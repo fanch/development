@@ -1,0 +1,42 @@
+# Depends on: doxygen
+
+url="http://fuse.sourceforge.net/"
+packager="tnut <tnut@nutyx.org>"
+contributors="Pierre B"
+description="Library that makes it possible to implement a filesystem in a userspace program."
+
+name=fuse2
+version=2.9.7
+release=1
+
+source=( https://github.com/libfuse/libfuse/releases/download/fuse-$version/fuse-$version.tar.gz)
+
+build() {
+cd fuse-$version
+
+./configure --prefix=/usr    \
+            --disable-static \
+            --exec-prefix=/
+make
+make DESTDIR=$PKG install
+mkdir -p $PKG/lib
+install -vm755 Dest/lib/libfuse.so.2.9.7 $PKG/lib                  
+install -vm755 Dest/lib/libulockmgr.so.1.0.1 $PKG/lib                 
+ln -sfv ../../lib/libfuse.so.2.9.7 $PKG/usr/lib/libfuse.so         
+ln -sfv ../../lib/libulockmgr.so.1.0.1 $PKG/usr/lib/libulockmgr.so 
+
+install -vm644  Dest/lib/pkgconfig/fuse.pc $PKG/usr/lib/pkgconfig  
+                                                         
+install -vm4755 Dest/bin/fusermount       $PKG/bin                 
+install -vm755  Dest/bin/ulockmgr_server  $PKG/bin                 
+
+install -vm755  Dest/sbin/mount.fuse      $PKG/sbin                
+
+install -vdm755 $PKG/usr/include/fuse                              
+
+install -vm644  Dest/usr/include/*.h      $PKG/usr/include         
+install -vm644  Dest/usr/include/fuse/*.h $PKG/usr/include/fuse/   
+
+install -vm644  Dest/usr/share/man/man1/* $PKG/usr/share/man/man1  
+/$PKGsbin/ldconfig -v
+}

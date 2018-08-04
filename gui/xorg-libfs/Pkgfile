@@ -1,0 +1,30 @@
+# Depends on: xextproto kbproto inputproto fontsproto xorg-xtrans
+
+description="libFS, library X Font Service client"
+url="http://xorg.freedesktop.org"
+packager="greg <greg@nutyx.org>"
+contributors="Pierre B"
+ 
+name=xorg-libfs
+version=1.0.7
+release=1
+
+source=(http://ftp.x.org/pub/individual//lib/libFS-$version.tar.bz2)
+
+build() {
+
+cd libFS-$version
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+
+make
+make DESTDIR=$PKG install
+
+}
+uptodate() {
+local ext url name LINX
+LYNX="lynx -read_timeout=20 -dump -listonly -nonumbers "
+ext=".tar.bz2"
+url="https://ftp.x.org/archive//individual//lib"
+name="libFS-"
+$LYNX $url/?C=M\;O=D|grep "$ext$"|grep "$url/$name"|sed "s@$ext\$@@"|sed "s@$url/$name@@"|head -1
+}

@@ -1,0 +1,891 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+   
+<!-- Mirrored from www.nutyx.org/fr/build-kernel by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 10:32:51 GMT -->
+<HEAD>
+      <TITLE>NuTyX GNU/Linux</TITLE>
+      <META charset="utf-8" />
+      <LINK rel="shortcut icon" href="../favicon.html">
+ <style type="text/css">
+ body{
+   text-align: left;
+   color: #444;
+   background: #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF3d3d////riJKgAAAAAJ0Uk5T/wDltzBKAAAAFUlEQVR42mJgBAEGGMmAxAYCgAADAAGGABmnk/7aAAAAAElFTkSuQmCC); 
+   font: 14px;
+}
+header {
+   float: left;
+   padding-top: 6px;
+   padding-left: 2%;
+   margin-right: 2%;
+   background-color: #606060;
+}
+nav { padding-top: 1px; }
+/* horizontally center ul element */
+nav ul { text-align:center; }
+nav li {
+    /* make list elements fall inline as block elements */
+    position: relative;
+    display: inline-block;
+    /* next two lines only for display purposes */
+    text-align: center;
+    border:1px solid black;
+}
+nav li a {
+    font-size:12px;
+    text-decoration: none;
+    float:left;
+    padding:10px;
+    background-color: #333333;
+    color:#ffffff;
+    border-bottom:1px;
+    border-bottom-color:#000000;
+    border-bottom-style:solid;
+}
+nav li a:hover {
+    background-color:#9B1C26;
+    border-bottom-color:#000000;
+    border-bottom-style:solid;
+}
+img { border: 0; }
+nav.img { border: 0; }
+h1 { text-decoration: underline; }
+
+p1 {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    color:#585858;
+    font-size:1em;
+}
+pre {
+   padding: 0.5em 1em;
+   margin: 1em 0em 1em 2em;
+   font-weight:bold;
+   color: black;
+   font-family: monospace;
+   background-color: #D0D0D0;
+}
+td { padding: 0.5em 0.5em 0.5em 0.5em; }
+tr.header { color: white; background-color: #606060; }
+tr.odd { background-color: #D0D0D0; }
+.sidebar { background-color: #E0E0E0; }
+pre.command { border-left: 0.2em solid #C70000; }
+pre.command_user { border-left: 0.2em solid #00C700; }
+pre.output { font-weight:normal; }
+div.important {
+   margin: 1em 2em 1em 2em;
+   font-size: 1.2em;
+   color:#883333;
+   padding: 0.5em 0.5em 0.5em 0.5em;
+   border: 2px solid #866;
+}
+div.note {
+   margin: 1em 2em 1em 0em;
+   font-size: 1em;
+   color:#333388;
+   border: 2px solid #dbddec;
+   padding: 0.5em 0.5em 0.5em 0.5em;
+}
+div.toc {
+   margin: 0em 0em 0em 0em;
+   font-size: 0.9em;
+   border: 1px solid #999999;
+   padding: 0em 2em 0em 1em;
+   width: -moz-max-content;
+   background-color: #e9e9ef;
+}
+div.important img { padding: 0.4em; }
+div.note img { padding: 0em 0.4em; }
+div.pied_page { text-align: center; }
+a { color: #F64825; }
+#foot {
+    text-align: center;
+    text-decoration-color: #000000;
+    font-size: 10px;
+}
+/* Last edited info */
+p.updated {
+    text-align: left;
+    font-size: small;
+    font-weight: bold;
+    font-style: italic;
+}
+a:link {
+    color: #703030;
+    text-decoration: none;
+}
+a:visited {
+    color: #0b0080;
+}
+a:hover {
+    color: #403030;
+    text-decoration: underline;
+}
+table {
+    width: 100%;
+}
+td.menu {
+    font: courrier;
+    background-color: #959595;
+    text-decoration: none;
+    vertical-align:middle;
+    text-align:center;
+    height:60px;
+}
+td.menu:hover {
+    text-decoration: none;
+    background-color: #AAAAAA;
+    text-transform: uppercase;
+}
+td.menu a:link {
+    font-weight:bold;
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+td.menu a:visited {
+    font-weight:bold;
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+td.menu a:hover {
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+ @media print { header, footer {display:none } }
+ </style>
+</head>
+<body>
+    <table>
+     <tr>
+      <td>
+       <a href=".html"><img id="logo" src="../graphics/logo_nutyx_120.png" alt="logo nutyx" /></a>
+      </td>
+      <td>
+       <table class="sidebar" >
+        <tr>
+            <td class="menu"><br><a href="news.html">Nouvelles</a><br><br>
+            <td class="menu"><br><a href="information.html">Information</a><br><br>
+            <td class="menu"><br><a href="documentation.html">Documentation</a><br><br>
+            <td class="menu"><br><a href="installation.html">Installation</a><br><br>
+            <td class="menu"><br><a href="packages.html">Paquets</a><br><br>
+            <td class="menu"><br><a href="faq.html">FAQ</a><br><br>
+        </tr>
+        <tr>
+            <td class="menu"><br><a href="http://downloads.nutyx.org/?C=M;O=D">Téléchargements</a><br><br>
+            <td class="menu"><br><a href="http://forum.nutyx.org/index.php?action=recent">Forum</a><br><br>
+            <td class="menu"><br><a href="http://github.com/NuTyX">Code</a><br><br>
+            <td class="menu"><br><a href="screenshots.html">Captures d'écrans</a><br><br>
+            <td class="menu"><br><a href="wallpapers.html">Fonds d'écrans</a><br><br>
+            <td class="menu"><br><a href="../en/index.html" title="Home"> <img src="../graphics/gb.gif" alt="Home" height="12" width="35"></a><br><br>
+        </tr>
+       </table>
+      </td>
+     </tr>
+    </table>
+   <hr>
+<table border="0" cellpadding="15" cellspacing="10" width="100%">
+ <tr valign="top">
+  <td class="sidebar" width="20%">
+   <h4>Forum</h4>
+    <div>
+<p class="updated">Sat Jul  1 17:50:49 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=366.msg1880#msg1880">Re : Recette uClibc-ng (gelée)</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 21:42:58 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=378.msg1879#msg1879">Recette musl-libc</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 20:51:32 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=366.msg1878#msg1878">Re : Recette uClibc-ng (gelée)</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 20:44:04 2017 UTC</p><div style="text-transform: uppercase;">Généralitées:</div><b>News</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=376.msg1877#msg1877">Re : Nouvelle iso avec mode LIVE disponible</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Thu Jun 29 06:03:45 2017 UTC</p><div style="text-transform: uppercase;">CONFIGURER:</div><b>Le son</b><br><i>tnut</i><br><img src="../graphics/lamp.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=377.msg1876#msg1876">Re : Pas de son, groupe audio absent</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Wed Jun 28 14:51:32 2017 UTC</p><div style="text-transform: uppercase;">CONFIGURER:</div><b>Le son</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=377.msg1875#msg1875">Pas de son, groupe audio absent</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Tue Jun 27 14:01:19 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1874#msg1874">Re : Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Tue Jun 27 10:57:23 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1873#msg1873">Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Mon Jun 26 21:04:29 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1872#msg1872">Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Mon Jun 26 08:08:47 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>SipoMatadorduCosmos</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1871#msg1871">Re : Problème de dépendance</a><br><br>
+    </div>
+<hr>  <td valign="top" align="left" width="100%">
+   <div>
+  <form method="get" action="https://www.nutyx.org/fr/.">
+     <fieldset>
+          <label for="search-field">Recherche ...</label>
+          <input id="search-field" type="text" name="search" size="18" maxlength="200" />
+     </fieldset>
+  </form>
+   </div>
+    <p class="updated"> Thu Mar 30 10:06:42 2017 UTC</p>
+  <h1>Compiler et installer son propre noyau</h1>
+<div class="toc">
+ <h2>
+Sommaire
+</h2>
+  <ul style="list-style-type: none; padding: 0;">
+<li><a href="#1">Introduction</a>
+<li><a href="#2">Vérifier la machine qui utilisera le futur kernel</a>
+<li><a href="#3">Télécharger les sources du noyau</a>
+<li><a href="#4">Extraire les sources du noyau</a>
+<li><a href="#5">Se rendre dans le dossier des sources</a>
+<li><a href="#6">Configurer les options de compilation</a>
+<li><a href="#7">Compiler le noyau</a>
+<li><a href="#8">Créer une nouvelle entrée dans le fichier /boot/grub/grub.cfg</a>
+</ul>
+</div>
+<a name="1"></a>   <h2>Introduction</h2>
+   <p>
+    Cet article peut s'appliquer à toute autre distribution.
+   <p>
+    Si vous avez décidé de compiler vous-même votre noyau,
+    cet article vous explique sommairement comment compiler et installer un noyau personnalisé. 
+   <p>
+    Il existe beaucoup de raisons de vouloir compiler son propre noyau.
+    Avoir un noyau optimisé en taille et pour son propre matériel est sans doute la raison la plus fréquente.
+   <p>
+    Si vous êtes sur NuTyX, assurez-vous d'avoir installé le jeu de paquets de dévelopement:
+    <pre class="command_user"><kbd>get cards.devel</kbd></pre>
+<a name="2"></a>  <h2>Vérifier la machine qui utilisera le futur kernel</h2>
+   <p>
+    On va commencer par prendre connaîssance de son matériel avec la commande:
+    <pre class="command_user"><kbd>lspci</kbd></pre>
+    <pre class="output">00:00.0 Host bridge: Intel Corporation Atom Processor D2xxx/N2xxx DRAM Controller (rev 03)
+00:02.0 VGA compatible controller: Intel Corporation Atom Processor D2xxx/N2xxx Integrated Graphics Controller (rev 09)
+00:1b.0 Audio device: Intel Corporation NM10/ICH7 Family High Definition Audio Controller (rev 02)
+00:1c.0 PCI bridge: Intel Corporation NM10/ICH7 Family PCI Express Port 1 (rev 02)
+00:1c.1 PCI bridge: Intel Corporation NM10/ICH7 Family PCI Express Port 2 (rev 02)
+00:1c.2 PCI bridge: Intel Corporation NM10/ICH7 Family PCI Express Port 3 (rev 02)
+00:1d.0 USB controller: Intel Corporation NM10/ICH7 Family USB UHCI Controller #1 (rev 02)
+00:1d.1 USB controller: Intel Corporation NM10/ICH7 Family USB UHCI Controller #2 (rev 02)
+00:1d.2 USB controller: Intel Corporation NM10/ICH7 Family USB UHCI Controller #3 (rev 02)
+00:1d.3 USB controller: Intel Corporation NM10/ICH7 Family USB UHCI Controller #4 (rev 02)
+00:1d.7 USB controller: Intel Corporation NM10/ICH7 Family USB2 EHCI Controller (rev 02)
+00:1e.0 PCI bridge: Intel Corporation 82801 Mobile PCI Bridge (rev e2)
+00:1f.0 ISA bridge: Intel Corporation NM10 Family LPC Controller (rev 02)
+00:1f.2 SATA controller: Intel Corporation NM10/ICH7 Family SATA Controller [AHCI mode] (rev 02)
+00:1f.3 SMBus: Intel Corporation NM10/ICH7 Family SMBus Controller (rev 02)
+01:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8101E/RTL8102E PCI Express Fast Ethernet controller (rev 05)                                                       
+02:00.0 Network controller: Broadcom Corporation BCM4313 802.11b/g/n Wireless LAN Controller (rev 01)                                                                              
+03:00.0 Unassigned class [ff00]: Realtek Semiconductor Co., Ltd. RTS5209 PCI Express Card Reader (rev 01)</pre>
+   <p>
+    On retiendra donc:</p>
+    <ul>
+     <li>
+      processeur Atom
+     <li>
+      Audio device Intel
+     <li>
+      Controlleur SATA Intel
+     <li>
+      Carte réseau: Realtek RTL8101E/RTL8102E
+     <li>
+      Carte graphique. Intel  Atom Processor D2xxx/N2xxx
+    </ul>
+   <p>
+    Voici un résumé de ce que l'on va faire.
+    Il faut savoir que <b>les étapes 4 et 5</b> peuvent être refaites à l'infini (dans le cas où le noyau ne booterai pas par exemple).
+    Voici les différentes étapes à suivre:  
+<a name="3"></a>  <h2>Télécharger les sources du noyau</h2>
+   <p>
+    Pour pouvoir compiler un noyau, il faut donc commencer par récupérer les sources d'une version de noyau.
+    Au moment de l'écriture de l'article, la version 4.9 est disponible.
+    Nous allons donc prendre le risque de le compiler...
+   <p>
+    Ouvrez un terminal et tapez la commande:
+    <pre class="command_user"><kbd>wget https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.9.tar.xz</kbd></pre>
+   <p>
+    Les sources commencent à se télécharger dans votre dossier personnel
+   <pre class="output">--2012-09-01 17:49:53--  http://www.kernel.org/pub/linux/kernel/v4.0/linux-4.9.tar.xz
+Résolution de www.kernel.org... 149.20.4.69, 149.20.20.133
+Connexion vers www.kernel.org|149.20.4.69|:80...connecté.
+requête HTTP transmise, en attente de la réponse...200 OK
+Longueur: 82259123 (78M) [application/x-bzip2]
+Sauvegarde en : &laquo;linux-4.9.tar.bz2&raquo;
+
+100%[=============================&gt;] 82.259.123  2,55M/s   ds 37s     
+
+2012-09-01 17:50:31 (2,13 MB/s) - &laquo;linux-4.9.tar.xz&raquo; sauvegardé [82259123/82259123]</pre>
+     
+<a name="4"></a>  <h2>Extraire les sources du noyau</h2>
+   <p>
+    On extrait les sources du noyau téléchargées:
+   <pre class="command_user"><kbd>tar xf linux-4.9.tar.xz</kbd></pre>
+   <p>
+    Après quelques minutes, le prompt sera à nouveau disponible et les sources du noyau seront en place.
+    Se rendre dans le dossier du noyau et taper les commandes magiques pour configurer les options qui nous semblent utiles.
+    Pour pouvoir compiler le noyau, il faut être dans le dossier sources de celui-ci, tapez dans votre console:
+<a name="5"></a>  <h2>Se rendre dans le dossier des sources</h2>
+   <pre class="command_user"><kbd>cd linux-4.9</kbd></pre>
+   <p>
+    Nous sommes maintenant pr&ecirc;t &agrave; lancer quelques commandes magiques.
+   <p>
+    Je vous conseille pour commencer histoire de se faire une id&eacute;e des possibilit&eacute;es du makefile d'utiliser la commande:
+    <pre class="command_user"><kbd>make help|more</kbd></pre>
+   <p>
+    Elle vous donnera TOUTES les options qui vous sont disponibles pour la compilation du noyau et de ses modules.
+    <pre class="output">Cleaning targets:
+  clean           - Remove most generated files but keep the config and
+                    enough build support to build external modules
+  mrproper        - Remove all generated files + config + various backup files
+  distclean       - mrproper + remove editor backup and patch files
+
+Configuration targets:
+  config          - Update current config utilising a line-oriented program
+  nconfig         - Update current config utilising a ncurses menu based program
+  menuconfig      - Update current config utilising a menu based program
+  xconfig         - Update current config utilising a QT based front-end
+  gconfig         - Update current config utilising a GTK based front-end
+  oldconfig       - Update current config utilising a provided .config as base
+  localmodconfig  - Update current config disabling modules not loaded
+  localyesconfig  - Update current config converting local mods to core
+  silentoldconfig - Same as oldconfig, but quietly, additionally update deps
+  defconfig       - New config with default from ARCH supplied defconfig
+  savedefconfig   - Save current config as ./defconfig (minimal config)
+  allnoconfig     - New config where all options are answered with no
+  allyesconfig    - New config where all options are accepted with yes
+  allmodconfig    - New config selecting modules when possible
+  alldefconfig    - New config with all symbols set to default
+  randconfig      - New config with random answer to all options
+  listnewconfig   - List new options
+  oldnoconfig     - Same as silentoldconfig but sets new symbols to their default value
+
+......
+....</pre>
+    <p>
+     Je vous ai mis que le début <img src="../graphics/smiley-wink.gif" alt="Wink" title="Wink">.
+     On va donc commencer par s'assurer que les sources sont propres et dépourvus de toute partie de code déjà compilée.
+     <div class="note"><img src="../graphics/note.gif" width="10" height="10" alt="*" />
+      Cette commande n'est à faire qu'à la première tentative de compilation du noyau.
+      Il n'est plus necessaire de taper cette commande ci-dessous si vous souhaitez recompiler le noyau pour diverses raisons
+     </div>
+     <pre class="command_user"><kbd>make mrproper</kbd></pre>
+    <p>
+     Aucun message ne doit appara&icirc;tre.
+     Nous allons maintenant lancer l'outil de configuration afin de choisir le minimum d'options necessaire pour avoir un noyau fonctionnel.
+     J'ai volontairement choisi l'interface non graphique en effet, vous pouvez la lancer dans une chroot, une console graphique ou non.
+
+<a name="6"></a> <h2>Configurer les options de compilation</h2>
+   <p>
+    L'&eacute;quipe de Linuxfromscratch recommande de d&eacute;activer la variable LC_ALL:
+    <pre class="command_user"><kbd>LC_ALL= make menuconfig</kbd></pre>
+    <p>
+     Vous voici devant le menu principal de configuration du noyau:
+    <p>
+     <img src="../graphics/build-kernel/menuprincipal.png" alt="Configuration menu principal" title="Menu principal" width="578" height="517" /> 
+   <p>
+    Dans cet article, je ne vais que choisir les options indispensables au bon amor&ccedil;age du noyau et donc optenir un nombre de modules plus petit.
+    Il faut savoir que le noyau disponible en binaire en contient plus de 5000.
+   <p>
+    Naviguez à travers tous les menus et activez UNIQUEMENT les options mentionés ci-dessous.
+    Comme vous pouvez le voir nous déactivons tous les modules, puisque ils ne sont pas necessaires dans une configuration minimaliste:
+
+    <div style="font-size:120%"><b>General Setup</b></div>
+    <table>
+     <tr class="odd">
+      <td>
+       Kernel compression mode (Gzip)
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+       (NuTyX) Default hostname
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+       Support for paging of anonymous memory
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+       System V IPC
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+       POSIX Message Queues
+      </td>
+     </tr>
+     <tr class="even">
+     <td>
+      (18) Kernel log buffer size
+     </td>
+     </tr>
+     <tr class="odd">
+      <td>
+       Namespaces support
+      </td>
+     </tr>
+    </table>
+   <div>
+     <div style="font-size:150%"><b>Enable loadable module support</b></div>
+   </div>
+   <div>
+     <div style="font-size:150%"><b>Enable the block layer</b></div>
+   </div>
+    <table>
+     <tr class="odd">
+      <td style="width:20%;">
+       IO Schedulers --->
+      </td>
+      <td>
+       CFQ I/O scheduler
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+      </td>
+      <td>
+       Default I/O scheduler (CFQ)
+      </td>
+     </tr>
+    </table>
+   <div>
+     <div style="font-size:150%"><b>Processor type and features</b></div>
+   </div>
+    <table>
+     <tr class="odd">
+      <td>
+       Processor family (Atom) Ajustez en fonction de votre microprocesseur
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+       High Memory Support (4GB)
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+       Memory model (Flat Memory))
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+       (4096) Low address space to protect from user allocation
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+       (64) Amount of low memory, in kilobytes, to reserve for the BIOS
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+       (0x2000000) Alignment value to which kernel should be aligned
+      </td>
+     </tr>
+    </table>
+     
+    <div style="font-size:150%"><b>Power management and ACPI options</b></div>
+    <div style="font-size:150%"><b>Bus options (PCI,etc)</b></div>
+    <table>
+     <tr class="odd">
+      <td>
+       PCI Support
+      </td>
+      <td>
+       PCI access mode (Any)
+      </td>
+     </tr>
+    </table>
+   <div>
+     <div style="font-size:150%"><b>Executable file formats / Emulations</b></div>
+   </div>
+    <table>
+     <tr class="odd">
+      <td style="width:35%;">
+       Kernel support for ELF binaries
+      </td>
+     </tr>
+    </table>
+   <div>
+     <div style="font-size:150%"><b>Networking support</b></div>
+   </div>
+  <table>
+   <tr class="odd">
+    <td style="width:35%;">
+     Networking options
+    </td>
+    <td>
+     Packet socket
+    </td>
+     </tr>
+     <tr class="even">
+      <td>
+      </td>
+      <td>
+       Unix domain socket
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+      </td>
+      <td>
+       TCP/IP networking
+      </td>
+     </tr>
+    </table>
+   <div>
+     <div style="font-size:150%"><b>Device Drivers</b></div>
+   </div>
+    <table>
+     <tr class="odd">
+      <td style="width:20%;">
+       Generic Driver Options
+      </td>
+      <td>
+       Maintain a devtmpfs filesystem to mount at /dev
+      </td>
+     </tr>
+     <tr  class="even">
+      <td>
+      </td>
+      <td>
+       Automount devtmpfs at /dev, after the kernel mounted the rootfs
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+      </td>
+      <td>
+       Userspace firmware loading support
+      </td>
+     </tr>
+     <tr class="even">
+     <td>
+      Block devices
+     </td>
+     <td>
+     </td>
+     </tr>
+     <tr class="odd">
+      <td>
+       SCSI device support
+      </td>
+      <td>
+       SCSI device support
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+      </td>
+      <td>
+       legacy /proc/scsi/ support
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+      </td>
+      <td>
+       SCSI disk support
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+      </td>
+      <td>
+       SCSI generic support
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+       Serial ATA and Parallel ATA Drivers
+      </td>
+      <td>
+       ATA ACPI support
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+      </td>
+      <td>
+       AHCI SATA support
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+       Network device support
+      </td>
+      <td>
+       Network core driver support
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+      </td>
+      <td>
+       Ethernet driver support
+      </td>
+      <td>
+       Realtek devices</td><td>Realtek RTL-8139 C+ PCI Fast Ethernet Adapter support (Ajustez en fonction de votre carte réseau)
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+       Realtek RTL-8129 PCI Fast Ethernet Adapter support
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+       Input device support
+      </td>
+      <td>
+       Generic input layer (need for keyboard, mouse ..)
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+      </td>
+      <td>
+       Mouse interface
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+      </td>
+      <td>
+       Provide legacy /dev/psaux device
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+      </td>
+      <td>
+       (1024) Horizontal screen resolution
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+      </td>
+      <td>
+       (768) Vertical screen resolution
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+      </td>
+      <td>
+       Event interface
+      </td>
+     </tr>
+     <tr class="odd">
+     <td>
+      </td>
+      <td>
+       Keyboards
+      </td>
+      <td>
+       AT keyboard
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+      </td>
+      <td>
+       Mice
+      </td>
+      <td>
+       PS/2 mouse
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+      </td>
+      <td>
+       Miscellaneous devices
+      </td>
+      <td>
+       User level driver support
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+       USB support
+      </td>
+      <td>
+       Support for Host-side USB
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+      </td>
+      <td>
+       USB announce new devices
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+      </td>
+      <td>
+       Enable USB persist by default
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+      </td>
+      <td>
+       xHCI HCD (USB 3.0) support
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+      </td>
+      <td>
+       EHCUI HCD (USB 2.0) support
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+      </td>
+      <td>
+       Root Hub Transaction Translators
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+      </td>
+      <td>
+       Improved Transaction Translator scheduling
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+      </td>
+      <td>
+       Generic EHCI driver for a platform device
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+      </td>
+      <td>
+       UHCI HCD (most Intel and VIA) support
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+      </td>
+      <td>
+       USB Mass Storage support
+      </td>
+     </tr>
+    </table>
+     
+    <div style="font-size:150%"><b>Firmware Drivers</b></div>
+    <div style="font-size:150%"><b>File systems</b></div>
+    <table>
+     <tr class="odd">
+      <td>
+      The Extended 3 (ext3) filesystem (Ajustez en fonction de votre système de fichiers)
+      </td>
+     </tr>
+     <tr class="even">
+      <td>
+       Ext3 POSIX Access Control Lists
+      </td>
+     </tr>
+     <tr class="odd">
+      <td>
+       Ext3 Security Labels
+      </td>
+     </tr>
+    </table>
+    <div style="font-size:150%"><b>Kernel hacking</b></div>
+    <table>
+     <tr class="odd">
+      <td>
+       Early printk
+      </td>
+     </tr>
+    </table>
+    <div style="font-size:150%"><b>Security options</b></div>
+    <div style="font-size:150%"><b>Cryptographic API</b></div>
+    <table>
+     <tr class="odd">
+      <td>
+       AES cipher algorithms
+      </td>
+     </tr>
+    </table>
+     
+    <div style="font-size:150%"><b>Virtualization</b></div>
+    <div style="font-size:150%"><b>Library routines</b></div>
+   
+    <table>
+     <tr class="odd">
+      <td>
+       CRC32/CRC32c functions
+      </td>
+     </tr>
+    </table> 
+    <p>
+     Une fois la configuration terminée, vous chosissez l'option <span style="color: #ff0000;">Exit</span> jusqu'au retour au prompt de la console.
+    <p>
+     Un nouveau message vous demande si vous souhaitez sauvergarder votre configuration, chosissez simplement l'option de défaut <span style="color: #ff0000;">Yes</span>.
+    <p>
+     Un joli message apparait dans votre terminal <img src="../graphics/smiley-cool.gif" border="0" alt="Cool" title="Cool" />:
+     <pre class="output">#
+# configuration written to .config
+#
+
+
+<b>* End of the configuration.
+*</b> Execute 'make' to start the build or try 'make help'</pre>
+
+<a name="7"></a>  <h2>Compiler le noyau</h2>
+   <p>
+    La compilation du noyau peut commencer. Tapez dans la console:
+    <pre class="command_user"><kbd>make -j4</kbd></pre>
+   <p>
+    La compilation est démarrée, si vous avez plus ou moins de processeurs à disposition, adaptez la valeur <b>-j4</b> à votre nombre de processeurs.
+   <p>
+    <img src="../graphics/build-kernel/Compile.png" border="0" alt="Compilation en cours" width="578" height="517" />
+   <p>
+    Quelques minutes (ou quelques heures plus tard, ... Vous voilà avec un noyau prêt à être utilisé.
+   <pre class="output">Kernel: arch/x86/boot/bzImage is ready  (#1)</pre>
+<a name="8"></a>  <h2>Créer une nouvelle entrée dans le fichier /boot/grub/grub.cfg</h2>
+   <p>
+    Il ne nous reste plus qu'à ajouter la bonne entrée dans le fichier de configuration <strong><span style="color: #339966;">/boot/grub/grub.cfg</span> </strong> de grub 2.0.
+   <pre class="output">menuentry "NuTyX avec noyau experimental sur /dev/sda2" {
+  set root=(hd0,2)
+  linux /home/thierry/linux-3.17.4/arch/x86/boot/bzImage root=/dev/sda2 ro quiet
+}</pre>
+   <p>
+    Et voilà de cette façon, vous pourrez toujours choisir au démarrage de votre NuTyX sur quel noyau celle-ci doit être lancée.
+   <p>
+    Et surtout, pour expérimenter d'autres options de votre noyau fonctionnel (ou pas), c'est très simple. Vous taperez donc toujours les 4 mêmes commandes:
+  <pre class="command_user"><kbd>cd linux-4.9
+make menuconfig
+make -j4
+sudo make modules_install</kbd></pre>
+   <p>
+    Et c'est tout <img src="../graphics/smiley-cool.gif" border="0" alt="Cool" title="Cool" />
+<hr>
+    <footer >
+     <p id="foot"> Powered by cards 2.2.2.2     &copy; 2007 - 2017 <a href=".html">NuTyX</a>.<br><br>
+Hosted by <a href="http://tuxfamily.org/"><img src="../graphics/logo_tuxfamily_50.png"/></a><br><br>
+     <a href="http://www.wtfpl.net/">
+     <img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
+     width="80" height="15" alt="WTFPL" /></a> 
+     <a href="http://www.anybrowser.org/campaign/">
+       <img src="../graphics/abblue.gif" width="80" height="15"
+       alt="anybrowser"></a>
+    </footer>
+   </tr>
+  </table>
+ </body>
+
+<!-- Mirrored from www.nutyx.org/fr/build-kernel by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 10:32:52 GMT -->
+</html>

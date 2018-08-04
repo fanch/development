@@ -1,0 +1,29 @@
+# Depends on: xproto resourceproto xorg-libx11 xorg-libxext 
+
+description="libXres, resource extension client library"
+url="http://xorg.freedesktop.org"
+packager="greg <greg@nutyx.org>"
+contributors="Pierre B"
+
+name=xorg-libxres
+version=1.2.0
+
+source=(http://ftp.x.org/pub/individual//lib/libXres-$version.tar.bz2)
+
+build() {
+
+	cd libXres-$version
+	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
+	
+	make
+	make DESTDIR=$PKG install
+	
+}
+uptodate() {
+local ext url name LINX
+LYNX="lynx -read_timeout=20 -dump -listonly -nonumbers "
+ext=".tar.bz2"
+url="https://ftp.x.org/archive//individual//lib"
+name="libXres-"
+$LYNX $url/?C=M\;O=D|grep "$ext$"|grep "$url/$name"|sed "s@$ext\$@@"|sed "s@$url/$name@@"|head -1
+}

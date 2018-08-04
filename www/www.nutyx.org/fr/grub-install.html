@@ -1,0 +1,323 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+   
+<!-- Mirrored from www.nutyx.org/fr/grub-install by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 10:32:42 GMT -->
+<HEAD>
+      <TITLE>NuTyX GNU/Linux</TITLE>
+      <META charset="utf-8" />
+      <LINK rel="shortcut icon" href="../favicon.html">
+ <style type="text/css">
+ body{
+   text-align: left;
+   color: #444;
+   background: #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF3d3d////riJKgAAAAAJ0Uk5T/wDltzBKAAAAFUlEQVR42mJgBAEGGMmAxAYCgAADAAGGABmnk/7aAAAAAElFTkSuQmCC); 
+   font: 14px;
+}
+header {
+   float: left;
+   padding-top: 6px;
+   padding-left: 2%;
+   margin-right: 2%;
+   background-color: #606060;
+}
+nav { padding-top: 1px; }
+/* horizontally center ul element */
+nav ul { text-align:center; }
+nav li {
+    /* make list elements fall inline as block elements */
+    position: relative;
+    display: inline-block;
+    /* next two lines only for display purposes */
+    text-align: center;
+    border:1px solid black;
+}
+nav li a {
+    font-size:12px;
+    text-decoration: none;
+    float:left;
+    padding:10px;
+    background-color: #333333;
+    color:#ffffff;
+    border-bottom:1px;
+    border-bottom-color:#000000;
+    border-bottom-style:solid;
+}
+nav li a:hover {
+    background-color:#9B1C26;
+    border-bottom-color:#000000;
+    border-bottom-style:solid;
+}
+img { border: 0; }
+nav.img { border: 0; }
+h1 { text-decoration: underline; }
+
+p1 {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    color:#585858;
+    font-size:1em;
+}
+pre {
+   padding: 0.5em 1em;
+   margin: 1em 0em 1em 2em;
+   font-weight:bold;
+   color: black;
+   font-family: monospace;
+   background-color: #D0D0D0;
+}
+td { padding: 0.5em 0.5em 0.5em 0.5em; }
+tr.header { color: white; background-color: #606060; }
+tr.odd { background-color: #D0D0D0; }
+.sidebar { background-color: #E0E0E0; }
+pre.command { border-left: 0.2em solid #C70000; }
+pre.command_user { border-left: 0.2em solid #00C700; }
+pre.output { font-weight:normal; }
+div.important {
+   margin: 1em 2em 1em 2em;
+   font-size: 1.2em;
+   color:#883333;
+   padding: 0.5em 0.5em 0.5em 0.5em;
+   border: 2px solid #866;
+}
+div.note {
+   margin: 1em 2em 1em 0em;
+   font-size: 1em;
+   color:#333388;
+   border: 2px solid #dbddec;
+   padding: 0.5em 0.5em 0.5em 0.5em;
+}
+div.toc {
+   margin: 0em 0em 0em 0em;
+   font-size: 0.9em;
+   border: 1px solid #999999;
+   padding: 0em 2em 0em 1em;
+   width: -moz-max-content;
+   background-color: #e9e9ef;
+}
+div.important img { padding: 0.4em; }
+div.note img { padding: 0em 0.4em; }
+div.pied_page { text-align: center; }
+a { color: #F64825; }
+#foot {
+    text-align: center;
+    text-decoration-color: #000000;
+    font-size: 10px;
+}
+/* Last edited info */
+p.updated {
+    text-align: left;
+    font-size: small;
+    font-weight: bold;
+    font-style: italic;
+}
+a:link {
+    color: #703030;
+    text-decoration: none;
+}
+a:visited {
+    color: #0b0080;
+}
+a:hover {
+    color: #403030;
+    text-decoration: underline;
+}
+table {
+    width: 100%;
+}
+td.menu {
+    font: courrier;
+    background-color: #959595;
+    text-decoration: none;
+    vertical-align:middle;
+    text-align:center;
+    height:60px;
+}
+td.menu:hover {
+    text-decoration: none;
+    background-color: #AAAAAA;
+    text-transform: uppercase;
+}
+td.menu a:link {
+    font-weight:bold;
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+td.menu a:visited {
+    font-weight:bold;
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+td.menu a:hover {
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+ @media print { header, footer {display:none } }
+ </style>
+</head>
+<body>
+    <table>
+     <tr>
+      <td>
+       <a href=".html"><img id="logo" src="../graphics/logo_nutyx_120.png" alt="logo nutyx" /></a>
+      </td>
+      <td>
+       <table class="sidebar" >
+        <tr>
+            <td class="menu"><br><a href="news.html">Nouvelles</a><br><br>
+            <td class="menu"><br><a href="information.html">Information</a><br><br>
+            <td class="menu"><br><a href="documentation.html">Documentation</a><br><br>
+            <td class="menu"><br><a href="installation.html">Installation</a><br><br>
+            <td class="menu"><br><a href="packages.html">Paquets</a><br><br>
+            <td class="menu"><br><a href="faq.html">FAQ</a><br><br>
+        </tr>
+        <tr>
+            <td class="menu"><br><a href="http://downloads.nutyx.org/?C=M;O=D">Téléchargements</a><br><br>
+            <td class="menu"><br><a href="http://forum.nutyx.org/index.php?action=recent">Forum</a><br><br>
+            <td class="menu"><br><a href="http://github.com/NuTyX">Code</a><br><br>
+            <td class="menu"><br><a href="screenshots.html">Captures d'écrans</a><br><br>
+            <td class="menu"><br><a href="wallpapers.html">Fonds d'écrans</a><br><br>
+            <td class="menu"><br><a href="../en/index.html" title="Home"> <img src="../graphics/gb.gif" alt="Home" height="12" width="35"></a><br><br>
+        </tr>
+       </table>
+      </td>
+     </tr>
+    </table>
+   <hr>
+<table border="0" cellpadding="15" cellspacing="10" width="100%">
+ <tr valign="top">
+  <td class="sidebar" width="20%">
+   <h4>Forum</h4>
+    <div>
+<p class="updated">Sat Jul  1 17:50:49 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=366.msg1880#msg1880">Re : Recette uClibc-ng (gelée)</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 21:42:58 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=378.msg1879#msg1879">Recette musl-libc</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 20:51:32 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=366.msg1878#msg1878">Re : Recette uClibc-ng (gelée)</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 20:44:04 2017 UTC</p><div style="text-transform: uppercase;">Généralitées:</div><b>News</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=376.msg1877#msg1877">Re : Nouvelle iso avec mode LIVE disponible</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Thu Jun 29 06:03:45 2017 UTC</p><div style="text-transform: uppercase;">CONFIGURER:</div><b>Le son</b><br><i>tnut</i><br><img src="../graphics/lamp.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=377.msg1876#msg1876">Re : Pas de son, groupe audio absent</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Wed Jun 28 14:51:32 2017 UTC</p><div style="text-transform: uppercase;">CONFIGURER:</div><b>Le son</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=377.msg1875#msg1875">Pas de son, groupe audio absent</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Tue Jun 27 14:01:19 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1874#msg1874">Re : Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Tue Jun 27 10:57:23 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1873#msg1873">Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Mon Jun 26 21:04:29 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1872#msg1872">Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Mon Jun 26 08:08:47 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>SipoMatadorduCosmos</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1871#msg1871">Re : Problème de dépendance</a><br><br>
+    </div>
+<hr>  <td valign="top" align="left" width="100%">
+   <div>
+  <form method="get" action="https://www.nutyx.org/fr/.">
+     <fieldset>
+          <label for="search-field">Recherche ...</label>
+          <input id="search-field" type="text" name="search" size="18" maxlength="200" />
+     </fieldset>
+  </form>
+   </div>
+    <p class="updated"> Wed May 24 18:57:50 2017 UTC</p>
+ <h1>Mise en place de GRUB</h1>
+  <p>
+   Si vous n'avez pas installé de procédure d'amorçage lors de l'installation de NuTyX (par erreur ou par volonté).
+   Il n'est pas trop tard. Avec l'ISO, c'est très simple d'installer GRUB sur votre machine et de façon indépendante.
+<div class="toc">
+ <h2>
+Sommaire
+</h2>
+  <ul style="list-style-type: none; padding: 0;">
+<li><a href="#1">Historique</a>
+<li><a href="#2">Pour pouvoir installer GRUB</a>
+<li><a href="#3">La sélection de la partition</a>
+<li><a href="#4">Grub est installé</a>
+</ul>
+</div>
+<a name="1"></a>  <h2>Historique</h2>
+   <p>
+    Au début de l'existance de la distribution NuTyX, l'installation de celle-ci se faisait uniquement par le script,
+    et <b>grub</b> s'installait également via le script.
+    Le problème était que toutes les distributions ne disposaient pas de l'application grub installée par défaut.
+   <p>
+    J'ai donc décidé de retirer cette option du script d'installation.
+    C'est pour cette raison que désormais, l'installation de grub est <b>OPTIONNELLE</b> en effet
+    si vous installez NuTyX comme seconde distribution par exemple, 
+    il n'est pas necessaire d'installer une seconde fois la procedure d'amorçage <b>GRUB</b>
+<a name="2"></a>  <h2>Pour pouvoir installer GRUB</h2>
+   <p>
+    Il n'est pas necessaire d'avoir une NuTyX installée,
+    il est en effet  possible d'installer le GRUB pour n'importe quelle distribution.
+   <p>
+    Relancez la machine et démarrez la mini-iso
+   <p>
+      <img src="graphics/grub-install/SelectLanguage.png" alt="Figure 1: Amorçage de l'iso" title="Figure 1: Amorçage de la mini-iso"/>
+   <p>
+    Une fois arrivé sur le menu principal,
+    choisissez "Démarrage Configurer l'amorçage du PC (en option)" comme ci-dessous:
+   <p>
+     <img src="graphics/grub-install/ConfigureBoot.png" alt="Figure 2: Choix Démarrage Configurer l'amorçage du PC" title="Figure 2: Choix Démarrage Configurer l'amorçage du PC"/>
+   <p>
+    Une fois le choix effectué, un nouvel écran apparaît, Il s'agit maintenant de faire ...
+<a name="3"></a>  <h2>La sélection de la partition</h2>
+   <p>
+    On choisit la partition sur laquelle l'application grub doit être installée.
+    Veuillez noter que la partition de destination ne doit pas forcément être sur le disque d'amorçage.
+    Dans ce cas un menu apparaît avec le choix du disque de destination.
+   <p>
+   <img src="graphics/grub-install/SelectPartitionForBoot.png" alt="Figure 3: Choix de la partition" title="Figure 3: Choix de la partition"/>
+<a name="4"></a>  <h2>Grub est installé</h2>
+   <p>
+    Il est maintenant possible d'éditer le fichier <span style="color: #00ff00;"><strong>grub.cfg</strong></span>.
+   <p>
+    <img src="graphics/grub-install/ModifyGrubCfg.png" alt="Figure 4: Modifier le fichier de configuration" title="Figure 4: Modifier le fichier de configuration"/>
+    <div class="important"><img src="../graphics/caution.gif" alt="caution" /> Attention à la syntaxe de la dénomination des disques et des partitions, c'est un peu spéciale.</div>
+   <p>
+    <img src="../graphics/grub-install/DefaultGrubCfg.png" alt="Figure 5: Configuration par défaut" title="Figure 5: Configuration par défaut"/>
+   <p>
+    Sous grub 2.00 le premier disque commence à <b>0</b> et la première partition commence à <b>1</b>,
+    donc dans l'exemple suivant:
+    <pre class="output">set root=(hd0,5)</pre>
+   <p>
+    définit donc la cinquième partition sur le premier disque</p>
+   <p>
+    Dans l'exemple ci-dessous, on trouve 2 entrées,
+    la première entrée lancera la NuTyX qui se trouve sur la partition <b>/dev/sda2</b>.
+    La deuxième entrée lancera Windows 10 qui se trouve sur la partition <b>/dev/sda3</b>.
+    <pre class="output"># Begin grub.cfg
+# By default boot the first menu entry.
+set default 0
+# Allow 5 seconds before booting the default.
+set timeout 5<br />set color_highlight=blue/white
+set color_normal=cyan/black<br />set gfxpayload=1024x768x16
+menuentry "NuTyX  xfs sur /dev/sda2" {
+ set root=(hd0,2)
+ linux /boot/kernel root=/dev/sda2 ro quiet
+# initrd /boot/initrd
+}
+menuentry "Windows 10" {
+ set root=(hd0,3)
+ chainloader (hd0,3)+1
+}
+</pre>
+<hr>
+    <footer >
+     <p id="foot"> Powered by cards 2.2.2.2     &copy; 2007 - 2017 <a href=".html">NuTyX</a>.<br><br>
+Hosted by <a href="http://tuxfamily.org/"><img src="../graphics/logo_tuxfamily_50.png"/></a><br><br>
+     <a href="http://www.wtfpl.net/">
+     <img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
+     width="80" height="15" alt="WTFPL" /></a> 
+     <a href="http://www.anybrowser.org/campaign/">
+       <img src="../graphics/abblue.gif" width="80" height="15"
+       alt="anybrowser"></a>
+    </footer>
+   </tr>
+  </table>
+ </body>
+
+<!-- Mirrored from www.nutyx.org/fr/grub-install by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 10:32:47 GMT -->
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+   
+<!-- Mirrored from www.nutyx.org/fr/build-post by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 10:32:55 GMT -->
+<HEAD>
+      <TITLE>NuTyX GNU/Linux</TITLE>
+      <META charset="utf-8" />
+      <LINK rel="shortcut icon" href="../favicon.html">
+ <style type="text/css">
+ body{
+   text-align: left;
+   color: #444;
+   background: #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF3d3d////riJKgAAAAAJ0Uk5T/wDltzBKAAAAFUlEQVR42mJgBAEGGMmAxAYCgAADAAGGABmnk/7aAAAAAElFTkSuQmCC); 
+   font: 14px;
+}
+header {
+   float: left;
+   padding-top: 6px;
+   padding-left: 2%;
+   margin-right: 2%;
+   background-color: #606060;
+}
+nav { padding-top: 1px; }
+/* horizontally center ul element */
+nav ul { text-align:center; }
+nav li {
+    /* make list elements fall inline as block elements */
+    position: relative;
+    display: inline-block;
+    /* next two lines only for display purposes */
+    text-align: center;
+    border:1px solid black;
+}
+nav li a {
+    font-size:12px;
+    text-decoration: none;
+    float:left;
+    padding:10px;
+    background-color: #333333;
+    color:#ffffff;
+    border-bottom:1px;
+    border-bottom-color:#000000;
+    border-bottom-style:solid;
+}
+nav li a:hover {
+    background-color:#9B1C26;
+    border-bottom-color:#000000;
+    border-bottom-style:solid;
+}
+img { border: 0; }
+nav.img { border: 0; }
+h1 { text-decoration: underline; }
+
+p1 {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    color:#585858;
+    font-size:1em;
+}
+pre {
+   padding: 0.5em 1em;
+   margin: 1em 0em 1em 2em;
+   font-weight:bold;
+   color: black;
+   font-family: monospace;
+   background-color: #D0D0D0;
+}
+td { padding: 0.5em 0.5em 0.5em 0.5em; }
+tr.header { color: white; background-color: #606060; }
+tr.odd { background-color: #D0D0D0; }
+.sidebar { background-color: #E0E0E0; }
+pre.command { border-left: 0.2em solid #C70000; }
+pre.command_user { border-left: 0.2em solid #00C700; }
+pre.output { font-weight:normal; }
+div.important {
+   margin: 1em 2em 1em 2em;
+   font-size: 1.2em;
+   color:#883333;
+   padding: 0.5em 0.5em 0.5em 0.5em;
+   border: 2px solid #866;
+}
+div.note {
+   margin: 1em 2em 1em 0em;
+   font-size: 1em;
+   color:#333388;
+   border: 2px solid #dbddec;
+   padding: 0.5em 0.5em 0.5em 0.5em;
+}
+div.toc {
+   margin: 0em 0em 0em 0em;
+   font-size: 0.9em;
+   border: 1px solid #999999;
+   padding: 0em 2em 0em 1em;
+   width: -moz-max-content;
+   background-color: #e9e9ef;
+}
+div.important img { padding: 0.4em; }
+div.note img { padding: 0em 0.4em; }
+div.pied_page { text-align: center; }
+a { color: #F64825; }
+#foot {
+    text-align: center;
+    text-decoration-color: #000000;
+    font-size: 10px;
+}
+/* Last edited info */
+p.updated {
+    text-align: left;
+    font-size: small;
+    font-weight: bold;
+    font-style: italic;
+}
+a:link {
+    color: #703030;
+    text-decoration: none;
+}
+a:visited {
+    color: #0b0080;
+}
+a:hover {
+    color: #403030;
+    text-decoration: underline;
+}
+table {
+    width: 100%;
+}
+td.menu {
+    font: courrier;
+    background-color: #959595;
+    text-decoration: none;
+    vertical-align:middle;
+    text-align:center;
+    height:60px;
+}
+td.menu:hover {
+    text-decoration: none;
+    background-color: #AAAAAA;
+    text-transform: uppercase;
+}
+td.menu a:link {
+    font-weight:bold;
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+td.menu a:visited {
+    font-weight:bold;
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+td.menu a:hover {
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+ @media print { header, footer {display:none } }
+ </style>
+</head>
+<body>
+    <table>
+     <tr>
+      <td>
+       <a href=".html"><img id="logo" src="../graphics/logo_nutyx_120.png" alt="logo nutyx" /></a>
+      </td>
+      <td>
+       <table class="sidebar" >
+        <tr>
+            <td class="menu"><br><a href="news.html">Nouvelles</a><br><br>
+            <td class="menu"><br><a href="information.html">Information</a><br><br>
+            <td class="menu"><br><a href="documentation.html">Documentation</a><br><br>
+            <td class="menu"><br><a href="installation.html">Installation</a><br><br>
+            <td class="menu"><br><a href="packages.html">Paquets</a><br><br>
+            <td class="menu"><br><a href="faq.html">FAQ</a><br><br>
+        </tr>
+        <tr>
+            <td class="menu"><br><a href="http://downloads.nutyx.org/?C=M;O=D">Téléchargements</a><br><br>
+            <td class="menu"><br><a href="http://forum.nutyx.org/index.php?action=recent">Forum</a><br><br>
+            <td class="menu"><br><a href="http://github.com/NuTyX">Code</a><br><br>
+            <td class="menu"><br><a href="screenshots.html">Captures d'écrans</a><br><br>
+            <td class="menu"><br><a href="wallpapers.html">Fonds d'écrans</a><br><br>
+            <td class="menu"><br><a href="../en/index.html" title="Home"> <img src="../graphics/gb.gif" alt="Home" height="12" width="35"></a><br><br>
+        </tr>
+       </table>
+      </td>
+     </tr>
+    </table>
+   <hr>
+<table border="0" cellpadding="15" cellspacing="10" width="100%">
+ <tr valign="top">
+  <td class="sidebar" width="20%">
+   <h4>Forum</h4>
+    <div>
+<p class="updated">Sat Jul  1 17:50:49 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=366.msg1880#msg1880">Re : Recette uClibc-ng (gelée)</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 21:42:58 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=378.msg1879#msg1879">Recette musl-libc</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 20:51:32 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=366.msg1878#msg1878">Re : Recette uClibc-ng (gelée)</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 20:44:04 2017 UTC</p><div style="text-transform: uppercase;">Généralitées:</div><b>News</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=376.msg1877#msg1877">Re : Nouvelle iso avec mode LIVE disponible</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Thu Jun 29 06:03:45 2017 UTC</p><div style="text-transform: uppercase;">CONFIGURER:</div><b>Le son</b><br><i>tnut</i><br><img src="../graphics/lamp.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=377.msg1876#msg1876">Re : Pas de son, groupe audio absent</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Wed Jun 28 14:51:32 2017 UTC</p><div style="text-transform: uppercase;">CONFIGURER:</div><b>Le son</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=377.msg1875#msg1875">Pas de son, groupe audio absent</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Tue Jun 27 14:01:19 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1874#msg1874">Re : Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Tue Jun 27 10:57:23 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1873#msg1873">Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Mon Jun 26 21:04:29 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1872#msg1872">Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Mon Jun 26 08:08:47 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>SipoMatadorduCosmos</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1871#msg1871">Re : Problème de dépendance</a><br><br>
+    </div>
+<hr>  <td valign="top" align="left" width="100%">
+   <div>
+  <form method="get" action="https://www.nutyx.org/fr/.">
+     <fieldset>
+          <label for="search-field">Recherche ...</label>
+          <input id="search-field" type="text" name="search" size="18" maxlength="200" />
+     </fieldset>
+  </form>
+   </div>
+    <p class="updated"> Fri Apr  7 10:31:48 2017 UTC</p>
+   <h1>Post-construction et (en option) génération de l'iso installable</h1>
+<div class="toc">
+ <h2>
+Sommaire
+</h2>
+  <ul style="list-style-type: none; padding: 0;">
+<li><a href="#1">Introduction</a>
+<li><a href="#2">Marche à suivre</a>
+<li><a href="#3">Compilation du kernel et des ports optionnels.</a>
+<li>
+ <ul style="list-style-type: none;"><li><a href="#4">Mise en place d'un kernel de votre choix</a>
+<li>
+ <ul style="list-style-type: none;"><li><a href="#5">Compilation d'un des kernels disponible en ports</a>
+<li><a href="#6">Compilation de son propre kernel</a>
+  </ul>
+</li><li><a href="#7">Suppression des services indésirables (recommandé)</a>
+<li><a href="#8">Mise en place de grub, l'outil d'amorçage (en option)</a>
+<li><a href="#9">Ajout des outils de formatage (en option)</a>
+<li><a href="#10">Ajout des outils de gestion de partitions logiques (en option)</a>
+<li><a href="#11">Ajout du client dhcp pour pouvoir obtenir une adresse IP dynamiquement (en option)</a>
+<li><a href="#12">Ajout d'un éditeur de texte (en option)</a>
+<li><a href="#13">Ajout du support NFS (en option)</a>
+  </ul>
+</li><li><a href="#14">Option1: Produire une ISO installable.</a>
+<li><a href="#15">Option2: Réduire la taille finale de l'ISO.</a>
+</ul>
+</div>
+<a name="1"></a>    <h2>Introduction</h2>
+     <p>Si vous avez terminé la passe 2 avec succès, vous avez tous les paquets d'un système de base.</p>
+     <p>On peut maintenant finaliser notre NuTyX et l'adapter à nos besoins. Et enfin, produire une ISO installable.</p>
+     <p>Il s'agit maintenant de décider ce qu'il vous faut, en effet actuellement votre NuTyX:</p>
+      <ol>
+       <li>Ne contient pas de kernel</li>
+       <li>Ne peut pas être amorcée</li>
+       <li>Ne permet pas de formater votre disque dur dans un autre système de fichiers que ext3 ou ext4</li>
+       <li>Ne permet pas la gestion de partitions logiques</li>
+       <li>Ne permet pas de se connecter à un serveur dhcp et donc d'obtenir une adresse IP de façon dynamique</li>
+       <li>Ne contient aucun editeur de texte</li>
+      </ol>
+     <p>D'autre part votre NuTyX contient certains services dont vous n'avez peut-être pas l'utilitée</p>
+<a name="2"></a>    <h2>Marche à suivre</h2>
+     <p>Vous l'avez peut-être déjà compris, cette post-construction n'est plus un simple copié-collé.</p>
+     <p>C'est maintenant à vous de savoir ce que vous souhaitez utiliser comme moyen d'amorçage, kernel, système de fichiers, volumes logiques et adresse IP statique ou dynamique</p>
+     <p>Pour mener à bien notre petite expédition, il faudra configurer un minimum le gestionnaire de paquets 'cards' et rapatrier tous les ports contenant les recette de fabrication des paquets NuTyX disponibles.</p>
+  <ol>
+   <li>On commence par sortir de la NuTyX</li>
+<pre class="command"><kbd>exit</kbd></pre>
+   <p>On revérifie la variable LFS</p>
+<pre class="command"><kbd>echo $LFS</kbd></pre>
+   <p>Elle doit retourner quelque chose:</p>
+<pre class="output">/mnt/lfs </pre>
+   <li>On peut maintenant réentrer dans la nouvelle NuTyX pour finaliser les travaux</li>
+<pre class="command"><kbd>chroot $LFS /usr/bin/env -i HOME=/root TERM="$TERM" PS1='\u: \w\$' \
+/bin/bash --login</kbd></pre>
+Aucune erreur ne doit apparaître:
+<pre class="output">root [ / ]# </pre>
+   <li>On commence par adapter le fichier cards.conf. Adaptez si necessaire la langue.</li>
+   <pre class="command"><kbd>cat &gt; /etc/cards.conf &lt;&lt; "EOF"
+dir /usr/ports/gui-extra
+dir /usr/ports/gui
+dir /usr/ports/cli-extra
+dir /usr/ports/cli
+dir /usr/ports/base
+locale fr
+base /usr/ports/base
+EOF</kbd></pre>
+    <li>On peut maintenant rapatrier tous les ports disponibles sous NuTyX et compiler les ports de notre choix (pour autant qu'ils soient configurés dans le fichier 'cards.conf' ci-dessus</li>
+    <pre class="command"><kbd>ports -u</kbd></pre>
+    <pre class="output">...</pre>
+    <p>Nous sommes maintenant prêt pour la finalisation de notre NuTyX.</p>
+   </ol>
+<a name="3"></a> <h2>Compilation du kernel et des ports optionnels.</h2>
+  <ol>
+   <li>
+<a name="4"></a>    <h3>Mise en place d'un kernel de votre choix</h3>
+   </li>
+    <p>Le seul paquet devant être impérativement installé pour avoir une NuTyX fonctionnelle est donc le kernel. Vous avez le choix entre plusieurs possibilitées:</p>
+     <ol>
+      <li>
+<a name="5"></a>       <h4>Compilation d'un des kernels disponible en ports</h4>
+      </li>
+         <p>Ce choix sera indispensable si vous décidez de produire une ISO installable, c'est également le choix le plus simple:</p>
+         <pre class="command"><kbd>cd /usr/ports/base/kernel-lts
+pkgmk -d -i</kbd></pre>
+      <li>
+<a name="6"></a>       <h4>Compilation de son propre kernel</h4>
+      </li>
+        <p>Ce choix implique que la génération d'une ISO installable sera impossible</p>
+        <p>Vous pouvez soit vous inspirez de l'article qui explique comment <a href="build-kernel.html">compiler son propre kernel</a> ou vous trouverez de nombreaux tutos sur la compilation d'un kernel sur le net</p>
+     </ol>
+    <li>
+<a name="7"></a>     <h3>Suppression des services indésirables (recommandé)</h3>
+    </li>
+     <p>Lors de la construction de votre NuTyX, les services ssh et rsync ont automatiquement été installés. Si vous n'envisagez pas de mettre en place un service rsync ni un accès à distance de votre machine. Il est vivement recommandé d'arrêter les services rsyncd et sshd. Même si vous ne savez pas ce que c'est, faites:</p>
+     <pre class="command"><kbd>cards remove openssh.service
+cards remove rsync.service</kbd></pre>
+    <li>
+<a name="8"></a>     <h3>Mise en place de grub, l'outil d'amorçage (en option)</h3>
+    </li>
+     <p>Le paquet grub est uniquement necessaire si vous dédicez de produire une ISO installable ou que vous n'avez pas encore de technique d'amorçage sur votre machine actuelle (peu probable):</p>
+     <pre class="command"><kbd>cards depcreate grub</kbd></pre> 
+     <p>Une fois terminée, vous allez pouvoir utiliser grub en ligne de commande ou via l'ISO générée</p>
+    <li>
+<a name="9"></a>     <h3>Ajout des outils de formatage (en option)</h3>
+    </li>
+     <p>Les possibilitées de formatage sont:</p>
+     <pre class="command"><kbd>cards depcreate btrfs-progs</kbd></pre>
+     <pre class="command"><kbd>cards depcreate xfsprogs</kbd></pre>
+     <pre class="command"><kbd>cards depcreate reiserfsprogs</kbd></pre>
+     <pre class="command"><kbd>cards depcreate jfsutils</kbd></pre>
+     <p>Choisissez le système de fichiers qui vous convient</p>
+    <li>
+<a name="10"></a>     <h3>Ajout des outils de gestion de partitions logiques (en option)</h3>
+    </li>
+     <p>Si vous souhaitez des partition logiques et disques en raid:</p>
+     <pre class="command"><kbd>cards depcreate mdadm</kbd></pre>
+    <li>
+<a name="11"></a>     <h3>Ajout du client dhcp pour pouvoir obtenir une adresse IP dynamiquement (en option)</h3>
+    </li>
+      <p>Si vous ne souhaitez pas utiliser une adresse IP fixe, vous devez donc un client dhcp pour obtenir une adresse IP de façon dynamique</p>
+      <pre class="command"><kbd>cards depcreate dhcpcd</kbd></pre>
+    <li>
+<a name="12"></a>     <h3>Ajout d'un éditeur de texte (en option)</h3>
+    </li>
+     <p>L'installateur utilise la commande 'vi', vous avez donc le choix entre:</p>
+     <pre class="command"><kbd>cards depcreate e3</kbd></pre><p>et</p>
+     <pre class="command"><kbd>cards depcreate vim</kbd></pre> 
+    <li>
+<a name="13"></a>     <h3>Ajout du support NFS (en option)</h3>
+    </li>
+     <p>Si vous n'utilisez pas ou ne connaissez pas <a href="https://fr.wikipedia.org/wiki/Network_File_System">NFS</a>, vous pouvez ignorer cette option:</p>
+     <pre class="command"><kbd>cards depcreate nfs-utils</kbd></pre>
+     <p>Comme pour les services sshd et rsyncd, si vous n'avez pas l'intention de mettre en place un service nfs en place, faites:
+     <pre class="command"><kbd>cards remove nfs-utils.service</kbd></pre>
+  </ol>
+<a name="14"></a> <h2>Option1: Produire une ISO installable.</h2>
+  <ol> 
+   <li>On ajoute les fichiers necessaires au fonctionnement de l'iso</li>
+   <pre class="command"><kbd>cp -av /root/development/iso /ISO</kbd></pre>
+   <pre class="output">'/root/development/iso' -&gt; '/ISO'
+'/root/development/iso/isolinux' -&gt; '/ISO/isolinux'
+'/root/development/iso/isolinux/boot.cat' -&gt; '/ISO/isolinux/boot.cat'
+'/root/development/iso/isolinux/boot.msg' -&gt; '/ISO/isolinux/boot.msg'
+'/root/development/iso/isolinux/isolinux.bin' -&gt; '/ISO/isolinux/isolinux.bin'
+'/root/development/iso/isolinux/isolinux.cfg' -&gt; '/ISO/isolinux/isolinux.cfg'</pre>
+   <pre class="command"><kbd>cp -v /boot/kernel-* /ISO/isolinux/kernel</kbd></pre>
+   <pre class="output">'/boot/kernel-3.19.0' -&gt; '/ISO/isolinux/kernel'</pre>
+   <pre class="command"><kbd>cp -v /boot/initrd-* /ISO/isolinux/initrd</kbd></pre>
+   <pre class="output">'/boot/initrd-3.19.0' -&gt; '/ISO/isolinux/initrd'</pre>
+   <div class="note"><img alt="[Note]" src="../graphics/note.gif" />Consultez les options en bas de la page avant d'aller plus loin si vous souhaiter ajouter des paquets et donc personnaliser votre ISO ou si vous souhaitez réduire la taille de celle-ci en supprimant les archives des binaires ainsi que les logs de construction.</div>
+   <li>On produit maintenant les fichiers squashfs qui seront utilisés par l'iso et effacer les fichiers squash existant si necessaire puisque la commande mksquashfs ne peut pas les écraser.</li>
+<pre class="command"><kbd>mkdir -p /ISO/isolinux/boot/
+cd /
+for dir in opt bin etc lib root run sbin usr var home
+do
+  [ -f ISO/isolinux/boot/$dir.squashfs ] && rm ISO/isolinux/boot/$dir.squashfs
+  mksquashfs $dir ISO/isolinux/boot/$dir.squashfs
+done</kbd></pre>
+   <li>On peut maintenant sortir de la NuTyX pour produire l'iso.</li>
+   <pre class="command"><kbd>exit</kbd></pre>
+   <li>On peut enfin générer notre ISO dont la version est à la date du jour.</li>
+   <div class="important"><img alt="[Important]" src="../graphics/caution.gif" /><img alt="[Important]" src="../graphics/caution.gif" /><img alt="[Important]" src="../graphics/caution.gif" />Avant de lancer la prochaine commande, assurez-vous que vous avez bien la variable <b>LFS</b> configurée et que les commandes <b>mkisofs</b> et <b>isohybrid</b> sont à disposition sur votre linux principale. Elles sont respectivement dans les paquets <b>cdrkit</b> et <b>syslinux</b>.</div>
+    <pre class="command"><kbd>sh $LFS/root/development/scripts/mkiso</kbd></pre>
+    <pre class="output">Warning: creating filesystem that does not conform to ISO-9660.
+I: -input-charset not specified, using utf-8 (detected in locale settings)
+Size of boot image is 4 sectors -&gt; No emulation
+  3.82% done, estimate finish Fri Jan  9 21:46:48 2015
+  7.63% done, estimate finish Fri Jan  9 21:46:48 2015
+ 11.44% done, estimate finish Fri Jan  9 21:46:48 2015
+ 15.25% done, estimate finish Fri Jan  9 21:46:48 2015
+ 19.06% done, estimate finish Fri Jan  9 21:46:48 2015
+ 22.88% done, estimate finish Fri Jan  9 21:46:48 2015
+ 26.68% done, estimate finish Fri Jan  9 21:46:48 2015
+ 30.50% done, estimate finish Fri Jan  9 21:46:48 2015
+ 34.31% done, estimate finish Fri Jan  9 21:46:48 2015
+ 38.12% done, estimate finish Fri Jan  9 21:46:48 2015
+ 41.94% done, estimate finish Fri Jan  9 21:46:48 2015
+ 45.74% done, estimate finish Fri Jan  9 21:46:48 2015
+ 49.56% done, estimate finish Fri Jan  9 21:46:48 2015
+ 53.37% done, estimate finish Fri Jan  9 21:46:48 2015
+ 57.19% done, estimate finish Fri Jan  9 21:46:48 2015
+ 60.99% done, estimate finish Fri Jan  9 21:46:48 2015
+ 64.81% done, estimate finish Fri Jan  9 21:46:48 2015
+ 68.62% done, estimate finish Fri Jan  9 21:46:48 2015
+ 72.43% done, estimate finish Fri Jan  9 21:46:48 2015
+ 76.24% done, estimate finish Fri Jan  9 21:46:48 2015
+ 80.06% done, estimate finish Fri Jan  9 21:46:48 2015
+ 83.86% done, estimate finish Fri Jan  9 21:46:48 2015
+ 87.68% done, estimate finish Fri Jan  9 21:46:48 2015
+ 91.49% done, estimate finish Fri Jan  9 21:46:48 2015
+ 95.31% done, estimate finish Fri Jan  9 21:46:48 2015
+ 99.11% done, estimate finish Fri Jan  9 21:46:48 2015
+Total translation table size: 2048
+Total rockridge attributes bytes: 1751
+Total directory bytes: 4096
+Path table size(bytes): 38
+Max brk space used 28000
+165140 extents written (322 MB)</pre>
+   <p>Vous avez désormais une ISO qui se trouve dans le dossier $LFS</p>
+   <pre class="command"><kbd>ls $LFS/</kbd></pre>
+   <pre class="output">base   bin   etc   lib    NuTyX_x86_64-20161001.iso   root  sources  usr
+boot  home  lib64  NuTyX_x86_64-20161001.md5sum  run   srv      tmp     var
+dev   ISO   mnt    proc                                   sbin  sys      tools</pre>
+   <li>Il ne vous reste plus qu'à la transférer sur une clé usb et la tester</li>
+   <pre class="command"><kbd>dd if=$LFS/NuTyX_x86_64-20161001.iso of=/dev/sdb</kbd></pre>
+   <pre class="output">526336+0 enregistrements lus
+526336+0 enregistrements écrits
+269484032 octets (269 MB) copiés, 67.3208 s, 4.0 MB/s</pre>
+   </ol>
+    <p>Félicitations, vous avez maintenant entre les mains une ISO NuTyX de base prête à être installée sur toutes vos machines.</p>
+<a name="15"></a> <h2>Option2: Réduire la taille finale de l'ISO.</h2>
+    <ol>
+    <li>Si vous souhaitez réduire la taille finale de l'ISO, vous pouvez supprimer les binaires du git et les logs produits, ils ne serviront plus. Si vous souhaitez conserver les binaires, lancez la commande ci-dessus.</li>
+<pre class="command"><kbd>rsync -a /root/development/base/ /base/</kbd></pre>
+     <p>Aucune erreur ne doit apparaître</p>
+     <p>On peut maintenant effacer les binaires du git</p>
+     <pre class="command"><kbd>find /root/ -name "*.cards.*" -exec rm -v {} \;</kbd></pre>
+     <p>Aucune erreur ne doit apparaître</p>
+     <p>On efface les logs.</p>
+     <pre class="command"><kbd>mv /root/logs /logs</kbd></pre>
+     <p>Si besoin est, les binaires et les logs se trouvent donc à la racine de la NuTyX</p>
+    <li>Le kernel compilé est très gros en taille. Si vous souhaitez réduire la taille de votre iso, vous pouvez supprimez la doc et les sources du kernel:</li>
+     <pre class="command"><kbd>pkgrm kernel.doc
+pkgrm kernel.devel</kbd></pre>
+   </ol>
+<hr>
+    <footer >
+     <p id="foot"> Powered by cards 2.2.2.2     &copy; 2007 - 2017 <a href=".html">NuTyX</a>.<br><br>
+Hosted by <a href="http://tuxfamily.org/"><img src="../graphics/logo_tuxfamily_50.png"/></a><br><br>
+     <a href="http://www.wtfpl.net/">
+     <img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
+     width="80" height="15" alt="WTFPL" /></a> 
+     <a href="http://www.anybrowser.org/campaign/">
+       <img src="../graphics/abblue.gif" width="80" height="15"
+       alt="anybrowser"></a>
+    </footer>
+   </tr>
+  </table>
+ </body>
+
+<!-- Mirrored from www.nutyx.org/fr/build-post by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 10:32:55 GMT -->
+</html>

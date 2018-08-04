@@ -1,0 +1,341 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+   
+<!-- Mirrored from www.nutyx.org/en/build-pass-1 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 10:31:18 GMT -->
+<HEAD>
+      <TITLE>NuTyX GNU/Linux</TITLE>
+      <META charset="utf-8" />
+      <LINK rel="shortcut icon" href="../favicon.html">
+ <style type="text/css">
+ body{
+   text-align: left;
+   color: #444;
+   background: #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF3d3d////riJKgAAAAAJ0Uk5T/wDltzBKAAAAFUlEQVR42mJgBAEGGMmAxAYCgAADAAGGABmnk/7aAAAAAElFTkSuQmCC); 
+   font: 14px;
+}
+header {
+   float: left;
+   padding-top: 6px;
+   padding-left: 2%;
+   margin-right: 2%;
+   background-color: #606060;
+}
+nav { padding-top: 1px; }
+/* horizontally center ul element */
+nav ul { text-align:center; }
+nav li {
+    /* make list elements fall inline as block elements */
+    position: relative;
+    display: inline-block;
+    /* next two lines only for display purposes */
+    text-align: center;
+    border:1px solid black;
+}
+nav li a {
+    font-size:12px;
+    text-decoration: none;
+    float:left;
+    padding:10px;
+    background-color: #333333;
+    color:#ffffff;
+    border-bottom:1px;
+    border-bottom-color:#000000;
+    border-bottom-style:solid;
+}
+nav li a:hover {
+    background-color:#9B1C26;
+    border-bottom-color:#000000;
+    border-bottom-style:solid;
+}
+img { border: 0; }
+nav.img { border: 0; }
+h1 { text-decoration: underline; }
+
+p1 {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    color:#585858;
+    font-size:1em;
+}
+pre {
+   padding: 0.5em 1em;
+   margin: 1em 0em 1em 2em;
+   font-weight:bold;
+   color: black;
+   font-family: monospace;
+   background-color: #D0D0D0;
+}
+td { padding: 0.5em 0.5em 0.5em 0.5em; }
+tr.header { color: white; background-color: #606060; }
+tr.odd { background-color: #D0D0D0; }
+.sidebar { background-color: #E0E0E0; }
+pre.command { border-left: 0.2em solid #C70000; }
+pre.command_user { border-left: 0.2em solid #00C700; }
+pre.output { font-weight:normal; }
+div.important {
+   margin: 1em 2em 1em 2em;
+   font-size: 1.2em;
+   color:#883333;
+   padding: 0.5em 0.5em 0.5em 0.5em;
+   border: 2px solid #866;
+}
+div.note {
+   margin: 1em 2em 1em 0em;
+   font-size: 1em;
+   color:#333388;
+   border: 2px solid #dbddec;
+   padding: 0.5em 0.5em 0.5em 0.5em;
+}
+div.toc {
+   margin: 0em 0em 0em 0em;
+   font-size: 0.9em;
+   border: 1px solid #999999;
+   padding: 0em 2em 0em 1em;
+   width: -moz-max-content;
+   background-color: #e9e9ef;
+}
+div.important img { padding: 0.4em; }
+div.note img { padding: 0em 0.4em; }
+div.pied_page { text-align: center; }
+a { color: #F64825; }
+#foot {
+    text-align: center;
+    text-decoration-color: #000000;
+    font-size: 10px;
+}
+/* Last edited info */
+p.updated {
+    text-align: left;
+    font-size: small;
+    font-weight: bold;
+    font-style: italic;
+}
+a:link {
+    color: #703030;
+    text-decoration: none;
+}
+a:visited {
+    color: #0b0080;
+}
+a:hover {
+    color: #403030;
+    text-decoration: underline;
+}
+table {
+    width: 100%;
+}
+td.menu {
+    font: courrier;
+    background-color: #959595;
+    text-decoration: none;
+    vertical-align:middle;
+    text-align:center;
+    height:60px;
+}
+td.menu:hover {
+    text-decoration: none;
+    background-color: #AAAAAA;
+    text-transform: uppercase;
+}
+td.menu a:link {
+    font-weight:bold;
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+td.menu a:visited {
+    font-weight:bold;
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+td.menu a:hover {
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+ @media print { header, footer {display:none } }
+ </style>
+</head>
+<body>
+    <table>
+     <tr>
+      <td>
+       <a href=".html"><img id="logo" src="../graphics/logo_nutyx_120.png" alt="logo nutyx" /></a>
+      </td>
+      <td>
+       <table>
+        <tr>
+            <td class="menu"><br><a href="news.html">News</a><br><br>
+            <td class="menu"><br><a href="information.html">Information</a><br><br>
+            <td class="menu"><br><a href="documentation.html">Documentation</a><br><br>
+            <td class="menu"><br><a href="installation.html">Installation</a><br><br>
+            <td class="menu"><br><a href="packages.html">Packages</a><br><br>
+            <td class="menu"><br><a href="faq.html">FAQ</a><br><br>
+        </tr>
+        <tr>
+            <td class="menu"><br><a href="http://downloads.nutyx.org/?C=M;O=D">Downloads</a><br><br>
+            <td class="menu"><br><a href="http://forums.nutyx.org/index.php?action=recent">Forum</a><br><br>
+            <td class="menu"><br><a href="http://github.com/NuTyX">Code</a><br><br>
+            <td class="menu"><br><a href="screenshots.html">Screenshots</a><br><br>
+            <td class="menu"><br><a href="wallpapers.html">Wallpapers</a><br><br>
+            <td class="menu"><br><a href="../fr/index.html" title="Acceuil"> <img src="../graphics/fr.gif" alt="Accueil" height="12" width="35"></a><br><br>
+        </tr>
+       </table>
+      </td>
+     </tr>
+    </table>
+   <hr>
+<table border="0" cellpadding="15" cellspacing="10" width="100%">
+ <tr valign="top">
+  <td class="sidebar" width="20%">
+   <h4>Forum</h4>
+    <div>
+<p class="updated">Sun Jun 25 16:07:12 2017 UTC</p><div style="text-transform: uppercase;">General:</div><b>News</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=197.msg614#msg614">New ISO  with LIVE mode available</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Mon Jun 12 19:48:17 2017 UTC</p><div style="text-transform: uppercase;">INSTALL:</div><b>From GIT</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=196.msg613#msg613">Re: Error in 2nd pass of &quot;build your own&quot;</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Sun May 28 22:40:06 2017 UTC</p><div style="text-transform: uppercase;">INSTALL:</div><b>From GIT</b><br><i>myrddin</i><br><img src="../graphics/thumbup.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=196.msg612#msg612">Re: Error in 2nd pass of &quot;build your own&quot;</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Sun May 28 17:59:21 2017 UTC</p><div style="text-transform: uppercase;">INSTALL:</div><b>From GIT</b><br><i>tnut</i><br><img src="../graphics/lamp.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=196.msg611#msg611">Re: Error in 2nd pass of &quot;build your own&quot;</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri May 26 07:30:33 2017 UTC</p><div style="text-transform: uppercase;">INSTALL:</div><b>From GIT</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=196.msg610#msg610">Re: Error in 2nd pass of &quot;build your own&quot;</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri May 26 03:01:17 2017 UTC</p><div style="text-transform: uppercase;">INSTALL:</div><b>From GIT</b><br><i>myrddin</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=196.msg609#msg609">Error in 2nd pass of &quot;build your own&quot;</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Sun May 21 19:31:21 2017 UTC</p><div style="text-transform: uppercase;">Off-Topic:</div><b>Let's talk about you</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=195.msg608#msg608">Re: New nuty user </a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Sun May 21 16:52:07 2017 UTC</p><div style="text-transform: uppercase;">Off-Topic:</div><b>Let's talk about you</b><br><i>john</i><br><img src="../graphics/smiley.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=195.msg607#msg607">New nuty user </a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Thu May 18 12:19:48 2017 UTC</p><div style="text-transform: uppercase;">General:</div><b>Cards: The Package Manager</b><br><i>tnut</i><br><img src="../graphics/wink.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=194.msg606#msg606">Re: where are CLI commands such as lspci</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Thu May 18 11:48:07 2017 UTC</p><div style="text-transform: uppercase;">General:</div><b>Cards: The Package Manager</b><br><i>myrddin</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=194.msg605#msg605">Re: where are CLI commands such as lspci</a><br><br>
+    </div>
+<hr>  <td valign="top" align="left" width="100%">
+   <div>
+  <form method="get" action="https://www.nutyx.org/en/.">
+     <fieldset>
+          <label for="search-field">Search ...</label>
+          <input id="search-field" type="text" name="search" size="18" maxlength="200" />
+     </fieldset>
+  </form>
+   </div>
+    <p class="updated"> Fri Mar 10 14:43:42 2017 UTC</p>
+    <h1>Building of the CHROOT (pass 1)</h1>
+    <p>
+     In this first pass we will build up a chroot environnement which will be used to build a NuTyX in a second pass.
+     If you choose to use a separate artition, it should be mounted now. When done we can go on.
+    <p>
+     We start by creating folders, links and the right user account for the building of the first pass.
+    <p>
+     The first part of preparation is done via the root account and the second directly in the unpriviledge account LFS.
+    <p>
+     The building time of the first pass can varie between 1 hour( with an 8 cores processor) and probably 1 night(with a single core 32 bits).
+    <p>
+     It's a summary of what has to be done before starting the various scripts which will do all the job automatically.
+    <p>
+     Note that in this article, we use only a folder and not a partition.
+     It's possible to build the CHROOT in a folder.
+<div class="toc">
+ <h2>
+Contents
+</h2>
+  <ul style="list-style-type: none; padding: 0;">
+<li><a href="#1">Administrator part:</a>
+<li><a href="#2">LFS part:</a>
+</ul>
+</div>
+<a name="1"></a>    <h2>Administrator part:</h2>
+    <p>
+     <ol>
+     <li>Creation of the LFS configuration variable:</li>
+<pre class="command"><kbd>export LFS=/mnt/lfs</kbd></pre>
+     <li>Creation of folders:</li>
+<pre class="command"><kbd> mkdir -vp $LFS/{sources,tools}</kbd></pre>
+     <li>Add the needed links:</li>
+<pre class="command"><kbd>ln -svf $LFS/tools /
+ln -svf $LFS/sources /</kbd></pre>
+     <li>Creation of the lfs user:</li>
+<pre class="command"><kbd>groupadd lfs
+useradd -s /bin/bash -g lfs -m -k /dev/null lfs
+passwd lfs</kbd></pre>
+     Enter the password of your choice, it's not absolutly necessaryy if you enter this accound from root.
+     <li>Owner and mode changing of the folders:</li>
+<pre class="command"><kbd>chown -v lfs $LFS/{tools,sources}
+chmod -v a+wt $LFS/sources
+chown -v lfs $LFS</kbd></pre>
+     <li>Adjust the working environnement: the /home/lfs/.bash_profile file:</li>
+      <pre class="command"><kbd>cat &gt; /home/lfs/.bash_profile &lt;&lt; "EOF"
+exec env -i HOME=$HOME TERM=$TERM PS1='\u:\w\$ ' /bin/bash
+EOF</kbd></pre>
+      and the  /home/lfs/.bashrc file
+     <pre class="command"><kbd>echo "set +h
+umask 022
+LFS=$LFS
+LC_ALL=POSIX
+LFS_TARGET=$(uname -m)-lfs-linux-gnu
+PATH=/home/lfs/bin:/tools/bin:/bin:/usr/bin
+export LFS LC_ALL LFS_TARGET PATH" &gt; /home/lfs/.bashrc</kbd></pre>
+
+     </ol>
+     Time to go on with the LFS unprivildge user part: 
+<pre class="command"><kbd>su - lfs</kbd></pre>
+
+<a name="2"></a>     <h2>LFS part:</h2>
+     <p>
+      From now on, you should type all the commands as lfs user.
+     <p>
+      we get the latest version of the source code from git:
+<pre class="command_user"><kbd>git clone git://github.com/NuTyX/core.git development</kbd></pre>
+     <p>
+      Ones this is done, a new folder is created: <b>development</b>.
+      We enter in it and launch the first script:
+<pre class="command_user"><kbd>cd development
+scripts/runmebeforepass1</kbd></pre>
+     <p>
+      The script will check a serie of verification and NO error should occur.
+      The downloading of the sources will start automatically.
+      When it's finish you just have to follow instructions.
+   
+     <p>
+      If everything went well, you should read the following messages:
+     <pre class="output">=====&gt; Successfull configured</pre>
+      If your read this, congratulations you are ready to launch the first pass for the construction of your future NuTyX, do:    
+      <pre class="command_user"><kbd>cd chroot
+pass</kbd></pre>
+
+     <p>
+      Let's the show begin ...
+
+<pre class="output">+ mkdir -pv /mnt/lfs/var/lib/pkg/DB
+mkdir: created directory '/mnt/lfs/var'
+mkdir: created directory '/mnt/lfs/var/lib'
+mkdir: created directory '/mnt/lfs/var/lib/pkg'
+mkdir: created directory '/mnt/lfs/var/lib/pkg/DB'
+=======&gt; Building '/home/lfs/development/chroot/cards/Pkgfile' succeeded.
+/home/lfs/development/chroot</pre>
+    <p>
+     Note that you can follow the evolution of the construction and then check that everything goes well by consulting the folder /home/lfs/logs/chroot/ .
+     For each build package is a log corresponding.
+  <div class="pied_page">
+   <a class="url" href="build-pass-2.html">We will see in a next article how to enter the chroot and to build a NuTyX from scratch by using a second time the same script.</a>
+  </div>
+<hr>
+    <footer >
+     <p id="foot"> Powered by cards 2.2.2.2     &copy; 2007 - 2017 <a href=".html">NuTyX</a>.<br><br>
+Hosted by <a href="http://tuxfamily.org/"><img src="../graphics/logo_tuxfamily_50.png"/></a><br><br>
+     <a href="http://www.wtfpl.net/">
+     <img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
+     width="80" height="15" alt="WTFPL" /></a> 
+     <a href="http://www.anybrowser.org/campaign/">
+       <img src="../graphics/abblue.gif" width="80" height="15"
+       alt="anybrowser"></a>
+    </footer>
+   </tr>
+  </table>
+ </body>
+
+<!-- Mirrored from www.nutyx.org/en/build-pass-1 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 10:31:18 GMT -->
+</html>

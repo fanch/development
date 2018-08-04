@@ -1,0 +1,370 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+   
+<!-- Mirrored from www.nutyx.org/fr/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 10:30:18 GMT -->
+<HEAD>
+      <TITLE>NuTyX GNU/Linux</TITLE>
+      <META charset="utf-8" />
+      <LINK rel="shortcut icon" href="../favicon.html">
+ <style type="text/css">
+ body{
+   text-align: left;
+   color: #444;
+   background: #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF3d3d////riJKgAAAAAJ0Uk5T/wDltzBKAAAAFUlEQVR42mJgBAEGGMmAxAYCgAADAAGGABmnk/7aAAAAAElFTkSuQmCC); 
+   font: 14px;
+}
+header {
+   float: left;
+   padding-top: 6px;
+   padding-left: 2%;
+   margin-right: 2%;
+   background-color: #606060;
+}
+nav { padding-top: 1px; }
+/* horizontally center ul element */
+nav ul { text-align:center; }
+nav li {
+    /* make list elements fall inline as block elements */
+    position: relative;
+    display: inline-block;
+    /* next two lines only for display purposes */
+    text-align: center;
+    border:1px solid black;
+}
+nav li a {
+    font-size:12px;
+    text-decoration: none;
+    float:left;
+    padding:10px;
+    background-color: #333333;
+    color:#ffffff;
+    border-bottom:1px;
+    border-bottom-color:#000000;
+    border-bottom-style:solid;
+}
+nav li a:hover {
+    background-color:#9B1C26;
+    border-bottom-color:#000000;
+    border-bottom-style:solid;
+}
+img { border: 0; }
+nav.img { border: 0; }
+h1 { text-decoration: underline; }
+
+p1 {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    color:#585858;
+    font-size:1em;
+}
+pre {
+   padding: 0.5em 1em;
+   margin: 1em 0em 1em 2em;
+   font-weight:bold;
+   color: black;
+   font-family: monospace;
+   background-color: #D0D0D0;
+}
+td { padding: 0.5em 0.5em 0.5em 0.5em; }
+tr.header { color: white; background-color: #606060; }
+tr.odd { background-color: #D0D0D0; }
+.sidebar { background-color: #E0E0E0; }
+pre.command { border-left: 0.2em solid #C70000; }
+pre.command_user { border-left: 0.2em solid #00C700; }
+pre.output { font-weight:normal; }
+div.important {
+   margin: 1em 2em 1em 2em;
+   font-size: 1.2em;
+   color:#883333;
+   padding: 0.5em 0.5em 0.5em 0.5em;
+   border: 2px solid #866;
+}
+div.note {
+   margin: 1em 2em 1em 0em;
+   font-size: 1em;
+   color:#333388;
+   border: 2px solid #dbddec;
+   padding: 0.5em 0.5em 0.5em 0.5em;
+}
+div.toc {
+   margin: 0em 0em 0em 0em;
+   font-size: 0.9em;
+   border: 1px solid #999999;
+   padding: 0em 2em 0em 1em;
+   width: -moz-max-content;
+   background-color: #e9e9ef;
+}
+div.important img { padding: 0.4em; }
+div.note img { padding: 0em 0.4em; }
+div.pied_page { text-align: center; }
+a { color: #F64825; }
+#foot {
+    text-align: center;
+    text-decoration-color: #000000;
+    font-size: 10px;
+}
+/* Last edited info */
+p.updated {
+    text-align: left;
+    font-size: small;
+    font-weight: bold;
+    font-style: italic;
+}
+a:link {
+    color: #703030;
+    text-decoration: none;
+}
+a:visited {
+    color: #0b0080;
+}
+a:hover {
+    color: #403030;
+    text-decoration: underline;
+}
+table {
+    width: 100%;
+}
+td.menu {
+    font: courrier;
+    background-color: #959595;
+    text-decoration: none;
+    vertical-align:middle;
+    text-align:center;
+    height:60px;
+}
+td.menu:hover {
+    text-decoration: none;
+    background-color: #AAAAAA;
+    text-transform: uppercase;
+}
+td.menu a:link {
+    font-weight:bold;
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+td.menu a:visited {
+    font-weight:bold;
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+td.menu a:hover {
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+ @media print { header, footer {display:none } }
+ </style>
+</head>
+<body>
+    <table>
+     <tr>
+      <td>
+       <a href=".html"><img id="logo" src="../graphics/logo_nutyx_120.png" alt="logo nutyx" /></a>
+      </td>
+      <td>
+       <table class="sidebar" >
+        <tr>
+            <td class="menu"><br><a href="news.html">Nouvelles</a><br><br>
+            <td class="menu"><br><a href="information.html">Information</a><br><br>
+            <td class="menu"><br><a href="documentation.html">Documentation</a><br><br>
+            <td class="menu"><br><a href="installation.html">Installation</a><br><br>
+            <td class="menu"><br><a href="packages.html">Paquets</a><br><br>
+            <td class="menu"><br><a href="faq.html">FAQ</a><br><br>
+        </tr>
+        <tr>
+            <td class="menu"><br><a href="http://downloads.nutyx.org/?C=M;O=D">Téléchargements</a><br><br>
+            <td class="menu"><br><a href="http://forum.nutyx.org/index.php?action=recent">Forum</a><br><br>
+            <td class="menu"><br><a href="http://github.com/NuTyX">Code</a><br><br>
+            <td class="menu"><br><a href="screenshots.html">Captures d'écrans</a><br><br>
+            <td class="menu"><br><a href="wallpapers.html">Fonds d'écrans</a><br><br>
+            <td class="menu"><br><a href="../en/index.html" title="Home"> <img src="../graphics/gb.gif" alt="Home" height="12" width="35"></a><br><br>
+        </tr>
+       </table>
+      </td>
+     </tr>
+    </table>
+   <hr>
+<table border="0" cellpadding="15" cellspacing="10" width="100%">
+ <tr valign="top">
+  <td class="sidebar" width="20%">
+   <h4>Forum</h4>
+    <div>
+<p class="updated">Sat Jul  1 17:50:49 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=366.msg1880#msg1880">Re : Recette uClibc-ng (gelée)</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 21:42:58 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=378.msg1879#msg1879">Recette musl-libc</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 20:51:32 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=366.msg1878#msg1878">Re : Recette uClibc-ng (gelée)</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 20:44:04 2017 UTC</p><div style="text-transform: uppercase;">Généralitées:</div><b>News</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=376.msg1877#msg1877">Re : Nouvelle iso avec mode LIVE disponible</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Thu Jun 29 06:03:45 2017 UTC</p><div style="text-transform: uppercase;">CONFIGURER:</div><b>Le son</b><br><i>tnut</i><br><img src="../graphics/lamp.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=377.msg1876#msg1876">Re : Pas de son, groupe audio absent</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Wed Jun 28 14:51:32 2017 UTC</p><div style="text-transform: uppercase;">CONFIGURER:</div><b>Le son</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=377.msg1875#msg1875">Pas de son, groupe audio absent</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Tue Jun 27 14:01:19 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1874#msg1874">Re : Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Tue Jun 27 10:57:23 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1873#msg1873">Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Mon Jun 26 21:04:29 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1872#msg1872">Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Mon Jun 26 08:08:47 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>SipoMatadorduCosmos</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1871#msg1871">Re : Problème de dépendance</a><br><br>
+    </div>
+<hr>  <td valign="top" align="left" width="100%">
+   <div>
+  <form method="get" action="https://www.nutyx.org/fr/.">
+     <fieldset>
+          <label for="search-field">Recherche ...</label>
+          <input id="search-field" type="text" name="search" size="18" maxlength="200" />
+     </fieldset>
+  </form>
+   </div>
+    <p class="updated"> Mon May 29 14:31:38 2017 UTC</p>
+  <div style="float:right;clear=right;">
+    <img src=http://downloads.nutyx.org/ScreenShots/1406572766.png   width="400" height="270" >
+  </div>
+
+  <h1>Bienvenue</h1>
+   <p>
+    NuTyX est une distribution GNU/Linux complète très flexible grâce au concept des <a href="dictionary.html#ID010">collections</a>. 
+    Vous trouverez un jeu identique de <a href="packages.html">paquets</a> en 32 bits et en 64 bits.
+   <p>
+    Elle se base sur la documentation du site <a href="http://www.linuxfromscratch.org/">LFS</a>
+    et <a href="http://www.linuxfromscratch.org/blfs/">BLFS</a>.
+   <p>
+    Il est bon de posséder quelques connaissances sur le système GNU/Linux.
+   <p>
+    C'est un excellent système d'exploitation pour les personnes qui souhaitent maitriser leur machine
+    et développer leur connaîssances sur les fonctionnements d'une distribution GNU/Linux.
+   <p>
+    NuTyX propose les interfaces graphiques 
+   <a href="http://www.gnome.org/">GNOME</a>, 
+   <a href="http://www.mate-desktop.com/">MATE</a>, 
+   <a href="http://www.lxde.org/">LXDE</a>, 
+   <a href="http://www.kde.org/">KDE5</a> 
+   et <a href="http://www.xfce.org/">XFCE</a> en binaires.
+   <p>
+    Une <a href="documentation.html">documentation</a> très détaillée est disponible en ligne.
+   <p>
+    NuTyX dispose de son propre gestionnaire 
+   de <a href="dictionary.html#ID005">paquets</a> 
+   <a href="dictionary.html#ID000">CARDS</a></p>
+   <p>
+    Vous pouvez <a href="faq.html#4">choisir</a> d'utiliser le système de <a href="dictionary.html#ID070">ports</a>,
+    compiler et installer vos <a href="dictionary.html#ID005">paquets</a> depuis leurs sources,
+    ils seront intégrés nativement au système, leur gestion sera transparente.
+ 
+    <div style="font-size:150%"><b>Les 10 atouts de NuTyX</b></div>     
+ 
+    <ol>
+     <li>
+      Sa capacité d'être installée depuis quasi n'importe quelle autre distribution 
+      grâce à l'utilisation d'un <a href="http://downloads.nutyx.org/install-nutyx">script bash</a> 
+      qui peut être téléchargé, vérifié et lancé depuis la distribution hôte. 
+      Le script fait un check des outils necessaires, lance le téléchargement d'un jeu minimum de paquets et finalement les installer à l'endroit que vous avez spécifié.
+      Tous les détails et explications se trouvent <a href="install-offline.html">ici</a>
+     <br>
+     <br>
+     <li>
+      La hiérarchie des <a href="dictionary.html#ID010">collections</a> de <a href="dictionary.html#ID070">ports</a> permet une flexibilitée maximale dans la gestion de ceux-ci.
+      Chaque <a href="dictionary.html#ID010">collection</a> est constituée d'une dite indispensable et d'une extra.<br/>
+      Les quelques commandes ci-dessous donnent une petite idée de la flexibilitée des <a href="dictionary.html#ID010">collections</a>. 
+      Imaginez que vous ayez installé un bureau kde5 avec les applications classiques: libreoffice, firefox, etc etc.
+      Vous souhaitez remplacer l'environnement graphique <a href="http://www.kde.org/">kde5</a> 
+      par l'environnement graphique <a href="http://www.gnome.org/">gnome</a> sans devoir tout réinstaller et sans perdre vos applications classiques:
+      <pre class="command"><kbd>init 3</kbd></pre>
+      Vous vous loguez en console non graphique avec votre compte ou celui de root et tapez:
+      <pre class="command"><kbd>del kde5 kde5-extra
+get gnome gnome-extra
+init 5</kbd></pre>
+      et vous êtes sur gnome, toutes vos autres applications sont là et fonctionnelles et vous n'avez même pas rebooté.
+     <br>
+     <br>
+     <li>
+      La syntaxe d'une <a href="dictionary.html#ID060">recette</a> d'un <a href="dictionary.html#ID005">paquet</a> est probablement la plus simple que l'on puisse trouver.
+      Elle peux s'écrire dans la plupart des cas en moins de 10 lignes. 
+      Les <a href="dictionary.html#ID006">dépendances</a> (si on le souhaite) peuvent également être gérées.
+      Les <a href="dictionary.html#ID005">paquets</a> personnels créés localement peuvent également être gérés par
+      le gestionnaire de <a href="dictionary.html#ID005">paquets</a> <a href="dictionary.html#ID000">cards</a>.
+     <br>
+     <br>
+     <li>
+      Une fois installée dans un dossier, il est très facile de produire une ISO de sa NuTyX.
+      L'ISO peut être ensuite réinstallée à volonté sur d'autres machines.
+     <br>
+     <br>
+     <li>
+      Un <a href="dictionary.html#ID005">paquet</a> est constitué de plusieurs "parties" un <a href="dictionary.html#ID005">paquet</a> "dit de base" indispensable 
+      au fonctionnement du système d'exploitation et ses sous-<a href="dictionary.html#ID005">paquets</a> (optionnels). 
+      Comme exemple de sous-<a href="dictionary.html#ID005">paquets</a> 
+      on trouve les locales, la documentation, les fichiers nécessaires au développement.
+     <br>
+     <br>
+     <li>
+      La création d'une partition ou disque séparé pour la séparation des 
+      données personnelles et du système est superflue en effet, l'installateur 
+      est capable de (ré)installer NuTyX sans avoir à formater.
+     <br>
+     <br>
+     <li>
+      L'installateur ne FORMATTERA JAMAIS de son propre gré une partition cible pour l'installation de NuTyX.
+      Cela signifie que NuTyX peut être installée sur une partition contenant (par exemple) ses données personnelles, 
+      des dossiers divers (pour autant que ces dossiers ne fassent pas partie des dossiers systèmes
+     <br>
+     <br>
+     <li>
+      Une simple commande permet de revenir sur <a href="dictionary.html#ID040">un système de base</a> et permet par exemple de changer complètement son environnement graphique 
+      (par ex. de KDE vers XFCE) sans devoir tout réinstaller et sans devoir tout retélécharger, les <a href="dictionary.html#ID005">paquets</a> déjà téléchargés (et à jour) seront simplement réinstallés.
+     <br>
+     <br>
+     <li>
+      Le gestionnaire de <a href="dictionary.html#ID005">paquets</a> tout à fait unique écrit spécialement pour les besoins de NuTyX.
+      Il est constitué de modules cohérents et extensibles. <b>Un de ses points fort est certainement la possibilité 
+      de trouver automatiquement les <a href="dictionary.html#ID006">dépendances</a> pour le fonctionnement d'un <a href="dictionary.html#ID005">paquet</a></b>.
+     <br>
+     <br>
+     <li>
+      Tous les <a href="dictionary.html#ID005">paquets</a> sont soigneusement compilés par <a href="dictionary.html#ID200">niveau</a> dans un <a href="build-bot.html">serveur de compilation</a> dédié.
+      Après compilation, toutes les <a href="dictionary.html#ID006">dépendances</a> de fonctionnement des <a href="dictionary.html#ID005">paquets</a> sont revérifiées pour ne pas avoir de liens cassés.
+     <br>
+     <br>
+    </ol>
+   <p>
+    L'équipe vous accueille sur 
+   <a class="url" href="http://webchat.freenode.net/?channels=nutyx">le salon de discussions #nutyx sur irc.freenode.org</a>.
+   <p>
+    Retrouvez NuTyX sur les platformes:
+    <ul>
+     <li>
+      <a class="url" href="https://fr.wikipedia.org/wiki/NuTyX">Wikipédia</a>
+     <li>
+       <a class="url" href="https://www.youtube.com/channel/UChR816uG9bS4eOQfKY-xB8g">YouTube</a>
+     <li>
+       <a class="url" href="https://plus.google.com/u/0/communities/115738264560160961893">Google+</a> 
+     <li>
+      <a class="url" href="https://twitter.com/nutyx_linux">twitter</a>
+     <li>
+       <a class="url" href="https://www.facebook.com/groups/62674847880/">facebook</a>
+    </ul>
+   <p>
+    NuTyX peut "vous ouvrir toutes les portes du libre", à vous de décider de les passer ou pas.
+<hr>
+    <footer >
+     <p id="foot"> Powered by cards 2.2.2.2     &copy; 2007 - 2017 <a href=".html">NuTyX</a>.<br><br>
+Hosted by <a href="http://tuxfamily.org/"><img src="../graphics/logo_tuxfamily_50.png"/></a><br><br>
+     <a href="http://www.wtfpl.net/">
+     <img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
+     width="80" height="15" alt="WTFPL" /></a> 
+     <a href="http://www.anybrowser.org/campaign/">
+       <img src="../graphics/abblue.gif" width="80" height="15"
+       alt="anybrowser"></a>
+    </footer>
+   </tr>
+  </table>
+ </body>
+
+<!-- Mirrored from www.nutyx.org/fr/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 10:30:32 GMT -->
+</html>

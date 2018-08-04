@@ -1,0 +1,32 @@
+# Depends on:
+
+description="library libpciaccess for access generic PCI"
+url="http://xorg.freedesktop.org"
+packager="greg <greg@nutyx.org>"
+contributors="Pierre B"
+ 
+name=xorg-libpciaccess
+_name=libpciaccess
+version=0.13.5
+release=1
+
+source=(http://ftp.x.org/pub/individual//lib/${_name}-$version.tar.bz2)
+
+build() {
+
+	cd ${_name}-$version
+
+	./configure --prefix=/usr
+
+	make
+	make DESTDIR=$PKG install
+	
+}
+uptodate() {
+local ext url name LINX
+LYNX="lynx -read_timeout=20 -dump -listonly -nonumbers "
+ext=".tar.bz2"
+url="https://ftp.x.org/archive//individual//lib"
+name="libpciaccess-"
+$LYNX $url/?C=M\;O=D|grep "$ext$"|grep "$url/$name"|sed "s@$ext\$@@"|sed "s@$url/$name@@"|head -1
+}

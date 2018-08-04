@@ -1,0 +1,404 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+   
+<!-- Mirrored from www.nutyx.org/en/faq by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 10:30:15 GMT -->
+<HEAD>
+      <TITLE>NuTyX GNU/Linux</TITLE>
+      <META charset="utf-8" />
+      <LINK rel="shortcut icon" href="../favicon.html">
+ <style type="text/css">
+ body{
+   text-align: left;
+   color: #444;
+   background: #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF3d3d////riJKgAAAAAJ0Uk5T/wDltzBKAAAAFUlEQVR42mJgBAEGGMmAxAYCgAADAAGGABmnk/7aAAAAAElFTkSuQmCC); 
+   font: 14px;
+}
+header {
+   float: left;
+   padding-top: 6px;
+   padding-left: 2%;
+   margin-right: 2%;
+   background-color: #606060;
+}
+nav { padding-top: 1px; }
+/* horizontally center ul element */
+nav ul { text-align:center; }
+nav li {
+    /* make list elements fall inline as block elements */
+    position: relative;
+    display: inline-block;
+    /* next two lines only for display purposes */
+    text-align: center;
+    border:1px solid black;
+}
+nav li a {
+    font-size:12px;
+    text-decoration: none;
+    float:left;
+    padding:10px;
+    background-color: #333333;
+    color:#ffffff;
+    border-bottom:1px;
+    border-bottom-color:#000000;
+    border-bottom-style:solid;
+}
+nav li a:hover {
+    background-color:#9B1C26;
+    border-bottom-color:#000000;
+    border-bottom-style:solid;
+}
+img { border: 0; }
+nav.img { border: 0; }
+h1 { text-decoration: underline; }
+
+p1 {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    color:#585858;
+    font-size:1em;
+}
+pre {
+   padding: 0.5em 1em;
+   margin: 1em 0em 1em 2em;
+   font-weight:bold;
+   color: black;
+   font-family: monospace;
+   background-color: #D0D0D0;
+}
+td { padding: 0.5em 0.5em 0.5em 0.5em; }
+tr.header { color: white; background-color: #606060; }
+tr.odd { background-color: #D0D0D0; }
+.sidebar { background-color: #E0E0E0; }
+pre.command { border-left: 0.2em solid #C70000; }
+pre.command_user { border-left: 0.2em solid #00C700; }
+pre.output { font-weight:normal; }
+div.important {
+   margin: 1em 2em 1em 2em;
+   font-size: 1.2em;
+   color:#883333;
+   padding: 0.5em 0.5em 0.5em 0.5em;
+   border: 2px solid #866;
+}
+div.note {
+   margin: 1em 2em 1em 0em;
+   font-size: 1em;
+   color:#333388;
+   border: 2px solid #dbddec;
+   padding: 0.5em 0.5em 0.5em 0.5em;
+}
+div.toc {
+   margin: 0em 0em 0em 0em;
+   font-size: 0.9em;
+   border: 1px solid #999999;
+   padding: 0em 2em 0em 1em;
+   width: -moz-max-content;
+   background-color: #e9e9ef;
+}
+div.important img { padding: 0.4em; }
+div.note img { padding: 0em 0.4em; }
+div.pied_page { text-align: center; }
+a { color: #F64825; }
+#foot {
+    text-align: center;
+    text-decoration-color: #000000;
+    font-size: 10px;
+}
+/* Last edited info */
+p.updated {
+    text-align: left;
+    font-size: small;
+    font-weight: bold;
+    font-style: italic;
+}
+a:link {
+    color: #703030;
+    text-decoration: none;
+}
+a:visited {
+    color: #0b0080;
+}
+a:hover {
+    color: #403030;
+    text-decoration: underline;
+}
+table {
+    width: 100%;
+}
+td.menu {
+    font: courrier;
+    background-color: #959595;
+    text-decoration: none;
+    vertical-align:middle;
+    text-align:center;
+    height:60px;
+}
+td.menu:hover {
+    text-decoration: none;
+    background-color: #AAAAAA;
+    text-transform: uppercase;
+}
+td.menu a:link {
+    font-weight:bold;
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+td.menu a:visited {
+    font-weight:bold;
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+td.menu a:hover {
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+ @media print { header, footer {display:none } }
+ </style>
+</head>
+<body>
+    <table>
+     <tr>
+      <td>
+       <a href=".html"><img id="logo" src="../graphics/logo_nutyx_120.png" alt="logo nutyx" /></a>
+      </td>
+      <td>
+       <table>
+        <tr>
+            <td class="menu"><br><a href="news.html">News</a><br><br>
+            <td class="menu"><br><a href="information.html">Information</a><br><br>
+            <td class="menu"><br><a href="documentation.html">Documentation</a><br><br>
+            <td class="menu"><br><a href="installation.html">Installation</a><br><br>
+            <td class="menu"><br><a href="packages.html">Packages</a><br><br>
+            <td class="menu"><br><a href="faq.html">FAQ</a><br><br>
+        </tr>
+        <tr>
+            <td class="menu"><br><a href="http://downloads.nutyx.org/?C=M;O=D">Downloads</a><br><br>
+            <td class="menu"><br><a href="http://forums.nutyx.org/index.php?action=recent">Forum</a><br><br>
+            <td class="menu"><br><a href="http://github.com/NuTyX">Code</a><br><br>
+            <td class="menu"><br><a href="screenshots.html">Screenshots</a><br><br>
+            <td class="menu"><br><a href="wallpapers.html">Wallpapers</a><br><br>
+            <td class="menu"><br><a href="../fr/index.html" title="Acceuil"> <img src="../graphics/fr.gif" alt="Accueil" height="12" width="35"></a><br><br>
+        </tr>
+       </table>
+      </td>
+     </tr>
+    </table>
+   <hr>
+<table border="0" cellpadding="15" cellspacing="10" width="100%">
+ <tr valign="top">
+  <td class="sidebar" width="20%">
+   <h4>Forum</h4>
+    <div>
+<p class="updated">Sun Jun 25 16:07:12 2017 UTC</p><div style="text-transform: uppercase;">General:</div><b>News</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=197.msg614#msg614">New ISO  with LIVE mode available</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Mon Jun 12 19:48:17 2017 UTC</p><div style="text-transform: uppercase;">INSTALL:</div><b>From GIT</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=196.msg613#msg613">Re: Error in 2nd pass of &quot;build your own&quot;</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Sun May 28 22:40:06 2017 UTC</p><div style="text-transform: uppercase;">INSTALL:</div><b>From GIT</b><br><i>myrddin</i><br><img src="../graphics/thumbup.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=196.msg612#msg612">Re: Error in 2nd pass of &quot;build your own&quot;</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Sun May 28 17:59:21 2017 UTC</p><div style="text-transform: uppercase;">INSTALL:</div><b>From GIT</b><br><i>tnut</i><br><img src="../graphics/lamp.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=196.msg611#msg611">Re: Error in 2nd pass of &quot;build your own&quot;</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri May 26 07:30:33 2017 UTC</p><div style="text-transform: uppercase;">INSTALL:</div><b>From GIT</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=196.msg610#msg610">Re: Error in 2nd pass of &quot;build your own&quot;</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri May 26 03:01:17 2017 UTC</p><div style="text-transform: uppercase;">INSTALL:</div><b>From GIT</b><br><i>myrddin</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=196.msg609#msg609">Error in 2nd pass of &quot;build your own&quot;</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Sun May 21 19:31:21 2017 UTC</p><div style="text-transform: uppercase;">Off-Topic:</div><b>Let's talk about you</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=195.msg608#msg608">Re: New nuty user </a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Sun May 21 16:52:07 2017 UTC</p><div style="text-transform: uppercase;">Off-Topic:</div><b>Let's talk about you</b><br><i>john</i><br><img src="../graphics/smiley.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=195.msg607#msg607">New nuty user </a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Thu May 18 12:19:48 2017 UTC</p><div style="text-transform: uppercase;">General:</div><b>Cards: The Package Manager</b><br><i>tnut</i><br><img src="../graphics/wink.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=194.msg606#msg606">Re: where are CLI commands such as lspci</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Thu May 18 11:48:07 2017 UTC</p><div style="text-transform: uppercase;">General:</div><b>Cards: The Package Manager</b><br><i>myrddin</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forums.nutyx.org/index.php?topic=194.msg605#msg605">Re: where are CLI commands such as lspci</a><br><br>
+    </div>
+<hr>  <td valign="top" align="left" width="100%">
+   <div>
+  <form method="get" action="https://www.nutyx.org/en/.">
+     <fieldset>
+          <label for="search-field">Search ...</label>
+          <input id="search-field" type="text" name="search" size="18" maxlength="200" />
+     </fieldset>
+  </form>
+   </div>
+    <p class="updated"> Fri May 19 18:42:41 2017 UTC</p>
+  <h1>Frequently asked questions</h1>
+
+<div class="toc">
+ <h2>
+Contents
+</h2>
+  <ul style="list-style-type: none; padding: 0;">
+<li><a href="#1">How to register to the Mailing Lists</a>
+<li><a href="#2">NuTyX is not a multi-lib</a>
+<li><a href="#3">The installer doesn't allow me to specify a separate /home partition</a>
+<li><a href="#4">Building packages in a chroot. When and Why ?</a>
+<li>
+ <ul style="list-style-type: none;"><li><a href="#5">NuTyX can be considered as a "binaires" distribution.</a>
+<li><a href="#6">NuTyX can be considered as a "sources" distribution</a>
+  </ul>
+</li><li><a href="#7">Is it possible to upgrade NuTyX (prior to 9.0) to NuTyX 9.X without reinstalling everything?</a>
+<li><a href="#8">How to activate the root account ?</a>
+</ul>
+</div>
+<a name="1"></a>   <h2>How to register to the Mailing Lists</h2>
+    <p>
+     It's done in a few steps:
+     <ul>
+      <li>
+       You send a email to one of &lt;mailing_list_name&gt;-request@nutyx.org (<i>nutyx-support-request@nutyx.org</i> for example) by specifying:
+       <b><i>subscribe</i></b> as subjet.
+      <li>
+       You will receive a confirmation mail. Check your spam mails.
+      <li>
+       Simply answer this last email by choosing "Reply" on your favorite email software.
+      <li>
+       After a few minutes you will receive a last email that confirm you are register on the mailing-list
+      </ul>
+      <table>
+       <caption><EM>Available Mailing Lists:</EM></caption>
+       <tr class="sidebar">
+        <th>
+         Mailing List name:
+        <th>
+         email adress:
+        <th>
+         Short description:
+       <tr class="even">
+        <td>
+         nutyx-support<td>nutyx-support@nutyx.org<td>To get some support about NuTyX
+       <tr class="odd">
+        <td>
+         nutyx-annonce<td>nutyx-annonce@nutyx.org<td>To get news about NuTyX
+       <tr class="even">
+        <td>
+         nutyx-dev<td>nutyx-dev@nutyx.org<td>To discuss about development and future of NuTyX
+     </table>
+    <p>
+     The archives are available at: <a href="https://listengine.tuxfamily.org/nutyx.org/">https://listengine.tuxfamily.org/nutyx.org/</a>
+
+<a name="2"></a>   <h2>NuTyX is not a multi-lib</h2>
+    <p>
+     It's take much more time to build up a multilib distribution.
+     Normaly all the libraries needs to be compiled in 64 and 32 bits.
+    <p>
+     Today, it's not possible to produce a multilib because there are links created at construction / installatio of NuTyX (lib64->lib) under /lib and /usr.
+
+<a name="3"></a>   <h2>The installer doesn't allow me to specify a separate /home partition</h2>
+    <p>
+     This question has been asked many times.
+     I will try to answer it as far as possible.
+    <p>
+     Modern users often have a lot of data on their computers.
+     The size of the home folder can quickly become very large.
+     MP3 files, photos and videos are big files.
+    <p>
+     Imagine that you have a 250 GB hard disk.
+     You say &quot;OK, I'll take 100 G for the system and 150 for my personal data.&quot;
+     Great! You just cut your disk into two pieces, and the home partition will fill up more quickly in proportion to its size than if you had retained a single partition.
+     It would be nice if we could reinstall NuTyX when we wanted without having to cut the hard disk into separate partitions to preserve personal data.
+     <u>That's exactly how the NuTyX installer works</u>.
+    <ul>
+     <li>
+      The installer will never format a partition that is already formated, without manual intervention.
+    <li>
+      If you have a distribution (NuTyX or any other) with personal data and the system on the same partition,
+      the installer will tell you during the installation process that there is already a distribution there but will not offer to format the partition.
+      You will need to delete the <b>  /var, /proc, /sys, /usr, /sbin,</b> and <b>/etc </b> folders, but other folders such as <b>/home</b> and <b>/MP3</b> will not be touched.
+      So your data are safe. 
+    <li>
+     Today it is very easy to configure a file server based on NFS, so that users could have their home folders on a remote server.
+    <li>
+     To summarise: creating a separate home partition today is unecessary, at least with NuTyX.
+     It's worth asking why Apple's MacOS operating system never recommended this.
+    </ul>
+
+<a name="4"></a>   <h2>Building packages in a chroot. When and Why ?</h2>
+    <p>
+     The NuTyX ISO install a base system which give the user's choice between two scenarios in using the distribution:
+<a name="5"></a>      <h3>NuTyX can be considered as a "binaires" distribution.</h3>
+
+       The user install the needed binaries packages by downloads them from the remote server.
+      <p>
+       Once the base system is installed, the user install it's favorits applications as explain in the online documentation.
+      <p>
+       A typical installation look like:
+       <pre class="command_user"><kbd>get xorg lxdm xfce4 xfce4-extra firefox gvfs ntfs-3g transmission thunderbird</kbd></pre>
+      <p>
+       All the binaries packages are split into base packages and sub-packages (devel, doc, man, etc), in most of the case, only the base package will be installed.
+       It means:
+       <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />
+        if the user want to compile a package not available in binaries,
+        <a href="build-in-chroot.html">he (she) will have to compile thoses packages in a chroot</a>,
+        otherwise the compilation will always fails because of missing dependancies.
+       </div>
+<a name="6"></a>     <h3>NuTyX can be considered as a "sources" distribution</h3>
+       The user compile all the packges he needs on the local machine.
+      <p>
+       Once the base system installed, the user install the development tools:
+       <pre class="command_user"><kbd>get cards.devel</kbd></pre>
+      <p>
+       He (she) download the availables recipes:
+       <pre class="command_user"><kbd>sudo ports -u</kbd></pre>
+      <p>
+       He (She) adjust the <b>/etc/cards.conf</b> configuration file as:
+       <pre class="output">dir /usr/ports/kde5-extra
+dir /usr/ports/kde5
+dir /usr/ports/gnome-extra
+dir /usr/ports/gnome
+dir /usr/ports/mate-extra
+dir /usr/ports/mate
+dir /usr/ports/xfce4-extra
+dir /usr/ports/xfce4
+dir /usr/ports/gui-extra
+dir /usr/ports/gui
+dir /usr/ports/cli-extra
+dir /usr/ports/base
+base /usr/ports/base
+logdir /var/log/pkgbuild</pre>
+      And can now compile the needed packages <u><b>without being in a chroot</b></u>.
+      So for example, to compile the graphical server xorg:
+      <pre class="command_user"><kbd>sudo cards depcreate xorg</kbd></pre>
+
+<a name="7"></a>   <h2>Is it possible to upgrade NuTyX (prior to 9.0) to NuTyX 9.X without reinstalling everything?</h2>
+    <p>
+     No. The number of changes is too great.
+     The package manager has changed, the initrd has changed,
+     the installer has changed, and the ports location has changed.
+
+<a name="8"></a>   <h2>How to activate the root account ?</h2>
+    <p>
+     As default, NuTyX does not activate the root account, but if you wish to compile yours own packages, it's maybe a good activate the root account.
+     It's very simple, type:
+     <pre class="command_user"><kbd>nu</kbd></pre>
+     and choose <b>root</b> as user
+     <p>
+       <img src="graphics/faq/ActivateRoot1.png" alt="Figure 1: Specify the root account" title="Figure 1: Specify the root account"/>
+     <p>
+      choose a new password
+     <p>
+      <img src="graphics/faq/ActivateRoot2.png" alt="Figure 2: Specify the password" title="Figure 2: Specify the password"/>
+     <p>
+      and confirm the new password
+    <p>
+      <img src="graphics/faq/ActivateRoot3.png" alt="Figure 3: Confirm the password" title="Figure 3: Confirm the password"/>
+     <p>
+      and you're done.
+<hr>
+    <footer >
+     <p id="foot"> Powered by cards 2.2.2.2     &copy; 2007 - 2017 <a href=".html">NuTyX</a>.<br><br>
+Hosted by <a href="http://tuxfamily.org/"><img src="../graphics/logo_tuxfamily_50.png"/></a><br><br>
+     <a href="http://www.wtfpl.net/">
+     <img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
+     width="80" height="15" alt="WTFPL" /></a> 
+     <a href="http://www.anybrowser.org/campaign/">
+       <img src="../graphics/abblue.gif" width="80" height="15"
+       alt="anybrowser"></a>
+    </footer>
+   </tr>
+  </table>
+ </body>
+
+<!-- Mirrored from www.nutyx.org/en/faq by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 10:30:18 GMT -->
+</html>

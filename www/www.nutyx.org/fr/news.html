@@ -1,0 +1,467 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+   
+<!-- Mirrored from www.nutyx.org/fr/news by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 10:31:19 GMT -->
+<HEAD>
+      <TITLE>NuTyX GNU/Linux</TITLE>
+      <META charset="utf-8" />
+      <LINK rel="shortcut icon" href="../favicon.html">
+ <style type="text/css">
+ body{
+   text-align: left;
+   color: #444;
+   background: #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF3d3d////riJKgAAAAAJ0Uk5T/wDltzBKAAAAFUlEQVR42mJgBAEGGMmAxAYCgAADAAGGABmnk/7aAAAAAElFTkSuQmCC); 
+   font: 14px;
+}
+header {
+   float: left;
+   padding-top: 6px;
+   padding-left: 2%;
+   margin-right: 2%;
+   background-color: #606060;
+}
+nav { padding-top: 1px; }
+/* horizontally center ul element */
+nav ul { text-align:center; }
+nav li {
+    /* make list elements fall inline as block elements */
+    position: relative;
+    display: inline-block;
+    /* next two lines only for display purposes */
+    text-align: center;
+    border:1px solid black;
+}
+nav li a {
+    font-size:12px;
+    text-decoration: none;
+    float:left;
+    padding:10px;
+    background-color: #333333;
+    color:#ffffff;
+    border-bottom:1px;
+    border-bottom-color:#000000;
+    border-bottom-style:solid;
+}
+nav li a:hover {
+    background-color:#9B1C26;
+    border-bottom-color:#000000;
+    border-bottom-style:solid;
+}
+img { border: 0; }
+nav.img { border: 0; }
+h1 { text-decoration: underline; }
+
+p1 {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    color:#585858;
+    font-size:1em;
+}
+pre {
+   padding: 0.5em 1em;
+   margin: 1em 0em 1em 2em;
+   font-weight:bold;
+   color: black;
+   font-family: monospace;
+   background-color: #D0D0D0;
+}
+td { padding: 0.5em 0.5em 0.5em 0.5em; }
+tr.header { color: white; background-color: #606060; }
+tr.odd { background-color: #D0D0D0; }
+.sidebar { background-color: #E0E0E0; }
+pre.command { border-left: 0.2em solid #C70000; }
+pre.command_user { border-left: 0.2em solid #00C700; }
+pre.output { font-weight:normal; }
+div.important {
+   margin: 1em 2em 1em 2em;
+   font-size: 1.2em;
+   color:#883333;
+   padding: 0.5em 0.5em 0.5em 0.5em;
+   border: 2px solid #866;
+}
+div.note {
+   margin: 1em 2em 1em 0em;
+   font-size: 1em;
+   color:#333388;
+   border: 2px solid #dbddec;
+   padding: 0.5em 0.5em 0.5em 0.5em;
+}
+div.toc {
+   margin: 0em 0em 0em 0em;
+   font-size: 0.9em;
+   border: 1px solid #999999;
+   padding: 0em 2em 0em 1em;
+   width: -moz-max-content;
+   background-color: #e9e9ef;
+}
+div.important img { padding: 0.4em; }
+div.note img { padding: 0em 0.4em; }
+div.pied_page { text-align: center; }
+a { color: #F64825; }
+#foot {
+    text-align: center;
+    text-decoration-color: #000000;
+    font-size: 10px;
+}
+/* Last edited info */
+p.updated {
+    text-align: left;
+    font-size: small;
+    font-weight: bold;
+    font-style: italic;
+}
+a:link {
+    color: #703030;
+    text-decoration: none;
+}
+a:visited {
+    color: #0b0080;
+}
+a:hover {
+    color: #403030;
+    text-decoration: underline;
+}
+table {
+    width: 100%;
+}
+td.menu {
+    font: courrier;
+    background-color: #959595;
+    text-decoration: none;
+    vertical-align:middle;
+    text-align:center;
+    height:60px;
+}
+td.menu:hover {
+    text-decoration: none;
+    background-color: #AAAAAA;
+    text-transform: uppercase;
+}
+td.menu a:link {
+    font-weight:bold;
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+td.menu a:visited {
+    font-weight:bold;
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+td.menu a:hover {
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+ @media print { header, footer {display:none } }
+ </style>
+</head>
+<body>
+    <table>
+     <tr>
+      <td>
+       <a href=".html"><img id="logo" src="../graphics/logo_nutyx_120.png" alt="logo nutyx" /></a>
+      </td>
+      <td>
+       <table class="sidebar" >
+        <tr>
+            <td class="menu"><br><a href="news.html">Nouvelles</a><br><br>
+            <td class="menu"><br><a href="information.html">Information</a><br><br>
+            <td class="menu"><br><a href="documentation.html">Documentation</a><br><br>
+            <td class="menu"><br><a href="installation.html">Installation</a><br><br>
+            <td class="menu"><br><a href="packages.html">Paquets</a><br><br>
+            <td class="menu"><br><a href="faq.html">FAQ</a><br><br>
+        </tr>
+        <tr>
+            <td class="menu"><br><a href="http://downloads.nutyx.org/?C=M;O=D">Téléchargements</a><br><br>
+            <td class="menu"><br><a href="http://forum.nutyx.org/index.php?action=recent">Forum</a><br><br>
+            <td class="menu"><br><a href="http://github.com/NuTyX">Code</a><br><br>
+            <td class="menu"><br><a href="screenshots.html">Captures d'écrans</a><br><br>
+            <td class="menu"><br><a href="wallpapers.html">Fonds d'écrans</a><br><br>
+            <td class="menu"><br><a href="../en/index.html" title="Home"> <img src="../graphics/gb.gif" alt="Home" height="12" width="35"></a><br><br>
+        </tr>
+       </table>
+      </td>
+     </tr>
+    </table>
+   <hr>
+<table border="0" cellpadding="15" cellspacing="10" width="100%">
+ <tr valign="top">
+  <td class="sidebar" width="20%">
+   <h4>Forum</h4>
+    <div>
+<p class="updated">Sat Jul  1 17:50:49 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=366.msg1880#msg1880">Re : Recette uClibc-ng (gelée)</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 21:42:58 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=378.msg1879#msg1879">Recette musl-libc</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 20:51:32 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=366.msg1878#msg1878">Re : Recette uClibc-ng (gelée)</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 20:44:04 2017 UTC</p><div style="text-transform: uppercase;">Généralitées:</div><b>News</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=376.msg1877#msg1877">Re : Nouvelle iso avec mode LIVE disponible</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Thu Jun 29 06:03:45 2017 UTC</p><div style="text-transform: uppercase;">CONFIGURER:</div><b>Le son</b><br><i>tnut</i><br><img src="../graphics/lamp.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=377.msg1876#msg1876">Re : Pas de son, groupe audio absent</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Wed Jun 28 14:51:32 2017 UTC</p><div style="text-transform: uppercase;">CONFIGURER:</div><b>Le son</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=377.msg1875#msg1875">Pas de son, groupe audio absent</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Tue Jun 27 14:01:19 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1874#msg1874">Re : Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Tue Jun 27 10:57:23 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1873#msg1873">Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Mon Jun 26 21:04:29 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1872#msg1872">Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Mon Jun 26 08:08:47 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>SipoMatadorduCosmos</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1871#msg1871">Re : Problème de dépendance</a><br><br>
+    </div>
+<hr>  <td valign="top" align="left" width="100%">
+   <div>
+  <form method="get" action="https://www.nutyx.org/fr/.">
+     <fieldset>
+          <label for="search-field">Recherche ...</label>
+          <input id="search-field" type="text" name="search" size="18" maxlength="200" />
+     </fieldset>
+  </form>
+   </div>
+    <p class="updated"> Wed Apr  5 18:49:57 2017 UTC</p>
+<h1>Dernière nouvelle 05-04-2017</h1>
+
+<div class="toc">
+ <h2>
+Sommaire
+</h2>
+  <ul style="list-style-type: none; padding: 0;">
+<li><a href="#1">NuTyX 9.0 disponible avec cards 2.2</a>
+<li><a href="#2">Mise à jour majeure</a>
+<li><a href="#3">Nouveautés dans les ISOs</a>
+<li><a href="#4">Nouveau kernel LTS</a>
+<li><a href="#5">Plus d'initrd par défaut</a>
+<li><a href="#6">Les composants principaux de la chaîne de compilation sont mis à jour.</a>
+<li><a href="#7">Collection base-extra supprimée</a>
+<li><a href="#8">Renommage et Splitting</a>
+<li><a href="#9">Cards 2.2</a>
+<li><a href="#10">Structure des dossiers simplifiée</a>
+<li><a href="#11">Le wifi</a>
+<li><a href="#12">La chaîne YouTube</a>
+<li><a href="#13">Paquets NuTyX 8.2 déplacés</a>
+<li><a href="#14">Liste des mises à jour principales de la NuTyX 9.0</a>
+<li><a href="#15">Remerciements</a>
+</ul>
+</div>
+<a name="1"></a><h2>NuTyX 9.0 disponible avec cards 2.2</h2>
+<p>
+ L'équipe de NuTyX est très fière de vous proposer la version NuTyX 9.0.
+<p>
+ NuTyX 9.0 propose le kernel 4.10.8, kernel lts 4.9.20, glibc 2.25, gcc 6.3.0, binutils 2.28, python 3.6.0,
+ xorg-server 1.19.2, qt 5.8.0, plasma 5.9.4, kf5 5.31.0, gnome 3.22.2, mate 1.16.1, xfce4 4.12.3, firefox 52.0.2 et beaucoup d'autres mise à jour.
+
+<p>
+ Plus de 2500 commits depuis la version 8.2
+
+<p>
+ Des nouvelles isos sont disponible en 32 et 64 bits.
+ Leur tailles sont respectivement 246 MB et 247 MB sur <a href="http://downloads.nutyx.org/?C=M;O=D">http://downloads.nutyx.org</a>.
+<p>
+ Les interfaces graphiques disponibles sont:
+ kde5, gnome, mate, xfce4, lxde, flwm, jwm, ratpoison, blackbox, fluxbox, openbox, bspwm, icewm, twm, etc.
+
+<a name="2"></a><h2>Mise à jour majeure</h2>
+ <p>
+  Cette nouvelle version est le résultat de plus de 6 mois de dévelopement.
+  Une mise à jour la 8.2.1 est peut-être possible, mais risquée, l'équipe de NuTyX recommande de faire une nouvelle installation.
+<a name="3"></a><h2>Nouveautés dans les ISOs</h2>
+<p>
+ Ces nouvelles isos peuvent être lancées sur des machines configurées en mode UEFI.
+ Si tel est le cas, l'installateur aide l'utilisateur à faire les bons choix lors de l'installation et l'uefi se chargera de l'amorçage de la machine, aucun gestionnaire d'amorçage tiers n'est utilisé par défaut.
+ Libre à l'utilisateur d'en installer un si il le souhaite
+<p>
+ Vous trouverez un tutoriel, comment installer NuTyX en mode UEFI dans la document du site et sur la chaîne YouTube.
+ <p>
+ L'ISO peut se charger à 100 % en ram si la machine cible dispose plus qu'1Gb de ram..
+ La clé USB peut donc être déconnectée et ainsi libérer le port USB.
+ Utile dans le cas de l'installation sur tablette ne disposant que d'un seul port USB
+
+<a name="4"></a><h2>Nouveau kernel LTS</h2>
+<p>
+ Le support à long terme du kernel est passé de la version 4.4 -> 4.9.
+<a name="5"></a><h2>Plus d'initrd par défaut</h2>
+<p>
+L'initrd étant devenue obsolète, il n'est plus necessaire de spécifier la ligne initrd dans le fichier d'amorçage grub.
+les systèmes de fichiers reconnues par NuTyX sont compilés dans le kernel.
+
+<a name="6"></a><h2>Les composants principaux de la chaîne de compilation sont mis à jour.</h2>
+<p>
+ Les composants principaux de la chaîne d'outils cad en-têtes du noyau, compilateur, editeur de liens, assembleur et librairie C sont désormais à jour,
+ les versions respectives de chaque composant se trouvent dans la liste ci-dessous.
+
+<a name="7"></a><h2>Collection base-extra supprimée</h2>
+<p>
+ La collection base-extra est désormais intégrée dans la collection base.
+<p>
+ Le nombre de collections officielles est donc désormais 13 collections:
+ <ul>
+  <li>
+    base
+  <li>
+    cli, cli-extra
+  <li>
+    gui, gui-extra
+  <li>
+    xfce4, xfce4-extra
+  <li>
+    mate, mate-extra
+  <li>
+    gnome, gnome-extra
+  <li>
+    kde5, kde5-extra
+ </ul>
+ 
+<a name="8"></a><h2>Renommage et Splitting</h2> 
+<p>
+ Le renommage de python3 en python, le split de qt5 et les dernières mise à jour ont eu de grosses répercussions sur les paquets qui en dépendent et ont entrainé plus de travail que prévu.
+ C'est pourquoi l'équipe de NuTyX a décidé de recompiler toutes les collections.
+
+<ul>
+ <li>
+   python -> python2
+ <li>
+  python3 -> python
+ <li>
+  qt5 -> qt
+ <li>
+  fltk1 -> fltk
+ <li>
+  xorg-mesa -> mesa
+</ul>
+
+<a name="9"></a><h2>Cards 2.2</h2>
+<p>
+ Il s'agit d'une mise à jour majeure. Cards est intégralement traduit en français.
+<p>
+  Cards affiche plus de résultats lors d'une recherche de paquets.
+  Si le paquet trouvé est déjà installé, celui-ci s'affichera en vert dans le résultat de la recherche.
+  Désormais, celle-ci s'effectue également dans les alias et les groupes.
+  
+<a name="10"></a><h2>Structure des dossiers simplifiée</h2>
+<p>
+ Les liens /usr/lib64 -&gt; /usr/lib et /lib64 -&gt; /lib sont supprimés.
+<p>
+ Le dossier /usr/lib64 ne doit plus être présent.
+<p>
+ Le dossier /lib64 ne doit contenir que 2 liens vers le même fichier /lib/ld-linux-x86-64.so.2
+
+<a name="11"></a><h2>Le wifi</h2>
+  <p>
+   Pour la gestion du wifi, c'est désormais le paquet networkmanager qui est préféré.
+   Sa grande souplesse permet de configurer votre wifi très facilement.
+   L'outil wicd basé sur python est toujours disponible comme alternative pour se connecter en wifi.
+  <p>
+   La post-configuration du wifi a été amélioré. Le bug de l'ESSID corrigé. Un nom contenant des espaces est désormais possible.
+
+<a name="12"></a><h2>La chaîne YouTube</h2>
+ <p>
+  <a href="https://www.youtube.com/channel/UChR816uG9bS4eOQfKY-xB8g">https://www.youtube.com/channel/UChR816uG9bS4eOQfKY-xB8g</a>
+ <p>
+  Une nouvelle chaîne YouTube est ouverte. Elle contient divers tutoriels disponibles sur le site.
+ <p>
+  Plusieurs fois demandées, vous pouvez désormais visionnez une installation en UEFI ou en bios.
+
+<a name="13"></a><h2>Paquets NuTyX 8.2 déplacés</h2>
+ <p>
+  Si vous êtes actuellement sur la dernière version de NuTyX 8, et si vous n'êtes pas encore disposé à passer sur la NuTyX 9.0,
+  c'est tout à fait possible de continuer à utiliser votre version 8
+ <p>
+  Vous devez MAINTENANT effectuer une petite manipulation dans votre fichier <b>/etc/cards.conf</b>.
+  <pre class="command_user"><kbd>sudo sed -i s@downloads.nutyx.org@downloads.tuxfamily.org/nutyx@ /etc/cards.conf</kbd></pre>
+ <p>
+  La vérification est alors très simple:
+  <pre class="command_user"><kbd>cards config</kbd></pre>
+  <pre class="output">1 Directory: /var/lib/pkg/depot/gnome-extra from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/gnome-extra
+2 Directory: /var/lib/pkg/depot/gnome from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/gnome
+3 Directory: /var/lib/pkg/depot/mate-extra from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/mate-extra
+4 Directory: /var/lib/pkg/depot/mate from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/mate
+5 Directory: /var/lib/pkg/depot/kde5-extra from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/kde5-extra
+6 Directory: /var/lib/pkg/depot/kde5 from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/kde5
+7 Directory: /var/lib/pkg/depot/xfce4-extra from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/xfce4-extra
+8 Directory: /var/lib/pkg/depot/xfce4 from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/xfce4
+9 Directory: /var/lib/pkg/depot/gui-extra from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/gui-extra
+10 Directory: /var/lib/pkg/depot/gui from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/gui
+11 Directory: /var/lib/pkg/depot/cli-extra from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/cli-extra
+12 Directory: /var/lib/pkg/depot/cli from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/cli
+13 Directory: /var/lib/pkg/depot/base-extra from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/base-extra
+14 Directory: /var/lib/pkg/depot/base from http://downloads.tuxfamily.org/nutyx/x86_64/8.2/base
+...</pre>
+<a name="14"></a><h2>Liste des mises à jour principales de la NuTyX 9.0</h2>
+ <ul>
+  <li>
+   cards 2.1.94 -> 2.2
+  <li>
+   kernel 4.7.4 -> 4.10.8
+  <li>
+   kernel lts 4.4.21 -> 4.9.20
+  <li>
+   gcc 6.2.0 -> 6.3.0
+  <li>
+   glibc 2.24 -> glibc 2.25
+  <li>
+   binutils 2.27 -> 2.28
+  <li>
+   python 3.5.1 -> python 3.6.0
+  <li>
+   alsa 1.1.2 -> 1.1.3
+  <li>
+   cups 2.1.4 -> 2.2.2
+  <li>
+   samba 4.4.5 -> 4.5.5
+  <li>
+   mesa 12.0.6 -> 17.0.1
+  <li>
+   libdrm 2.4.70 -> 2.4.75
+  <li>
+   xorg-server 1.18.4 -> 1.19.2
+  <li>
+   qt5 5.7.0 -> qt 5.8.0 
+  <li>
+   gtk3 3.20.9 -> 3.22.9
+  <li>
+   firefox 49.0.2 -> 52.0.2
+  <li>
+   thunderbird 45.3.0 -> 45.8.0
+  <li>
+   chromium 53.0.2785.116 -> 56.0.2924.10
+  <li>
+   libreoffice 5.2.1.1 -> 5.3.1.3
+  <li>
+   kf5 5.26.0 -> 5.31.0
+  <li>
+   plasma 5.7.95 -> 5.9.4
+  </ul>
+ <p>
+<a name="15"></a> <h2>Remerciements</h2>
+ <p>
+  Merci à Pierre pour son travail sur l'interface kde5.
+ <p>
+  Merci à Guy pour son aide précieuse sur la construction des isos désormais compatible uefi.
+ <p>
+  Merci Sipomatador d'avoir trouvé le bug concernant les différentes familles de microcesseurs.
+ <p>
+  Merci à Timcowchip pour son travail sur la collection rework, ses pull request vont permettre à certains paquets de rejoindre leur collection d'origine.
+ <p>
+  Et un énorme merci à l'équipe de "Linux From Scratch" pour la mise à disposition de la documentation de la LFS/BLFS 8.0.
+  
+<hr>
+    <footer >
+     <p id="foot"> Powered by cards 2.2.2.2     &copy; 2007 - 2017 <a href=".html">NuTyX</a>.<br><br>
+Hosted by <a href="http://tuxfamily.org/"><img src="../graphics/logo_tuxfamily_50.png"/></a><br><br>
+     <a href="http://www.wtfpl.net/">
+     <img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
+     width="80" height="15" alt="WTFPL" /></a> 
+     <a href="http://www.anybrowser.org/campaign/">
+       <img src="../graphics/abblue.gif" width="80" height="15"
+       alt="anybrowser"></a>
+    </footer>
+   </tr>
+  </table>
+ </body>
+
+<!-- Mirrored from www.nutyx.org/fr/news by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 10:31:20 GMT -->
+</html>

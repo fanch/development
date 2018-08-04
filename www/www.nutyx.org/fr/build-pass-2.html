@@ -1,0 +1,404 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+   
+<!-- Mirrored from www.nutyx.org/fr/build-pass-2 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 10:32:55 GMT -->
+<HEAD>
+      <TITLE>NuTyX GNU/Linux</TITLE>
+      <META charset="utf-8" />
+      <LINK rel="shortcut icon" href="../favicon.html">
+ <style type="text/css">
+ body{
+   text-align: left;
+   color: #444;
+   background: #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF3d3d////riJKgAAAAAJ0Uk5T/wDltzBKAAAAFUlEQVR42mJgBAEGGMmAxAYCgAADAAGGABmnk/7aAAAAAElFTkSuQmCC); 
+   font: 14px;
+}
+header {
+   float: left;
+   padding-top: 6px;
+   padding-left: 2%;
+   margin-right: 2%;
+   background-color: #606060;
+}
+nav { padding-top: 1px; }
+/* horizontally center ul element */
+nav ul { text-align:center; }
+nav li {
+    /* make list elements fall inline as block elements */
+    position: relative;
+    display: inline-block;
+    /* next two lines only for display purposes */
+    text-align: center;
+    border:1px solid black;
+}
+nav li a {
+    font-size:12px;
+    text-decoration: none;
+    float:left;
+    padding:10px;
+    background-color: #333333;
+    color:#ffffff;
+    border-bottom:1px;
+    border-bottom-color:#000000;
+    border-bottom-style:solid;
+}
+nav li a:hover {
+    background-color:#9B1C26;
+    border-bottom-color:#000000;
+    border-bottom-style:solid;
+}
+img { border: 0; }
+nav.img { border: 0; }
+h1 { text-decoration: underline; }
+
+p1 {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    color:#585858;
+    font-size:1em;
+}
+pre {
+   padding: 0.5em 1em;
+   margin: 1em 0em 1em 2em;
+   font-weight:bold;
+   color: black;
+   font-family: monospace;
+   background-color: #D0D0D0;
+}
+td { padding: 0.5em 0.5em 0.5em 0.5em; }
+tr.header { color: white; background-color: #606060; }
+tr.odd { background-color: #D0D0D0; }
+.sidebar { background-color: #E0E0E0; }
+pre.command { border-left: 0.2em solid #C70000; }
+pre.command_user { border-left: 0.2em solid #00C700; }
+pre.output { font-weight:normal; }
+div.important {
+   margin: 1em 2em 1em 2em;
+   font-size: 1.2em;
+   color:#883333;
+   padding: 0.5em 0.5em 0.5em 0.5em;
+   border: 2px solid #866;
+}
+div.note {
+   margin: 1em 2em 1em 0em;
+   font-size: 1em;
+   color:#333388;
+   border: 2px solid #dbddec;
+   padding: 0.5em 0.5em 0.5em 0.5em;
+}
+div.toc {
+   margin: 0em 0em 0em 0em;
+   font-size: 0.9em;
+   border: 1px solid #999999;
+   padding: 0em 2em 0em 1em;
+   width: -moz-max-content;
+   background-color: #e9e9ef;
+}
+div.important img { padding: 0.4em; }
+div.note img { padding: 0em 0.4em; }
+div.pied_page { text-align: center; }
+a { color: #F64825; }
+#foot {
+    text-align: center;
+    text-decoration-color: #000000;
+    font-size: 10px;
+}
+/* Last edited info */
+p.updated {
+    text-align: left;
+    font-size: small;
+    font-weight: bold;
+    font-style: italic;
+}
+a:link {
+    color: #703030;
+    text-decoration: none;
+}
+a:visited {
+    color: #0b0080;
+}
+a:hover {
+    color: #403030;
+    text-decoration: underline;
+}
+table {
+    width: 100%;
+}
+td.menu {
+    font: courrier;
+    background-color: #959595;
+    text-decoration: none;
+    vertical-align:middle;
+    text-align:center;
+    height:60px;
+}
+td.menu:hover {
+    text-decoration: none;
+    background-color: #AAAAAA;
+    text-transform: uppercase;
+}
+td.menu a:link {
+    font-weight:bold;
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+td.menu a:visited {
+    font-weight:bold;
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+td.menu a:hover {
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+ @media print { header, footer {display:none } }
+ </style>
+</head>
+<body>
+    <table>
+     <tr>
+      <td>
+       <a href=".html"><img id="logo" src="../graphics/logo_nutyx_120.png" alt="logo nutyx" /></a>
+      </td>
+      <td>
+       <table class="sidebar" >
+        <tr>
+            <td class="menu"><br><a href="news.html">Nouvelles</a><br><br>
+            <td class="menu"><br><a href="information.html">Information</a><br><br>
+            <td class="menu"><br><a href="documentation.html">Documentation</a><br><br>
+            <td class="menu"><br><a href="installation.html">Installation</a><br><br>
+            <td class="menu"><br><a href="packages.html">Paquets</a><br><br>
+            <td class="menu"><br><a href="faq.html">FAQ</a><br><br>
+        </tr>
+        <tr>
+            <td class="menu"><br><a href="http://downloads.nutyx.org/?C=M;O=D">Téléchargements</a><br><br>
+            <td class="menu"><br><a href="http://forum.nutyx.org/index.php?action=recent">Forum</a><br><br>
+            <td class="menu"><br><a href="http://github.com/NuTyX">Code</a><br><br>
+            <td class="menu"><br><a href="screenshots.html">Captures d'écrans</a><br><br>
+            <td class="menu"><br><a href="wallpapers.html">Fonds d'écrans</a><br><br>
+            <td class="menu"><br><a href="../en/index.html" title="Home"> <img src="../graphics/gb.gif" alt="Home" height="12" width="35"></a><br><br>
+        </tr>
+       </table>
+      </td>
+     </tr>
+    </table>
+   <hr>
+<table border="0" cellpadding="15" cellspacing="10" width="100%">
+ <tr valign="top">
+  <td class="sidebar" width="20%">
+   <h4>Forum</h4>
+    <div>
+<p class="updated">Sat Jul  1 17:50:49 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=366.msg1880#msg1880">Re : Recette uClibc-ng (gelée)</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 21:42:58 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=378.msg1879#msg1879">Recette musl-libc</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 20:51:32 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=366.msg1878#msg1878">Re : Recette uClibc-ng (gelée)</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 20:44:04 2017 UTC</p><div style="text-transform: uppercase;">Généralitées:</div><b>News</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=376.msg1877#msg1877">Re : Nouvelle iso avec mode LIVE disponible</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Thu Jun 29 06:03:45 2017 UTC</p><div style="text-transform: uppercase;">CONFIGURER:</div><b>Le son</b><br><i>tnut</i><br><img src="../graphics/lamp.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=377.msg1876#msg1876">Re : Pas de son, groupe audio absent</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Wed Jun 28 14:51:32 2017 UTC</p><div style="text-transform: uppercase;">CONFIGURER:</div><b>Le son</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=377.msg1875#msg1875">Pas de son, groupe audio absent</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Tue Jun 27 14:01:19 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1874#msg1874">Re : Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Tue Jun 27 10:57:23 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1873#msg1873">Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Mon Jun 26 21:04:29 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1872#msg1872">Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Mon Jun 26 08:08:47 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>SipoMatadorduCosmos</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1871#msg1871">Re : Problème de dépendance</a><br><br>
+    </div>
+<hr>  <td valign="top" align="left" width="100%">
+   <div>
+  <form method="get" action="https://www.nutyx.org/fr/.">
+     <fieldset>
+          <label for="search-field">Recherche ...</label>
+          <input id="search-field" type="text" name="search" size="18" maxlength="200" />
+     </fieldset>
+  </form>
+   </div>
+    <p class="updated"> Tue Nov  8 19:28:24 2016 UTC</p>
+   <h1>Construction de la NuTyX (pass 2)</h1>
+    <p>C'est le moment de construire votre NuTyX. Une seule condition: Avoir terminé avec succès la Construction de la CHROOT ( pass 1 ).</p>
+    <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />L'auteur n'est pas responsable pour les pertes de données ou autre qui pourrait engendrer une mauvaise manipulation. Cet article s'adresse à un public averti.</div>
+   <p>Toutes les opérations vont devoir se faire en compte root. Il est donc INDISPENSABLE d'être très vigilent sinon vous pouvez "casser" votre distribution actuelle.</p>
+    <p>La variable LFS pointe dans notre exemple sur /mnt/lfs. A vous d'ajuster si vous avez choisi un autre emplacement.</p>
+    <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />Veuillez notez que la passe 2 peut s'avérer beaucoup plus "aventureuse" dans le sens où il est tout à fait possible qu'un paquet ne se compile pas du premier coup. Il est important de le signaler <a href="http://forum.nutyx.org/index.php?board=16.0" title="Lire dans une autre fenêtre" class="external" onclick="window.open(this.href); return false;">sur le forum</a> ou sur le canal irc</div>
+    <p>Pour éviter tout risque de dispersion et pour faciliter la lecture, l'article sera divisé en deux parties. La première reprend chaque action numérotée une à une et la deuxième donne une explication de chaque action.</p> 
+    <p>Il y a 22 actions. Donc encore une fois:</p>
+    <div class="important"><img alt="[Important]" src="../graphics/caution.gif" />Toutes les opértations se font dans le compte root</div>
+<div class="toc">
+ <h2>
+Sommaire
+</h2>
+  <ul style="list-style-type: none; padding: 0;">
+<li><a href="#1">Les actions</a>
+<li><a href="#2">Explications relative à chaque action</a>
+<li><a href="#3">Ce qu'il faut savoir:</a>
+</ul>
+</div>
+<a name="1"></a>   <h2>Les actions</h2>
+    <ol>
+      <li>On sort du compte 'lfs'</li>
+        <pre class="command_user"><kbd>exit</kbd></pre>
+      <li>On vérifie la variable LFS</li>
+        <pre class="command"><kbd>echo $LFS</kbd></pre>qui DOIT retourner <pre class="output">/mnt/lfs</pre> ou la valeur que vous avez définie au début de la pass 1
+        <div class="important"><img alt="[Important]" src="../graphics/caution.gif" /><img alt="[Important]" src="../graphics/caution.gif" /><img alt="[Important]" src="../graphics/caution.gif" />AVANT D'ALLER PLUS LOIN ASSUREZ-VOUS QUE LA VARIABLE LFS SOIT CORRECTEMENT DEFINIE. SI CELLE-CI EST INCORRECTE, VOUS ALLEZ CASSER VOTRE DISTRIBUTION</div>
+	Si le résultat est correct:
+        <pre class="command"><kbd>chown -R root:root $LFS</kbd></pre>
+      <li>On créé les dossiers et lien pour y placer les recettes.</li>
+        <pre class="command"><kbd>install -dv -m0750  $LFS/root
+ln -sv development/scripts $LFS/root/bin</kbd></pre>
+      <li>On déplace les recettes et l'on se place dans le dossier adéquat</li>
+        <pre class="command"><kbd>mv /home/lfs/development $LFS/root/
+cd $LFS/root/development/base/nutyx</kbd></pre>
+      <li>On compile le premier paquet de NuTyX</li>
+        <pre class="command"><kbd>/tools/bin/pkgmk -cf ../../../bin/pkgmk.conf.passes</kbd></pre>
+      <li>On installe les paquets <b>nutyx</b> dans la NuTyX</li>
+        <pre class="command"><kbd>/tools/bin/pkgadd -r $LFS nutyx1*
+/tools/bin/pkgadd -r $LFS nutyx.man1*</kbd></pre>
+      <li>On vérifie sa présence</li>
+        <pre class="command"><kbd>/tools/bin/pkginfo -r $LFS -i</kbd></pre>
+retourne
+        <pre class="output">(base) nutyx 8.2-1...
+(base) nutyx.man 8.2-1...</pre>
+      <li>On installe les fichiers de configurations dans notre nouvelle NuTyX</li>
+        <pre class="command"><kbd>VERSION="development" install-nutyx -ic</kbd></pre>
+      <li>On monte les différents dossiers</li>
+        <pre class="command"><kbd>mount -v --bind /dev $LFS/dev
+mount -vt devpts devpts $LFS/dev/pts -o gid=5,mode=620
+mount -vt proc proc $LFS/proc
+mount -vt sysfs sysfs $LFS/sys
+mount -vt tmpfs tmpfs $LFS/run
+if [ -h /dev/shm ]; then mkdir -pv $LFS/$(readlink $LFS/dev/shm);fi
+chmod 1777 /dev/shm</kbd></pre>
+      <li>On copie resolv.conf depuis la distribution host</li>
+       <pre class="command"><kbd>cp -v /etc/resolv.conf $LFS/etc</kbd></pre>
+      <li>On vérifie que tous les dossiers soient correctement montés, la commande: </li>
+       <pre class="command"><kbd>mount|grep $LFS</kbd></pre>
+	doit retourner quelque chose comme:
+       <pre class="output">/dev/sda2 on /mnt/lfs type ext4 (rw)
+/devtmpfs on /mnt/lfs/dev type devtmpfs (rw,nosuid,relatime,size=16300988k,nr_inodes=4075247,mode=755)
+devpts on /mnt/lfs/dev/pts type devpts (rw,relatime,gid=5,mode=620,ptmxmode=000)
+proc on /mnt/lfs/proc type proc (rw,relatime)
+sysfs on /mnt/lfs/sys type sysfs (rw,relatime)
+tmpfs on /mnt/lfs/run type tmpfs (rw,relatime)</pre>
+      <li>On entre maintenant dans la NuTyX</li>
+       <pre class="command"><kbd>chroot "$LFS" /usr/bin/env -i HOME=/root TERM="$TERM" PS1='\u:\w\$ ' \
+/bin/bash --login +h</kbd></pre>
+	Le résultat sffichera toute sorte de messages que l'on peut ignorer:
+<pre class="output">bash: id: command not found
+bash: id: command not found
+bash: date: command not found
+bash: uname: command not found
+bash: uname: command not found
+bash: whoami: command not found
+bash: uname: command not found
+bash: tput: command not found
+...</pre>
+      <li>On redéfinie la variable PATH</li>
+       <pre class="command"><kbd>export PATH=/bin:/usr/bin:/sbin:/usr/sbin:/tools/bin:/root/bin</kbd></pre>
+      <li> On lance la compilation des paquets</li>
+       <pre class="command"><kbd>cd /root/development/base
+pass</kbd></pre>
+	retourne
+       <pre class="output">tar -p -o -C /tmp/work/src -xf /sources/linux-3.19.3.tar.xz
+...</pre>
+      <li>On attend le message suivant:</li>
+      <pre class="output">=======&gt; Building '/root/development/base/bash/bash...' succeeded.
+need to install bash manually</pre>
+     <li>En français cela signifie qu'il faut installer le paquet <b>bash</b> à la main. Il faut donc le faire en dehors de la NuTyX. Il faut donc sortir:</li>
+      <pre class="command"><kbd>exit</kbd></pre>
+     <li>Nous allons maintenant dans le bon dossier et installons le paquet <b>bash</b>:</li>
+      <pre class="command"><kbd>cd $LFS/root/development/base/bash
+for PACK in *.xz; do /tools/bin/pkgadd -r $LFS $PACK;done</kbd></pre>
+     <li>On vérifie qu'il est bien ajouté:</li>
+     <pre class="command"><kbd>/tools/bin/pkginfo -r $LFS -i|grep bash</kbd></pre>
+retourne
+        <pre class="output">(base) bash 4.4-1
+(base) bash.da 4.4-1
+(base) bash.de 4.4-1
+(base) bash.devel 4.4-1
+(base) bash.doc 4.4-1
+...</pre>
+     <li>Nous entrons à nouveau dans la NuTyX et finissons le travail:</li>
+      <pre class="command"><kbd>chroot "$LFS" /usr/bin/env -i HOME=/root TERM="$TERM" PS1='\u:\w\$ ' \
+/bin/bash --login +h</kbd></pre>
+    Quelques erreurs vont s'afficher:
+      <pre class="output">bash: id: command not found
+bash: id: command not found
+bash: date: command not found
+bash: uname: command not found
+bash: uname: command not found
+bash: whoami: command not found
+bash: uname: command not found
+bash: wc: command not found
+/</pre>
+     <li>Nous définissons la variable PATH une dernière fois:</li>
+      <pre class="command"><kbd>export PATH=/bin:/usr/bin:/sbin:/usr/sbin:/tools/bin:/root/bin</kbd></pre>
+     <li>Nous relançons la compilation des paquets restants:</li>
+      <pre class="command"><kbd>cd /root/development/base
+pass</kbd></pre>
+      <pre class="output">tar -p -o -C /tmp/work/src -xf /sources/bc-1.06.95.tar.bz2
+....</pre>
+     <li>La compilation se termine par le paquet <b>ca-certificates</b>:</li>
+      <pre class="output">ADD: ca-certificates-20150725, 1282 files: 100%
+=======&gt; Installing 'ca-certificates1418739487x86_64.cards.tar' succeeded.
+=======&gt; compress ca-certificates1418739487x86_64.cards.tar</pre>
+    </ol>
+<a name="2"></a>    <h2>Explications relative à chaque action</h2>
+    <ol>
+      <li><div class="important"><img alt="[Important]" src="../graphics/caution.gif" />Il est indispensable d'effectuer toutes les opérations via le compte root.</div></li>
+      <li>La variable LFS est utilisé tout au long de l'article, il est indispensable qu'elle soit correctement définie et surtout qu'elle soit identique tout au long des 2 passes. Une solution radicale consiste à la définir une fois pour toute dans le fichier .bash_profile du compte root et de la sourcer:</li>
+<pre class="command"><kbd>echo "export LFS=/mnt/lfs" &gt;&gt; /root/.bash_profile
+source  ~/.bash_profile</kbd></pre>
+      <li>Vérification de la variable LFS. Si tout est ok, on change le propriétaire et le groupe du contenu du dossier $LFS</li>
+      <li>On créer le dossier pour y placer les recettes ainsi qe le dossier logs qui recevra les resultats de la compilation de chaque recette. On crée également un lien pour que le script <b>pass</b> soit trouvé.</li>
+      <li>On va maintenant compiler le premier paquet qui est <b>nutyx</b>. Pour cela on se rend dans le dossier</li>
+      <li>On compile le premier paquet qui d'ailleurs ne contient aucun code, ce paquet consiste à crééer tous les dossiers de la NuTyX.</li>
+      <li>On installe le premier paquet <b>nutyx</b> dans la NuTyX et</li>
+      <li>On vérifie bien sa présence dans la base de données de celle-ci.</li>
+      <li>On ajoute tous les fichiers de configuration par défaut, ceux-ci se trouvent dans le script d'installation de la NuTyX development</li>
+      <li>Il s'agit maintenant de monter les quelques dossiers indispensable pour le bon déroulement des opérations de compilation.</li>
+      <li>Pour que le cas échéant, une recette nécessite de télécharger les sources, on copie le fichier resolv.conf qui définie le routage et la résolution de noms de domaine.</li>
+      <li>Une dernière vérification sur la présence de tous les dossiers concernés.</li>
+      <li>On peut maintenant entrer dans la CHROOT cad la future NuTyX. Comme il n'y a encore aucun programme au bon endroit, on obtient une erreur lors de la commande chroot et la variable PATH est à redéfinir pour que toutes les commandes binaires soient présentées dans le bon ordre.</li>
+      <li>La variable PATH est réajustée en effet, lorsque l'on entre dans la chroot elle n'est pas configurée correctement</li>
+      <li>On se met dans le dossier des recettes NuTyX version courante. Et on lance la compilation des paquets dans le bonne ordre.</li>
+      <li>L'interpreteur bash doit être installé en dehors de la chroot, on attend donc le message.</li>
+      <li>On va donc devoir ressortir de la chroot</li>
+      <li>On lance une boucle pour installer tous les paquets <b>bash</b>.</li>
+      <li>On vérifie que les paquets bash se soient correctements installés</li>
+      <li>On peut retourner dans la CHROOT cad la future NuTyX. Cette fois aucune erreur ne doit s'afficher</li>
+      <li>La variable PATH est réajustée en effet, lorsque l'on entre dans la chroot elle n'est pas configurée correctement</li>
+      <li>On se met dans le dossier des recettes NuTyX version courante. Et on relance la compilation des paquets restants dans le bonne ordre.</li>
+      <li>Une fois le paquet <b>ca-certificates</b> compilé et installé, votre NuTyX de base est complète</li>
+    </ol>
+<a name="3"></a>    <h2>Ce qu'il faut savoir:</h2>
+    <ol>
+      <li><div class="note"><img alt="[Note]" src="../graphics/note.gif" />Si vous avez une erreur lors de la compilation d'une recette, ce n'est pas grave, lorsque vous relancez la commande pass, le script reprend le travail là où il s'est arrêté. Afin de faire profiter un maximum de lecteurs, merci de nous informer du problème soit sur <a class="url" href="http://webchat.freenode.net/?channels=nutyx">le canal irc</a> ou sur <a class="url" href="http://forum.nutyx.org/">le forum</a>.</div></li>
+      <li><div class="note"><img alt="[Note]" src="../graphics/note.gif" />Vous pouvez effectuer la passe 2 en plusieurs étapes. Si vous êtes sorti de la chroot, vous DEVEZ alors vous assurez de retaper <u>les commandes 12 et 13.</u> Si vous avez arrêté la machine, assurez-vous de tapez <u>la commande 9</u> en plus des commandes 12 et 13.</div></li>
+    </ol>
+  <div class="pied_page"><a class="url" href="build-post.html">Une fois la passe 2 terminée, vous pouvez passer à la post-installation et génération de l'iso</a></div>
+<hr>
+    <footer >
+     <p id="foot"> Powered by cards 2.2.2.2     &copy; 2007 - 2017 <a href=".html">NuTyX</a>.<br><br>
+Hosted by <a href="http://tuxfamily.org/"><img src="../graphics/logo_tuxfamily_50.png"/></a><br><br>
+     <a href="http://www.wtfpl.net/">
+     <img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
+     width="80" height="15" alt="WTFPL" /></a> 
+     <a href="http://www.anybrowser.org/campaign/">
+       <img src="../graphics/abblue.gif" width="80" height="15"
+       alt="anybrowser"></a>
+    </footer>
+   </tr>
+  </table>
+ </body>
+
+<!-- Mirrored from www.nutyx.org/fr/build-pass-2 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 10:32:55 GMT -->
+</html>

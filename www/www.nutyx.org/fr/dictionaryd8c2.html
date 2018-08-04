@@ -1,0 +1,529 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+     "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+   
+<!-- Mirrored from www.nutyx.org/fr/dictionary?type=col&branch=stable&arch=x86_64&searchpkg=xfce4 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 10:32:55 GMT -->
+<HEAD>
+      <TITLE>NuTyX GNU/Linux</TITLE>
+      <META charset="utf-8" />
+      <LINK rel="shortcut icon" href="../favicon.html">
+ <style type="text/css">
+ body{
+   text-align: left;
+   color: #444;
+   background: #eee url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAMAAAC6sdbXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF3d3d////riJKgAAAAAJ0Uk5T/wDltzBKAAAAFUlEQVR42mJgBAEGGMmAxAYCgAADAAGGABmnk/7aAAAAAElFTkSuQmCC); 
+   font: 14px;
+}
+header {
+   float: left;
+   padding-top: 6px;
+   padding-left: 2%;
+   margin-right: 2%;
+   background-color: #606060;
+}
+nav { padding-top: 1px; }
+/* horizontally center ul element */
+nav ul { text-align:center; }
+nav li {
+    /* make list elements fall inline as block elements */
+    position: relative;
+    display: inline-block;
+    /* next two lines only for display purposes */
+    text-align: center;
+    border:1px solid black;
+}
+nav li a {
+    font-size:12px;
+    text-decoration: none;
+    float:left;
+    padding:10px;
+    background-color: #333333;
+    color:#ffffff;
+    border-bottom:1px;
+    border-bottom-color:#000000;
+    border-bottom-style:solid;
+}
+nav li a:hover {
+    background-color:#9B1C26;
+    border-bottom-color:#000000;
+    border-bottom-style:solid;
+}
+img { border: 0; }
+nav.img { border: 0; }
+h1 { text-decoration: underline; }
+
+p1 {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    color:#585858;
+    font-size:1em;
+}
+pre {
+   padding: 0.5em 1em;
+   margin: 1em 0em 1em 2em;
+   font-weight:bold;
+   color: black;
+   font-family: monospace;
+   background-color: #D0D0D0;
+}
+td { padding: 0.5em 0.5em 0.5em 0.5em; }
+tr.header { color: white; background-color: #606060; }
+tr.odd { background-color: #D0D0D0; }
+.sidebar { background-color: #E0E0E0; }
+pre.command { border-left: 0.2em solid #C70000; }
+pre.command_user { border-left: 0.2em solid #00C700; }
+pre.output { font-weight:normal; }
+div.important {
+   margin: 1em 2em 1em 2em;
+   font-size: 1.2em;
+   color:#883333;
+   padding: 0.5em 0.5em 0.5em 0.5em;
+   border: 2px solid #866;
+}
+div.note {
+   margin: 1em 2em 1em 0em;
+   font-size: 1em;
+   color:#333388;
+   border: 2px solid #dbddec;
+   padding: 0.5em 0.5em 0.5em 0.5em;
+}
+div.toc {
+   margin: 0em 0em 0em 0em;
+   font-size: 0.9em;
+   border: 1px solid #999999;
+   padding: 0em 2em 0em 1em;
+   width: -moz-max-content;
+   background-color: #e9e9ef;
+}
+div.important img { padding: 0.4em; }
+div.note img { padding: 0em 0.4em; }
+div.pied_page { text-align: center; }
+a { color: #F64825; }
+#foot {
+    text-align: center;
+    text-decoration-color: #000000;
+    font-size: 10px;
+}
+/* Last edited info */
+p.updated {
+    text-align: left;
+    font-size: small;
+    font-weight: bold;
+    font-style: italic;
+}
+a:link {
+    color: #703030;
+    text-decoration: none;
+}
+a:visited {
+    color: #0b0080;
+}
+a:hover {
+    color: #403030;
+    text-decoration: underline;
+}
+table {
+    width: 100%;
+}
+td.menu {
+    font: courrier;
+    background-color: #959595;
+    text-decoration: none;
+    vertical-align:middle;
+    text-align:center;
+    height:60px;
+}
+td.menu:hover {
+    text-decoration: none;
+    background-color: #AAAAAA;
+    text-transform: uppercase;
+}
+td.menu a:link {
+    font-weight:bold;
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+td.menu a:visited {
+    font-weight:bold;
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+td.menu a:hover {
+    color: black;
+    text-decoration: none;
+    font-family: arial;
+}
+ @media print { header, footer {display:none } }
+ </style>
+</head>
+<body>
+    <table>
+     <tr>
+      <td>
+       <a href=".html"><img id="logo" src="../graphics/logo_nutyx_120.png" alt="logo nutyx" /></a>
+      </td>
+      <td>
+       <table class="sidebar" >
+        <tr>
+            <td class="menu"><br><a href="news.html">Nouvelles</a><br><br>
+            <td class="menu"><br><a href="information.html">Information</a><br><br>
+            <td class="menu"><br><a href="documentation.html">Documentation</a><br><br>
+            <td class="menu"><br><a href="installation.html">Installation</a><br><br>
+            <td class="menu"><br><a href="packages.html">Paquets</a><br><br>
+            <td class="menu"><br><a href="faq.html">FAQ</a><br><br>
+        </tr>
+        <tr>
+            <td class="menu"><br><a href="http://downloads.nutyx.org/?C=M;O=D">Téléchargements</a><br><br>
+            <td class="menu"><br><a href="http://forum.nutyx.org/index.php?action=recent">Forum</a><br><br>
+            <td class="menu"><br><a href="http://github.com/NuTyX">Code</a><br><br>
+            <td class="menu"><br><a href="screenshots.html">Captures d'écrans</a><br><br>
+            <td class="menu"><br><a href="wallpapers.html">Fonds d'écrans</a><br><br>
+            <td class="menu"><br><a href="../en/index.html" title="Home"> <img src="../graphics/gb.gif" alt="Home" height="12" width="35"></a><br><br>
+        </tr>
+       </table>
+      </td>
+     </tr>
+    </table>
+   <hr>
+<table border="0" cellpadding="15" cellspacing="10" width="100%">
+ <tr valign="top">
+  <td class="sidebar" width="20%">
+   <h4>Forum</h4>
+    <div>
+<p class="updated">Sat Jul  1 17:50:49 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=366.msg1880#msg1880">Re : Recette uClibc-ng (gelée)</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 21:42:58 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=378.msg1879#msg1879">Recette musl-libc</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 20:51:32 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=366.msg1878#msg1878">Re : Recette uClibc-ng (gelée)</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Fri Jun 30 20:44:04 2017 UTC</p><div style="text-transform: uppercase;">Généralitées:</div><b>News</b><br><i>Modelor</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=376.msg1877#msg1877">Re : Nouvelle iso avec mode LIVE disponible</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Thu Jun 29 06:03:45 2017 UTC</p><div style="text-transform: uppercase;">CONFIGURER:</div><b>Le son</b><br><i>tnut</i><br><img src="../graphics/lamp.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=377.msg1876#msg1876">Re : Pas de son, groupe audio absent</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Wed Jun 28 14:51:32 2017 UTC</p><div style="text-transform: uppercase;">CONFIGURER:</div><b>Le son</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=377.msg1875#msg1875">Pas de son, groupe audio absent</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Tue Jun 27 14:01:19 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1874#msg1874">Re : Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Tue Jun 27 10:57:23 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>tnut</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1873#msg1873">Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Mon Jun 26 21:04:29 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>Rocket</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1872#msg1872">Re : Problème de dépendance</a><br><br>
+<hr align="center" style="width: 50%;">
+<p class="updated">Mon Jun 26 08:08:47 2017 UTC</p><div style="text-transform: uppercase;">INSTALLER:</div><b>Un paquet</b><br><i>SipoMatadorduCosmos</i><br><img src="../graphics/xx.gif" alt="" /> <a href="http://forum.nutyx.org/index.php?topic=362.msg1871#msg1871">Re : Problème de dépendance</a><br><br>
+    </div>
+<hr>  <td valign="top" align="left" width="100%">
+   <div>
+  <form method="get" action="https://www.nutyx.org/fr/.">
+     <fieldset>
+          <label for="search-field">Recherche ...</label>
+          <input id="search-field" type="text" name="search" size="18" maxlength="200" />
+     </fieldset>
+  </form>
+   </div>
+    <p class="updated"> Thu Jun  1 10:42:34 2017 UTC</p>
+   <h1>Petit lexique du NuTyXien</h1>
+
+    <a name='ID000'></a>
+<div class="toc">
+ <h2>
+Sommaire
+</h2>
+  <ul style="list-style-type: none; padding: 0;">
+<li><a href="#1">Cards</a>
+<li><a href="#2">Un paquet</a>
+<li><a href="#3">Une collection</a>
+<li><a href="#4">Une dépendance</a>
+<li><a href="#5">Une famille</a>
+<li><a href="#6">Un groupe</a>
+<li><a href="#7">Une catégorie</a>
+<li><a href="#8">Le système de base</a>
+<li><a href="#9">Un script</a>
+<li><a href="#10">Une recette</a>
+<li><a href="#11">Un port</a>
+<li><a href="#12">Le fichier 'Pkgfile'</a>
+<li><a href="#13">Une chroot</a>
+<li><a href="#14">Les niveaux</a>
+<li><a href="#15">Les alias</a>
+</ul>
+</div>
+<a name="1"></a>    <h2>Cards</h2>
+     <p>
+      Cards qui signifie 'Create, Add, Remove and Download 
+      System' (Système de Création , d'Ajout, de Suppression et 
+      de Téléchargement des <a href="#ID005">paquets</a>) est un jeu 
+      d'utilitaires pour la gestion vos logiciels installés sur votre NuTyX-linux.
+     <p>
+      Cards permet également la gestion des <a href="#ID005">dépendances</a> pour la compilation.
+      Il gére les <a href="#ID005">dépendances</a> pour le fonctionnement de manière autonome.
+      Cela signifie que dans 95 % des cas, les <a href="#ID005">dépendances</a> pour le fonctionnement ne doivent pas
+      être spécifiées dans la <a href="#ID060">recette</a> de construction.
+
+    <a name='ID005'></a>
+<a name="2"></a>    <h2>Un paquet</h2>
+     <p>
+      Un paquet est une archive contenant un ensemble de fichiers.
+      Ces fichiers peuvent être de différente nature.
+      On y trouvera des librairies, des applications en ligne de commande, 
+      des application utilisées dans un environnement graphique, 
+      des information de configuration, etc
+     <p>
+      Lorsque le paquet est installé sur votre NuTyX, il sera géré par le 
+      gestionnaire de <a href="#ID005">paquets</a> <a href="#ID000">cards</a>
+     <p>
+      <b>Syntaxe d'une archive</b></p>
+      <ul>
+       <li>
+        <b>name</b>: (nom-du-port)
+       <li>
+        <b>.group-name</b>: seulement si il y a le paquet fait partie d'un groupe. Voir configuration: 'PKGMK_GROUPS'
+       <li>
+        <b>.locale-name</b>: seulement si le paquet fait partie d'une locale. Voir configuration: 'PKGMK_LOCALES'
+       <li>
+        <b>build-version</b>: Unité de temps en 10 chiffres représentant la date de construction du paquet. Voir aussi 'PKGMK_BUILDVER'
+       <li>
+        <b>architecture</b>: &quot;any&quot; ou l'architecturepour laquelle le paquet est destiné: par ex. ("$(uname -m)" x86_64)
+       <li>
+        <b>.extension</b>: l'extension prédéfinie par cards sans compression.
+       <li>
+        <b>.compression-extension</b>: seulement si le paquet est compressé. Voir configuration: 'PKGMK_COMPRESS_PACKAGE'
+      </ul>
+
+    <a name='ID010'></a>
+<a name="3"></a>    <h2>Une collection</h2>
+     <p>
+      Une collection regroupe un jeu de <a href="#ID005">paquets</a> qui constituent un ensemble de fonctionnalitées.
+     <p>
+      Losque vous installez le système de base depuis l'ISO MINI ou depuis le <a href="#ID050">script</a>,
+      vous installez la <a href="http://nutyx.org/fr/?branch=stable&amp;arch=x86_64&amp;searchpkg=base">collection base</a>.
+     <p>
+      Par exemple, la <a href="http://nutyx.org/fr/?branch=stable&amp;arch=x86_64&amp;searchpkg=gui">collection gui</a> permet d'avoir une inteface utilisateur graphique. 
+      Sur cette interface graphique, on choisira son gestionnaire de fenêtres favori.
+     <p>
+      Sous NuTyX, il est possible d'installer les <a href="dictionary3393.html?type=col&amp;branch=stable&amp;arch=x86_64&amp;searchpkg=kde5">collections kde5</a>,
+      <a href="dictionaryb313.html?type=col&amp;branch=stable&amp;arch=x86_64&amp;searchpkg=gnome">gnome</a>,
+      <a href="dictionary6048.html?type=col&amp;branch=stable&amp;arch=x86_64&amp;searchpkg=mate">mate</a>
+      ou <a href="dictionaryd8c2.html?type=col&amp;branch=stable&amp;arch=x86_64&amp;searchpkg=xfce4">xfce4</a>.
+ 
+    <a name='ID006'></a>
+<a name="4"></a>    <h2>Une dépendance</h2>
+     <p>Une dépendance est le nom d'un <a href="#ID005">paquet</a> <b>AAA</b> qui est necessaire au fonctionnement ou à la compilation d'un autre <a href="#ID005">paquet</a> <b>BBB</b>.
+     <p>Le <a href="#ID005">paquet</a> <i>gtk3</i> est une dépendance utilisée par de nombreux <a href="#ID005">paquets</a> de la <a href="dictionaryd0e7.html?branch=stable&amp;arch=x86_64&amp;searchpkg=gnome">collection gnome</a>
+
+    <a name='ID020'></a>
+<a name="5"></a>    <h2>Une famille</h2>
+     <p>
+      Sous NuTyX, une famille de <a href="#ID005">paquets</a> désigne un ensemble de <a href="#ID005">paquets</a> dont le commencement du nom est commun (paquet père): 
+      Un exemple de famille de <a href="#ID005">paquets</a> sous NuTyX:</p>
+     <ul>
+      <li>
+       gstreamer1
+      <li>
+       gstreamer1-plugins-bad
+      <li>
+       gstreamer1-plugin-good
+      <li>
+       gstreamer1-plugin-libav
+      <li>
+       gstreamer1-...
+     </ul>
+      <p>
+       Une famille de <a href="#ID005">paquets</a> se trouve toujours dans une même <a href="#ID010">collection</a>
+      <p>
+       Une famille de <a href="#ID005">paquets</a> peut partager les mêmes variables telles que la <b>version</b>, les <b>sources</b>, etc
+
+    <a name='ID025'></a>
+<a name="6"></a>    <h2>Un groupe</h2>
+     <p>
+      Un groupe de paquets constitue un ensemble de paquets fournissant un usage précis,
+      par exemple le <a href="dictionary712b.html?branch=stable&amp;arch=x86_64&amp;searchpkg=devel">groupe devel</a> fournira les outils necessaires pour la compilation.
+     <p>
+      Le nom du groupe d'un paquet est déterminé par la partie du nom qui suit le point.
+     <p>
+      Chaque locales constituent également un groupe de paquets.
+     <p>
+      Par exemple, le paquet <b>gcc.devel</b> fait partie du groupe <b>devel</b>.
+     <p>
+      La plupart des paquets sont répartis dans ces groupes.
+     <p>
+      Les groupes actuels sont: <a href="dictionary712b.html?branch=stable&amp;arch=x86_64&amp;searchpkg=devel">devel</a>, <a href="dictionaryf830.html?branch=stable&amp;arch=x86_64&amp;searchpkg=man">man</a>,
+      <a href="dictionaryca5d.html?branch=stable&amp;arch=x86_64&amp;searchpkg=doc">doc</a>, lib et
+      <a href="dictionary0f96.html?branch=stable&amp;arch=x86_64&amp;searchpkg=service">service</a> ainsi que chaque locale disponible
+     <b>
+      fr, de, da, it, pt, tr, ru, sv, nn, es, nl et fi</b>
+
+    <a name='ID030'></a>
+<a name="7"></a>    <h2>Une catégorie</h2>
+     <p>Une catégorie définie un ensemble d'applications ayant des fonctionnalitées similaires: 
+     Un exemple typique de catégorie est "Internet" qui regroupera les navigateurs, 
+     les client d'email, clients discussions instantanées, etc</p>
+
+    <a name='ID040'></a>
+<a name="8"></a>    <h2>Le système de base</h2>
+     <p>
+      Le système de base de NuTyX est constitué d'un ensemble minimum de <a href="#ID005">paquets</a> qui ne sera JAMAIS supprimé.
+     <p>
+      La liste des <a href="#ID005">paquets</a> à garder lors du retour à un système de base est définie
+      dans le fichier <i>/etc/cards.conf</i>. Le mot clé en début de ligne est: <i>base</i>.
+
+    <a name='ID050'></a>
+<a name="9"></a>    <h2>Un script</h2>
+     <p>
+      Le script est utilisé, comme en cinéma, pour définir chaque action 
+      devant être exécutée par l'interpréteur. Dans le cadre de cet article, 
+      le script sera donc l'ensemble des actions ordonnées à faire pour 
+      la construction d'un <a href="#ID005">paquet</a>.
+     <p>
+      Un script peut également être utilisé pour installer 
+      une NuTyX depuis une autre distribution linux ou depuis une autre 
+      NuTyX déjà installée.
+
+    <a name='ID060'></a>
+<a name="10"></a>    <h2>Une recette</h2>
+     <p>Une recette définie la construction d'un <a href="#ID005">paquet</a>. 
+     Sous NuTyX, la recette d'un <a href="#ID005">paquet</a> se trouve dans 
+     le fichier <a href="#ID080">Pkgfile</a>.
+
+    <a name='ID070'></a> 
+<a name="11"></a>    <h2>Un port</h2>
+     <p>
+      Sur NuTyX, un port est constitué d'un dossier contenant tous les fichiers 
+      necessaires pour la construction d'un <a href="#ID005">paquet</a>. 
+      Il contiendra toujours au minimum un fichier appelé <a href="#ID080">Pkgfile</a>.
+     <p>
+      Le port peut également, dans certains cas, contenir  un <a href="#ID050">script</a> de 
+     pré-installation ou de post-installation. Il peut également contenir 
+     un fichier README descrivant diverse options, actions, configutations possibles du port.
+     <p>
+      Le terme <i>port</i> fait référence a un dépot distant contenant des <i>ports</i> et
+     utilise un programme client capable de télécharger ces <i>ports</i> depuis ce dépot distant
+     <p>
+      NuTyX utilise l'utilitaire <i>ports</i> pour le téléchargement des <i>ports</i> depuis 
+     le dépot distant et les place dans le dossier <i>/usr/ports/&lt;nom_de_<a href="#ID010">collection</a>&gt;</i>
+
+    <a name='ID080'></a> 
+<a name="12"></a>    <h2>Le fichier 'Pkgfile'</h2>
+     <p>
+      Le Pkgfile est un fichier texte. Il contient 
+     la <a href="#ID060">recette</a> de construction d'une application. 
+     Le résultat de la construction sera un <a href="#ID005">paquet</a> 
+     qui pourra être installé par le gestionnaire de 
+     <a href="#ID005">paquets</a> <a href="#ID000">cards</a>
+     Le contenu de ce fichier texte suit un schéma standard et est composé de trois parties:
+     <ol>
+      <li>
+        Les informations générales (optionnelles mais vivement recommandées) sur le <a href="#ID005">paquet</a>: Description, URL, Developeur(s), Empaqueteu(r), <a href="#ID006">dépendances</a>
+      <li>
+        Les informations indispensable pour la construction du <a href="#ID005">paquet</a>:
+      Nom, version, release
+      <li>
+        La fonction "build" définit la construction proprement dite du <a href="#ID005">paquet</a>.
+     </ol>
+     <p>
+        Il est indispensable de placer le fichier <a href="#ID080">Pkgfile</a> dans un dossier portant le même nom que la variable <i>name</i> définie dans ce fichier <a href="#ID080">Pkgfile</a>.
+     <p>
+      Exemple d'un tel Pkgfile situé dans le dossier <i>monpaquet</i>:
+      <pre class="output"># Depends on: glib atk
+
+description="Mon premier paquet"
+url="http://downloads.nutyx.org"
+packager="tnut at nutyx dot org"
+
+name=monpaquet
+version=1.0
+release=1
+source=(${url}/files/$name-$version.tar.xz)
+
+build() {
+
+cd ${name}-$version
+
+./configure --prefix=/usr \
+--disable-static
+
+make
+
+make DESTDIR=$PKG install
+}</pre>     
+
+    <a name='ID100'></a>
+<a name="13"></a>    <h2>Une chroot</h2>
+     <p>
+      Une chroot est un environnement de travail dans lequel on construit toutes les <a href="#ID060">recettes</a> provenant de différents <a href="#ID070">ports</a>.
+      Votre NuTyX principale n'utilise pas et donc n'a pas de paquets de développement installés. 
+     <p>
+      Sous NuTyX, une chroot est indispensable les raisons suivantes:
+      <ul>
+       <li>
+        L'environnement de travail étant isolé de la distribution principale
+       <li>
+        Etant isolé, votre chroot ne pourra jamais endommager le système d'exploitation hôte.
+       <li>
+        La chroot étant une NuTyX fraîchement installée, vous contrôllez entièrement les dépendances necessaires.
+       <li>
+        La chroot vous assure qu'aucune <a href="#ID006">dépendance</a> ne sera installée depuis ou sur le système d'exploitation hôte à votre insus.
+     </ul>
+    <a name='ID200'></a>
+<a name="14"></a>    <h2>Les niveaux</h2>
+     <p>
+      Lorsque <a href="#ID000">cards</a> compile un <a href="#ID005">paquet</a>,
+      il doit connaître le niveau de compilation de celui-ci.
+     <p>
+      Chaque <a href="#ID005">paquet</a> peut ou pas contenir des <a href="#ID006">dépendances</a>.
+     <p>
+      Si un <a href="#ID005">paquet</a> appelé <i>AAAA</i> ne contient aucune <a href="#ID006">dépendance</a>s, il sera au premier Niveau cad 0 (zero).
+     <p>
+      Si un paquet appelé <i>BBBB</i> contient une <a href="#ID006">dépendance</a> appelé <i>AAAA</i>, ce paquet sera au deuxième Niveau, cad 1.
+     <p>
+      La liste des <a href="#ID006">dépendances</a> de compilation d'un <a href="#ID005">paquet</a> 
+      se définie à la ligne:
+<pre class="output"># Depends on: glib atk pango gtk xorg-libx11</pre> du <a href="#ID080">Pkgfile</a>.
+
+     <a name='ID300'></a>
+<a name="15"></a>    <h2>Les alias</h2>
+     <p>
+      Il faut savoir que certaines commandes mentionnées sur les pages du site peuvent être remplacées par des alias,
+      c'est à dire un racourci de la commande originale. Si vous souhaitez connaître la liste des alias, utilisez la commande:
+<pre class="command_user"><kbd>alias</kbd></pre>
+     <p>Si vous souhaitez modifier les alias définis dans votre NuTyX,
+     vous devez éditer le fichier <b><span style="color: #007a00;">.bashrc</span></b> qui se trouve dans le dossier personnel du compte concerné.
+     <div>Extrait de <b>/root/.bashrc</b>:</div>
+     <pre class="output">if [ -f "/etc/bashrc" ] ; then
+  source /etc/bashrc
+fi
+if [ $EUID -eq 0 ]; then
+         alias del='cards remove'
+         alias get='cards install'
+         alias up='cards install -u'
+         alias check='cards sync;cards diff'
+else
+         alias del='sudo cards remove'
+         alias get='sudo cards install'
+         alias up='sudo cards install -u'
+         alias check='sudo cards sync;sudo cards diff'
+fi
+alias search='cards search'
+alias ll='ls -l'
+alias l='ls -alh'
+alias duh='du -h --max-depth=1'
+alias dfh='df -h'
+alias pkgfind='cards list| grep -i'
+# End ~/.bashrc</pre>
+<hr>
+    <footer >
+     <p id="foot"> Powered by cards 2.2.2.2     &copy; 2007 - 2017 <a href=".html">NuTyX</a>.<br><br>
+Hosted by <a href="http://tuxfamily.org/"><img src="../graphics/logo_tuxfamily_50.png"/></a><br><br>
+     <a href="http://www.wtfpl.net/">
+     <img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
+     width="80" height="15" alt="WTFPL" /></a> 
+     <a href="http://www.anybrowser.org/campaign/">
+       <img src="../graphics/abblue.gif" width="80" height="15"
+       alt="anybrowser"></a>
+    </footer>
+   </tr>
+  </table>
+ </body>
+
+<!-- Mirrored from www.nutyx.org/fr/dictionary?type=col&branch=stable&arch=x86_64&searchpkg=xfce4 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Jul 2017 10:32:55 GMT -->
+</html>

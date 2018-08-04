@@ -13,15 +13,22 @@ source=(http://download.savannah.gnu.org/releases/$name/$name-$version.tar.gz)
 
 
 build() {
-cd attr-$version
-./configure --prefix=/usr \
---bindir=/bin
-make
-make  DESTDIR=$PKG 
-chmod -v 755 $PKG/usr/lib/libattr.so
-mkdir $PKG/lib
-mv -v $PKG/usr/lib/libattr.so.* $PKG/lib
-ln -sfv ../../lib/libattr.so.1 $PKG/usr/lib/libattr.so
+    cd $name-$version
+
+    ./configure --prefix=/usr \
+		--bindir=/bin \
+		--sysconfdir=/etc
+
+    make
+    make DESTDIR=$PKG install
+
+    install -d $PKG/lib
+    mv $PKG/usr/lib/libattr.so.* $PKG/lib
+    rm $PKG/usr/lib/libattr.so
+    ln -sf ../../lib/$(readlink $PKG/lib/libattr.so.1) $PKG/usr/lib/libattr.so
+
+
+    rm -r $PKG/usr/share/{doc,locale}
 }
 
 devel () {

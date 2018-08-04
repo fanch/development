@@ -9,20 +9,15 @@ version=2.4.48
 
 PKGMK_GROUPS=(devel man doc)
 
-source=(http://download.savannah.gnu.org/releases/$name/$name-$version.src.tar.gz)
+source=(http://download.savannah.gnu.org/releases/$name/$name-$version.tar.gz)
 
 
 build() {
 cd attr-$version
-
-sed -i -e 's|/@pkg_name@|&-@pkg_version@|' include/builddefs.in
-
-INSTALL_USER=root  \
-INSTALL_GROUP=root \
 ./configure --prefix=/usr \
 --bindir=/bin
 make
-make  DIST_ROOT=$PKG install install-lib install-dev
+make  DESTDIR=$PKG 
 chmod -v 755 $PKG/usr/lib/libattr.so
 mkdir $PKG/lib
 mv -v $PKG/usr/lib/libattr.so.* $PKG/lib

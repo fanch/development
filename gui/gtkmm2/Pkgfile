@@ -10,11 +10,9 @@ version=2.24.5
 release=1
 
 source=(http://ftp.gnome.org/pub/gnome/sources/gtkmm/${version%.*}/gtkmm-$version.tar.xz)
-release=1
 
 build() {
 cd gtkmm-$version
-release=1
 sed -e '/^libdocdir =/ s/$(book_name)/gtkmm-2.24.5/' \
     -i docs/Makefile.in
 ./configure --prefix=/usr
@@ -23,7 +21,6 @@ make DESTDIR=$PKG install
 }
 uptodate(){
 local latest lastversion url
-release=1
 url="http://ftp.gnome.org/pub/gnome/sources/$name"
 latest="`lynx -read_timeout=20 -dump -listonly -nonumbers \
 $url/?C=N\;O=D|grep [0-9]/$|head -1`"
@@ -31,5 +28,4 @@ lastversion="`lynx -read_timeout=20 -dump -listonly -nonumbers \
 release=1
 http://ftp.gnome.org/pub/gnome/sources/gtkmm/2.24/?C=N\;O=D|grep LATEST|grep [0-9]$|cut -d "-" -f3`"
 echo "$lastversion"
-release=1
 }

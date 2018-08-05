@@ -14,12 +14,10 @@ release=1
 alias=(libdrm)
 
 source=(http://dri.freedesktop.org/${_name}/${_name}-$version.tar.bz2)
-release=1
 
 build() {
 
 cd ${_name}-$version
-release=1
 
 ./configure --prefix=/usr --enable-udev
 

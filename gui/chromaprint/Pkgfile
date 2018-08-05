@@ -10,10 +10,8 @@ version=1.4.2
 release=1
 
 source=(https://bitbucket.org/acoustid/${name}/downloads/${name}-${version}.tar.gz)
-release=1
 build() {
 cd $name-$version
-release=1
 cmake \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_BUILD_TYPE=Release \

@@ -8,12 +8,10 @@ name=ssh-askpass
 version=7.7p1
 release=1
 source=($url/openssh-$version.tar.gz)
-release=1
 
 build() {
 
 cd openssh-$version/contrib
-release=1
 make gnome-ssh-askpass2
 install -v -d -m755 $PKG/usr/libexec/openssh/contrib
 install -v -m755    gnome-ssh-askpass2 \

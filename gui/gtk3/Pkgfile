@@ -11,11 +11,9 @@ version=3.22.29
 release=1
 
 source=(http://ftp.gnome.org/pub/gnome/sources/gtk+/${version%.*}/gtk+-$version.tar.xz)
-release=1
 
 build() {
 cd gtk+-$version
-release=1
 ./configure --prefix=/usr \
 --sysconfdir=/etc         \
 --mandir=/usr/share/man   \
@@ -44,7 +42,6 @@ rm $PKG/{usr/bin/gtk-update-icon-cache,usr/share/man/man1/gtk-update-icon-cache.
 }
 uptodate(){
 local latest lastversion url
-release=1
 url="http://ftp.gnome.org/pub/gnome/sources/gtk+"
 latest="`lynx -read_timeout=20 -dump -listonly -nonumbers \
 $url/?C=N\;O=D|grep [0-9]/$|head -1`"
@@ -52,5 +49,4 @@ lastversion="`lynx -read_timeout=20 -dump -listonly -nonumbers \
 release=1
 $latest/?C=N\;O=D|grep LATEST|grep [0-9]$|cut -d "-" -f3`"
 echo "$lastversion"
-release=1
 }

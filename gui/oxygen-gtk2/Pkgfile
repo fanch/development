@@ -10,11 +10,9 @@ version=1.4.6
 release=1
 
 source=(http://download.kde.org/stable/oxygen-gtk2/$version/src/$name-$version.tar.bz2)
-release=1
 
 build() {
   	cd $name-$version
-release=1
         mkdir build
         cd build
 	cmake -DCMAKE_INSTALL_PREFIX=/usr \

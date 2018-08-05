@@ -13,10 +13,8 @@ run=(python-requests)
 
 source=(
 http://cyberelk.net/tim/data/pycups/pycups-$version.tar.bz2)
-release=1
 
 build() {
     cd pycups-$version
-release=1
     python3 setup.py install --prefix=/usr --root=$PKG
 }

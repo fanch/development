@@ -11,13 +11,11 @@ release=1
 
 source=(
 http://downloads.sourceforge.net/sourceforge/wvware/$name-$version.tar.gz
-release=1
 libwmf.0.2.8.4-libpng-1.5.patch
 libwmf.0.2.8.4-useafterfree.patch)
 
 build(){
     cd $name-$version
-release=1
     patch -p1 -i $SRC/libwmf.0.2.8.4-libpng-1.5.patch
     patch -p1 -i $SRC/libwmf.0.2.8.4-useafterfree.patch
     ./configure --prefix=/usr \

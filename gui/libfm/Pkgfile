@@ -13,13 +13,11 @@ release=1
 run=(shared-mime-info)
 
 source=(http://downloads.sourceforge.net/pcmanfm/${name}-$version.tar.xz)
-release=1
 
 build() {
 
     cd $SRC
     [ -d gtk3 ] || cp -r $name-$version gtk3
-release=1
     cd gtk3
     ./configure --prefix=/usr \
     --sysconfdir=/etc \
@@ -40,6 +38,5 @@ package() {
 	rm $PKG/usr/lib/pkgconfig/libfm-extra.pc
 	rm $PKG/usr/include/libfm
 	rm $PKG/usr/include/libfm-1.0/{fm-xml-file.h,fm-extra.h,fm-version.h}
-release=1
 	
 }

@@ -11,12 +11,10 @@ version=2.38.0
 release=1
 
 source=(http://www.graphviz.org/pub/graphviz/stable/SOURCES/$name-$version.tar.gz
-release=1
        http://www.linuxfromscratch.org/patches/blfs/svn/graphviz-2.38.0-consolidated_fixes-1.patch)
 
 build () {
   cd $name-$version
-release=1
 
   patch -Np1 -i ../graphviz-2.38.0-consolidated_fixes-1.patch
   sed -i '/LIBPOSTFIX="64"/s/64//' configure.ac
@@ -27,8 +25,6 @@ release=1
   make DESTDIR=$PKG install
 	
   install -v -m755 -d $PKG/usr/share/doc/graphviz-$version
-release=1
   ln -v -s $PKG/usr/share/graphviz/doc \
            $PKG/usr/share/doc/graphviz-$version
-release=1
 }

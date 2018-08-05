@@ -12,7 +12,6 @@ release=1
 
 build() {
 	cd SDL_ttf-$version
-release=1
 
 	./configure \
 		--prefix=/usr \

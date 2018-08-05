@@ -11,7 +11,6 @@ release=1
 
 build() {
   cd ${name}-${version}
-release=1
   patch -Np0 -i ${SRC}/fix_broken_shadows.diff
   ./configure --prefix=/usr
   make

@@ -12,13 +12,11 @@ release=1
 
 build() {
 cd ffmpeg-$version
-release=1
 sed -i 's/-lflite"/-lflite -lasound"/' configure
 ./configure --prefix=/usr      \
 	    --enable-libpulse    \
             --enable-gpl         \
             --enable-version3    \
-release=1
             --enable-nonfree     \
             --disable-static     \
             --enable-shared      \
@@ -57,7 +55,6 @@ release=1
 	    --enable-openssl     \
             --enable-sdl2        \
             --docdir=/usr/share/doc/$name-$version
-release=1
 make
 gcc tools/qt-faststart.c -o tools/qt-faststart
 make DESTDIR=$PKG install

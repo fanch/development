@@ -15,7 +15,6 @@ _name="${name}-everywhere-src"
 build() {
 export PATH="$SCR/bin:$PATH"
 cd ${_name}-${version}
-release=1
 qmake
 make docs
 make INSTALL_ROOT=$PKG install_docs

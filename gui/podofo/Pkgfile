@@ -11,11 +11,9 @@ release=1
 
 source=(
 http://downloads.sourceforge.net/$name/$name-$version.tar.gz)
-release=1
 
 build() {
     cd $name-$version
-release=1
     mkdir build
     cd build
     cmake -DCMAKE_INSTALL_PREFIX=/usr .. \

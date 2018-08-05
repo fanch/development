@@ -15,13 +15,11 @@ release=1
 
 build() {
 	cd $name-$version
-release=1
 	mkdir python2
 	pushd python2
 	PYTHON=/usr/bin/python \
 	../configure --prefix=/usr \
 		--docdir=/usr/share/doc/dbus-python-$version
-release=1
 	make
 	popd
 	mkdir python3
@@ -29,7 +27,6 @@ release=1
 	PYTHON=/usr/bin/python3 \
 	../configure --prefix=/usr \
 		--docdir=/usr/share/doc/dbus-python-$version
-release=1
 	popd
 	make DESTDIR=$PKG -C python2 install
 	make DESTDIR=$PKG -C python3 install

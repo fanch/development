@@ -12,7 +12,6 @@ release=1
 
 prepare() {
 cd $name-$version
-release=1
 sed -e '/^libdocdir =/ s/$(book_name)/cairomm-1.12.2/' \
     -i docs/Makefile.in
 }

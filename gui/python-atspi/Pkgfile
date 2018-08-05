@@ -10,18 +10,15 @@ version=2.26.0
 release=1
 
 source=(http://ftp.gnome.org/pub/gnome/sources/pyatspi/${version%.*}/pyatspi-$version.tar.xz)
-release=1
 
 build() {
 cd pyatspi-$version
-release=1
 ./configure --prefix=/usr
 make
 make DESTDIR=$PKG install
 }
 uptodate(){
 local latest lastversion url
-release=1
 url="http://ftp.gnome.org/pub/gnome/sources/pyatspi"
 latest="`lynx -read_timeout=20 -dump -listonly -nonumbers \
 $url/?C=N\;O=D|grep [0-9]/$|head -1`"
@@ -29,5 +26,4 @@ lastversion="`lynx -read_timeout=20 -dump -listonly -nonumbers \
 release=1
 $latest/?C=N\;O=D|grep LATEST|grep [0-9]$|cut -d "-" -f3`"
 echo "$lastversion"
-release=1
 }

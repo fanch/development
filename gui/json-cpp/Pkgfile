@@ -11,11 +11,9 @@ version=1.8.4
 release=1
 
 source=(https://github.com/open-source-parsers/jsoncpp/archive/$version.tar.gz)
-release=1
 
 build() {
 cd jsoncpp-$version
-release=1
 mkdir -pv build
 
 python3 doxybuild.py \
@@ -34,7 +32,6 @@ ninja -C build test
 package() {
 
 cd jsoncpp-$version
-release=1
 
 DESTDIR=$PKG ninja -C build install
 install -Dm 644 README.md -t $PKG/usr/share/doc/$name

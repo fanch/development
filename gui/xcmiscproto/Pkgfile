@@ -12,7 +12,6 @@ _name=$name
 
 
 source=(http://ftp.x.org/pub/individual/proto/$name-$version.tar.bz2)
-release=1
 
 build=xorg
 

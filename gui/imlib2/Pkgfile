@@ -10,10 +10,8 @@ version=1.4.10
 release=1
 
 source=(http://downloads.sourceforge.net/enlightenment/$name-$version.tar.gz)
-release=1
 build() {
 cd $name-$version
-release=1
 case $(uname -m) in 
 	i686)
 		EXTRAOPTS="--disable-mmx";;

@@ -1,7 +1,6 @@
 # Depends on: boost lua qtbase
 
 description="Fast and flexible source code highlighter (CLI version)"
-release=1
 url="http://www.andre-simon.de/doku/highlight/highlight.html"
 packager="remy <remy@nutyx.org>"
 contributors="Pierre B,tnut"
@@ -11,17 +10,14 @@ version=3.42
 release=1
 
 source=(http://www.andre-simon.de/zip/$name-$version.tar.bz2)
-release=1
 
 build(){
     cd $name-$version
-release=1
     make 
     make gui
 }
 package(){
     cd $name-$version
-release=1
     make DESTDIR=$PKG install
     make DESTDIR=$PKG install-gui
 }

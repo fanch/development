@@ -11,12 +11,10 @@ version=0.4.0
 release=1
 
 source=(https://github.com/i-rinat/$name/archive/v$version/$name-$version.tar.gz)
-release=1
 
 build() {
 
 cd $name-$version
-release=1
 
 mkdir -v build
 cd build

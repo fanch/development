@@ -9,16 +9,12 @@ version=1.11
 release=1
 
 source=(http://www.mupdf.com/downloads/archive/$name-$version-source.tar.gz
-release=1
 	http://www.linuxfromscratch.org/patches/blfs/svn/$name-$version-shared_libs-1.patch
-release=1
 	http://www.linuxfromscratch.org/patches/blfs/svn/$name-$version-openjpeg-3.patch)
-release=1
 
 build() {
 unset MAKEFLAGS
 cd $name-$version-source
-release=1
 
 for i in curl freetype harfbuzz jpeg libjpeg openjpeg zlib
 do
@@ -26,14 +22,11 @@ do
 done
 
 patch -Np1 -i ../$name-$version-openjpeg-3.patch
-release=1
 patch -Np1 -i ../$name-$version-shared_libs-1.patch
-release=1
 
 
 
 docdir=$PKG/usr/share/doc/$name-$version \
-release=1
 install
 
 ln -svf mupdf-x11-curl $PKG/usr/bin/mupdf

@@ -17,12 +17,10 @@ release=1
 run=(xdg-utils gtk-update-icon-cache)
 
 source=(http://downloads.nutyx.org/files/nutyx-${nutyx_version}.tar.xz
-release=1
 	99-printer.rules)
 
 build() {
 	cd $name-$version
-release=1
 	sed -i '/kerberized/,$ d' conf/cupsd.conf.in
 	sed -i 's:555:755:g;s:444:644:g' Makedefs.in
 	sed -i '/MAN.*.EXT/s:.gz::g' \
@@ -36,7 +34,6 @@ release=1
 		--with-rcdir=/tmp/cupsinit \
 		--with-system-groups=lpadmin \
 		--with-docdir=/usr/share/cups/doc-$version \
-release=1
 		--disable-libusb
 	make
 	make BUILDROOT=$PKG install
@@ -44,7 +41,6 @@ release=1
 	rm -rf $PKG/tmp/cupsinit
 	mkdir -p $PKG/usr/share/doc
 	ln -svnf ../cups/doc-$version $PKG/usr/share/doc/cups-$version
-release=1
 	
 	# Lanceur
 	if [ ! -f $PKG/usr/share/applications/cups.desktop ]; then
@@ -54,7 +50,6 @@ release=1
 	fi
 	# Service
 	cd ../nutyx-${nutyx_version}
-release=1
 	make DESTDIR=$PKG install-$name
 
 	# Supprimer les filtres faisant parti de cups-filters

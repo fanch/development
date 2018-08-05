@@ -10,13 +10,11 @@ version=3.2.6
 release=1
 
 source=(http://ftp.gnome.org/pub/gnome/sources/GConf/${version%.*}/GConf-$version.tar.xz
-release=1
 		gconf-merge-schema)
 
 build() {
 
 cd GConf-$version
-release=1
 ./configure --prefix=/usr \
 --sysconfdir=/etc \
 --disable-static \
@@ -31,7 +29,6 @@ install -m755 gconf-merge-schema $PKG/usr/bin/
 }
 uptodate(){
 local latest lastversion url
-release=1
 url="http://ftp.gnome.org/pub/gnome/sources/GConf"
 latest="`lynx -read_timeout=20 -dump -listonly -nonumbers \
 $url/?C=N\;O=D|grep [0-9]/$|head -1`"
@@ -39,5 +36,4 @@ lastversion="`lynx -read_timeout=20 -dump -listonly -nonumbers \
 release=1
 $latest/?C=N\;O=D|grep LATEST|grep [0-9]$|cut -d "-" -f3`"
 echo "$lastversion"
-release=1
 }

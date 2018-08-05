@@ -10,13 +10,11 @@ version=2.30.3
 release=1
 
 source=(https://download.gnome.org/sources/${name}/2.30/${name}-${version}.tar.bz2)
-release=1
 
 
 build() {
 
 cd $SRC/${name}-${version}
-release=1
   ./configure --prefix=/usr --disable-static \
       --enable-glade
   make
@@ -26,7 +24,6 @@ release=1
 package() {
 
 cd $SRC/${name}-${version}
-release=1
 
 make DESTDIR=$PKG install
 }

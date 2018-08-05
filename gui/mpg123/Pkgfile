@@ -10,10 +10,8 @@ version=1.23.6
 release=1
 
 source=( http://downloads.sourceforge.net/$name/$name-$version.tar.bz2)
-release=1
 build() {
 cd $name-$version
-release=1
 ./configure --prefix=/usr --with-module-suffix=.so
 make
 make DESTDIR=$PKG install

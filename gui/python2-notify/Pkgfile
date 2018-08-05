@@ -13,7 +13,6 @@ release=1
 
 build() {
 	cd notify-python-$version
-release=1
 	patch  -p1 < $SRC/libnotify07.patch
 	patch -Np1 -i ../python-notify-0.1.1-fix-gtk-symbols-1.patch
 	PYTHON=/usr/bin/python2 ./configure --prefix=/usr

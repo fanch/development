@@ -10,12 +10,10 @@ version=20171113
 release=1
 
 source=(http://downloads.nutyx.org/files/$name-$version.tar.xz
-release=1
 	66-noto-mono.conf 66-noto-sans.conf 66-noto-serif.conf)
 
 build() {
   cd $name-$version
-release=1
   mkdir -p $PKG/usr/share/fonts/noto
   install -m644 hinted/Noto*.ttf $PKG/usr/share/fonts/noto
 

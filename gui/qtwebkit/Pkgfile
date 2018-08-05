@@ -16,7 +16,6 @@ release=1
 build() {
 
 cd $name-opensource-src-$version
-release=1
 
 patch -p1 -i ../qtwebkit-5.9.0-icu_59-1.patch
 sed -e '/CONFIG/a QMAKE_CXXFLAGS += -Wno-expansion-to-defined' \

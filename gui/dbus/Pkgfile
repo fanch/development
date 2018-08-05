@@ -14,12 +14,10 @@ nutyx_version=9.92
 release=1
 
 source=(http://downloads.nutyx.org/files/nutyx-${nutyx_version}.tar.xz
-release=1
 	dbus.system-local.conf)
 
 build() {
 	cd $name-$version
-release=1
 	./configure --prefix=/usr                 \
             --sysconfdir=/etc                     \
             --localstatedir=/var                  \
@@ -27,7 +25,6 @@ release=1
             --disable-xml-docs                    \
             --disable-static                      \
             --docdir=/usr/share/doc/dbus-$version \
-release=1
             --with-console-auth-dir=/run/console  \
             --with-system-pid-file=/run/dbus/pid  \
 	    --with-system-socket=/run/dbus/system_bus_socket
@@ -42,7 +39,6 @@ release=1
 
 	# service
         cd ../nutyx-${nutyx_version}
-release=1
         make DESTDIR=$PKG install-dbus
 	mkdir -p $PKG/usr/lib/dbus-1.0/services
 	mkdir -p $PKG/usr/share/dbus-1/services

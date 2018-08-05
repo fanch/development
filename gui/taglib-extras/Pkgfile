@@ -10,13 +10,11 @@ version=1.0.1
 release=1
 
 source=(http://downloads.nutyx.org/files/$name-$version.tar.gz
-release=1
 		taglib-1.10.patch)
 
 build() {
 
   cd $name-$version
-release=1
   patch -p1 -i ../taglib-1.10.patch
   cmake -DCMAKE_INSTALL_PREFIX=/usr \
         -DCMAKE_SKIP_RPATH=ON       \

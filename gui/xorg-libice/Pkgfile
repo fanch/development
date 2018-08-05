@@ -10,12 +10,10 @@ version=1.0.9
 release=1
 
 source=(http://ftp.x.org/pub/individual//lib/libICE-$version.tar.bz2)
-release=1
 
 build() {
 
 	cd libICE-$version
-release=1
 
 	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
 	ICE_LIBS=-lpthread

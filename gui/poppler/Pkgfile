@@ -13,13 +13,10 @@ release=1
 
 source=(
 http://poppler.freedesktop.org/$name-$version.tar.xz
-release=1
 http://poppler.freedesktop.org/poppler-data-$dataversion.tar.gz)
-release=1
 
 build() {
 cd poppler-$version
-release=1
 mkdir build
 cd    build
 
@@ -33,7 +30,6 @@ make
 make DESTDIR=$PKG install
 
 cd ../../poppler-data-$dataversion
-release=1
 make prefix=/usr DESTDIR=$PKG install
 
 rm -f $PKG/usr/lib/pkgconfig/poppler-{glib,qt4,qt}.pc

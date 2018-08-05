@@ -11,12 +11,10 @@ version=1.7.9
 release=1
 
 source=(http://ftp.x.org/pub/individual//lib/libXi-$version.tar.bz2)
-release=1
 
 build() {
 
 cd libXi-$version
-release=1
 ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
 
 make

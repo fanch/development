@@ -15,7 +15,6 @@ run=(xorg-luit)
 _name=xterm
 
 source=(ftp://invisible-island.net/${_name}/${_name}-$version.tgz
-release=1
 	$name.list xorg-term-327-color-1.patch)
 
 build() {

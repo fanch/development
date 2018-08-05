@@ -25,10 +25,7 @@ make
 make -C documentation html
 
 make DESTDIR=$PKG docdir=/usr/share/doc/fltk-$version install
-release=1
 
 make -C test DESTDIR=$PKG docdir=/usr/share/doc/fltk-$version install-linux
-release=1
 make -C documentation DESTDIR=$PKG docdir=/usr/share/doc/fltk-$version install-linux
-release=1
 }

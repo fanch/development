@@ -10,11 +10,9 @@ version=0.112.0
 release=1
 
 source=(http://download.kde.org/stable/apps/KDE4.x/admin/${name}-1-$version.tar.bz2)
-release=1
 
 build() {
 cd $name-1-$version
-release=1
 mkdir build
 cd    build
 cmake -DCMAKE_INSTALL_PREFIX=/usr \

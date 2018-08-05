@@ -15,13 +15,11 @@ release=1
 build() {
 
 cd ${_name}-$version
-release=1
 
 ./configure --prefix=/usr \
 --sysconfdir=/etc \
 --localstatedir=/var \
 --docdir=/usr/share/doc/$name-$version \
-release=1
 --disable-docs --disable-static
 make
 
@@ -29,15 +27,12 @@ make DESTDIR=$PKG install
 
 install -v -dm755 \
  $PKG/usr/share/{man/man{1,3,5},doc/fontconfig-$version/fontconfig-devel}
-release=1
 install -v -m644 fc-*/*.1 $PKG/usr/share/man/man1
 install -v -m644 doc/*.3 $PKG/usr/share/man/man3
 install -v -m644 doc/*.5 $PKG/usr/share/man/man5
 install -v -m644 doc/fontconfig-devel/* \
  $PKG/usr/share/doc/${_name}-$version/fontconfig-devel
-release=1
 install -v -m644 doc/*.{pdf,sgml,txt,html} \
  $PKG/usr/share/doc/${_name}-$version
-release=1
  
 }

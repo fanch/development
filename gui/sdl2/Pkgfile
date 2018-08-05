@@ -14,7 +14,6 @@ build() {
   mkdir build
   cd build
   ../SDL2-$version/configure --prefix=/usr     \
-release=1
     --enable-sdl-dlopen                        \
     --disable-arts --disable-esd --disable-nas \
     --enable-alsa --enable-pulseaudio-shared   \
@@ -26,5 +25,4 @@ package() {
   cd build
   make DESTDIR=$PKG install
   install -Dm644 ../SDL2-$version/COPYING.txt $PKG/usr/share/licenses/$name/LICENSE
-release=1
 }

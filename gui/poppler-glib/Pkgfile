@@ -10,11 +10,9 @@ version=0.62.0
 release=1
 
 source=(http://poppler.freedesktop.org/poppler-$version.tar.xz)
-release=1
 
 build() {
 cd poppler-$version
-release=1
 
 mkdir build
 cd    build

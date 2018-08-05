@@ -5,7 +5,7 @@ packager="tnut <tnut@nutyx.org>"
 
 name=eudev
 version=3.2.5
-
+release=1
 source=(http://anduin.linuxfromscratch.org/LFS/udev-lfs-20171102.tar.bz2
 	http://dev.gentoo.org/~blueness/eudev/$name-$version.tar.gz)
 

@@ -6,7 +6,7 @@ contributors="Pierre B"
 
 name=libtirpc
 version=1.0.3
-
+release=1
 source=(http://downloads.sourceforge.net/libtirpc/libtirpc-$version.tar.bz2)
 
 build()

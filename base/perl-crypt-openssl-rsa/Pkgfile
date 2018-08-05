@@ -8,7 +8,7 @@ contributors="Pierre B"
 run=( perl perl-crypt-openssl-random perl-crypt-openssl-bignum )
 name=perl-crypt-openssl-rsa
 version=0.30
-
+release=1
 source=(http://search.cpan.org/CPAN/authors/id/T/TO/TODDR/Crypt-OpenSSL-RSA-$version.tar.gz)
 
 build() {

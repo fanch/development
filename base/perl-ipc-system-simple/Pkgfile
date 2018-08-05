@@ -8,7 +8,7 @@ run=( perl )
 
 name=perl-ipc-system-simple
 version=1.25
-
+release=1
 source=(http://search.cpan.org/CPAN/authors/id/P/PJ/PJF/IPC-System-Simple-$version.tar.gz)
 
 build() {

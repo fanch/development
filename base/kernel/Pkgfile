@@ -13,7 +13,7 @@ alias=(linux)
 
 version=4.17.11
 _version=${version:0:4}
-
+release=1
 run=(nutyx)
 
 ## Download all the sources

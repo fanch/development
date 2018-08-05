@@ -6,7 +6,7 @@ packager="tnut <tnut@nutyx.org>"
 
 name=nfs-utils
 version=2.2.1
-
+release=1
 nutyx_version=9.0
 source=(http://downloads.tuxfamily.org/nutyx/files/nutyx-${nutyx_version}.tar.xz
 	http://downloads.sourceforge.net/nfs/$name-$version.tar.bz2)

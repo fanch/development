@@ -6,7 +6,7 @@ packager="tnut <tnut@nutyx.org>"
 
 name=tar
 version=1.30
-
+release=1
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.xz)
 
 build()

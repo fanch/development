@@ -5,7 +5,7 @@ contributors="Pierre B"
 
 name=grub
 version=2.02
-
+release=1
 source=(http://ftp.gnu.org/gnu/grub/grub-$version.tar.xz
 	grub.cfg)
 

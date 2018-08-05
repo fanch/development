@@ -6,7 +6,7 @@ packager="tnut <tnut@nutyx.org>"
 
 name=zlib
 version=1.2.11
-
+release=1
 source=(${url}zlib-$version.tar.xz)
 
 PKGMK_GROUPS=(devel man)

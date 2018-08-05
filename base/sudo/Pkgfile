@@ -7,7 +7,7 @@ packager="tnut <tnut@nutyx.org>"
 
 name=sudo
 version=1.8.23
-
+release=1
 source=($url/sudo/dist/$name-$version.tar.gz)
 
 build() {

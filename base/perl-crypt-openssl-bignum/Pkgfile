@@ -9,7 +9,7 @@ run=( perl )
 
 name=perl-crypt-openssl-bignum
 version=0.09
-
+release=1
 source=(http://search.cpan.org/CPAN/authors/id/K/KM/KMX/Crypt-OpenSSL-Bignum-$version.tar.gz)
 
 build() {

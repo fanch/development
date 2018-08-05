@@ -5,7 +5,7 @@ packager="tnut <tnut@nutyx.org>"
 
 name=pciutils
 version=3.5.6
-
+release=1
 source=(https://www.kernel.org/pub/software/utils/pciutils/$name-$version.tar.xz)
 
 PKGMK_GROUPS=(devel man)

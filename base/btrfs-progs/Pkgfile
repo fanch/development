@@ -8,7 +8,7 @@ packager="tnut <tnut@tnut@nutyx.org>"
 
 name=btrfs-progs
 version=4.17
-
+release=1
 source=(https://www.kernel.org/pub/linux/kernel/people/kdave/$name/$name-v$version.tar.xz)
 
 build(){

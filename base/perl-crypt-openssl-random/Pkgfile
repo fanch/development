@@ -8,7 +8,7 @@ contributors="Pierre B"
 run=( perl perl-crypt-openssl-guess )
 name=perl-crypt-openssl-random
 version=0.15
-
+release=1
 source=(http://search.cpan.org/CPAN/authors/id/R/RU/RURBAN/Crypt-OpenSSL-Random-$version.tar.gz)
 
 build() {

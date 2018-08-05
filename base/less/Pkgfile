@@ -5,7 +5,7 @@ packager="tnut <tnut@nutyx.org>"
 
 name=less
 version=530
-
+release=1
 source=(http://www.greenwoodsoftware.com/less/less-$version.tar.gz)
 
 build()

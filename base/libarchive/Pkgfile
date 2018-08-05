@@ -7,9 +7,8 @@ packager="tnut <tnut@nutyx.org>"
 
 name=libarchive
 version=3.3.2
-
-source=(http://www.libarchive.org/downloads/libarchive-$version.tar.gz
-	)
+release=1
+source=(http://www.libarchive.org/downloads/libarchive-$version.tar.gz)
 
 build() {
 cd $name-$version

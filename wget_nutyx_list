@@ -167,4 +167,4 @@ http://www.linuxfromscratch.org/patches/blfs/svn/wireless_tools-29-fix_iwlist_sc
 http://www.linuxfromscratch.org/patches/blfs/svn/wpa_supplicant-2.6-upstream_fixes-1.patch
 http://hostap.epitest.fi/releases/wpa_supplicant-2.6.tar.gz
 https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/xfsprogs-4.17.0.tar.xz
-
+ http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20180105.tar.xz

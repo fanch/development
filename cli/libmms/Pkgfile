@@ -9,11 +9,9 @@ release=1
 
 source=(
 http://download.sourceforge.net/libmms/$name-$version.tar.gz)
-release=1
 
 build(){
     cd $name-$version
-release=1
     ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install

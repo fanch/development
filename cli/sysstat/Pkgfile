@@ -10,13 +10,10 @@ nutyx_version=9.92
 release=1
 
 source=(http://downloads.nutyx.org/files/nutyx-${nutyx_version}.tar.xz
-release=1
 	$url/$name-$version.tar.xz)
-release=1
 build() {
 
 cd $name-$version
-release=1
 
 sa_lib_dir=/usr/lib/sa    \
 sa_dir=/var/log/sa        \
@@ -28,6 +25,5 @@ make DESTDIR=$PKG install
 
 # Service
 cd ../nutyx-${nutyx_version}
-release=1
 make DESTDIR=$PKG install-sysstat
 }

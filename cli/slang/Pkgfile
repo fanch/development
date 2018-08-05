@@ -11,7 +11,6 @@ release=1
 build() {
 	unset MAKEFLAGS
 	cd $name-$version
-release=1
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \
 		--mandir=/usr/share/man \
@@ -19,6 +18,5 @@ release=1
 	make
 	make DESTDIR=$PKG install
 	chmod -v 755 $PKG/usr/lib/libslang.so.${version/a/} \
-release=1
              $PKG/usr/lib/slang/v2/modules/*.so
 }

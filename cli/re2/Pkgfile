@@ -8,11 +8,9 @@ version=2017-08-01
 release=1
 
 source=(https://github.com/google/re2/archive/$version.zip)
-release=1
 
 build() {
   cd $name-$version
-release=1
   make prefix=/usr
   make prefix=/usr DESTDIR=$PKG install
 }

@@ -11,14 +11,12 @@ release=1
 
 build() {
 cd $name-$version
-release=1
 sed   -e 's/cp -p/cp/'       \
       -i build/make/Makefile 
 chmod -v 644 vpx/*.h 
 mkdir ../libvpx-build
 cd ../libvpx-build
 ../libvpx-$version/configure --prefix=/usr \
-release=1
 --enable-shared --disable-static
 make
 

@@ -7,11 +7,9 @@ version=0.173
 release=1
 
 source=( https://sourceware.org/elfutils/ftp/$version/elfutils-$version.tar.bz2 )
-release=1
 
 build() {
 cd $name-$version
-release=1
 ./configure --prefix=/usr \
 --program-prefix="eu-"
 make

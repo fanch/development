@@ -12,10 +12,8 @@ version=1.8
 release=1
 
 source=(https://github.com/gpodder/$name/archive/$version.tar.gz)
-release=1
 
 build() {
   cd $name-$version
-release=1
   python setup.py install --root=$PKG
 }

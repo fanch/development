@@ -11,17 +11,14 @@ release=1
 run=(python2)
 
 source=(https://github.com/rogerbinns/apsw/archive/$version-r1.tar.gz
-release=1
 )
 
 
 build() {
 
 cp -rf apsw-${version}-r1 apsw2
-release=1
 
   cd apsw-${version}-r1
-release=1
   python setup.py build --enable=load_extension
   cd $SRC/apsw2
   python2 setup.py build --enable=load_extension

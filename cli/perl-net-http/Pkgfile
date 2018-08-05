@@ -12,11 +12,9 @@ version=6.16
 release=1
 
 source=(http://cpan.metacpan.org/authors/id/O/OA/OALDERS/Net-HTTP-$version.tar.gz)
-release=1
 
 build() {
 cd Net-HTTP-$version
-release=1
 perl Makefile.PL INSTALLDIRS=vendor
 make
 make DESTDIR=$PKG install

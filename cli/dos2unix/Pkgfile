@@ -10,11 +10,9 @@ version=7.3.5
 release=1
 
 source=(http://waterlan.home.xs4all.nl/$name/$name-$version.tar.gz)
-release=1
 
 build() {
   cd $name-$version
-release=1
   make
   make DESTDIR=$PKG install
 }

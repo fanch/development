@@ -10,12 +10,10 @@ version=0.9.58
 release=1
 
 source=(ftp://ftp.gnu.org/gnu/libmicrohttpd/$name-$version.tar.gz)
-release=1
 
 build() {
 
   cd $name-$version
-release=1
   ./configure --prefix=/usr --disable-dependency-tracking --enable-largefile \
 	--enable-curl --enable-messages --with-pic --enable-https --disable-examples
 
@@ -23,7 +21,6 @@ release=1
   make DESTDIR=$PKG install
 
   install -Dm644 $SRC/$name-$version/src/include/platform.h \
-release=1
 	$PKG/usr/include/$name/platform.h
   sed -i 's#Cflags: -I${includedir}#Cflags: -I${includedir} -I${includedir}/libmicrohttpd#' \
 	$PKG/usr/lib/pkgconfig/libmicrohttpd.pc

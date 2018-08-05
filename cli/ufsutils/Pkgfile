@@ -14,7 +14,6 @@ source=(https://mirrors.kernel.org/debian/pool/main/u/ufsutils/ufsutils_8.2.orig
 build() {
 unset MAKEFLAGS
 cd ${name}-${version}
-release=1
 	for i in ../debian/patches/*.patch;do patch -p1 -i ${i};done
 
 	sed -e "s:sbin/growfs::" -i Makefile
@@ -22,7 +21,6 @@ release=1
 	    -e "s:^\(libdir = \$(exec_prefix)\/\)\(.*\):\1$(get_libdir):" \
 	    -i "Makefile.common"
 	make -C  ../${name}-${version}
-release=1
 
 	install -d ${PKG}/usr/bin
 	install -d ${PKG}/usr/lib

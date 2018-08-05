@@ -16,7 +16,6 @@ release=1
 
 build() {
   	cd $name-$version
-release=1
 	patch -Np1 -i "${SRC}/02-logging-append.patch"
 	patch -Np1 -i "${SRC}/12-fix-intel-audio-powersave-hook.patch"
 	patch -Np1 -i "${SRC}/13-49bluetooth-sync.patch"

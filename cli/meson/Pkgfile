@@ -12,7 +12,6 @@ release=1
 
 build() {
   cd $name-$version
-release=1
   python3 setup.py build
   python3 setup.py install --root=$PKG 
   cp -rv $PKG/* /

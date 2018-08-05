@@ -9,11 +9,9 @@ version=3.2.1
 release=1
 
 source=( ftp://sourceware.org/pub/$name/$name-$version.tar.gz )
-release=1
 
 build() {
 cd $name-$version
-release=1
 sed -e '/^includesdir/ s:$(libdir)/@PACKAGE_NAME@-@PACKAGE_VERSION@/include:$(includedir):' \
 -i include/Makefile.in
 sed -e '/^includedir/ s:${libdir}/@PACKAGE_NAME@-@PACKAGE_VERSION@/include:@includedir@:' \

@@ -12,11 +12,9 @@ version=6.04
 release=1
 
 source=(http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/File-Listing-$version.tar.gz)
-release=1
 
 build() {
 cd File-Listing-$version
-release=1
 perl Makefile.PL INSTALLDIRS=vendor
 make
 make DESTDIR=$PKG install

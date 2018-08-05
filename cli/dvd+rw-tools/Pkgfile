@@ -8,12 +8,10 @@ version=7.1
 release=1
 
 source=( http://fy.chalmers.se/~appro/linux/DVD+RW/tools/dvd+rw-tools-$version.tar.gz \
-release=1
 	 transport.patch)
 
 build() {
 	cd $name-$version
-release=1
 	patch -Np1 -i ../transport.patch
 	make
 	mkdir -p $PKG/usr/bin $PKG/usr/share/man/man1

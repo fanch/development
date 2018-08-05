@@ -10,12 +10,10 @@ release=1
 
 source=(
 https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-$version.tar.gz)
-release=1
 
 build() {
 
     cd pip-$version
-release=1
     python3 setup.py build
     python3 setup.py install --prefix=/usr --root=$PKG
 }

@@ -10,11 +10,9 @@ version=6.2.32
 release=1
 
 source=(http://download.oracle.com/berkeley-db/$name-$version.tar.gz)
-release=1
 
 build() {
 cd $name-$version
-release=1
 cd build_unix
 ../dist/configure --prefix=/usr \
 --enable-compat185 \
@@ -23,7 +21,6 @@ cd build_unix
 make
 make DESTDIR=$PKG \
 docdir=/usr/share/doc/$name-$version install
-release=1
 
 chown -R 0:0 $PKG
 chmod -R +w $PKG

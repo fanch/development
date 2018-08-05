@@ -12,11 +12,9 @@ version=008
 release=1
 
 source=(http://www.kernel.org/pub/linux/utils/usb/usbutils/usbutils-$version.tar.xz)
-release=1
 
 build() {
 cd $name-$version
-release=1
 sed -i '/^usbids/ s:usb.ids:hwdata/&:' lsusb.py
 ./configure --prefix=/usr \
 --datadir=/usr/share/hwdata \

@@ -12,11 +12,9 @@ version=6.01
 release=1
 
 source=(http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/HTTP-Daemon-$version.tar.gz)
-release=1
 
 build() {
 cd HTTP-Daemon-$version
-release=1
 perl Makefile.PL INSTALLDIRS=vendor
 make
 make DESTDIR=$PKG install

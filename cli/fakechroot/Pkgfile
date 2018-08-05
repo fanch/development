@@ -12,13 +12,11 @@ release=1
 install=fakechroot.install
 
 source=(https://github.com/dex4er/fakechroot/archive/$version.tar.gz)
-release=1
 
 
 build () {
 
   cd $name-$version
-release=1
   ./configure --prefix=/usr --sbindir=/usr/bin \
     --libdir=/usr/lib/libfakeroot --sysconfdir=/etc
   make
@@ -27,7 +25,6 @@ release=1
 package() {
 
   cd $name-$version
-release=1
   make DESTDIR=$PKG install
   
   install -dm755 $PKG/etc/ld.so.conf.d/

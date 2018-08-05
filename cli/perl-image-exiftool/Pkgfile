@@ -12,11 +12,9 @@ version=10.55
 release=1
 
 source=(http://www.cpan.org/authors/id/E/EX/EXIFTOOL/Image-ExifTool-$version.tar.gz)
-release=1
 
 build() {
 cd Image-ExifTool-$version
-release=1
 perl Makefile.PL
 make
 make DESTDIR=$PKG install

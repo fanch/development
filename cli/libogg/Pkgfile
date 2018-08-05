@@ -10,10 +10,8 @@ release=1
 
 build() {
     cd $name-$version
-release=1
     ./configure --prefix=/usr \
                 --docdir=/usr/share/doc/libogg-$version \
-release=1
                 --disable-static
     make
     make DESTDIR=$PKG install

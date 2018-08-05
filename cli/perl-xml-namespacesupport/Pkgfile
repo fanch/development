@@ -11,11 +11,9 @@ release=1
 
 source=(
 http://www.cpan.org/authors/id/P/PE/PERIGRIN/XML-NamespaceSupport-$version.tar.gz)
-release=1
 
 build() {
     cd XML-NamespaceSupport-$version
-release=1
     perl Makefile.PL
     make OPTIMIZE="$CFLAGS" || exit 1
     make install INSTALLDIRS=vendor DESTDIR=$PKG || exit 1

@@ -10,7 +10,6 @@ version=7.15.32
 release=1
 
 source=(http://sourceforge.net/projects/$name/files/$name/$version-latest/libPGF-codec-and-console-src.zip)
-release=1
 
 build() {
  cd $SRC/PGF/Codec

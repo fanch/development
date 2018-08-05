@@ -10,10 +10,8 @@ version=2.0.15
 release=1
 
 source=(http://librdf.org/dist/source/raptor2-$version.tar.gz)
-release=1
 build() {
 cd raptor2-$version
-release=1
 ./configure --prefix=/usr \
 --disable-static \
 --with-icu-config=/usr/bin/icu-config

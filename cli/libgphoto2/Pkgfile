@@ -24,11 +24,9 @@ cd $PKG/usr/lib/libgphoto2
 
 export LD_LIBRARY_PATH=$PKG/usr/lib${LD_LIBRARY_PATH:+:}$LD_LIBRARY_PATH
 export CAMLIBS=$PWD/$version
-release=1
 
 ./print-camera-list hwdb \
 | install -Dm644 /dev/stdin $PKG/etc/udev/hwdb.d/20-gphoto.hwdb
 ./print-camera-list udev-rules version 201 \
-release=1
 | install -Dm644 /dev/stdin $PKG/etc/udev/rules.d/40-gphoto.rules
 }

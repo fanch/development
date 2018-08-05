@@ -10,17 +10,13 @@ release=1
 
 source=(
 http://downloads.sourceforge.net/openjade/openjade-$version.tar.gz
-release=1
 http://www.linuxfromscratch.org/patches/blfs/svn/$name-$version-upstream-1.patch)
-release=1
 
 build(){
     cd $name-$version
-release=1
 
     # fix a compilation problem identified in gcc-4.6 and later
     patch -Np1 -i ../$name-$version-upstream-1.patch
-release=1
 
     # fix a compilation problem with perl-5.16 and later
     sed -i -e '/getopts/{N;s#&G#g#;s#do .getopts.pl.;##;}' \
@@ -33,7 +29,6 @@ release=1
                 --enable-default-catalog=/etc/sgml/catalog \
                 --enable-default-search-path=/usr/share/sgml \
                 --datadir=/usr/share/sgml/openjade-$version
-release=1
     make
     make DESTDIR=$PKG install
     make DESTDIR=$PKG/usr/share/man install-man
@@ -47,12 +42,9 @@ release=1
     ln -v -sf libostyle.so libstyle.so
     
     cd $SRC/$name-$version
-release=1
     install -v -m644 dsssl/catalog $PKG/usr/share/sgml/openjade-$version
-release=1
     install -v -m644 dsssl/*.{dtd,dsl,sgm} \
         $PKG/usr/share/sgml/openjade-$version
-release=1
 }
 
 

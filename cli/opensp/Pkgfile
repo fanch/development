@@ -9,11 +9,9 @@ version=1.5.2
 release=1
 
 source=(http://downloads.sourceforge.net/openjade/OpenSP-$version.tar.gz)
-release=1
 
 build(){
     cd OpenSP-$version
-release=1
     sed -i 's/32,/253,/' lib/Syntax.cxx &&
     sed -i 's/LITLEN          240 /LITLEN          8092/' \
         unicode/{gensyntax.pl,unicode.syn} &&

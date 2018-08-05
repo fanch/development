@@ -12,11 +12,9 @@ version=6.07
 release=1
 
 source=(http://search.cpan.org/CPAN/authors/id/O/OA/OALDERS/LWP-Protocol-https-$version.tar.gz)
-release=1
 
 build() {
 cd LWP-Protocol-https-$version
-release=1
 perl Makefile.PL INSTALLDIRS=vendor
 make
 make DESTDIR=$PKG install

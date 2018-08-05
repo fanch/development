@@ -10,7 +10,6 @@ version=0.7.97
 release=1
 
 source=(https://mediaarea.net/download/source/libmediainfo/$version/libmediainfo_$version.tar.bz2)
-release=1
 
 build() {
 
@@ -40,6 +39,5 @@ package() {
   install -m 644 $SRC/MediaInfoLib/Project/GNU/Library/libmediainfo.pc $PKG/usr/lib/pkgconfig
   
   sed -i -e 's|Version: |Version: '$version'|g' $PKG/usr/lib/pkgconfig/libmediainfo.pc
-release=1
   
 }

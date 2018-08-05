@@ -7,11 +7,9 @@ version=0.9.19
 release=1
 
 source=( https://github.com/LMDB/lmdb/archive/LMDB_${version}.tar.gz )
-release=1
 
 build() {
 cd  lmdb-LMDB_${version}/libraries/liblmdb
-release=1
 make
 sed -i 's| liblmdb.a||' Makefile
 make prefix=$PKG/usr install

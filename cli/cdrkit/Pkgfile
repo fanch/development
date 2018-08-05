@@ -11,11 +11,9 @@ version=1.1.11
 release=1
 
 source=(https://mirrors.kernel.org/debian/pool/main/c/cdrkit/cdrkit_${version}.orig.tar.gz)
-release=1
 
 build() {
 	cd $name-$version
-release=1
 	make
 	make PREFIX=$PKG/usr install
 	cd $PKG/usr/bin

@@ -8,11 +8,9 @@ version=2.1.0
 release=1
 
 source=(http://downloads.sourceforge.net/traceroute/traceroute-$version.tar.gz)
-release=1
 
 build(){
     cd $name-$version
-release=1
     make
     make prefix=/usr DESTDIR=$PKG install 
 }

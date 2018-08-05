@@ -12,11 +12,9 @@ version=2.18
 release=1
 
 source=(http://search.cpan.org/CPAN/authors/id/M/MA/MARKOV/MailTools-$version.tar.gz)
-release=1
 
 build() {
 cd MailTools-$version
-release=1
 perl Makefile.PL INSTALLDIRS=vendor
 make
 make DESTDIR=$PKG install

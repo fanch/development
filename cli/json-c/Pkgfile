@@ -10,7 +10,6 @@ source=(
 
 build(){
     cd $name-$version
-release=1
     sed -i s/-Werror// Makefile.in
     ./configure --prefix=/usr \
                 --disable-static

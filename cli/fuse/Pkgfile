@@ -12,7 +12,6 @@ release=1
 
 build() {
 cd $name-$version
-release=1
 sed -i '/^udev/,$ s/^/#/' util/meson.build &&
 
 mkdir build 

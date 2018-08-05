@@ -12,11 +12,9 @@ version=3.20
 release=1
 
 source=(http://www.cpan.org/authors/id/P/PE/PETDANCE/HTML-Tagset-$version.tar.gz)
-release=1
 
 build() {
 cd HTML-Tagset-$version
-release=1
 perl Makefile.PL INSTALLDIRS=vendor
 make
 make DESTDIR=$PKG install

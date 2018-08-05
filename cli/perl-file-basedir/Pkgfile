@@ -11,11 +11,9 @@ version=0.07
 release=1
 
 source=(http://search.cpan.org/CPAN/authors/id/K/KI/KIMRYAN/File-BaseDir-$version.tar.gz)
-release=1
 
 build() {
     cd File-BaseDir-$version
-release=1
     perl Makefile.PL INSTALLDIRS=vendor
     make
     make DESTDIR=$PKG install

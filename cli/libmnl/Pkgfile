@@ -8,4 +8,3 @@ release=1
 
 source=(
 http://www.netfilter.org/projects/$name/files/$name-$version.tar.bz2)
-release=1

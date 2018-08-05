@@ -8,12 +8,10 @@ version=3.4
 release=1
 
 source=(http://www.antlr3.org/download/C/${name}-${version}.tar.gz)
-release=1
 
 build() {
 
 cd $name-$version
-release=1
 
 if [[ "$PKGMK_ARCH" == 'i686' ]]; then
 	_cfgopt='32' && _cfgopt=
@@ -30,7 +28,6 @@ make
 package() {
 
   cd $name-$version
-release=1
   make DESTDIR=$PKG install
   
 }

@@ -10,7 +10,6 @@ release=1
 build()
 {
 cd $name-$version
-release=1
 sed -i '/skipping/d' util/packer.c
 ./configure --prefix=/usr \
 --with-default-dict=/$LIB/cracklib/pw_dict

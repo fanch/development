@@ -12,11 +12,9 @@ release=1
 
 build() {
 cd $name-$version
-release=1
 ./configure --prefix=/usr \
 --disable-static
 make
 make DESTDIR=$PKG install
 install -v -m644 doc/Vorbis* $PKG/usr/share/doc/libvorbis-$version
-release=1
 }

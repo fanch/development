@@ -14,11 +14,9 @@ PKGMK_KEEP_SOURCES="no"
 _version=v_${version//./_}
 release=1
 source=(https://github.com/keplerproject/luafilesystem/archive/${_version}.tar.gz)
-release=1
 
 build(){
     cd luafilesystem-${_version}
-release=1
     make
     make PREFIX=$PKG/usr LUA_LIBDIR=$PKG/lib/lua/5.2 install
 }

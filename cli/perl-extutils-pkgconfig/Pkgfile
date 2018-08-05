@@ -12,11 +12,9 @@ version=1.15
 release=1
 
 source=(http://www.cpan.org/modules/by-module/ExtUtils/ExtUtils-PkgConfig-$version.tar.gz)
-release=1
 
 build() {
 	cd ExtUtils-PkgConfig-$version
-release=1
 	perl Makefile.PL
 	make
 	make DESTDIR=$PKG install

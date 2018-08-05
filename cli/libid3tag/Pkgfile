@@ -8,16 +8,13 @@ version=0.15.1b
 release=1
 
 source=(ftp://ftp.mars.org/pub/mpeg/$name-$version.tar.gz\
-release=1
 	id3tag.pc)
 
 build() {
 	mkdir -p $PKG/usr/lib/pkgconfig/
 	sed "s/#version#/$version/" id3tag.pc > \
-release=1
 	$PKG/usr/lib/pkgconfig/id3tag.pc
 	cd $name-$version
-release=1
 	./configure --prefix=/usr 
 	make
 	make DESTDIR=$PKG install

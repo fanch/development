@@ -15,13 +15,11 @@ release=1
 
 source=(
 ${url}/ftp/python/$version/Python-$version.tar.xz
-release=1
 $name.png)
 
 
 build() {
     cd Python-$version
-release=1
     ./configure --prefix=/usr \
                 --with-system-expat \
                 --with-system-ffi \
@@ -37,25 +35,18 @@ release=1
     # Install all HTML Docs files with desktop menu integration
 
     install -v -dm755 $PKG/usr/share/doc/$name-$version
-release=1
     cd $SRC
     wget --no-check-certificate http://docs.python.org/ftp/python/doc/$version/python-$version-docs-html.tar.bz2
-release=1
     tar --strip-components=1 -C $PKG/usr/share/doc/$name-$version \
-release=1
         --no-same-owner -xvf python-$version-docs-html.tar.bz2
-release=1
 
     find $PKG/usr/share/doc/$name-$version -type d -exec chmod 0755 {} \;
-release=1
     find $PKG/usr/share/doc/$name-$version -type f -exec chmod 0644 {} \;
-release=1
 
     mkdir -p $PKG/usr/share/applications
     echo "[Desktop Entry]
 Categories=Development;Documentation
 Exec=xdg-open file:///usr/share/doc/$name-$version/index.html
-release=1
 Icon=$name
 StartupNotify=false
 Terminal=false
@@ -70,7 +61,6 @@ cd $PKG
 bsdtar -cf \
 $PKGMK_PACKAGE_DIR/$name.doc${PKGMK_BUILDVER}any.cards.tar \
 usr/share/doc/$name-$version \
-release=1
 usr/share/applications/python2.desktop \
 usr/share/icons/hicolor/48x48/apps/$name.png
 

@@ -15,7 +15,6 @@ source=(https://pypi.python.org/packages/e4/2e/a7e27d2c36076efeb8c0e519758968b20
 build() {
 
     cd httplib2-$version
-release=1
    
     python2 setup.py install --prefix=/usr --root=$PKG
     

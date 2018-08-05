@@ -13,15 +13,12 @@ nutyx_version=10.1
 release=1
 
 source=(http://downloads.nutyx.org/files/nutyx-${nutyx_version}.tar.xz
-release=1
 	https://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/$name-4.2/$name-$version.tar.gz)
-release=1
 
 
 build() {
 
 cd $name-$version
-release=1
 ./configure --prefix=/usr \
 --bindir=/usr/sbin \
 --sysconfdir=/etc \
@@ -30,7 +27,6 @@ release=1
 --enable-linuxcaps \
 --with-lineeditlibs=readline \
 --docdir=/usr/share/doc/$name-$version
-release=1
 
 make
 make DESTDIR=$PKG install
@@ -75,6 +71,5 @@ restrict ::1
 EOF
 # service
 cd ../nutyx-${nutyx_version}
-release=1
 make DESTDIR=$PKG install-ntpd
 }

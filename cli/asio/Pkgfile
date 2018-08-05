@@ -10,10 +10,8 @@ version=1.10.8
 release=1
 
 source=(http://downloads.sourceforge.net/$name/$name-$version.tar.bz2)
-release=1
 
 package() {
 cd $name-$version
-release=1
 install -D -m644 LICENSE_1_0.txt $PKG/usr/share/licenses/$name/LICENSE
 }

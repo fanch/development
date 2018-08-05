@@ -21,14 +21,12 @@ echo "Fonction vide, normal..."
 
 build() {
 cd $name-$version
-release=1
 ./configure --prefix=/usr
 make
 }
 
 package() {
 cd $name-$version
-release=1
 make DESTDIR=$PKG install
 }
 

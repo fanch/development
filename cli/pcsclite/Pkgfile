@@ -16,9 +16,7 @@ source=(https://alioth.debian.org/frs/download.php/latestzip/39/pcsclite-latest.
 
 build() {
   tar xf pcsc-lite-$version.tar.bz2
-release=1
   cd pcsc-lite-$version
-release=1
   ./configure --prefix=/usr \
               --sbindir=/usr/bin \
               --enable-libudev \

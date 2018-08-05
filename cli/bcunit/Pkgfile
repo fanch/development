@@ -10,13 +10,11 @@ version=3.0.2
 release=1
 
 source=(https://github.com/BelledonneCommunications/bcunit/archive/$version.tar.gz
-release=1
 )
 
 build() {
 
 cd $SRC/bcunit-$version
-release=1
 [ -x configure ] || ./autogen.sh
 ./configure --prefix=/usr
 make

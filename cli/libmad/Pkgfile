@@ -8,16 +8,12 @@ version=0.15.1b
 release=1
 
 source=(ftp://ftp.mars.org/pub/mpeg/$name-$version.tar.gz\
-release=1
 	http://www.linuxfromscratch.org/patches/blfs/svn/libmad-$version-fixes-1.patch)
-release=1
 
 
 build() {
 	cd $name-$version
-release=1
         patch -Np1 -i ../libmad-$version-fixes-1.patch
-release=1
         sed "s@AM_CONFIG_HEADER@AC_CONFIG_HEADERS@g" -i configure.ac
         touch NEWS AUTHORS ChangeLog
         autoreconf -fi
@@ -36,10 +32,8 @@ Name: mad
 Description: MPEG audio decoder
 Requires:
 Version: #version#
-release=1
 Libs: -L${libdir} -lmad
 Cflags: -I${includedir}
 EOF
 sed -i "s/#version#/$version/" $PKG/usr/lib/pkgconfig/mad.pc
-release=1
 }

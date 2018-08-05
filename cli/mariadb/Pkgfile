@@ -12,16 +12,13 @@ nutyx_version=10.0.1
 release=1
 
 source=(http://downloads.nutyx.org/files/nutyx-${nutyx_version}.tar.xz
-release=1
 	ftp://ftp.osuosl.org/pub/mariadb/$name-$version/source/$name-$version.tar.gz)
-release=1
 
 PKGMK_GROUPS=(devel lib man doc service)
 
 build() {
 
 cd $name-$version
-release=1
 
 sed -i "s@data/test@\${INSTALL_MYSQLTESTDIR}@g" sql/CMakeLists.txt
 
@@ -30,9 +27,7 @@ cd build
 cmake -DCMAKE_BUILD_TYPE=Release                        \
       -DCMAKE_INSTALL_PREFIX=/usr                       \
       -DINSTALL_DOCDIR=share/doc/mariadb-$version       \
-release=1
       -DINSTALL_DOCREADMEDIR=share/doc/mariadb-$version \
-release=1
       -DINSTALL_MANDIR=share/man                        \
       -DINSTALL_MYSQLSHAREDIR=share/mysql               \
       -DINSTALL_MYSQLTESTDIR=share/mysql/test           \
@@ -53,9 +48,7 @@ make
 make DESTDIR=$PKG install
 
 # Make mariadb version seen as mysql version
-release=1
 ln -sfv $PKG/usr/include/mysql/{mariadb,mysql}_version.h
-release=1
 
 install -v -dm 755 $PKG/etc/mysql
 
@@ -135,6 +128,5 @@ rm -r $PKG/usr/share/mysql/test
 
 # Service
 cd $SRC/nutyx-${nutyx_version}
-release=1
 make DESTDIR=$PKG install-mysql
 }

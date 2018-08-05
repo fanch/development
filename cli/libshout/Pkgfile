@@ -12,7 +12,6 @@ release=1
 
 build() {
 cd $name-$version
-release=1
 sed -e 's/SSLeay_add_all_algorithms/OpenSSL_add_all_algorithms/g' \
 -i src/tls.c
 

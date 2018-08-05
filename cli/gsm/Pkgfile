@@ -8,7 +8,6 @@ version=1.0.17
 release=1
 
 source=(http://www.quut.com/$name/$name-$version.tar.gz
-release=1
         gsm.patch)
 
 build() {

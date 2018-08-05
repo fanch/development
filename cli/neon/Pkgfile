@@ -10,12 +10,10 @@ version=0.30.2
 release=1
 
 source=( http://www.webdav.org/neon/$name-$version.tar.gz)
-release=1
 
 
 build() {
 cd $name-$version
-release=1
 ./configure --prefix=/usr \
 --with-expat \
 --with-ssl=openssl \

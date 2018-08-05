@@ -10,11 +10,9 @@ version=3.11
 release=1
 
 source=(${url}download/pyyaml/PyYAML-$version.tar.gz)
-release=1
 
 build() {
 cd PyYAML-$version
-release=1
 python setup.py build
 python setup.py install --optimize=1 --root=$PKG
 python3 setup.py build

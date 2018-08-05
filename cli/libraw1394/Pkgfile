@@ -10,12 +10,10 @@ version=2.1.2
 release=1
 
 source=(https://www.kernel.org/pub/linux/libs/ieee1394/$name-$version.tar.xz)
-release=1
 
 build() {
 
    cd $SRC/$name-$version
-release=1
    ./configure --prefix=/usr 
    make
    
@@ -24,7 +22,6 @@ release=1
 package () {
 
 	cd $SRC/$name-$version
-release=1
     make DESTDIR=$PKG install
    
 }

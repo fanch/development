@@ -12,7 +12,6 @@ _version=565
 release=1
 
 source=(${url}cryptopp${_version}.zip
-release=1
         crypto++-libcrypto++.pc)
 
 build() {

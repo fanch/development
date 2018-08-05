@@ -10,11 +10,9 @@ version=1.4.14
 release=1
 
 source=(http://ludovic.rousseau.free.fr/softwares/pcsc-perl/pcsc-perl-$version.tar.bz2)
-release=1
 
 build() {
   cd pcsc-perl-$version
-release=1
   PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor
   make DESTDIR=$PKG install
 
@@ -22,9 +20,7 @@ release=1
 release=1
   if [[ $(find "$PKG/usr/lib/perl5/" -name "*.so") ]]; then
 	_perlver_min=$(perl -e '$v = $^V->{version}; print $v->[0].".".($v->[1]);')
-release=1
 	_perlver_max=$(perl -e '$v = $^V->{version}; print $v->[0].".".($v->[1]+1);')
-release=1
 	depends+=("perl>=$_perlver_min" "perl<$_perlver_max")
 fi
  rm $PKG/usr/lib/share/perl5/base/perllocal.pod

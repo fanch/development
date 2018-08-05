@@ -13,15 +13,11 @@ source=()
 
 build() {
 wget -c https://github.com/htacg/$name/archive/$version.tar.gz \
-release=1
  -O $name-$version.tar.gz
-release=1
 tar xf $name-$version.tar.gz
-release=1
 mkdir build
 cd build
 cmake ../$name-$version \
-release=1
 -DCMAKE_INSTALL_PREFIX=/usr \
 -DCMAKE_BUILD_TYPE=Release  \
 -DBUILD_TAB2SPACE=ON        

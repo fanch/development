@@ -10,11 +10,9 @@ version=3.7.0
 release=1
 
 source=(http://www.netlib.org/$name/$name-$version.tgz )
-release=1
 
 build() {
 cd $name-$version
-release=1
 mkdir build
 cd build
 cmake .. \

@@ -6,12 +6,10 @@ version=1.7
 release=1
 
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
-release=1
 
 build() {
 
 	cd $name-$version
-release=1
 
 	sed -i 's/$(ACLOCAL)//' Makefile.in               
 	sed -i 's/lu", ptok ((UL) resp->ru.ru_maxrss)/ld", resp->ru.ru_maxrss/' time.c 

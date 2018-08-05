@@ -8,11 +8,9 @@ version=019
 release=1
 
 source=(http://bues.ch/b43/fwcutter/${name}-${version}.tar.bz2)
-release=1
 
 build() {
    cd $name-$version
-release=1
    make
    install -D -m755 b43-fwcutter $PKG/usr/bin/b43-fwcutter
    install -D -m644 b43-fwcutter.1 $PKG/usr/share/man/man1/b43-fwcutter.1

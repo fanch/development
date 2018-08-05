@@ -1,5 +1,4 @@
 description="Dynamic, any to any, pixel format conversion library"
-release=1
 url="http://gegl.org/babl"
 maintainer="http://gegl.org/babl/#Authors"
 contributors="Pierre B, tnut, greg"
@@ -10,11 +9,9 @@ version=0.1.42
 release=1
 
 source=(http://download.gimp.org/pub/$name/${version:0:3}/$name-$version.tar.bz2)
-release=1
 
 build() {
 cd $name-$version
-release=1
 ./configure --prefix=/usr
 make
 make DESTDIR=$PKG install

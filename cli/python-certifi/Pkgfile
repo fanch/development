@@ -10,6 +10,5 @@ release=1
 
 _name=certifi
 source=(https://files.pythonhosted.org/packages/source/c/certifi/certifi-$version.tar.gz)
-release=1
 
 build=python3

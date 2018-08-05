@@ -24,7 +24,6 @@ build() {
   cd $SRC/build
 
   cmake $SRC/pugixml-$version \
-release=1
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_INSTALL_LIBDIR=lib \

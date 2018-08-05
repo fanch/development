@@ -11,17 +11,13 @@ release=1
 
 
 source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz 
-release=1
 	    http://www.linuxfromscratch.org/patches/blfs/svn/$name-$version-convenience-1.patch)
-release=1
 	
 	
 build () {
 
 	cd $name-$version
-release=1
 	patch -Np1 -i ../$name-$version-convenience-1.patch
-release=1
 	make POPT=1 ICU=1
 
 }
@@ -30,7 +26,6 @@ release=1
 package() {
 
 	cd $name-$version
-release=1
 	install -d $PKG/usr/{bin,share/man/man8}
 	install -t $PKG/usr/bin {,c,s}gdisk fixparts
 	install -m644 -t $PKG/usr/share/man/man8 {{,c,s}gdisk,fixparts}.8

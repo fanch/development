@@ -8,7 +8,6 @@ version=2.0.3
 release=1
 
 source=(https://github.com/sparsehash/sparsehash/archive/sparsehash-$version.tar.gz )
-release=1
 
 build() {
  cd $name*

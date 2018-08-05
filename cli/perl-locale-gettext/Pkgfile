@@ -12,11 +12,9 @@ version=1.07
 release=1
 
 source=(http://search.cpan.org/CPAN/authors/id/P/PV/PVANDRY/gettext-$version.tar.gz)
-release=1
 
 build() {
     cd Locale-gettext-$version
-release=1
     PERL_MM_USE_DEFAULT=1 perl Makefile.PL
     make OPTIMIZE="$CFLAGS" 
     make install INSTALLDIRS=vendor DESTDIR=$PKG

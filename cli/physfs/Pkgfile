@@ -10,12 +10,10 @@ version=2.0.3
 release=1
 
 source=($url/downloads/$name-$version.tar.bz2)
-release=1
 
 build() {
 
 	cd $name-$version
-release=1
 
 	sed -i -e 's|-Werror||' CMakeLists.txt
 
@@ -31,7 +29,6 @@ release=1
 package () {
 
 	cd $name-$version
-release=1
 	make DESTDIR=$PKG install
 
 }

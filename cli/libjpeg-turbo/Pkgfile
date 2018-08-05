@@ -10,11 +10,9 @@ version=1.5.3
 release=1
 
 source=(http://sourceforge.net/projects/libjpeg-turbo/files/$version/libjpeg-turbo-$version.tar.gz)
-release=1
 
 build() {
 cd $name-$version
-release=1
 ./configure --prefix=/usr \
 --mandir=/usr/share/man \
 --with-jpeg8 --disable-static

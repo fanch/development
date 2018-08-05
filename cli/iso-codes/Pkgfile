@@ -10,11 +10,9 @@ version=3.77
 release=1
 
 source=(http://pkg-isocodes.alioth.debian.org/downloads/iso-codes-$version.tar.xz)
-release=1
 
 build() {
 cd $name-$version
-release=1
 ./configure --prefix=/usr 
 make
 make DESTDIR=$PKG install

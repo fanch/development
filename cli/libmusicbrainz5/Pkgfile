@@ -12,7 +12,6 @@ release=1
 
 build() {
 cd libmusicbrainz-$version
-release=1
 mkdir build
 cd build
 cmake .. \
@@ -24,7 +23,5 @@ doxygen ../Doxyfile
 make DESTDIR=$PKG install
 # Documentation
 mkdir -p $PKG/usr/share/doc/$name-$version
-release=1
 cp -vr docs/ $PKG/usr/share/doc/$name-$version
-release=1
 }

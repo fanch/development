@@ -15,12 +15,9 @@ source=(
 build() {
 
 cd $name-$version.src
-release=1
 
 mv ../compiler-rt-${version}.src projects/compiler-rt
-release=1
 mv ../cfe-$version.src tools/clang
-release=1
 
 mkdir -v build
 cd build

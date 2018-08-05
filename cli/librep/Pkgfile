@@ -10,11 +10,9 @@ version=0.92.6
 release=1
 
 source=(http://download.tuxfamily.org/$name/${name}_$version.tar.xz)
-release=1
 
 build() {
 cd ${name}_$version
-release=1
 ./autogen.sh --prefix=/usr \
 --disable-static
 make || make -j1

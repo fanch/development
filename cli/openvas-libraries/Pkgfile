@@ -14,9 +14,7 @@ version=9.0.1
 release=1
 
 source=(http://wald.intevation.org/frs/download.php/2420/$name-${version}.tar.gz
-release=1
 http://wald.intevation.org/frs/download.php/2434/$name-${version}.tar.gz
-release=1
 )
 
 prepare() {
@@ -25,7 +23,6 @@ echo "Fonction prepare sans objet"
 
 build() {
 cd $name-$version
-release=1
 LDFLAGS+=" -Wl,--no-as-needed"
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr \
 -DLIBDIR=/usr/lib -DSYSCONFDIR=/etc -DLOCALSTATEDIR=/var .
@@ -34,7 +31,6 @@ make
 
 package() {
 cd $name-$version
-release=1
 make DESTDIR=$PKG/ install
 rmdir $PKG/var/run
 }

@@ -8,11 +8,9 @@ packager="tnut at nutyx dot org"
 url="http://www.jedrea.com/chmlib/"
 
 source=($url/$name-$version.tar.bz2)
-release=1
 
 build(){
     cd $name-$version
-release=1
     ./configure --prefix=/usr \
                 --enable-examples=yes
     make

@@ -8,10 +8,8 @@ version=1.6
 release=1
 
 source=(http://libndp.org/files/$name-$version.tar.gz)
-release=1
 build() {
 cd $name-$version
-release=1
 ./configure --prefix=/usr \
 --sysconfdir=/etc \
 --localstatedir=/var \

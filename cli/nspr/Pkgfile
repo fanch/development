@@ -10,7 +10,6 @@ release=1
 build () {
 
 cd $name-$version/$name
-release=1
 sed -ri 's#^(RELEASE_BINS =).*#\1#' pr/src/misc/Makefile.in &&
 sed -i 's#$(LIBRARY) ##' config/rules.mk &&
 ./configure --prefix=/usr \

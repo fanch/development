@@ -8,11 +8,9 @@ version=2.0.7
 release=1
 
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
-release=1
 
 build() {
 cd $name-$version
-release=1
 sed -i 's#$(LOBJS): Makefile#$(LOBJS): pth_p.h Makefile#' Makefile.in
 ./configure --prefix=/usr \
 --mandir=/usr/share/man \

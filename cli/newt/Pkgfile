@@ -9,7 +9,6 @@ release=1
 
 build() {
 cd $name-$version
-release=1
 sed -e 's/^LIBNEWT =/#&/' \
     -e '/install -m 644 $(LIBNEWT)/ s/^/#/' \
     -e 's/$(LIBNEWT)/$(LIBNEWTSONAME)/g' \

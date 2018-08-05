@@ -10,19 +10,13 @@ version=2.1.26
 release=1
 
 source=(ftp://ftp.cyrusimap.org/cyrus-sasl/$name-$version.tar.gz
-release=1
 	http://www.linuxfromscratch.org/patches/blfs/svn/cyrus-sasl-$version-openssl-1.1.0-1.patch
-release=1
 	http://www.linuxfromscratch.org/patches/blfs/svn/cyrus-sasl-$version-fixes-3.patch)
-release=1
 
 build() {
 	cd $name-$version
-release=1
 	patch -Np1 -i ../cyrus-sasl-$version-fixes-3.patch
-release=1
 	patch -Np1 -i ../cyrus-sasl-$version-openssl-1.1.0-1.patch
-release=1
 	autoreconf -fi 
 	./configure --prefix=/usr \
 		--sysconfdir=/etc \

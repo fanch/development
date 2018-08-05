@@ -10,14 +10,11 @@ version=1.0.3
 release=1
 
 source=( http://www.linuxfromscratch.org/patches/blfs/svn/$name-$version-openssl-1.1.0-2.patch
-release=1
 	http://downloads.sourceforge.net/$name/$name-$version.tar.gz)
-release=1
  
 
 build() {
 cd $name-$version
-release=1
 patch -Np1 -i ../liboauth-1.0.3-openssl-1.1.0-2.patch
 ./configure --prefix=/usr \
 --disable-static

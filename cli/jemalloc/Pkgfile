@@ -10,7 +10,6 @@ url='http://www.canonware.com/jemalloc/'
 
 build() {
   cd $name-$version
-release=1
   ./configure --prefix=/usr
   make
   make DESTDIR="$pkgdir" install

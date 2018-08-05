@@ -14,7 +14,6 @@ version=0.9.8
 release=1
 
 source=(http://www.codesink.org/download/$name-$version.tar.gz)
-release=1
 
 prepare() {
 echo "Fonction prepare sans objet"
@@ -22,14 +21,12 @@ echo "Fonction prepare sans objet"
 
 build() {
 cd $name-$version
-release=1
 ./configure --prefix=/usr
 make
 }
 
 package() {
 cd $name-$version
-release=1
 make DESTDIR=$PKG install
 }
 

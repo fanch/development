@@ -8,12 +8,9 @@ version=2.4.45
 release=1
 
 	 http://www.linuxfromscratch.org/patches/downloads/openldap/openldap-$version-consolidated-1.patch)
-release=1
 build() {
 cd $name-$version
-release=1
 patch -Np1 -i ../openldap-$version-consolidated-1.patch
-release=1
 autoconf
 ./configure --prefix=/usr \
             --sysconfdir=/etc \

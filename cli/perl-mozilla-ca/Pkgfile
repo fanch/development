@@ -12,14 +12,12 @@ version=20160104
 release=1
 
 source=(http://search.cpan.org/CPAN/authors/id/A/AB/ABH/Mozilla-CA-$version.tar.gz)
-release=1
 
 build() {
 export PERL_MM_USE_DEFAULT=1 PERL_AUTOINSTALL=--skipdeps
 unset PERL5LIB PERL_MM_OPT
 
 cd Mozilla-CA-$version
-release=1
 perl Makefile.PL
 make
 make install INSTALLDIRS=vendor DESTDIR=$PKG

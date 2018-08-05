@@ -14,7 +14,6 @@ version=1.05
 release=1
 
 source=(http://www.cpan.org/authors/id/F/FD/FDESAR/Parse-Yapp-$version.tar.gz
-release=1
 )
 
 prepare() {
@@ -23,14 +22,12 @@ echo "Fonction prepare sans objet"
 
 build() {
 cd $SRC/Parse-Yapp-$version
-release=1
 PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor
 make
 }
 
 package() {
 cd $SRC/Parse-Yapp-$version
-release=1
 make install DESTDIR=$PKG
 }
 

@@ -10,11 +10,9 @@ version=7.31_03
 release=1
 
 source=(http://search.cpan.org/CPAN/authors/id/B/BI/BINGOS/ExtUtils-MakeMaker-$version.tar.gz)
-release=1
 
 build() {
     cd ExtUtils-MakeMaker-$version
-release=1
     perl Makefile.PL
     make OPTIMIZE="$CFLAGS" || exit 1
     make test || true

@@ -10,17 +10,14 @@ version=1.1.1
 release=1
 
 source=(https://cmocka.org/files/1.1/cmocka-${version}.tar.xz)
-release=1
 
 prepare () {
 	cd ${name}-${version}
-release=1
 	mkdir build
 }
 
 build () {
 	cd ${name}-${version}/build
-release=1
 	cmake .. \
 		-DCMAKE_INSTALL_PREFIX=/usr \
 		-DCMAKE_BUILD_TYPE=Release \
@@ -32,7 +29,6 @@ release=1
 package() {
 
   cd ${name}-${version}/build
-release=1
   make install DESTDIR=$PKG
 
 }

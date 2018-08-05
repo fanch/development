@@ -1,5 +1,4 @@
 description="Portable version of the NetBSD 'make' build tool"
-release=1
 url="http://www.crufty.net/help/sjg/bmake.html"
 packager="tnut at nutyx dot org"
 
@@ -8,7 +7,6 @@ version=20170812
 release=1
 
 source=(http://www.crufty.net/ftp/pub/sjg/bmake-$version.tar.gz)
-release=1
 
 build(){
     cd $name

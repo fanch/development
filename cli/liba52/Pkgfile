@@ -8,11 +8,9 @@ version=0.7.4
 release=1
 
 source=(http://liba52.sourceforge.net/files/a52dec-$version.tar.gz)
-release=1
 
 build() {
 	cd a52dec-$version
-release=1
 	./configure --prefix=/usr \
             --mandir=/usr/share/man \
             --enable-shared \
@@ -25,5 +23,4 @@ release=1
         install -m644 liba52/a52_internal.h $PKG/usr/include/a52dec/
 	install -v -m644 -D doc/liba52.txt \
     	$PKG/usr/share/doc/liba52-$version/liba52.txt
-release=1
 }

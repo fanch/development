@@ -6,7 +6,7 @@ packager="tnut <tnut@nutyx.org>"
 
 name=mpfr
 version=4.0.1
-
+release=1
 source=(http://www.mpfr.org/mpfr-current/mpfr-$version.tar.xz)
 
 build()

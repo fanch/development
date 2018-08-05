@@ -85,7 +85,7 @@ http://www.linuxfromscratch.org/patches/lfs/development/kbd-2.0.4-backspace-1.pa
 http://www.linuxfromscratch.org/patches/lfs/development/ninja-1.8.2-add_NINJAJOBS_var-1.patch
 http://www.linuxfromscratch.org/patches/lfs/development/sysvinit-2.90-consolidated-1.patch
 http://www.linuxfromscratch.org/patches/lfs/development/systemd-239-glibc_statx_fix-1.patch
- http://www.linuxfromscratch.org/patches/blfs/svn/openssl-1.0.2o-compat_versioned_symbols-1.patch
+http://www.linuxfromscratch.org/patches/blfs/svn/openssl-1.0.2o-compat_versioned_symbols-1.patch
 http://ftpmirror.gnu.org/autoconf/autoconf-2.13.tar.gz
 http://ftpmirror.gnu.org/$name/$autoconf-archive-2016.09.16.tar.xz
 http://downloads.tuxfamily.org/nutyx/files/nutyx-9.0.tar.xz

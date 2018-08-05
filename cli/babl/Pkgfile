@@ -6,7 +6,6 @@ packager="tnut <tnut@nutyx.org>"
 
 name=babl
 version=0.1.42
-release=1
 
 source=(http://download.gimp.org/pub/$name/${version:0:3}/$name-$version.tar.bz2)
 

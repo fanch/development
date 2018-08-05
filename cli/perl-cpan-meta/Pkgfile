@@ -1,6 +1,7 @@
 # Depends on: perl
 
 description="the distribution metadata for a CPAN dist"
+url="https://metacpan.org/release/CPAN-Meta"
 packager="tnut <tnut@nutyx.org>"
 
 run=( perl )

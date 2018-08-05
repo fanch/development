@@ -6,7 +6,6 @@ packager="tnut <tnut@nutyx.org>"
 
 name=python-zmq
 version=16.0.3
-release=1
 
 source=(https://files.pythonhosted.org/packages/source/p/pyzmq/pyzmq-$version.tar.gz)
 

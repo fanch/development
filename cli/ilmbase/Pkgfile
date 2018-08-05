@@ -7,6 +7,7 @@ name=ilmbase
 version=2.2.0
 release=1
 
+source=( http://download.savannah.nongnu.org/releases/openexr/$name-$version.tar.gz)
 
 build() {
 # build package
@@ -20,6 +21,7 @@ make DESTDIR=$PKG install
 }
 uptodate() {
 local url ext
+url="http://download.savannah.nongnu.org/releases/openexr/"
 ext=".tar.gz"
 lynx -read_timeout=20 -dump -listonly -nonumbers \
 $url?C=M\;O=A|grep $url$name-[0-9]|grep [0-9]$ext$| \

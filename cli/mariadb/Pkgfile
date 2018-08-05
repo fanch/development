@@ -7,9 +7,7 @@ contributors="Pierre B"
 
 name=mariadb
 version=10.2.13
-release=1
 nutyx_version=10.0.1
-release=1
 
 source=(http://downloads.nutyx.org/files/nutyx-${nutyx_version}.tar.xz
 	ftp://ftp.osuosl.org/pub/mariadb/$name-$version/source/$name-$version.tar.gz)

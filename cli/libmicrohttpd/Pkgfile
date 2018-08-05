@@ -7,7 +7,6 @@ packager="tnut<tnut@nutyx.org>"
 
 name=libmicrohttpd
 version=0.9.58
-release=1
 
 source=(ftp://ftp.gnu.org/gnu/libmicrohttpd/$name-$version.tar.gz)
 

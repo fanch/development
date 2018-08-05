@@ -7,6 +7,5 @@ contributors="Pierre B"
 
 name=vcdimager
 version=2.0.1
-release=1
 
 source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)

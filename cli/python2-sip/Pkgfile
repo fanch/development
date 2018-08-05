@@ -7,7 +7,6 @@ contributors="Pierre B"
 
 name=python2-sip
 version=4.19.6
-release=1
 
 source=(http://sourceforge.net/projects/pyqt/files/sip/sip-$version/sip-$version.tar.gz )
 

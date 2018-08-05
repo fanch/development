@@ -13,6 +13,7 @@ name=python2-eyed3
 version=0.8
 release=1
 
+source=(http://eyed3.nicfit.net/releases/eyeD3-$version.tar.gz
 )
 
 prepare() {

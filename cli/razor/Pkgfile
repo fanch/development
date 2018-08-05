@@ -7,7 +7,7 @@ contributors="Pierre B"
 
 name=razor
 version=2.85
-release=1
+release=2
 
 unset MAKEFLAGS
 source=(http://sourceforge.net/projects/razor/files/razor-agents/$version/razor-agents-$version.tar.bz2

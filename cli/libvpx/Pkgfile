@@ -9,6 +9,7 @@ name=libvpx
 version=1.6.1
 release=1
 
+source=(http://storage.googleapis.com/downloads.webmproject.org/releases/webm/libvpx-$version.tar.bz2)
 build() {
 cd $name-$version
 sed   -e 's/cp -p/cp/'       \

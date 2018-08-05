@@ -7,8 +7,8 @@ contributors="Pierre B"
 
 name=udisks2
 version=2.7.6
-release=1
 
+source=(https://github.com/storaged-project/udisks/releases/download/udisks-$version/udisks-$version.tar.bz2)
 
 build() {
 cd udisks-$version

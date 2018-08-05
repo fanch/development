@@ -7,7 +7,7 @@ maintainer="Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>"
 
 name=xdg-user-dirs
 version=0.17
-release=1
+source=(http://user-dirs.freedesktop.org/releases/$name-$version.tar.gz
         xdg-user-dirs)
 
 build() {

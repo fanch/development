@@ -13,6 +13,7 @@ name=libsodium
 version=1.0.15
 release=1
 
+source=(https://download.libsodium.org/libsodium/releases/libsodium-$version.tar.gz
 )
 
 prepare() {

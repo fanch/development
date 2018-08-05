@@ -6,7 +6,6 @@ packager="tnut<tnut@nutyx.org>"
 
 name=libraw
 version=0.18.7
-release=1
 
 source=(http://www.libraw.org/data/LibRaw-$version.tar.gz)
 build ()

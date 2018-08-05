@@ -7,7 +7,6 @@ contributors="Pierre B"
 
 name=ruby
 version=2.5.0
-release=1
 
 source=(http://cache.ruby-lang.org/pub/ruby/2.5/ruby-$version.tar.xz)
 

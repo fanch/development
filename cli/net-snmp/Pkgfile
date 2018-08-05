@@ -7,7 +7,7 @@ packager="greg<greg@nutyx.org>"
 
 name=net-snmp
 version=5.7.3
-release=1
+release=5
 
 source=(http://downloads.sourceforge.net/$name/$name-$version.tar.gz{,.asc}
        net-snmp-5.7.3-perl-5.24.patch fix-openssl-build-errors.patch)
@@ -27,7 +27,6 @@ PYTHONPROG=/usr/bin/python2 ./configure --prefix=/usr \
     --enable-ipv6 \
     --with-python-modules \
     --with-default-snmp-version="3" \
-release=1
     --with-sys-contact="root@localhost" \
     --with-sys-location="Unknown" \
     --with-logfile="/var/log/snmpd.log" \

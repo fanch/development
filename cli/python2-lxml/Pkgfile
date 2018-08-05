@@ -7,7 +7,7 @@ contributors="Greg"
 
 name=python2-lxml
 version=4.1.1
-release=1
+release=2
 
 source=(https://github.com/lxml/lxml/archive/lxml-$version.tar.gz
 )

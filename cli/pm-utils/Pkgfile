@@ -7,8 +7,9 @@ contributors="Pierre B"
 
 name=pm-utils
 version=1.4.1
-release=1
+release=2
 
+source=(http://pm-utils.freedesktop.org/releases/pm-utils-${version}.tar.gz
         02-logging-append.patch
         12-fix-intel-audio-powersave-hook.patch
         13-49bluetooth-sync.patch
@@ -35,6 +36,7 @@ build() {
 uptodate() {
 local url ext
 ext=".tar.gz"
+url="https://pm-utils.freedesktop.org/releases/"
 lynx -read_timeout=20 -dump -listonly -nonumbers \
 $url/?C=N\;O=D|grep $name|grep $ext$|head -1|sed "s@$url/$name-@@"|sed "s/$ext//"
 }

@@ -9,6 +9,7 @@ name=libwebp
 version=0.6.0
 release=1
 
+source=(http://downloads.webmproject.org/releases/webp/$name-$version.tar.gz)
 
 build() {
 cd $name-$version

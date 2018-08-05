@@ -7,7 +7,6 @@ contributors="Pierre B"
 
 name=alsa-lib
 version=1.1.5
-release=1
 
 source=(ftp://ftp.alsa-project.org/pub/lib/$name-$version.tar.bz2)
 build() {

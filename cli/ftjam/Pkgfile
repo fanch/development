@@ -5,6 +5,6 @@ contributors="Chris Farrell"
 
 name=ftjam
 version=2.5.3rc2
-release=1
+release=3
 
 source=(http://david.freetype.org/jam/${name}-${version}.tar.bz2)

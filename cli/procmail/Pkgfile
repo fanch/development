@@ -6,7 +6,7 @@ packager="tnut<tnut@nutyx.org>"
 
 name=procmail
 version=3.22
-release=1
+release=2
 source=(http://www.ring.gr.jp/archives/net/mail/$name/$name-$version.tar.gz)
 
 build () {

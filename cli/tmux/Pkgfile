@@ -5,5 +5,5 @@ url="https://tmux.github.io"
 packager="tnut <tnut@nutyx.org>"
 name=tmux
 version=2.6
-release=1
 
+source=(https://github.com/tmux/tmux/releases/download/$version/$name-$version.tar.gz)

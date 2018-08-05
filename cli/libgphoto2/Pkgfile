@@ -5,13 +5,13 @@ url="http://www.gphoto.org/proj/libgphoto2/"
 packager="Sipo"
 name=libgphoto2
 version=2.5.16
-release=1
 _version="${version//./_}"
-release=1
 
+source=(https://github.com/gphoto/$name/archive/libgphoto2-${_version}-release.tar.gz)
 
 
 build() {
+cd $name-$name-${_version}-release
 
 autoreconf -fvi
 

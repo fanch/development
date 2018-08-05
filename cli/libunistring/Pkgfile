@@ -5,7 +5,6 @@ contributors="Pierre B"
 
 name=libunistring
 version=0.9.8
-release=1
 
 source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
 

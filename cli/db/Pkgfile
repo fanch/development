@@ -7,7 +7,7 @@ alias=(berkeley-db)
 
 name=db
 version=6.2.32
-release=1
+release=2
 
 source=(http://download.oracle.com/berkeley-db/$name-$version.tar.gz)
 

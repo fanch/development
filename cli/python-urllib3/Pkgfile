@@ -3,7 +3,6 @@
 description="HTTP library with thread-safe connection pooling and file post support"
 name=python-urllib3
 version=1.22
-release=1
 
 _name=urllib3
 

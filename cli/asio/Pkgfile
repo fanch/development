@@ -7,7 +7,6 @@ contributors="Greg"
 
 name=asio
 version=1.10.8
-release=1
 
 source=(http://downloads.sourceforge.net/$name/$name-$version.tar.bz2)
 

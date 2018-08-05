@@ -7,7 +7,7 @@ contributors=""
 
 name=fakechroot
 version=2.19
-release=1
+release=2
 
 install=fakechroot.install
 

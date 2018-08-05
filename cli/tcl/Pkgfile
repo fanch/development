@@ -6,7 +6,6 @@ description="The Tcl scripting language"
 
 name=tcl
 version=8.6.8
-release=1
 
 source=( http://downloads.sourceforge.net/$name/$name$version-src.tar.gz)
 

@@ -5,7 +5,7 @@ packager="greg<greg@nutyx.org>"
 
 name=libantlr3c
 version=3.4
-release=1
+release=2
 
 source=(http://www.antlr3.org/download/C/${name}-${version}.tar.gz)
 

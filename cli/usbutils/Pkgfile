@@ -9,7 +9,7 @@ run=(hwids)
 
 name=usbutils
 version=008
-release=1
+release=2
 
 source=(http://www.kernel.org/pub/linux/utils/usb/usbutils/usbutils-$version.tar.xz)
 

@@ -1,6 +1,6 @@
 name=chmlib
 version=0.40
-release=1
+release=2
 
 description="Library for dealing with Microsoft ITSS/CHM format files"
 maintainer="Matthew T. Russotto's"

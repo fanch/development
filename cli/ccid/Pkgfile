@@ -7,7 +7,7 @@ contributors="Pierre B"
 
 name=ccid
 version=1.4.25
-release=1
+release=2
 
 source=(https://alioth.debian.org/frs/download.php/file/4187/$name-$version.tar.bz2)
 

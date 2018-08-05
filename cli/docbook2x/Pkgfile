@@ -7,7 +7,7 @@ packager="greg<greg@nutyx.org>"
 
 name=docbook2x
 version=0.8.8
-release=1
+release=3
 
 source=(
 http://downloads.sourceforge.net/$name/docbook2X-$version.tar.gz

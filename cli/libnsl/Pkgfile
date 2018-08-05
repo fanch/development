@@ -3,7 +3,6 @@
 description="Contains the public client interface for NIS(YP) and NIS+."
 name=libnsl
 version=1.1.0
-release=1
 
 source=(https://github.com/thkukuk/libnsl/archive/$version/$name-$version.tar.gz)
 

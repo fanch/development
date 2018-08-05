@@ -6,7 +6,6 @@ packager="tnut <tnut@nutyx.org>"
 
 name=hwids
 version="20171003"
-release=1
 
 build() {
 git clone git://github.com/gentoo/$name.git

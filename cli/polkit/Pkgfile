@@ -6,21 +6,20 @@ packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
 
 name=polkit
-version=0.114
-release=1
+version=0.113+git_2919920+js38
+release=2
 
+source=(http://anduin.linuxfromscratch.org/BLFS/$name/$name-$version.tar.xz)
 
 build() {
 cd $name-$version
-sed -e '/JS_ReportWarningUTF8/s/,/, "%s",/'  \
-        -i  src/polkitbackend/polkitbackendjsauthority.cpp
-./configure --prefix=/usr                    \
-            --sysconfdir=/etc                \
-            --localstatedir=/var             \
-            --disable-static                 \
-            --enable-libsystemd-login=no     \
-            --enable-libelogind=no           \
-            --with-authfw=shadow 
+
+./configure --prefix=/usr \
+--sysconfdir=/etc \
+--mandir=/usr/share/man \
+--localstatedir=/var \
+--enable-libsystemd-login=no \
+--disable-static
 
 make||make -j1
 

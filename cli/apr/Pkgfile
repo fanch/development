@@ -7,7 +7,6 @@ packager="tnut <tnut@nutyx.org>"
 
 name=apr
 version=1.6.3
-release=1
 
 source=(http://archive.apache.org/dist/$name/$name-$version.tar.bz2)
 

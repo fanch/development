@@ -7,7 +7,6 @@ contributors="Pierre B"
 
 name=nmap
 version=7.60
-release=1
 
 source=(http://download.insecure.org/nmap/dist/$name-$version.tgz)
 

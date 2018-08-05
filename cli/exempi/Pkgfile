@@ -6,7 +6,6 @@ packager="tnut <tnut@nutyx.org>"
 
 name=exempi
 version=2.4.3
-release=1
 
 source=( http://libopenraw.freedesktop.org/download/$name-$version.tar.bz2)
 
@@ -24,7 +23,6 @@ uptodate() {
 local url latestversion
 url="http://libopenraw.freedesktop.org/download/"
 latestversion="`lynx -read_timeout=20 -dump -listonly -nonumbers \
-release=1
 $url/?C=M\;O=D|grep $name|grep tar.bz2$|head -1| cut -d "-" -f2|sed "s/.tar.bz2//"`"
 echo $latestversion
 }

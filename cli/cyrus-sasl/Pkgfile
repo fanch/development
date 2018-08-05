@@ -7,7 +7,7 @@ contributors="Pierre B"
 
 name=cyrus-sasl
 version=2.1.26
-release=1
+release=3
 
 source=(ftp://ftp.cyrusimap.org/cyrus-sasl/$name-$version.tar.gz
 	http://www.linuxfromscratch.org/patches/blfs/svn/cyrus-sasl-$version-openssl-1.1.0-1.patch

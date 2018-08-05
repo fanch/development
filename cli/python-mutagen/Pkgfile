@@ -8,6 +8,7 @@ name=python-mutagen
 version=1.39
 release=1
 
+source=(https://github.com/quodlibet/mutagen/releases/download/release-$version/mutagen-$version.tar.gz)
 
 build() {
 

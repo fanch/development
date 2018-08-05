@@ -6,13 +6,14 @@ contributors="Jayce, Greg"
 packager="tnut <tnut@nutyx.org>"
 
 name=meson
-version=0.47.1
-release=1
+version=0.45.0
 
+source=(https://github.com/mesonbuild/$name/releases/download/$version/$name-$version.tar.gz)
 
 build() {
   cd $name-$version
+  DFLAGS="${LDFLAGS/,--as-needed/}"
+  export LC_CTYPE=en_US.UTF-8
   python3 setup.py build
-  python3 setup.py install --root=$PKG 
-  cp -rv $PKG/* /
+  python3 setup.py install --root=$PKG --optimize=1 --skip-build
 }

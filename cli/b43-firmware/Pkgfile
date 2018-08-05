@@ -1,5 +1,6 @@
 # Depends on: b43-fwcutter
 
+description="Firmware for Broadcom B43 wireless networking chips - latest release"
 url="https://wireless.wiki.kernel.org/en/users/Drivers/b43"
 contributors="Pierre B"
 packager="tnut <tnut@nutyx.org>"

@@ -7,10 +7,12 @@ packager="Tnut <tnut@nutyx.org>"
 contributors="Pierre B, tnut, Remy"
 
 name=llvm
-version=6.0.1
-release=1
+version=5.0.1
 
 source=(
+	${url}releases/$version/$name-$version.src.tar.xz
+	${url}releases/$version/cfe-$version.src.tar.xz
+	${url}releases/$version/compiler-rt-$version.src.tar.xz)
 
 build() {
 
@@ -26,8 +28,7 @@ CC=gcc CXX=g++ \
 cmake -DCMAKE_INSTALL_PREFIX=/usr \
 	-DLLVM_ENABLE_FFI=ON \
 	-DCMAKE_BUILD_TYPE=Release \
-	-DLLVM_BUILD_LLVM_DYLIB=ON            \
-    -DLLVM_LINK_LLVM_DYLIB=ON             \
+	-DLLVM_BUILD_LLVM_DYLIB=ON \
 	-DLLVM_TARGETS_TO_BUILD="host;AMDGPU;" \
 	-Wno-dev \
 	..

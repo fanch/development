@@ -7,7 +7,7 @@ contributors="Pierre B"
 
 name=cifs-utils
 version=6.7
-release=1
+release=2
 
 source=( http://ftp.samba.org/pub/linux-cifs/$name/$name-$version.tar.bz2)
 

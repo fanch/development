@@ -4,7 +4,7 @@ packager="tnut <tnut@nutyx.org>"
 
 name=fdk-aac
 version=0.1.5
-release=1
+release=2
 
 source=(http://downloads.sourceforge.net/opencore-amr/$name-$version.tar.gz)
 

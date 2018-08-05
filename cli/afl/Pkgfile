@@ -1,13 +1,14 @@
 # Depends on: python llvm
 
 description="security-oriented fuzzer with compile-time instrumentation"
+url="http://lcamtuf.coredump.cx/afl/releases/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Greg"
 
 name=afl
 version=2.52b
-release=1
 
+source=(http://lcamtuf.coredump.cx/afl/releases/$name-$version.tgz)
 
 build () {
 
@@ -24,6 +25,7 @@ install -Dm 644 llvm_mode/README.llvm -t $PKG/usr/share/doc/$name
 uptodate() {
 local url ext
 ext=".tgz"
+url="http://lcamtuf.coredump.cx/afl/releases/"
 lynx -read_timeout=20 -dump -listonly -nonumbers \
 $url|grep $name-[0-9]|sort|tail -1|sed "s@$url$name-@@"|sed "s@$ext@@"
 }

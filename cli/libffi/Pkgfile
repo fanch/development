@@ -6,7 +6,7 @@ contributors="Pierre B"
 [ "$PKGMK_ARCH" == "i686" ] && PKGMK_GROUPS=(man)
 name=libffi
 version=3.2.1
-release=1
+release=2
 
 source=( ftp://sourceware.org/pub/$name/$name-$version.tar.gz )
 

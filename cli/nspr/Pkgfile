@@ -5,8 +5,8 @@ contributors="Pierre B"
 
 name=nspr
 version=4.19
-release=1
 
+source=( http://ftp.mozilla.org/pub/mozilla.org/nspr/releases/v$version/src/$name-$version.tar.gz )
 build () {
 
 cd $name-$version/$name

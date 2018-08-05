@@ -7,6 +7,7 @@ name=slang
 version=2.3.1a
 release=1
 
+source=(http://www.jedsoft.org/releases/$name/$name-$version.tar.bz2)
 
 build() {
 	unset MAKEFLAGS

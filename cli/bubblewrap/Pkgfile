@@ -10,6 +10,7 @@ release=1
 
 run=()
 
+source=($url/releases/download/v$version/bubblewrap-$version.tar.xz
 )
 
 prepare() {

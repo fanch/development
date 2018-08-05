@@ -4,6 +4,6 @@ packager="tnut at nutyx dot org"
 
 name=atool
 version=0.39.0
-release=1
+release=2
 
 source=(http://savannah.nongnu.org/download/$name/$name-$version.tar.gz)

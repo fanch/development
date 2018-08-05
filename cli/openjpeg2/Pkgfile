@@ -7,7 +7,6 @@ packager="tnut <tnut@nutyx.org>"
 _name=openjpeg
 name=openjpeg2
 version=2.3.0
-release=1
 
 PKGKMK_KEEP_SOURCES="no"
 

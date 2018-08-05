@@ -6,7 +6,7 @@ contributors="Pierre B"
 
 name=lcms
 version=1.19
-release=1
+release=3
 
 source=( http://downloads.sourceforge.net/$name/$name-$version.tar.gz
 	 http://www.linuxfromscratch.org/patches/blfs/svn/lcms-1.19-cve_2013_4276-1.patch)

@@ -9,33 +9,28 @@ name=fuse2
 version=2.9.7
 release=1
 
+source=( https://github.com/libfuse/libfuse/releases/download/fuse-$version/fuse-$version.tar.gz)
 
 build() {
 cd fuse-$version
 
-./configure --prefix=/usr    \
-            --disable-static \
-            --exec-prefix=/
+export MOUNT_FUSE_PATH=/usr/bin
+./configure --prefix=/usr \
+--libdir=/usr/lib \
+--enable-lib \
+--enable-util \
+--disable-example \
+--disable-static
 make
 make DESTDIR=$PKG install
 mkdir -p $PKG/lib
-install -vm755 Dest/lib/libfuse.so.2.9.7 $PKG/lib                  
-install -vm755 Dest/lib/libulockmgr.so.1.0.1 $PKG/lib                 
-ln -sfv ../../lib/libfuse.so.2.9.7 $PKG/usr/lib/libfuse.so         
-ln -sfv ../../lib/libulockmgr.so.1.0.1 $PKG/usr/lib/libulockmgr.so 
-
-install -vm644  Dest/lib/pkgconfig/fuse.pc $PKG/usr/lib/pkgconfig  
-                                                         
-install -vm4755 Dest/bin/fusermount       $PKG/bin                 
-install -vm755  Dest/bin/ulockmgr_server  $PKG/bin                 
-
-install -vm755  Dest/sbin/mount.fuse      $PKG/sbin                
-
-install -vdm755 $PKG/usr/include/fuse                              
-
-install -vm644  Dest/usr/include/*.h      $PKG/usr/include         
-install -vm644  Dest/usr/include/fuse/*.h $PKG/usr/include/fuse/   
-
-install -vm644  Dest/usr/share/man/man1/* $PKG/usr/share/man/man1  
-/$PKGsbin/ldconfig -v
+mv -v $PKG/usr/lib/libfuse.so.* $PKG/lib
+ln -sfv ../../lib/libfuse.so.$version $PKG/usr/lib/libfuse.so 
+rm -rf $PKG/tmp
+rm $PKG/dev/fuse
+install -v -m755 -d $PKG/usr/share/doc/fuse-$version
+install -v -m644    doc/kernel.txt \
+	$PKG/usr/share/doc/fuse-$version
+cp -Rv doc/html \
+	$PKG/usr/share/doc/fuse-$version
 }

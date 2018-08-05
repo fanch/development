@@ -7,7 +7,7 @@ contributors="Pierre B"
 
 name=gamin
 version=0.1.10
-release=1
+release=2
 
 source=(http://www.gnome.org/~veillard/gamin/sources/$name-$version.tar.gz
 	remove_deprecated_G_CONST_RETURN.patch)

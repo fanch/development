@@ -7,7 +7,6 @@ contributors="Pierre B"
 
 name=pcsclite
 version=1.8.23
-release=1
 
 PKGMK_KEEP_SOURCES="No"
 

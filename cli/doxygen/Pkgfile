@@ -6,7 +6,6 @@ packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
 name=doxygen
 version=1.8.14
-release=1
 
 source=(http://ftp.stack.nl/pub/$name/$name-$version.src.tar.gz)
 build() {

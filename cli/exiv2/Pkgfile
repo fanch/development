@@ -5,7 +5,6 @@ contributors="Pierre B"
 
 name=exiv2
 version=0.26
-release=1
 
 source=(http://www.exiv2.org/builds/$name-$version-trunk.tar.gz)
 

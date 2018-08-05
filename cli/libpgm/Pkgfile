@@ -6,7 +6,6 @@ packager="tnut <tnut@nutyx.org>"
 
 name=libpgm
 version=5.2.122
-release=1
 
 source=(https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/openpgm/$name-$version.tar.gz)
 

@@ -3,7 +3,7 @@ url="http://xiph.org/ao/"
 packager="tnut <tnut@nutyx.org>"
 
 name=elfutils
-version=0.173
+version=0.170
 release=1
 
 source=( https://sourceware.org/elfutils/ftp/$version/elfutils-$version.tar.bz2 )

@@ -9,7 +9,6 @@ contributors="Pierre B, Greg"
 name=xorg-encodings
 _name=${name/xorg-/}
 version=1.0.4
-release=1
 
 source=(http://ftp.x.org/pub/individual//font/${_name}-$version.tar.bz2)
 

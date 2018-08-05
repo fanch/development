@@ -7,7 +7,7 @@ contributors="Pierre B, Fanch"
 
 name=polkit-qt
 version=0.112.0
-release=1
+release=3
 
 source=(http://download.kde.org/stable/apps/KDE4.x/admin/${name}-1-$version.tar.bz2)
 

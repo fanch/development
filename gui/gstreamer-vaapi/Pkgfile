@@ -7,7 +7,6 @@ contributors=""
 
 name=gstreamer-vaapi
 version=1.14.0
-release=1
 
 source=(http://gstreamer.freedesktop.org/src/$name/$name-$version.tar.xz)
 

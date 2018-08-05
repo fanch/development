@@ -7,7 +7,7 @@ contributors="Pierre B"
 
 name=xorg-libxshmfence
 version=1.2
-release=1
+release=2
 
 source=(http://ftp.x.org/pub/individual//lib/libxshmfence-$version.tar.bz2)
 

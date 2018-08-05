@@ -6,7 +6,6 @@ packager="tnut <tnut@nutyx.org>"
 
 name=python-smbc
 version=1.0.15.8
-release=1
 
 _name=pysmbc
 source=(https://pypi.io/packages/source/p/pysmbc/pysmbc-$version.tar.bz2)

@@ -9,7 +9,6 @@ url="http://xorg.freedesktop.org"
 
 name=xorg-xrandr
 version=1.5.0
-release=1
 _name=${name/xorg-/}
 
 source=(http://ftp.x.org/pub/individual/app/${_name}-$version.tar.bz2)

@@ -7,8 +7,8 @@ contributors="Pierre B, Greg"
 
 name=webkitgtk
 version=2.20.0
-release=1
 
+source=(http://webkitgtk.org/releases/webkitgtk-$version.tar.xz)
 
 build() {
 cd webkitgtk-$version

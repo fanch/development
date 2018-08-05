@@ -9,7 +9,6 @@ url="http://xorg.freedesktop.org"
 
 name=xorg-xdpyinfo
 version=1.3.2
-release=1
 _name=${name/xorg-/}
 
 source=(http://ftp.x.org/pub/individual/app/${_name}-$version.tar.bz2)

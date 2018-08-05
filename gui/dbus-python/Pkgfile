@@ -9,8 +9,9 @@ run=( python python2 )
 
 name=dbus-python
 version=1.2.4
-release=1
+release=2
 
+source=( http://dbus.freedesktop.org/releases/$name/$name-$version.tar.gz\
 	)
 
 build() {
@@ -34,6 +35,7 @@ build() {
 uptodate() {
 local url ext
 ext=".tar.gz"
+url="https://dbus.freedesktop.org/releases/dbus-python"
 lynx -read_timeout=20 -dump -listonly -nonumbers \
 $url/?C=N\;O=D|grep $name-[0-9]|grep $ext$|head -1|sed "s@$url/$name-@@"|sed "s/$ext//"
 }

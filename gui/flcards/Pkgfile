@@ -7,7 +7,6 @@ packager="tnut <tnut@nutyx.org>"
 
 name=flcards
 version=2.4.0
-release=1
 
 source=(http://downloads.nutyx.org/files/cards-$version.tar.gz)
 

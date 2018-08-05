@@ -7,7 +7,6 @@ contributors="Pierre B"
 
 name=gegl
 version=0.3.28
-release=1
 
 source=(http://ftp.gimp.org/pub/$name/0.3/$name-$version.tar.bz2)
 

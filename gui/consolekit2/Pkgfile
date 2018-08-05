@@ -7,8 +7,9 @@ contributors="Pierre B"
 
 name=consolekit2
 version=1.0.2
-release=1
+release=3
 
+source=(https://github.com/Consolekit2/ConsoleKit2/releases/download/$version/ConsoleKit2-$version.tar.bz2
         consolekit2.tmpfiles.conf
 	75-consolekit2.rules
 	consolekit2.logrotate)

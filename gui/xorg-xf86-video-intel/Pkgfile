@@ -4,7 +4,6 @@ description="Xorg intel video driver."
 packager="tnut <tnut@nutyx.org>"
 name=xorg-xf86-video-intel
 version=20180223
-release=1
 _name=${name/xorg-/}
 
 source=(http://anduin.linuxfromscratch.org/BLFS/${_name}/${_name}-$version.tar.xz)

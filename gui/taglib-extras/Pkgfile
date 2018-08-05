@@ -7,7 +7,7 @@ contributors="Pierre B"
 
 name=taglib-extras
 version=1.0.1
-release=1
+release=2
 
 source=(http://downloads.nutyx.org/files/$name-$version.tar.gz
 		taglib-1.10.patch)

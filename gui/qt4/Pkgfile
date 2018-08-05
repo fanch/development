@@ -7,11 +7,12 @@ contributors="Pierre B"
 
 name=qt4
 version=4.8.7
-release=1
+release=2
 
 _name=qt-everywhere-opensource-src-${version}
 
 source=($name-$version-conglo-1.patch
+	http://download.qt-project.org/official_releases/qt/${version%.*}/$version/${_name}.tar.gz)
 
 build() {
 
@@ -38,6 +39,7 @@ echo "QMAKE_CXXFLAGS += -std=gnu++98" >> src/plugins/accessible/qaccessiblebase.
             -translationdir /usr/share/qt4/translations \
             -confirm-license   \
             -opensource        \
+            -release           \
             -dbus-linked       \
             -openssl-linked    \
             -system-sqlite     \

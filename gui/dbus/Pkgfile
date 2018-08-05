@@ -9,11 +9,11 @@ contributors="Pierre B, Jayce"
 
 name=dbus
 version=1.10.24
-release=1
+release=2
 nutyx_version=9.92
-release=1
 
 source=(http://downloads.nutyx.org/files/nutyx-${nutyx_version}.tar.xz
+	http://dbus.freedesktop.org/releases/dbus/$name-$version.tar.gz \
 	dbus.system-local.conf)
 
 build() {
@@ -48,6 +48,7 @@ build() {
 uptodate() {
 local url ext
 ext=".tar.gz"
+url="https://dbus.freedesktop.org/releases/dbus"
 lynx -read_timeout=20 -dump -listonly -nonumbers \
 $url/?C=N\;O=D|grep $name-[0-9]|grep $ext$|head -1|sed "s@$url/$name-@@"|sed "s/$ext//"
 }

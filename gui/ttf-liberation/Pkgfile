@@ -8,7 +8,7 @@ contributors="Alienus, tnut"
 run=( xorg-fontconfig xorg-font-util xorg-encodings fontforge )
 name=ttf-liberation
 version=2.00.1
-release=1
+release=2
 
 source=(http://sources.openelec.tv/mirror/liberation-fonts-ttf/liberation-fonts-ttf-$version.tar.gz
 ttf-liberation.30-0-liberation-mono.conf

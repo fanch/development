@@ -4,7 +4,6 @@ description="Xorg VMWare mouse input driver."
 packager="tnut <tnut@nutyx.org>"
 name=xorg-xf86-input-vmmouse
 version=13.1.0
-release=1
 _name=${name/xorg-/}
 
 source=(http://ftp.x.org/pub/individual//driver/${_name}-$version.tar.bz2)

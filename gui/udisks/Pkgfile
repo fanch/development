@@ -7,8 +7,9 @@ contributors="Pierre B"
 
 name=udisks
 version=1.0.5
-release=1
+release=3
 
+source=(http://hal.freedesktop.org/releases/$name-$version.tar.gz)
 
 build() {
 

@@ -7,7 +7,6 @@ contributors="Pierre B, Greg"
 
 name=xorg-server
 version=1.19.6
-release=1
 
 source=(http://ftp.x.org/pub/individual/xserver/$name-$version.tar.bz2)
 

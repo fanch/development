@@ -5,7 +5,6 @@ packager="tnut <tnut@nutyx.org>"
 
 name=python-efl
 version=1.20.0
-release=1
 
 source=(https://download.enlightenment.org/rel/bindings/python/$name-$version.tar.xz)
 

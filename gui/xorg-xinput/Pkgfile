@@ -11,7 +11,7 @@ run=(xorg-xrandr)
 
 name=xorg-xinput
 version=1.6.2
-release=1
+release=2
 
 _name=${name/xorg-/}
 

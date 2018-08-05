@@ -7,7 +7,6 @@ contributors="Pierre B"
 
 name=cups-filters
 version=1.17.9
-release=1
 
 source=( http://www.openprinting.org/download/$name/$name-$version.tar.xz)
 build() {

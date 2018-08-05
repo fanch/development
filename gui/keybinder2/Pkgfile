@@ -2,7 +2,7 @@
 
 name=keybinder2
 version=0.3.0
-release=1
+release=4
 
 url="https://github.com/engla/keybinder"
 description="Library for registering global keyboard shortcuta"

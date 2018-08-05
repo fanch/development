@@ -7,7 +7,6 @@ contributors="Pierre B"
 
 name=breeze-icons
 version=5.43.0
-release=1
 
 run=(gtk-update-icon-cache)
 

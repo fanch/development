@@ -9,8 +9,9 @@ run=(gobject-introspection vala)
 
 name=telepathy-glib
 version=0.24.1
-release=1
+release=3
 
+source=(http://${name%-*}.freedesktop.org/releases/$name/$name-$version.tar.gz)
 
 build() {
 

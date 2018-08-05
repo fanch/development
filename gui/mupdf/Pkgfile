@@ -6,7 +6,6 @@ packager="tnut <tnut@nutyx.org>"
 
 name=mupdf
 version=1.11
-release=1
 
 source=(http://www.mupdf.com/downloads/archive/$name-$version-source.tar.gz
 	http://www.linuxfromscratch.org/patches/blfs/svn/$name-$version-shared_libs-1.patch
@@ -25,7 +24,9 @@ patch -Np1 -i ../$name-$version-openjpeg-3.patch
 patch -Np1 -i ../$name-$version-shared_libs-1.patch
 
 
+make build=release
 
+make prefix=$PKG/usr build=release \
 docdir=$PKG/usr/share/doc/$name-$version \
 install
 

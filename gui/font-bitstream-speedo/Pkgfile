@@ -9,7 +9,6 @@ url="http://xorg.freedesktop.org"
 
 name=font-bitstream-speedo
 version=1.0.2
-release=1
 
 source=(http://ftp.x.org/pub/individual/font/$name-$version.tar.bz2)
 

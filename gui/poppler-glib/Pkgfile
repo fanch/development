@@ -7,7 +7,7 @@ contributors="Alienus"
 
 name=poppler-glib
 version=0.62.0
-release=1
+release=3
 
 source=(http://poppler.freedesktop.org/poppler-$version.tar.xz)
 

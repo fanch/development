@@ -16,7 +16,6 @@ run=(gtk-update-icon-cache shared-mime-info desktop-file-utils)
 
 name=gtk2
 version=2.24.32
-release=1
 
 source=(http://ftp.gnome.org/pub/gnome/sources/gtk+/${version%.*}/gtk+-$version.tar.xz)
 
@@ -68,7 +67,6 @@ rm -r usr/{share/gir-1.0,lib/pkgconfig,include}
 uptodate(){
 local lastversion
 lastversion="`lynx -read_timeout=20 -dump -listonly -nonumbers \
-release=1
 http://ftp.gnome.org/pub/gnome/sources/gtk+/${version:0:4}/?C=N\;O=D|grep LATEST|grep [0-9]$|cut -d "-" -f3`"
 echo "$lastversion"
 }

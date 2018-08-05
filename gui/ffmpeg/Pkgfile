@@ -7,8 +7,8 @@ contributors="Pierre B, tnut, Remy"
 
 name=ffmpeg
 version=3.4.2
-release=1
 
+source=(${url}releases/ffmpeg-$version.tar.xz)
 
 build() {
 cd ffmpeg-$version

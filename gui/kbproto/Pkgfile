@@ -7,7 +7,6 @@ url="http://xorg.freedesktop.org"
 
 name=kbproto
 version=1.0.7
-release=1
 _name=$name
 
 

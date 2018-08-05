@@ -8,8 +8,8 @@ contributors="Pierre B, Greg"
 name=xorg-fontconfig
 _name=fontconfig
 version=2.12.6
-release=1
 
+source=( https://www.freedesktop.org/software/$_name/release/$_name-$version.tar.gz)
 
 
 build() {

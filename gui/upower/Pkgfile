@@ -9,6 +9,7 @@ name=upower
 version=0.99.7
 release=1
 
+source=(http://upower.freedesktop.org/releases/$name-$version.tar.xz)
 
 build() {
 

@@ -7,7 +7,6 @@ contributors="Pierre B"
 
 name=gstreamer
 version=1.14.0
-release=1
 
 source=(http://gstreamer.freedesktop.org/src/gstreamer/gstreamer-$version.tar.xz)
 

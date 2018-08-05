@@ -9,6 +9,7 @@ name=telepathy-gabble
 version=0.18.4
 release=1
 
+source=(http://telepathy.freedesktop.org/releases/$name/$name-$version.tar.gz)
 
 build() {
 

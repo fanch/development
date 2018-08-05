@@ -7,7 +7,6 @@ contributors="Pierre B"
 
 name=python2-qt
 version=5.9.2
-release=1
 
 source=(http://sourceforge.net/projects/pyqt/files/PyQt5/PyQt-$version/PyQt5_gpl-$version.tar.gz)
 build() {

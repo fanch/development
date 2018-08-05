@@ -10,6 +10,7 @@ name=openal
 version=1.18.1
 release=1
 
+source=(http://kcat.strangesoft.net/openal-releases/openal-soft-$version.tar.bz2 )
 
 build() {
 cd openal-soft-$version/build

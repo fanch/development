@@ -6,9 +6,10 @@ packager="greg <greg@nutyx.org>"
 contributors="Pierre B, tnut"
 
 name=wayland
-version=1.14.0
 release=1
+version=1.14.0
 
+source=( http://wayland.freedesktop.org/releases/$name-$version.tar.xz)
 
 build() {
   cd $name-$version

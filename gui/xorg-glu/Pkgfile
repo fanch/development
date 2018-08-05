@@ -8,7 +8,7 @@ contributors="Pierre B"
 name=xorg-glu
 _name=glu
 version=9.0.0
-release=1
+release=2
 
 source=(ftp://ftp.freedesktop.org/pub/mesa/${_name}/${_name}-$version.tar.bz2)
 

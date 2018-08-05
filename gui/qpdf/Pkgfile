@@ -7,7 +7,6 @@ contributors="Pierre B, Tnut"
 
 name=qpdf
 version=7.0.0
-release=1
 
 source=(https://downloads.sourceforge.net/$name/$name/$name-$version.tar.gz)
 

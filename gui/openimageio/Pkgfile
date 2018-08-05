@@ -9,7 +9,6 @@ run=(python)
 
 name=openimageio
 version=1.8.9
-release=1
 
 PKGMK_KEEP_SOURCES="no"
 

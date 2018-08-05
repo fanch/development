@@ -7,7 +7,7 @@ contributors="Pierre B"
  
 name=xorg-libice
 version=1.0.9
-release=1
+release=2
 
 source=(http://ftp.x.org/pub/individual//lib/libICE-$version.tar.bz2)
 

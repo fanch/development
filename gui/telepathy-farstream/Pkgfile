@@ -7,8 +7,9 @@ contributors="Pierre B"
 
 name=telepathy-farstream
 version=0.6.2
-release=1
+release=2
 
+source=(http://${name%-*}.freedesktop.org/releases/$name/$name-$version.tar.gz)
 
 build() {
 

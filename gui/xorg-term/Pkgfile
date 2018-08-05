@@ -8,7 +8,7 @@ contributors="Pierre B"
 alias=(xterm)
 name=xorg-term
 version=327
-release=1
+release=2
 
 run=(xorg-luit)
 

@@ -9,6 +9,7 @@ name=wayland-protocols
 version=1.13
 release=1
 
+source=(https://wayland.freedesktop.org/releases/wayland-protocols-$version.tar.xz)
 
 build() {
 

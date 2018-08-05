@@ -8,7 +8,8 @@ url="http://www.linuxprinting.org/foomatic.html"
 
 name=foomatic-db-engine
 version=4.0
-release=1
+release="`date +%Y%m%d`"
+source=(http://www.openprinting.org/download/foomatic/$name-$version-$release.tar.gz)
 
 build() {
     cd $name-*

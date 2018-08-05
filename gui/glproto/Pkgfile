@@ -7,7 +7,6 @@ url="http://xorg.freedesktop.org"
 
 name=glproto
 version=1.4.17
-release=1
 _name=$name
 
 

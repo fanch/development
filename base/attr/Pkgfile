@@ -6,7 +6,7 @@ packager="tnut <tnut@nutyx.org>"
 
 name=attr
 version=2.4.48
-
+release=1
 PKGMK_GROUPS=(devel man doc)
 
 source=(http://download.savannah.gnu.org/releases/$name/$name-$version.tar.gz)

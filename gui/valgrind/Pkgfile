@@ -10,13 +10,16 @@ version=3.13.0
 release=1
 
 source=(ftp://sourceware.org/pub/$name/$name-$version.tar.bz2)
+release=1
 
 build() {
 
 	cd $name-$version
+release=1
 	sed -i 's|/doc/valgrind||' docs/Makefile.in 
 	./configure --prefix=/usr \
             --datadir=/usr/share/doc/$name-$version
+release=1
             
 	make
 	make DESTDIR=$PKG install

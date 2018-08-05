@@ -7,12 +7,14 @@ contributors="Alienus, tnut"
 
 name=dmenu
 version=4.7
-release=2
+release=1
 
 source=(http://dl.suckless.org/tools/$name-$version.tar.gz)
+release=1
 
 build(){
     cd $name-$version
+release=1
 
     make install PREFIX=/usr \
                  LIBDIR=/usr/lib \

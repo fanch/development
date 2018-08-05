@@ -11,3 +11,4 @@ release=1
 
 source=(
 http://launchpad.net/libnih/1.0/$version/+download/$name-$version.tar.gz)
+release=1

@@ -7,13 +7,14 @@ contributors="Pierre B"
 
 name=qtwebengine
 version=5.10.1
+release=1
 
 _name="${name}-everywhere-src"
 
-source=(https://download.qt.io/official_releases/qt/5.10/$version/submodules/${_name}-${version}.tar.xz)
 
 build() {
   cd ${_name}-${version}
+release=1
   mkdir build
   cd build 
   qmake WEBENGINE_CONFIG+="use_proprietary_codecs" ../ 

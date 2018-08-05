@@ -7,14 +7,17 @@ contributors="Pierre B"
 
 name=gstreamer-plugins-libav
 version=1.14.0
+release=1
 
 source=(http://gstreamer.freedesktop.org/src/gst-libav/gst-libav-$version.tar.xz )
+release=1
 
 build() {
 cd gst-*
 
 ./configure --prefix=/usr \
 --with-package-name="GStreamer Libav Plugins $version NuTyX" \
+release=1
 --with-package-origin="http://downloads.nutyx.org/"
 make
 make DESTDIR=$PKG install

@@ -4,9 +4,11 @@ description="Xorg vmware video driver."
 packager="tnut <tnut@nutyx.org>"
 name=xorg-xf86-video-vmware
 version=13.2.1
+release=1
 _name=${name/xorg-/}
 
 source=(http://ftp.x.org/pub/individual//driver/${_name}-$version.tar.bz2)
+release=1
 
 build=xorg
 

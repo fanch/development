@@ -7,12 +7,14 @@ contributors="tnut"
 
 name=libvncserver
 version=0.9.11
-release=2
+release=1
 
 source=(https://github.com/LibVNC/libvncserver/archive/LibVNCServer-${version}.tar.gz)
+release=1
 
 build () {
 cd $name-LibVNCServer-$version
+release=1
 ./autogen.sh
 ./configure --prefix=/usr
 make

@@ -10,9 +10,11 @@ version=2.6.4
 release=1
 
 source=(http://ftp.gnome.org/pub/gnome/sources/$name/${version%.*}/$name-$version.tar.bz2)
+release=1
 
 build() {
 	cd $name-$version
+release=1
 	sed -i '/DG_DISABLE_DEPRECATED/d' glade/Makefile.in
 	./configure --prefix=/usr \
 		--mandir=/usr/share/man \
@@ -22,10 +24,13 @@ build() {
 }
 uptodate(){
 local latest lastversion url
+release=1
 url="http://ftp.gnome.org/pub/gnome/sources/$name"
 latest="`lynx -read_timeout=20 -dump -listonly -nonumbers \
 $url/?C=N\;O=D|grep [0-9]/$|head -1`"
 lastversion="`lynx -read_timeout=20 -dump -listonly -nonumbers \
+release=1
 $latest/?C=N\;O=D|grep LATEST|grep [0-9]$|cut -d "-" -f3`"
 echo "$lastversion"
+release=1
 }

@@ -7,10 +7,12 @@ url="http://xorg.freedesktop.org"
 
 name=presentproto
 version=1.1
+release=1
 _name=$name
 
 
 source=(http://ftp.x.org/pub/individual/proto/$name-$version.tar.bz2)
+release=1
 
 build=xorg
 

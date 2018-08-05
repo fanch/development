@@ -11,12 +11,12 @@ name=qtwebkit
 version=5.9.0
 release=1
 
-source=(https://download.qt.io/community_releases/5.9/$version-final/$name-opensource-src-$version.tar.xz
 	http://www.linuxfromscratch.org/patches/blfs/svn/qtwebkit-5.9.0-icu_59-1.patch)
 
 build() {
 
 cd $name-opensource-src-$version
+release=1
 
 patch -p1 -i ../qtwebkit-5.9.0-icu_59-1.patch
 sed -e '/CONFIG/a QMAKE_CXXFLAGS += -Wno-expansion-to-defined' \
@@ -33,7 +33,6 @@ make INSTALL_ROOT=$PKG install
 }
 
 uptodate() {
-feed=https://github.com/annulen/webkit/releases.atom 
 exec="lynx -read_timeout=20 -dump -listonly -nonumbers $feed"
 ligne=1 
 $exec $feed | grep title | \

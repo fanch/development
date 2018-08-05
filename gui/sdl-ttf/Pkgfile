@@ -9,10 +9,10 @@ contributors="Tnut, Fanch"
 name=sdl-ttf
 version=2.0.11
 release=1
-source=(http://www.libsdl.org/projects/SDL_ttf/release/SDL_ttf-$version.tar.gz)
 
 build() {
 	cd SDL_ttf-$version
+release=1
 
 	./configure \
 		--prefix=/usr \

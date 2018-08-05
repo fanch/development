@@ -6,12 +6,12 @@ packager="tnut <tnut@nutyx.org>"
 
 name=libselinux
 version=2.4
-release=4
+release=1
 
-source=(https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/20150202/${name}-${version}.tar.gz
         libselinux.tmpfiles.d)
 build() {
 cd ${name}-${version}
+release=1
   sed -i 's|pkg-config --cflags ruby|pkg-config --cflags ruby-$(RUBYLIBVER)|' src/Makefile
   sed -i 's|site_ruby|vendor_ruby|' src/Makefile
  #make swigify

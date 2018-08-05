@@ -7,10 +7,9 @@ contributors="Pierre B"
 
 name=fontforge
 version=20170731
-release=2
+release=1
 run=(shared-mime-info)
 
-source=(https://github.com/$name/$name/releases/download/$version/$name-dist-$version.tar.xz)
 
 build() {
     cd $name*
@@ -18,6 +17,7 @@ build() {
             --enable-gtk2-use \
             --disable-static  \
             --docdir=/usr/share/doc/$name-$version
+release=1
     make
     make DESTDIR=$PKG install
 }

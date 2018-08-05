@@ -7,13 +7,13 @@ contributors="Pierre B"
 
 name=telepathy-idle
 version=0.2.0
-release=2
+release=1
 
-source=(http://${name%-*}.freedesktop.org/releases/$name/$name-$version.tar.gz)
 
 build() {
 
   cd $name-$version
+release=1
   ./configure --prefix=/usr \
               --libexecdir=/usr/lib/telepathy
   make

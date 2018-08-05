@@ -7,8 +7,10 @@ contributors="Pierre B"
 
 name=gstreamer-plugins-bad
 version=1.14.0
+release=1
 
 source=(http://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-$version.tar.xz )
+release=1
 
 build() {
 cd gst-plugins*

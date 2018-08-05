@@ -9,9 +9,11 @@ version=3.0.1
 release=1
 
 source=(http://www.cups-pdf.de/src/cups-pdf_$version.tar.gz)
+release=1
 
 build(){
  cd $name-$version/src
+release=1
  gcc $CFLAGS -s cups-pdf.c -o cups-pdf -lcups
 
  cd ../extra

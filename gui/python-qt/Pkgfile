@@ -7,11 +7,14 @@ contributors="Pierre B"
 
 name=python-qt
 version=5.10.1
+release=1
 
 source=(http://sourceforge.net/projects/pyqt/files/PyQt5/PyQt-$version/PyQt5_gpl-$version.tar.gz)
+release=1
 build() {
 
 cd PyQt5_gpl-$version
+release=1
 
 sed -i '/target_config.dbus_inc_dirs = \[\]/d' configure.py
 

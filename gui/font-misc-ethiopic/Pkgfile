@@ -9,11 +9,14 @@ url="http://xorg.freedesktop.org"
 
 name=font-misc-ethiopic
 version=1.0.3
+release=1
 
 source=(http://ftp.x.org/pub/individual/font/$name-$version.tar.bz2)
+release=1
 
 build() {
 	cd $name-$version	
+release=1
 	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var \
 	--with-fontrootdir=/usr/share/fonts
 	make

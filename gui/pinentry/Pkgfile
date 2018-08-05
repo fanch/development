@@ -10,9 +10,11 @@ version=1.0.0
 release=1
 
 source=(ftp://ftp.gnupg.org/gcrypt/$name/$name-$version.tar.bz2)
+release=1
 
 build() {
 cd $name-$version
+release=1
 ./configure --prefix=/usr \
 	--libexecdir=/usr/lib \
 	--disable-pinentry-qt \

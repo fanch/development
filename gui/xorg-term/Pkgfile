@@ -8,13 +8,14 @@ contributors="Pierre B"
 alias=(xterm)
 name=xorg-term
 version=327
-release=2
+release=1
 
 run=(xorg-luit)
 
 _name=xterm
 
 source=(ftp://invisible-island.net/${_name}/${_name}-$version.tgz
+release=1
 	$name.list xorg-term-327-color-1.patch)
 
 build() {

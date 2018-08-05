@@ -9,10 +9,10 @@ name=colord-gtk
 version=0.1.26
 release=1
 
-source=(http://www.freedesktop.org/software/${name%-*}/releases/$name-$version.tar.xz)
 
 build() {
 cd $name-$version
+release=1
 ./configure --prefix=/usr \
 --enable-vala \
 --disable-static

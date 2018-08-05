@@ -10,18 +10,27 @@ version=12.10.1
 release=1
 
 source=(http://launchpad.net/libindicator/${version%.*}/$version/+download/libindicator-$version.tar.gz)
+release=1
 
 build() {
 
   sed '/-Werror/s/$/ -Wno-deprecated-declarations/' -i libindicator-$version/libindicator/Makefile.{am,in}
+release=1
   sed 's/LIBINDICATOR_LIBS+="$LIBM"/LIBINDICATOR_LIBS+=" $LIBM"/g' -i libindicator-$version/configure
+release=1
   sed 's/LIBM="-lmw"/LIBM=" -lmw"/g' -i libindicator-$version/configure
+release=1
   sed 's/LIBM="-lm"/LIBM=" -lm"/g' -i libindicator-$version/configure
+release=1
   sed 's/LIBS="-lm  $LIBS"/LIBS=" -lm  $LIBS"/g' -i libindicator-$version/configure
+release=1
   sed 's/LIBS="-lmw  $LIBS"/LIBS=" -lmw  $LIBS"/g' -i libindicator-$version/configure
+release=1
   sed 's/LIBM="-lm"/LIBM=" -lm"/g' -i libindicator-$version/m4/libtool.m4
+release=1
 
   cd libindicator-$version
+release=1
 
   ./configure --prefix=/usr                \
               --sysconfdir=/etc            \

@@ -10,3 +10,4 @@ version=3.0
 release=1
 
 source=(http://freedesktop.org/software/pulseaudio/pavucontrol/pavucontrol-$version.tar.xz)
+release=1

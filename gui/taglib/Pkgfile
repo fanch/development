@@ -7,13 +7,13 @@ contributors="Pierre B"
 
 name=taglib
 version=1.11.1
-release=2
+release=1
 
-source=( https://taglib.github.io/releases/$name-$version.tar.gz)
 
 build() {
 
         cd $name-$version
+release=1
         mkdir build
         cd build
         cmake -DCMAKE_INSTALL_PREFIX=/usr \

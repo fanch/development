@@ -6,11 +6,12 @@ packager="tnut <tnut@nutyx.org>"
 
 name=libass
 version=0.14.0
+release=1
 
-source=(${url}/$name/releases/download/$version/$name-$version.tar.xz)
 
 build() {
 cd $name-$version
+release=1
 ./configure --prefix=/usr --disable-static
 make
 make DESTDIR=$PKG install

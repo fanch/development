@@ -9,4 +9,3 @@ name=libepoxy
 version=1.4.3
 release=1
 
-source=( https://github.com/anholt/${name}/releases/download/$version/$name-$version.tar.xz)

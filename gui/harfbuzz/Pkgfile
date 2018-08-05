@@ -7,11 +7,12 @@ contributors="Pierre B, Remy, Tnut"
 
 name=harfbuzz
 version=1.7.5
+release=1
 
-source=(https://www.freedesktop.org/software/$name/release/$name-$version.tar.bz2)
 
 build() {
 cd $name-$version
+release=1
 
 ./configure --prefix=/usr \
             --with-cairo  \

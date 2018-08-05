@@ -11,11 +11,12 @@ run=(xorg-xrandr)
 
 name=xorg-xinput
 version=1.6.2
-release=2
+release=1
 
 _name=${name/xorg-/}
 
 source=(http://ftp.x.org/pub/individual/app/${_name}-$version.tar.bz2)
+release=1
 
 build=xorg
 

@@ -7,14 +7,17 @@ contributors="Pierre B"
 
 name=gstreamer-plugins-ugly
 version=1.14.0
+release=1
 
 source=(http://gstreamer.freedesktop.org/src/gst-plugins-ugly/gst-plugins-ugly-$version.tar.xz )
+release=1
 
 build() {
 cd gst-plugins*
 
 ./configure --prefix=/usr \
 --with-package-name="GStreamer Ugly Plugins $version NuTyX" \
+release=1
 --with-package-origin="http://downloads.nutyx.org/"
 make
 make DESTDIR=$PKG install

@@ -10,10 +10,12 @@ version=2.3.2
 release=1
 
 source=(http://ftp.x.org/pub/individual//lib/libXft-$version.tar.bz2)
+release=1
 
 build() {
 
 cd libXft-$version
+release=1
 ./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
 
 make

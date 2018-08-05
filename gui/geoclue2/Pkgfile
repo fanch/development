@@ -10,10 +10,10 @@ name=geoclue2
 version=2.4.7
 release=1
 
-source=(http://freedesktop.org/software/geoclue/releases/${version:0:3}/geoclue-$version.tar.xz)
 
 build() {
   cd geoclue-$version
+release=1
   ./configure --prefix=/usr                \
               --sysconfdir=/etc            \
               --localstatedir=/var         \

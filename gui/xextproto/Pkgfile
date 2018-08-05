@@ -7,10 +7,12 @@ url="http://xorg.freedesktop.org"
 
 name=xextproto
 version=7.3.0
+release=1
 _name=$name
 
 
 source=(http://ftp.x.org/pub/individual/proto/$name-$version.tar.bz2)
+release=1
 
 build=xorg
 

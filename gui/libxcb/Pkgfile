@@ -7,12 +7,14 @@ contributors="Pierre B"
 
 name=libxcb
 version=1.12
-release=2
+release=1
 
 source=(http://xcb.freedesktop.org/dist/$name-$version.tar.bz2)
+release=1
 
 build() {
 cd $name-$version
+release=1
 
 sed -e "s/pthread-stubs//" -i configure
 
@@ -20,6 +22,7 @@ sed -e "s/pthread-stubs//" -i configure
 	    --sysconfdir=/etc \
 	    --localstatedir=/var \
 	    --docdir='${datadir}'/doc/libxcb-$version \
+release=1
 	    --enable-xinput \
             --enable-xkb
 make

@@ -9,15 +9,17 @@ contributors="Pierre B, Jayce"
 
 name=dbus
 version=1.10.24
-release=2
+release=1
 nutyx_version=9.92
+release=1
 
 source=(http://downloads.nutyx.org/files/nutyx-${nutyx_version}.tar.xz
-	http://dbus.freedesktop.org/releases/dbus/$name-$version.tar.gz \
+release=1
 	dbus.system-local.conf)
 
 build() {
 	cd $name-$version
+release=1
 	./configure --prefix=/usr                 \
             --sysconfdir=/etc                     \
             --localstatedir=/var                  \
@@ -25,6 +27,7 @@ build() {
             --disable-xml-docs                    \
             --disable-static                      \
             --docdir=/usr/share/doc/dbus-$version \
+release=1
             --with-console-auth-dir=/run/console  \
             --with-system-pid-file=/run/dbus/pid  \
 	    --with-system-socket=/run/dbus/system_bus_socket
@@ -39,6 +42,7 @@ build() {
 
 	# service
         cd ../nutyx-${nutyx_version}
+release=1
         make DESTDIR=$PKG install-dbus
 	mkdir -p $PKG/usr/lib/dbus-1.0/services
 	mkdir -p $PKG/usr/share/dbus-1/services
@@ -48,7 +52,6 @@ build() {
 uptodate() {
 local url ext
 ext=".tar.gz"
-url="https://dbus.freedesktop.org/releases/dbus"
 lynx -read_timeout=20 -dump -listonly -nonumbers \
 $url/?C=N\;O=D|grep $name-[0-9]|grep $ext$|head -1|sed "s@$url/$name-@@"|sed "s/$ext//"
 }

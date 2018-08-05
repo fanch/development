@@ -6,10 +6,11 @@ packager="tnut <tnut@nutyx.org>"
 
 name=ibus
 version=1.5.17
+release=1
 
-source=(https://github.com/ibus/ibus/releases/download/$version/$name-$version.tar.gz)
 build() {
 cd $name-$version
+release=1
 
 sed -i 's@/desktop/ibus@/org/freedesktop/ibus@g' \
     data/ibus.schemas.in \

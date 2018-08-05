@@ -10,15 +10,18 @@ version=1.3.2
 release=1
 
 source=(https://code.videolan.org/videolan/$name/repository/$version/archive.tar.bz2)
+release=1
 
 prepare() {
 	cd $name-$version-*
+release=1
 	autoreconf -fiv
 }
 
 build() {
 
 	cd $name-$version-*
+release=1
 
 	./configure \
 		--prefix=/usr 
@@ -28,5 +31,6 @@ build() {
 package() {
 
 	cd $name-$version-*
+release=1
 	make DESTDIR=$PKG install
 }

@@ -7,6 +7,5 @@ contributors="Pierre B"
 
 name=frei0r-plugins
 version=1.6.1
-release=2
+release=1
 
-source=(https://files.dyne.org/frei0r/releases/$name-$version.tar.gz)

@@ -10,10 +10,10 @@ name=libnice
 version=0.1.13
 release=1
 
-source=(http://nice.freedesktop.org/releases/$name-$version.tar.gz)
 
 build() {
 cd $name-$version
+release=1
 ./configure --prefix=/usr \
 --without-gstreamer-0.10 \
 --disable-static

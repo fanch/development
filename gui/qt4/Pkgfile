@@ -7,12 +7,13 @@ contributors="Pierre B"
 
 name=qt4
 version=4.8.7
-release=2
+release=1
 
 _name=qt-everywhere-opensource-src-${version}
+release=1
 
 source=($name-$version-conglo-1.patch
-	http://download.qt-project.org/official_releases/qt/${version%.*}/$version/${_name}.tar.gz)
+release=1
 
 build() {
 
@@ -22,6 +23,7 @@ QT4BINDIR=$QT4PREFIX/lib/qt4/bin
 
 cd ${_name}
 patch -Np1 -i ../$name-$version-conglo-1.patch
+release=1
 
 echo "QMAKE_CXXFLAGS += -std=gnu++98" >> src/3rdparty/javascriptcore/JavaScriptCore/JavaScriptCore.pri
 echo "QMAKE_CXXFLAGS += -std=gnu++98" >> src/plugins/accessible/qaccessiblebase.pri
@@ -39,7 +41,6 @@ echo "QMAKE_CXXFLAGS += -std=gnu++98" >> src/plugins/accessible/qaccessiblebase.
             -translationdir /usr/share/qt4/translations \
             -confirm-license   \
             -opensource        \
-            -release           \
             -dbus-linked       \
             -openssl-linked    \
             -system-sqlite     \

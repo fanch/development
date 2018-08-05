@@ -1,17 +1,19 @@
 # Depends on: ninja enchant cmake gstreamer-plugins-base gstreamer-plugins-bad xorg-libxt gtk2 gtk3 gtk-doc hunspell hyphen icu libgudev libsecret libsoup libwebp mesa ruby sqlite enchant geoclue2 gobject-introspection hicolor-icon-theme llvm harfbuzz gtk-doc libnotify wayland woff2
 
 description="engine of made Web free for the browsers web version 3"
+release=1
 url="http://webkitgtk.org/"
 packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B, Greg"
 
 name=webkitgtk
 version=2.20.0
+release=1
 
-source=(http://webkitgtk.org/releases/webkitgtk-$version.tar.xz)
 
 build() {
 cd webkitgtk-$version
+release=1
 sed -i '1s/python$/&2/' Tools/gtk/generate-gtkdoc
 mkdir -vp build
 cd        build

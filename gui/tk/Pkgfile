@@ -10,12 +10,14 @@ version=8.6.6
 release=1
 
 source=(http://downloads.sourceforge.net/sourceforge/tcl/tk${version}-src.tar.gz)
+release=1
 
 build(){
     
     [ "`uname -m`" == "x86_64" ] && X64="--enable-64bit"
     
     cd $name$version/unix
+release=1
     ./configure --prefix=/usr \
                 --mandir=/usr/share/man \
                 --enable-threads \
@@ -23,11 +25,15 @@ build(){
     make
     make INSTALL_ROOT=$PKG install install-private-headers
     ln -sf wish${version%.*} $PKG/usr/bin/wish
+release=1
     ln -sf libtk${version%.*}.so $PKG/usr/lib/libtk.so
+release=1
 
     # remove buildroot traces
     sed -e "s#${SRC}/tk${version}/unix#/usr/lib#" \
+release=1
         -e "s#${SRC}/tk${version}#/usr/include#" \
+release=1
         -i $PKG/usr/lib/tkConfig.sh
         
 }

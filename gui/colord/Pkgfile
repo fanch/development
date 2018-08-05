@@ -7,11 +7,12 @@ contributors="Pierre B"
 
 name=colord
 version=1.4.1
+release=1
 
-source=(http://www.freedesktop.org/software/$name/releases/$name-$version.tar.xz)
 
 build() {
 cd $name-$version
+release=1
 mkdir build
 cd    build
 meson --prefix=/usr                     \
@@ -31,7 +32,6 @@ DESTDIR=$PKG ninja install
 uptodate() {
 local url ext
 ext=".tar.xz"
-url="https://www.freedesktop.org/software/$name/releases/"
 lynx -read_timeout=20 -dump -listonly -nonumbers \
 $url/?C=N\;O=D|grep $name-[0-9]|grep $ext$|head -1|sed "s@$url/$name-@@"|sed "s/$ext//"
 }

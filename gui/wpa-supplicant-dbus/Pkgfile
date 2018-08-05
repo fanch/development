@@ -7,16 +7,17 @@ contributors="Pierre B, tnut, greg"
 
 name=wpa-supplicant-dbus
 version=2.6
-release=3
+release=1
 
 run=(wpa-supplicant)
 
 source=( http://www.linuxfromscratch.org/patches/blfs/svn/wpa_supplicant-$version-upstream_fixes-1.patch
-	http://hostap.epitest.fi/releases/wpa_supplicant-$version.tar.gz)
+release=1
 
 build() {
 
 cd wpa_supplicant-$version
+release=1
 cat > wpa_supplicant/.config << "EOF"
 CONFIG_BACKEND=file
 CONFIG_CTRL_IFACE=y
@@ -48,6 +49,7 @@ CONFIG_CTRL_IFACE_DBUS_NEW=y
 CONFIG_CTRL_IFACE_DBUS_INTRO=y
 EOF
 patch -p1 -i ../wpa_supplicant-$version-upstream_fixes-1.patch
+release=1
 cd wpa_supplicant &&
 make BINDIR=/usr/sbin LIBDIR=/usr/lib
 mkdir -p $PKG/{etc/dbus-1/system.d,usr/{sbin,share/dbus-1/system-services}}

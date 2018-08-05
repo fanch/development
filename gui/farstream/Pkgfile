@@ -9,4 +9,3 @@ name=farstream
 version=0.2.8
 release=1
 
-source=( http://freedesktop.org/software/farstream/releases/farstream/farstream-$version.tar.gz)

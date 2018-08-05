@@ -4,9 +4,11 @@ description="Xorg drivers"
 packager="tnut <tnut@nutyx.org>"
 name=xorg-xf86-video-openchrome
 version=0.6.0
+release=1
 _name=${name/xorg-/}
 
 source=(http://ftp.x.org/pub/individual//driver/${_name}-$version.tar.bz2)
+release=1
 
 build=xorg
 

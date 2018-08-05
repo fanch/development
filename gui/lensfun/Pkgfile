@@ -10,9 +10,11 @@ version=0.3.2
 release=1
 
 source=(http://sourceforge.net/projects/$name/files/$version/$name-$version.tar.gz
+release=1
 	)
 build(){
 cd $name-$version
+release=1
 mkdir build
 cd build
 cmake .. -DLENSFUN_INSTALL_PREFIX=/usr

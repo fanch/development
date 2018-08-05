@@ -7,14 +7,14 @@ url="https://github.com/engla/keybinder/tree/keybinder-3.0"
 name=keybinder3
 alias=(libkeybinder3)
 version=0.3.2
-release=2
+release=1
 
 
-source=(https://github.com/kupferlauncher/keybinder/releases/download/keybinder-3.0-v$version/keybinder-3.0-$version.tar.gz)
 
 build() {
 
   cd keybinder-3.0-$version
+release=1
   ./configure --prefix=/usr --enable-gtk-doc
   make
   
@@ -24,6 +24,7 @@ build() {
 package() {
 
   cd keybinder-3.0-$version
+release=1
   make DESTDIR=$PKG install
   
 }

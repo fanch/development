@@ -9,13 +9,13 @@ run=(gobject-introspection vala)
 
 name=telepathy-glib
 version=0.24.1
-release=3
+release=1
 
-source=(http://${name%-*}.freedesktop.org/releases/$name/$name-$version.tar.gz)
 
 build() {
 
 cd $name-$version
+release=1
 ./configure --prefix=/usr                   \
             --enable-vala-bindings          \
             --libexecdir=/usr/lib/telepathy \

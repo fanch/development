@@ -8,12 +8,14 @@ contributors="Pierre B"
 
 name=freefont-ttf
 version=20120503
-release=2
+release=1
 
 source=(http://ftp.gnu.org/gnu/freefont/$name-$version.zip)
+release=1
 
 build() {
         cd freefont-$version
+release=1
         install -v -d -m755 $PKG/usr/share/fonts/freefont
         install -v -m644 *.ttf $PKG/usr/share/fonts/freefont/
 

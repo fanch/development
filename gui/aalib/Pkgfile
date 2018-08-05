@@ -7,7 +7,7 @@ contributors="Pierre B"
 
 name=aalib
 version=1.4rc5
-release=3
+release=1
 
 source=(http://downloads.sourceforge.net/aa-project/aalib-1.4rc5.tar.gz)
 

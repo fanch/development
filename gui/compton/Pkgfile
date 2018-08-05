@@ -9,7 +9,6 @@ name=compton
 version=0.1_beta2
 release=1
 
-source=(https://github.com/chjj/compton/releases/download/v$version/compton-git-v$version-2013-10-21.tar.xz
 		compton.conf)
 
 run=(libconfig)

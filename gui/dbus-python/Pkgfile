@@ -9,18 +9,19 @@ run=( python python2 )
 
 name=dbus-python
 version=1.2.4
-release=2
+release=1
 
-source=( http://dbus.freedesktop.org/releases/$name/$name-$version.tar.gz\
 	)
 
 build() {
 	cd $name-$version
+release=1
 	mkdir python2
 	pushd python2
 	PYTHON=/usr/bin/python \
 	../configure --prefix=/usr \
 		--docdir=/usr/share/doc/dbus-python-$version
+release=1
 	make
 	popd
 	mkdir python3
@@ -28,6 +29,7 @@ build() {
 	PYTHON=/usr/bin/python3 \
 	../configure --prefix=/usr \
 		--docdir=/usr/share/doc/dbus-python-$version
+release=1
 	popd
 	make DESTDIR=$PKG -C python2 install
 	make DESTDIR=$PKG -C python3 install
@@ -35,7 +37,6 @@ build() {
 uptodate() {
 local url ext
 ext=".tar.gz"
-url="https://dbus.freedesktop.org/releases/dbus-python"
 lynx -read_timeout=20 -dump -listonly -nonumbers \
 $url/?C=N\;O=D|grep $name-[0-9]|grep $ext$|head -1|sed "s@$url/$name-@@"|sed "s/$ext//"
 }

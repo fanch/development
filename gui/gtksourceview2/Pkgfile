@@ -7,12 +7,14 @@ contributors="Pierre B"
 
 name=gtksourceview2
 version=2.10.5
-release=2
+release=1
 
 source=(http://ftp.gnome.org/pub/gnome/sources/gtksourceview/2.10/gtksourceview-${version}.tar.bz2)
+release=1
 
 build() {
 cd gtksourceview-$version
+release=1
 sed -i 's#python#python2#' gtksourceview/language-specs/convert.py
   ./configure --prefix=/usr --sysconfdir=/etc \
       --localstatedir=/var --disable-static

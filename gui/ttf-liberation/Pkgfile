@@ -8,15 +8,17 @@ contributors="Alienus, tnut"
 run=( xorg-fontconfig xorg-font-util xorg-encodings fontforge )
 name=ttf-liberation
 version=2.00.1
-release=2
+release=1
 
 source=(http://sources.openelec.tv/mirror/liberation-fonts-ttf/liberation-fonts-ttf-$version.tar.gz
+release=1
 ttf-liberation.30-0-liberation-mono.conf
 ttf-liberation.30-0-liberation-sans.conf
 ttf-liberation.30-0-liberation-serif.conf)
 
 build(){
     cd liberation-fonts-ttf-$version
+release=1
     install -d $PKG/usr/share/fonts/TTF/
     install -m644 *.ttf $PKG/usr/share/fonts/TTF/
 

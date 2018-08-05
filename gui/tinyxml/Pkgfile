@@ -10,6 +10,7 @@ version=2.6.2
 release=1
 
 source=(http://download.sourceforge.net/project/$name/$name/$version/${name}_${version//./_}.zip \
+release=1
         entity.patch $name-use-stl.patch)
 
 build() {
@@ -24,12 +25,17 @@ build() {
 
   make
   g++ ${CXXFLAGS} -DTIXML_USE_STL -shared -o lib$name.so.$version \
+release=1
     -Wl,-soname,lib$name.so.${version:0:1} *.o
+release=1
 
   mkdir -p $PKG/usr/{include,lib}
   install -m 0755 lib$name.so.$version $PKG/usr/lib/
+release=1
   install -m 0644 *.h $PKG/usr/include/
   ln -s lib$name.so.$version $PKG/usr/lib/lib$name.so.${version:0:1}
+release=1
   ln -s lib$name.so.$version $PKG/usr/lib/lib$name.so
+release=1
   
 }

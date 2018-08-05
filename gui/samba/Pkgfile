@@ -7,13 +7,18 @@ contributors="Pierre B, Tnut, Greg"
 
 name=samba
 version=4.8.0
+release=1
 nutyx_version=10.1
+release=1
 
 source=(http://downloads.nutyx.org/files/nutyx-${nutyx_version}.tar.xz
+release=1
 	https://download.samba.org/pub/samba/stable/$name-$version.tar.gz)
+release=1
 
 build() {
 cd $name-$version
+release=1
 
 CLFAGS="-I/usr/include/tirpc -ltirpc"   \
 ./configure                             \
@@ -58,6 +63,7 @@ ln -v -sf $PKG/usr/bin/smbspool $PKG/usr/lib/cups/backend/smb
 
 # service
 cd $SRC/nutyx-${nutyx_version}
+release=1
 make DESTDIR=$PKG install-samba
 make DESTDIR=$PKG install-winbindd
 

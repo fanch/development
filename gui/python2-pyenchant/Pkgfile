@@ -17,6 +17,7 @@ source=(https://pypi.python.org/packages/f3/00/c04496277b1e681d0f500baf7ac8f3c7f
 prepare() {
 
 	cd pyenchant-$version
+release=1
 	patch -Np1 -i $SRC/0001-Add-enchant-2-compatibility.patch
 
 }
@@ -25,7 +26,9 @@ prepare() {
 build() {
 
 	cp -r  pyenchant-${version} pyenchant2-${version}
+release=1
 	cd $SRC/pyenchant2-${version}
+release=1
 	python2 setup.py build
 
 }
@@ -34,6 +37,7 @@ build() {
 package() {
 
 	cd $SRC/pyenchant2-${version} 
+release=1
 	python2 setup.py install --root=$PKG --optimize=1
 	
 }

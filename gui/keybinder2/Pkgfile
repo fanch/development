@@ -2,7 +2,7 @@
 
 name=keybinder2
 version=0.3.0
-release=4
+release=1
 
 url="https://github.com/engla/keybinder"
 description="Library for registering global keyboard shortcuta"
@@ -11,9 +11,11 @@ contributors="Geantbrun"
 maintainer="https://github.com/engla/keybinder"
 
 source=(http://ftp.osuosl.org/pub/blfs/conglomeration/keybinder/keybinder-$version.tar.gz)
+release=1
 
 build() {
 cd keybinder-$version
+release=1
 ./configure --prefix=/usr --disable-lua
 make 
 make DESTDIR=$PKG install

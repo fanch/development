@@ -11,10 +11,12 @@ version=0.6
 release=1
 
 source=(http://0pointer.de/lennart/projects/${_name}/${_name}-${version}.tar.gz
+release=1
         fix_undefined_reference.patch)
         
 build() {
   cd ${_name}-$version
+release=1
   patch -p1 < ${SRC}/fix_undefined_reference.patch
   ./configure --prefix=/usr --disable-lynx
   make

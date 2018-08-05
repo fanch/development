@@ -12,12 +12,14 @@ version=1.12
 release=1
 
 source=(http://xcb.freedesktop.org/dist/xcb-proto-$version.tar.bz2
+release=1
 		python-35x-fixes.patch)
 
 
 prepare() {
 
   cd xcb-proto-$version
+release=1
   patch -Np1 -i ../python-35x-fixes.patch
   
 }
@@ -26,6 +28,7 @@ prepare() {
 build() {
 
 	cd xcb-proto-$version
+release=1
 
 	./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
 

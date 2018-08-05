@@ -9,9 +9,11 @@ url="http://xorg.freedesktop.org"
 
 name=xorg-xgamma
 version=1.0.6
+release=1
 _name=${name/xorg-/}
 
 source=(http://ftp.x.org/pub/individual/app/${_name}-$version.tar.bz2)
+release=1
 
 build=xorg
 

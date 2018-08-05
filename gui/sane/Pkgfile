@@ -7,19 +7,22 @@ contributors="Pierre B"
 
 name=sane
 version=1.0.27
-release=2
+release=1
 
 source=(network.patch
 	http://fossies.org/linux/misc//sane-backends-$version.tar.gz)
+release=1
 
 build() {
 	cd $name-backends-$version
+release=1
 	patch -Np1 -i ../network.patch
 
 	./configure --prefix=/usr \
 		--localstatedir=/var \
 		--sysconfdir=/etc \
 		--with-docdir=/usr/share/doc/sane-backend-$version \
+release=1
 		--enable-libusb_1_0 \
 		--enable-avahi \
 		--with-group=scanner

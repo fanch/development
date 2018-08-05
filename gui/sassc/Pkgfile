@@ -9,9 +9,11 @@ name=sassc
 version=3.5.0
 release=1
 source=(http://rsync.nutyx.org/sources/$name-$version.tar.bz2)
+release=1
 
 build() {
 cd $name-$version
+release=1
 autoreconf -i
 	./configure --prefix=/usr
 	make

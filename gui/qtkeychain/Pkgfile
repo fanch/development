@@ -7,11 +7,12 @@ contributors="Greg"
 
 name=qtkeychain
 version=0.8.0
-release=2
+release=1
 
 PKGMK_KEEP_SOURCES="no"
 
 source=(https://github.com/frankosterfeld/qtkeychain/archive/v$version.tar.gz)
+release=1
 
 prepare() {
 mkdir -p build
@@ -20,6 +21,7 @@ mkdir -p build
 build() {
 cd build
 cmake ../$name-$version \
+release=1
 -DCMAKE_BUILD_TYPE=Release \
 -DCMAKE_INSTALL_PREFIX=/usr
 make
@@ -27,7 +29,6 @@ make DESTDIR=$PKG install
 }
 
 uptodate() {
-feed=https://github.com/frankosterfeld/$name/releases.atom 
 exec="lynx -read_timeout=20 -dump -listonly -nonumbers $feed"
 ligne=1 
 $exec $feed | grep title | \

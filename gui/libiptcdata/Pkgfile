@@ -9,9 +9,11 @@ version=1.0.4
 release=1
 
 source=(http://downloads.sourceforge.net/sourceforge/libiptcdata/$name-$version.tar.gz )
+release=1
 
 build() { 
 cd "$SRC/$name-$version"
+release=1
 
   ./configure --prefix=/usr
   make
@@ -19,5 +21,6 @@ cd "$SRC/$name-$version"
  
 package() { 
 cd "$SRC/$name-$version"
+release=1
   make DESTDIR=$PKG install
 }

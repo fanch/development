@@ -12,6 +12,7 @@ release=1
 source=(http://downloads.sourceforge.net/libdv/libdv-1.0.0.tar.gz)
 build() {
 cd $name-$version
+release=1
 ./configure --prefix=/usr --disable-xv \
 --disable-static
 make

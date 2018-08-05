@@ -9,8 +9,10 @@ version=0.8.7
 release=1
 
 source=(http://www.freebsoft.org/pub/projects/speechd/$name-$version.tar.gz)
+release=1
 build() {
 cd $name-$version
+release=1
 sed -i "s/cicero //g" configure.ac
 sed -i "s/sd_cicero//g" src/modules/Makefile.am
 

@@ -5,11 +5,14 @@ packager="tnut <tnut@nutyx.org>"
 
 name=python-efl
 version=1.20.0
+release=1
 
 source=(https://download.enlightenment.org/rel/bindings/python/$name-$version.tar.xz)
+release=1
 
 build() {
 cd $name-$version
+release=1
 /usr/bin/python setup.py build
 /usr/bin/python setup.py install --prefix=/usr --root=$PKG
 /usr/bin/python3 setup.py install --prefix=/usr --root=$PKG

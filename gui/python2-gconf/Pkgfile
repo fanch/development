@@ -9,12 +9,14 @@ _name=gnome-python
 
 name=python2-gconf
 version=2.28.1
-release=2
+release=1
 
 source=(http://download.gnome.org/sources/$_name/${version%.*}/$_name-$version.tar.bz2)
+release=1
 
 build() {
 	cd $_name-$version
+release=1
 	PYTHON=python2 ./configure --prefix=/usr \
 		--disable-gtk-doc \
 		--disable-allbindings \

@@ -6,13 +6,13 @@ packager="greg <greg@nutyx.org>"
 contributors="Pierre B, tnut"
 
 name=wayland
-release=1
 version=1.14.0
+release=1
 
-source=( http://wayland.freedesktop.org/releases/$name-$version.tar.xz)
 
 build() {
   cd $name-$version
+release=1
   ./configure --prefix=/usr    \
               --disable-static \
               --disable-documentation

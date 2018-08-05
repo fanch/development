@@ -9,10 +9,10 @@ name=libspectre
 version=0.2.8
 release=1
 
-source=(http://libspectre.freedesktop.org/releases/$name-$version.tar.gz)
 
 build() {
 cd $name-$version
+release=1
 	./configure --prefix=/usr \
 	--disable-static
 	make

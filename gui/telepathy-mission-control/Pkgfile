@@ -9,11 +9,11 @@ name=telepathy-mission-control
 version=5.16.4
 release=1
 
-source=(http://${name%-*-*}.freedesktop.org/releases/$name/$name-$version.tar.gz)
 
 build() {
 
 cd $name-$version
+release=1
 ./configure --prefix=/usr                   \
             --libexecdir=/usr/lib/telepathy \
             --with-connectivity=nm          \

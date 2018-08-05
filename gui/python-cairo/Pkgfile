@@ -9,10 +9,10 @@ name=python-cairo
 version=1.15.0
 release=1
 
-source=(https://github.com/pygobject/pycairo/releases/download/v$version/pycairo-$version.tar.gz)
 
 build() {
 	cd pycairo-$version
+release=1
 	python3 setup.py build
 	python3 setup.py install --optimize=1 --root=$PKG
 }  

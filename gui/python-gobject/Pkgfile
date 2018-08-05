@@ -7,11 +7,14 @@ contributors="Pierre B"
 
 name=python-gobject
 version=3.28.1
+release=1
 
 source=(http://ftp.gnome.org/pub/gnome/sources/pygobject/${version%.*}/pygobject-$version.tar.xz)
+release=1
 
 build() {
 cd pygobject-$version
+release=1
 mkdir python3
 pushd python3
 ../configure --prefix=/usr \
@@ -22,10 +25,13 @@ make DESTDIR=$PKG -C python3 install
 }
 uptodate(){
 local latest lastversion url
+release=1
 url="http://ftp.gnome.org/pub/gnome/sources/pygobject"
 latest="`lynx -read_timeout=20 -dump -listonly -nonumbers \
 $url/?C=N\;O=D|grep [0-9]/$|head -1`"
 lastversion="`lynx -read_timeout=20 -dump -listonly -nonumbers \
+release=1
 $latest/?C=N\;O=D|grep LATEST|grep [0-9]$|cut -d "-" -f3`"
 echo "$lastversion"
+release=1
 }

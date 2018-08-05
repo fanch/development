@@ -6,9 +6,8 @@ url="http://www.linuxprinting.org/foomatic.html"
 description="Filter scripts used by the printer spoolers to convert the incoming PostScript data"
 name=foomatic-filters
 version=4.0
-release=20160212
+release=1
 
-source=(http://www.openprinting.org/download/foomatic/$name-${version}-${release}.tar.gz)
 
 build() {
 cd $name-*

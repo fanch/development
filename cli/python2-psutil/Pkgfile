@@ -12,13 +12,11 @@ release=1
 
 run=(python2 python2-setuptools)
 
-source=(https://github.com/giampaolo/psutil/archive/release-$version.tar.gz
 )
 
 
 build() {
 
-cd psutil-release-$version
 python2 setup.py build --build-lib=build/python2
 find build/python2 -type f -exec \
 sed -i '1s,^#! \?/usr/bin/\(env \|\)python$,#!/usr/bin/python2,' {} \;
@@ -28,7 +26,6 @@ sed -i '1s,^#! \?/usr/bin/\(env \|\)python$,#!/usr/bin/python2,' {} \;
 
 package() {
 
-cd psutil-release-$version
 python2 setup.py build --build-lib=build/python2 \
 install --root="$PKG" --optimize=1
 	

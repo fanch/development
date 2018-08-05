@@ -7,12 +7,16 @@ contributors="Pierre B"
 
 name=libdvdcss
 version=1.4.1
+release=1
 
 source=(http://download.videolan.org/libdvdcss/$version/libdvdcss-$version.tar.bz2)
+release=1
 build() {
 cd $name-$version
+release=1
 ./configure --prefix=/usr --disable-static \
 --docdir=/usr/share/doc/libdvdcss-$version
+release=1
 make
 make DESTDIR=$PKG install
 }

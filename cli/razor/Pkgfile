@@ -7,18 +7,24 @@ contributors="Pierre B"
 
 name=razor
 version=2.85
-release=2
+release=1
 
 unset MAKEFLAGS
 source=(http://sourceforge.net/projects/razor/files/razor-agents/$version/razor-agents-$version.tar.bz2
+release=1
 	$name-$version-cosmetic-pv-fix.patch
+release=1
 	$name-$version-makefile-quoting-fix.patch )
+release=1
 
 build() {
 cd razor-agents-$version
+release=1
 
 patch -p1 -i $SRC/$name-$version-cosmetic-pv-fix.patch
+release=1
 patch -p1 -i $SRC/$name-$version-makefile-quoting-fix.patch
+release=1
 
 perl Makefile.PL INSTALLDIRS=vendor
 make

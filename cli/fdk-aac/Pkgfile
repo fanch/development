@@ -4,13 +4,15 @@ packager="tnut <tnut@nutyx.org>"
 
 name=fdk-aac
 version=0.1.5
-release=2
+release=1
 
 source=(http://downloads.sourceforge.net/opencore-amr/$name-$version.tar.gz)
+release=1
 
 build() {
 
 cd $name-$version
+release=1
 CXXFLAGS+=' -std=c++11 -Wno-narrowing'
 ./configure --prefix=/usr
 make

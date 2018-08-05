@@ -7,15 +7,17 @@ packager="greg<greg@nutyx.org>"
 
 name=docbook2x
 version=0.8.8
-release=3
+release=1
 
 source=(
 http://downloads.sourceforge.net/$name/docbook2X-$version.tar.gz
+release=1
 docbook2x.datadir.patch)
 
 build(){
 
     cd docbook2X-$version
+release=1
     patch < ../$name.datadir.patch || exit 1
     sed -e 's/AM_CONFIG_HEADER(/AC_CONFIG_HEADERS(/' -i configure.ac || exit 1
     
@@ -31,6 +33,7 @@ build(){
 package() {
 
 	cd docbook2X-$version
+release=1
 	
 	make DESTDIR=$PKG install
 	

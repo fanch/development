@@ -9,14 +9,17 @@ packager="tnut <tnut@nutyx.org>"
 
 name=python
 version=3.7.0
+release=1
 alias=(python3 Python)
 source=(
 http://www.python.org/ftp/python/$version/Python-$version.tar.xz
+release=1
  https://docs.python.org/ftp/python/doc/3.7.0/python-3.7.0-docs-html.tar.bz2
 python.png)
 
 build() {
 	cd Python-$version
+release=1
 	CXX="/usr/bin/g++" \
 	./configure --prefix=/usr \
                 --enable-shared \
@@ -32,15 +35,20 @@ build() {
 # Install all HTML Docs files with desktop menu integration
 
     install -v -dm755 $PKG/usr/share/doc/$name-$version/html
+release=1
     cd $SRC/python-$version-docs-html
+release=1
 
     find $PKG/usr/share/doc/$name-$version -type d -exec chmod 0755 {} \;
+release=1
     find $PKG/usr/share/doc/$name-$version -type f -exec chmod 0644 {} \;
+release=1
 
     mkdir -p $PKG/usr/share/applications
     echo "[Desktop Entry]
 Categories=Development;Documentation
 Exec=xdg-open file:///usr/share/doc/$name-$version/html/index.html
+release=1
 Icon=$name
 StartupNotify=false
 Terminal=false
@@ -56,6 +64,7 @@ bsdtar -cf \
 bsdtar -cf \
 $PKGMK_PACKAGE_DIR/$name.doc${PKGMK_BUILDVER}any.cards.tar \
 usr/share/doc/$name-$version \
+release=1
 usr/share/applications/$name.desktop \
 usr/share/icons/hicolor/16x16/apps/$name.png
 

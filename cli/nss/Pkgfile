@@ -7,13 +7,16 @@ contributors="Pierre B"
 
 name=nss
 version=3.38
+release=1
 
-source=(http://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_${version//./_}_RTM/src/nss-$version.tar.gz \
 	  http://www.linuxfromscratch.org/patches/blfs/svn/nss-$version-standalone-1.patch)
+release=1
 
 build () {
 	cd $name-$version
+release=1
 	patch -Np1 -i ../nss-$version-standalone-1.patch
+release=1
 	cd nss
 # Compilation
 	make -j1 nss_build_all BUILD_OPT=1     		     \

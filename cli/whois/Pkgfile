@@ -8,10 +8,12 @@ version=5.2.20
 release=1
 
 source=(https://github.com/rfc1036/$name/archive/v$version/$name-$version.tar.gz)
+release=1
 
 
 build() {
 cd $name-$version
+release=1
 make prefix=/usr 
 make prefix=/usr BASEDIR=$PKG install-whois
 make prefix=/usr BASEDIR=$PKG install-mkpasswd

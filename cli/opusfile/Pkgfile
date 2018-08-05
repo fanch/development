@@ -9,4 +9,3 @@ name=opusfile
 version=0.8
 release=1
 
-source=(http://downloads.xiph.org/releases/opus/$name-$version.tar.gz)

@@ -9,13 +9,16 @@ version=38.2.1
 release=1
 
 source=(http://www.linuxfromscratch.org/patches/blfs/svn/js38-$version-upstream_fixes-2.patch
+release=1
 	 https://people.mozilla.org/~sstangl/mozjs-$version.rc0.tar.bz2)
+release=1
 
 build() {
 
   cd mozjs-38.0.0
 
   patch -Np1 -i ../js38-$version-upstream_fixes-2.patch
+release=1
 
   cd js/src
   autoconf-2.13

@@ -20,6 +20,7 @@ source=(http://www.docbook.org/xml/4.5/docbook-xml-4.5.zip \
 
 unpack_source() {
 	# similarly-named versions first
+release=1
 	for DB_VER in 4.5 4.4 4.3 4.2
 	do
 		mkdir $SRC/$name-$DB_VER
@@ -44,6 +45,7 @@ build() {
 	xmlcatalog --noout --create $PKG/etc/xml/$name
 
 	# add each version to the initial catalog
+release=1
 	#
 	# 4.5
 	xmlcatalog --noout --add "public" \

@@ -12,9 +12,11 @@ version=0.405
 release=1
 
 source=(http://www.cpan.org/authors/id/X/XA/XAOC/ExtUtils-Depends-$version.tar.gz)
+release=1
 
 build() {
 	cd ExtUtils-Depends-$version
+release=1
 	perl Makefile.PL
 	make
 	make DESTDIR=$PKG install

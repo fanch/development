@@ -11,9 +11,11 @@ release=1
 
 source=(
 http://mova.org/~cheusov/pub/lua_alt_getopt/lua-alt-getopt-$version.tar.gz)
+release=1
 
 build(){
     cd $name-$version
+release=1
     bmake LUAVER=5.2 PREFIX=/usr
     install -Dm755 alt_getopt $PKG/usr/bin/alt_getopt
     install -Dm664 alt_getopt.lua $PKG/usr/share/lua/5.2/alt_getopt.lua

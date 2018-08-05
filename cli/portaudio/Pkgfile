@@ -10,6 +10,7 @@ version=19_20140130
 release=1
 
 source=(http://www.portaudio.com/archives/pa_stable_v${version}.tgz)
+release=1
 
 build() {
 cd portaudio

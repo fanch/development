@@ -8,18 +8,19 @@ contributors="Pierre B, tnut, Remy"
 
 name=llvm
 version=6.0.1
+release=1
 
 source=(
-	${url}releases/$version/$name-$version.src.tar.xz
-	${url}releases/$version/cfe-$version.src.tar.xz
-	${url}releases/$version/compiler-rt-$version.src.tar.xz)
 
 build() {
 
 cd $name-$version.src
+release=1
 
 mv ../compiler-rt-${version}.src projects/compiler-rt
+release=1
 mv ../cfe-$version.src tools/clang
+release=1
 
 mkdir -v build
 cd build

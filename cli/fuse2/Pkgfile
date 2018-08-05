@@ -9,10 +9,10 @@ name=fuse2
 version=2.9.7
 release=1
 
-source=( https://github.com/libfuse/libfuse/releases/download/fuse-$version/fuse-$version.tar.gz)
 
 build() {
 cd fuse-$version
+release=1
 
 ./configure --prefix=/usr    \
             --disable-static \

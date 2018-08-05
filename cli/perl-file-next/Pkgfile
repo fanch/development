@@ -9,11 +9,14 @@ run=( perl )
 
 name=perl-file-next
 version=1.16
+release=1
 
 source=(http://search.cpan.org/CPAN/authors/id/P/PE/PETDANCE/File-Next-$version.tar.gz)
+release=1
 
 build() {
     cd File-Next-$version
+release=1
     perl Makefile.PL INSTALLDIRS=vendor
     make
     make DESTDIR=$PKG install

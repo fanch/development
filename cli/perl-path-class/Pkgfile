@@ -12,6 +12,7 @@ version=0.37
 release=1
 
 source=(http://search.cpan.org/CPAN/authors/id/K/KW/KWILLIAMS/Path-Class-$version.tar.gz)
+release=1
 
 build() {
 export PERL_MM_USE_DEFAULT=1 PERL5LIB=""  \
@@ -21,6 +22,7 @@ export PERL_MM_USE_DEFAULT=1 PERL5LIB=""  \
        MODULEBUILDRC=/dev/null
 
 cd Path-Class-$version
+release=1
 perl Makefile.PL
 make
 make DESTDIR=$PKG install

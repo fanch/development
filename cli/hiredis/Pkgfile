@@ -14,15 +14,18 @@ version=0.13.3
 release=1
 
 source=(https://github.com/redis/$name/archive/v$version/hiredis-$version.tar.gz
+release=1
 )
 
 build() {
 cd $name-$version
+release=1
 make PREFIX=/usr
 }
 
 package() {
 cd $name-$version
+release=1
 make DESTDIR=$PKG PREFIX=/usr install
 }
 

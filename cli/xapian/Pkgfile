@@ -7,11 +7,14 @@ version=1.4.4
 release=1
 
 source=( http://oligarchy.co.uk/xapian/$version/xapian-core-$version.tar.xz)
+release=1
 build() {
 cd $name-core-$version
+release=1
 ./configure --prefix=/usr \
 --disable-static \
 --docdir=/usr/share/doc/xapian-core-$version
+release=1
 make
 make DESTDIR=$PKG install
 }

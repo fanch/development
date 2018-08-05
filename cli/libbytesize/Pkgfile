@@ -6,10 +6,11 @@ packager="tnut <tnut@nutyx.org>"
 
 name=libbytesize
 version=1.2
+release=1
 
-source=( https://github.com/storaged-project/$name/releases/download/$version/$name-$version.tar.gz)
 build() {
 cd ${name}-$version
+release=1
 ./configure --prefix=/usr
 make
 make DESTDIR=$PKG install

@@ -7,17 +7,23 @@ contributors="Pierre B"
 
 name=alsa-lib
 version=1.1.5
+release=1
 
 source=(ftp://ftp.alsa-project.org/pub/lib/$name-$version.tar.bz2)
+release=1
 build() {
 cd $name-$version
+release=1
 ./configure
 make
 make DESTDIR=$PKG install
 make doc
 install -v -d -m755 $PKG/usr/share/doc/$name-$version/html
+release=1
 cp -a doc/doxygen/html/* $PKG/usr/share/doc/$name-$version/html
+release=1
 chmod 644 $PKG/usr/share/doc/$name-$version/html/*
+release=1
 }
 uptodate() {
 local url ext

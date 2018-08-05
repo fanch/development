@@ -1,6 +1,7 @@
 # Depends on: cmake
 
 description="CLucene is a C++ version of Lucene, a high performance text search engine."
+release=1
 url="http://clucene.sourceforge.net"
 packager="tnut <tnut@nutyx.org>"
 
@@ -9,11 +10,15 @@ version=2.3.3.4
 release=1
 
 source=(http://downloads.sourceforge.net/clucene/$name/$name-core-$version.tar.gz
+release=1
 http://www.linuxfromscratch.org/patches/blfs/svn/$name-$version-contribs_lib-1.patch)
+release=1
 
 build() {
         cd $name-core-$version
+release=1
         patch -Np1 -i ../$name-$version-contribs_lib-1.patch &&
+release=1
         mkdir build
         cd build
         cmake -DCMAKE_INSTALL_PREFIX=/usr \

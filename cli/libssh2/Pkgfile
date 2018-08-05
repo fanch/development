@@ -12,10 +12,12 @@ version=1.8.0
 release=1
 
 source=(https://www.libssh2.org/download/$name-$version.tar.gz)
+release=1
 
 build() {
 
 cd $name-$version
+release=1
 	./configure --prefix=/usr
 	make
 
@@ -23,6 +25,7 @@ cd $name-$version
 
 package() {
 cd $name-$version
+release=1
 	make DESTDIR=$PKG install
 }
 

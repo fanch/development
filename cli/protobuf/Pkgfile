@@ -7,12 +7,12 @@ contributors="Pierre B"
 
 name=protobuf
 version=2.6.1
-release=3
+release=1
 
-source=(https://github.com/google/protobuf/releases/download/v$version/protobuf-$version.tar.bz2)
 build () 
 { 
 cd ${name}-$version
+release=1
 ./autogen.sh
 ./configure --prefix=/usr --disable-static
 make DESTDIR=$PKG install

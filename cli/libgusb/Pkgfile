@@ -9,10 +9,10 @@ name=libgusb
 version=0.2.11
 release=1
 
-source=(http://people.freedesktop.org/~hughsient/releases/$name-$version.tar.xz)
 
 build() {
 cd $name-$version
+release=1
 ./configure --prefix=/usr \
 --disable-static
 make
@@ -21,7 +21,6 @@ make DESTDIR=$PKG install
 uptodate() {
 local url ext
 ext=".tar.xz"
-url="https://people.freedesktop.org/~hughsient/releases/"
 lynx -read_timeout=20 -dump -listonly -nonumbers \
 $url/?C=N\;O=D|grep $name|grep $ext$|head -1|sed "s@$url/$name-@@"|sed "s/$ext//"
 }

@@ -12,9 +12,11 @@ version=1.12
 release=1
 
 source=(http://www.cpan.org/authors/id/N/NL/NLNETLABS/Net-DNS-$version.tar.gz)
+release=1
 
 build() {
 cd Net-DNS-$version
+release=1
 perl Makefile.PL INSTALLDIRS=vendor
 make
 make DESTDIR=$PKG install

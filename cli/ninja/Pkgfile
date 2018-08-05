@@ -8,14 +8,16 @@ packager="tnut <tnut@nutyx.org>"
 
 name=ninja
 version=1.8.2
-release=3
+release=1
 
 source=(https://github.com/ninja-build/$name/archive/v$version/$name-$version.tar.gz
+release=1
  http://www.linuxfromscratch.org/patches/lfs/development/ninja-1.8.2-add_NINJAJOBS_var-1.patch)
 	
 build() {
 
 	cd $name-$version
+release=1
 	patch -Np1 -i ../ninja-1.8.2-add_NINJAJOBS_var-1.patch
 	python3 configure.py --bootstrap
 	python3 configure.py

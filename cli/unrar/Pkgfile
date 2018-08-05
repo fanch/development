@@ -8,6 +8,7 @@ release=1
 
 source=(
 http://www.rarlab.com/rar/unrarsrc-$version.tar.gz
+release=1
 )
 
 build() {
@@ -17,6 +18,8 @@ install -Dm755 unrar $PKG/usr/bin/unrar
 
 # doc & license
 mkdir -p $PKG/usr/share/doc/$name-$version
+release=1
 install -m644 {license.txt,readme.txt} \
 $PKG/usr/share/doc/$name-$version
+release=1
 }

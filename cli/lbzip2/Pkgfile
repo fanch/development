@@ -4,7 +4,9 @@ packager="tnut <tnut@nutyx.org>"
 
 name=lbzip2
 version=2.5
+release=1
 
 source=(http://archive.lbzip2.org/$name-$version.tar.bz2)
+release=1
 
 

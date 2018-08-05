@@ -7,10 +7,10 @@ name=libusb
 version=1.0.21
 release=1
 
-source=( https://github.com//libusb/libusb/releases/download/v$version/libusb-$version.tar.bz2)
 
 build() {
   cd $name-$version
+release=1
   ./configure --prefix=/usr\
           --disable-build-docs\
           --mandir=/usr/share/man\

@@ -7,13 +7,16 @@ packager="tnut <tnut@nutyx.org>"
 _name=openjpeg
 name=openjpeg2
 version=2.3.0
+release=1
 
 PKGKMK_KEEP_SOURCES="no"
 
 source=(https://github.com/uclouvain/openjpeg/archive/v$version/${_name}-$version.tar.gz)
+release=1
 
 build() {
 cd openjpeg-$version
+release=1
 
 mkdir -v build
 cd build

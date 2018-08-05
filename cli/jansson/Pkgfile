@@ -9,11 +9,11 @@ name=jansson
 version=2.10
 release=1
 
-source=(http://www.digip.org/$name/releases/$name-$version.tar.bz2)
 
 build() {
 
   cd $SRC/$name-$version
+release=1
   ./configure --prefix=/usr
   make
   
@@ -22,6 +22,7 @@ build() {
 package() {
 
   cd $SRC/$name-$version
+release=1
   make DESTDIR=$pkgdir install
   install -Dm644 LICENSE $PKG/usr/share/licenses/$name/LICENSE
   

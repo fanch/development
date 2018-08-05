@@ -13,10 +13,12 @@ release=1
 
 source=(
 http://www.cpan.org/authors/id/G/GR/GRANTM/XML-SAX-$version.tar.gz
+release=1
 perl-xml-sax.patch)
 
 build() {
     cd XML-SAX-$version
+release=1
     patch -Np1 -i ../perl-xml-sax.patch || exit 1
     perl Makefile.PL
     make OPTIMIZE="$CFLAGS" || exit 1

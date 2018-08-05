@@ -6,24 +6,29 @@ contributors="pierre B."
 
 name=apache-ant
 version=1.9.7
-release=2
+release=1
 
 source=(http://archive.apache.org/dist/ant/source/$name-$version-src.tar.bz2 
+release=1
 	http://pkgs.fedoraproject.org/repo/pkgs/hamcrest/hamcrest-1.3.tgz/92e91c2754d44e49b72d70c10a04cb08/hamcrest-1.3.tgz
 	http://anduin.linuxfromscratch.org/sources/other/junit-4.11.jar)
 	
 build() {
 
 cd $name-$version
+release=1
 
 mv ../hamcrest-1.3 .
 cp -v ../junit-4.11.jar \
 hamcrest-1.3/hamcrest-core-1.3.jar lib/optional
 
 mkdir -p $PKG/opt/ant-$version
+release=1
 ./build.sh -Ddist.dir=$PKG/opt/ant-$version dist
+release=1
 mkdir -p $PKG/etc/profile.d
 ln -v -sf ant-$version $PKG/opt/ant
+release=1
 cat >  $PKG/etc/profile.d/ant.sh << "EOF"
 #  Beginof /etc/profile.d/ant.sh
 

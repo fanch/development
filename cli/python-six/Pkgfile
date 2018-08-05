@@ -11,9 +11,11 @@ release=1
 
 source=(
 https://pypi.io/packages/source/s/six/six-$version.tar.gz)
+release=1
 
 build() {
     cd six-$version
+release=1
     python3 setup.py check
     python3 setup.py install --prefix=/usr --root=$PKG
 }

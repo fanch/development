@@ -4,10 +4,13 @@ packager="tnut <tnut@nutyx.org>"
 
 name=gdb
 version=8.0.1
+release=1
 
 source=(https://ftp.gnu.org/gnu/gdb/$name-$version.tar.xz)
+release=1
 build() {
 cd $name-$version
+release=1
 ./configure --prefix=/usr --with-system-readline
 make
 make DESTDIR=$PKG install

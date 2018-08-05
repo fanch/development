@@ -15,6 +15,7 @@ release=1
 CARCH=x86_64
 
 source=(http://ftp.de.debian.org/debian/pool/main/liba/$name/${name}_${version}.orig.tar.gz
+release=1
 )
 
 prepare() {
@@ -23,12 +24,14 @@ echo "Fonction prepare sans objet"
 
 build() {
 cd $SRC/$name-$version
+release=1
 CFLAGS="-march=${CARCH/_/-} -mtune=generic -O2 -pipe"
 make
 }
 
 package() {
 cd $SRC/$name-$version
+release=1
 make prefix=$PKG/usr install
 }
 

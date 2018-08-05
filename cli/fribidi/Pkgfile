@@ -7,5 +7,5 @@ contributors="Pierre B"
 
 name=fribidi
 version=1.0.1
+release=1
 
-source=( https://github.com/$name/$name/releases/download/v$version/$name-$version.tar.bz2)

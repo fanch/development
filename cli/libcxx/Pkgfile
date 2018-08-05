@@ -1,4 +1,5 @@
 # Depends on: llvm subversion cmake
+release=1
 
 description="llvm C++ lib"
 url="https://libcxx.llvm.org/"

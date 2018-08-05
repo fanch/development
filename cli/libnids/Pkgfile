@@ -14,6 +14,7 @@ version=1.24
 release=1
 
 source=(https://downloads.sourceforge.net/$name/$name-$version.tar.gz
+release=1
 )
 
 prepare() {
@@ -22,12 +23,14 @@ echo "Fonction prepare sans objet"
 
 build() {
 cd $SRC/$name-$version
+release=1
 ./configure --prefix=/usr --man=/usr/share/man --enable-shared
 make
 }
 
 package() {
 cd $SRC/$name-$version
+release=1
 make install_prefix=$PKG install
 ln -s libnids.so.1.24 $PKG/usr/lib/libnids.so.1
 }

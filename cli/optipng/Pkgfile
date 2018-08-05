@@ -10,11 +10,13 @@ release=1
 
 
 source=(http://downloads.sourceforge.net/sourceforge/$name/$name-$version.tar.gz)
+release=1
 
 
 build() {
 
     cd ${name}-${version}
+release=1
 	./configure --prefix=/usr --mandir=/usr/share/man --with-system-libs
 	make
 }
@@ -23,6 +25,7 @@ build() {
 package() {
 
   cd ${name}-${version}
+release=1
   make prefix=$PKG/usr mandir=$PKG/usr/share/man install
 }
 

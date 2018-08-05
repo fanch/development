@@ -9,11 +9,11 @@ name=htop
 version=2.0.2
 release=1
 
-source=(https://hisham.hm/htop/releases/$version/$name-$version.tar.gz)
 
 
 build() {
     cd $name-$version
+release=1
     ./configure --prefix=/usr --disable-nls 
     make
     make DESTDIR=$PKG install

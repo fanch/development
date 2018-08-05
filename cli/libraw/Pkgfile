@@ -6,11 +6,14 @@ packager="tnut<tnut@nutyx.org>"
 
 name=libraw
 version=0.18.7
+release=1
 
 source=(http://www.libraw.org/data/LibRaw-$version.tar.gz)
+release=1
 build ()
 {
 cd LibRaw-$version
+release=1
 sed -i "s#powf64#dc_&#g" internal/dcraw_common.cpp
 ./configure --prefix=/usr \
  --enable-jpeg \
@@ -18,6 +21,7 @@ sed -i "s#powf64#dc_&#g" internal/dcraw_common.cpp
  --enable-lcms \
  --disable-static \
  --docdir=/usr/share/doc/libraw-$version
+release=1
 make
 make DESTDIR=$PKG install
 }

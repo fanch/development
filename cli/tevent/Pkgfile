@@ -7,11 +7,14 @@ contributors="Pierre B"
 
 name=tevent
 version=0.9.36
+release=1
 
 source=(https://www.samba.org/ftp/$name/$name-$version.tar.gz)
+release=1
 
 build() {
 cd $name-$version
+release=1
 CLFAGS="-I/usr/include/tirpc -ltirpc"  \
 ./configure --prefix=/usr \
 --bundled-libraries=NONE \

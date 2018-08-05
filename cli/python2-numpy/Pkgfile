@@ -7,12 +7,15 @@ packager="greg<greg@nutyx.org>"
 
 name=python2-numpy
 version=1.11.2
+release=1
 
 source=(http://sourceforge.net/projects/numpy/files/NumPy/$version/numpy-$version.tar.gz)
+release=1
 
 build() {
 
 cd numpy-$version
+release=1
 
 sed -i "s@xlocale.h@locale.h@" numpy/core/src/multiarray/numpyos.c
 

@@ -4,13 +4,15 @@ contributors="Berlius"
 description="A directory listing program displaying a depth indented list of files"
 name=tree
 version=1.7.0
-release=2
+release=1
 
 source=(ftp://mama.indstate.edu/linux/$name/$name-$version.tgz)
+release=1
 
 build () {
 
 cd $name-$version
+release=1
 
 make
 

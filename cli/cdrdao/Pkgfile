@@ -7,13 +7,15 @@ packager="tnut <tnut@nutyx.org>"
 
 name=cdrdao
 version=1.2.3
-release=4
+release=1
 
 source=( http://downloads.sourceforge.net/$name/$name-$version.tar.bz2 \
+release=1
 	cdrdao-1.2.3-stat.patch)
 
 build() {
 	cd $name-$version
+release=1
 	patch -Np1 -i $SRC/cdrdao-1.2.3-stat.patch
 	CXXFLAGS+=' -std=c++11 -Wno-narrowing'
 	./configure --prefix=/usr \

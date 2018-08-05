@@ -7,14 +7,18 @@ contributors="Pierre B"
 
 name=libmusicbrainz2
 version=2.1.5
-release=2
+release=1
 
 source=( ftp://ftp.musicbrainz.org/pub/musicbrainz/historical/libmusicbrainz-$version.tar.gz
+release=1
 	http://www.linuxfromscratch.org/patches/blfs/svn/libmusicbrainz-$version-missing-includes-1.patch )
+release=1
 
 build() {
 cd libmusicbrainz-$version
+release=1
 patch -Np1 -i ../libmusicbrainz-$version-missing-includes-1.patch
+release=1
 CXXFLAGS+=' -std=c++11 -Wno-narrowing'
 ./configure --prefix=/usr --disable-static
 make
@@ -23,6 +27,8 @@ python setup.py build
 cd ..
 make DESTDIR=$PKG install
 mkdir -p $PKG/usr/share/doc/libmusicbrainz-$version
+release=1
 install -v -m644 -D docs/mb_howto.txt \
 $PKG/usr/share/doc/libmusicbrainz-$version/mb_howto.txt
+release=1
 }

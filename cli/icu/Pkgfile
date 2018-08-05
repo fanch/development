@@ -5,8 +5,10 @@ contributors="Pierre B, Tnut, Remy"
 
 name=icu
 version=60.2
+release=1
 
 source=(http://download.$name-project.org/files/icu4c/$version/icu4c-${version//./_}-src.tgz)
+release=1
 
 build () {
 cd $name

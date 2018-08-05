@@ -14,6 +14,7 @@ source=(https://pypi.python.org/packages/71/2a/2e4e77803a8bd6408a2903340ac498cb0
 build() {
 
     cd Pygments-$version
+release=1
     python2 setup.py install --prefix=/usr --root=$PKG
     
 }

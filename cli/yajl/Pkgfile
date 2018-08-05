@@ -10,10 +10,12 @@ version=2.1.0
 release=1
 
 source=(https://github.com/lloyd/${name}/archive/${version}.tar.gz)
+release=1
 
 build() {
 
 cd $name-$version
+release=1
 cmake -DCMAKE_INSTALL_PREFIX=/usr .
 
 make
@@ -25,6 +27,7 @@ make
 package() {
 
 cd $name-$version
+release=1
 make DESTDIR=$PKG install
 
 }

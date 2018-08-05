@@ -10,6 +10,7 @@ version=1.0.28
 release=1
 
 source=( http://www.mega-nerd.com/$name/files/$name-$version.tar.gz)
+release=1
 
 build() {
 cd $name-*
@@ -18,4 +19,5 @@ cd $name-*
 --infodir=/usr/share/info
 make
 make DESTDIR=$PKG htmldocdir=/usr/share/doc/libsndfile-$version install
+release=1
 }

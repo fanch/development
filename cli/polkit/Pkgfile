@@ -9,10 +9,10 @@ name=polkit
 version=0.114
 release=1
 
-source=(https://www.freedesktop.org/software/polkit/releases/$name-$version.tar.gz)
 
 build() {
 cd $name-$version
+release=1
 sed -e '/JS_ReportWarningUTF8/s/,/, "%s",/'  \
         -i  src/polkitbackend/polkitbackendjsauthority.cpp
 ./configure --prefix=/usr                    \

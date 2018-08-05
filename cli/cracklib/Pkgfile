@@ -4,14 +4,13 @@ packager="tnut <tnut@nutyx.org>"
 contributors="Pierre B"
 name=cracklib
 version=2.9.6
-release=2
+release=1
 
-source=(https://github.com/cracklib/cracklib/releases/download/$name-$version/$name-$version.tar.gz
-	https://github.com/cracklib/cracklib/releases/download/$name-$version/$name-words-2.9.6.gz)
 
 build()
 {
 cd $name-$version
+release=1
 sed -i '/skipping/d' util/packer.c
 ./configure --prefix=/usr \
 --with-default-dict=/$LIB/cracklib/pw_dict

@@ -9,8 +9,10 @@ name=x265
 version=2.5
 release=1
 source=( https://bitbucket.org/multicoreware/x265/downloads/${name}_${version}.tar.gz)
+release=1
 build() {
   cd ${name}_${version}
+release=1
 
    mkdir bld 
    cd bld

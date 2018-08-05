@@ -6,16 +6,23 @@ packager="tnut <tnut@nutyx.org>"
 
 name=apache
 version=2.4.29
+release=1
 nutyx_version=9.92
+release=1
 
 source=(http://downloads.nutyx.org/files/nutyx-${nutyx_version}.tar.xz
+release=1
 	http://archive.apache.org/dist/httpd/httpd-$version.tar.bz2
+release=1
 	http://www.linuxfromscratch.org/patches/blfs/svn/httpd-$version-blfs_layout-1.patch)
+release=1
 build(){
 
 cd httpd-$version
+release=1
 
 patch -Np1 -i ../httpd-$version-blfs_layout-1.patch
+release=1
 sed '/dir.*CFG_PREFIX/s@^@#@' -i support/apxs.in
 ./configure --enable-authnz-fcgi                            \
             --enable-layout=BLFS                            \
@@ -42,6 +49,7 @@ rm -f $PKG/srv/www/htdocs/index.html
 
 # Service
 cd $SRC/nutyx-${nutyx_version}
+release=1
 make DESTDIR=$PKG install-httpd
 mv $PKG/etc/httpd/httpd.conf{,.example}
 }

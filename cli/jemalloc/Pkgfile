@@ -7,10 +7,10 @@ description='General-purpose scalable concurrent malloc implementation'
 
 url='http://www.canonware.com/jemalloc/'
 
-source=("https://github.com/jemalloc/jemalloc/releases/download/$version/$name-$version.tar.bz2")
 
 build() {
   cd $name-$version
+release=1
   ./configure --prefix=/usr
   make
   make DESTDIR="$pkgdir" install

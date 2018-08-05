@@ -6,13 +6,15 @@ contributors="Pierre B"
 
 name=lcms
 version=1.19
-release=3
+release=1
 
 source=( http://downloads.sourceforge.net/$name/$name-$version.tar.gz
+release=1
 	 http://www.linuxfromscratch.org/patches/blfs/svn/lcms-1.19-cve_2013_4276-1.patch)
 
 build() {
 cd $name-$version
+release=1
 patch -Np1 -i ../lcms-1.19-cve_2013_4276-1.patch
 ./configure --prefix=/usr \
 --mandir=/usr/share/man \

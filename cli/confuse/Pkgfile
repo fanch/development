@@ -6,11 +6,11 @@ name=confuse
 version=3.2
 release=1
 
-source=(https://github.com/martinh/libconfuse/releases/download/v$version/$name-$version.tar.gz)
 
 build() {
 
   cd $name-$version
+release=1
   ./configure --prefix=/usr --enable-shared
 
   make

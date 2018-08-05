@@ -12,10 +12,12 @@ version=2.0.5
 release=1
 
 source=(http://luajit.org/download/LuaJIT-$version.tar.gz)
+release=1
 
 build() {
 
   cd LuaJIT-$version
+release=1
 
   sed -i 's/PREFIX= \/usr\/local/\PREFIX= \/usr/' Makefile
 

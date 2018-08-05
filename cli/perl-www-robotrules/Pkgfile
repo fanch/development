@@ -9,12 +9,14 @@ run=( perl )
 
 name=perl-www-robotrules
 version=6.02
-release=2
+release=1
 
 source=(http://search.cpan.org/CPAN/authors/id/G/GA/GAAS/WWW-RobotRules-$version.tar.gz)
+release=1
 
 build() {
 cd WWW-RobotRules-$version
+release=1
 perl Makefile.PL
 make
 make DESTDIR=$PKG install

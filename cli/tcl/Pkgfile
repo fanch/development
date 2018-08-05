@@ -6,12 +6,15 @@ description="The Tcl scripting language"
 
 name=tcl
 version=8.6.8
+release=1
 
 source=( http://downloads.sourceforge.net/$name/$name$version-src.tar.gz)
+release=1
 
 build() {
 # build package
 cd $name$version/unix
+release=1
 
 if [ "$CARCH" = "x86_64" ]; then
 	./configure --prefix=/usr --mandir=/usr/share/man --enable-threads --enable-64bit
@@ -46,8 +49,12 @@ chmod -v 755 $PKG/usr/lib/libtcl8.6.so
 cd ../..
 
 wget https://downloads.sourceforge.net/tcl/tcl$version-html.tar.gz
+release=1
 tar -xf tcl$version-html.tar.gz --strip-components=1
+release=1
 
 mkdir -p $PKG/usr/share/doc/tcl-$version
+release=1
 cp -v -r  html/* $PKG/usr/share/doc/tcl-$version
+release=1
 }

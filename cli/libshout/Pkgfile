@@ -9,10 +9,10 @@ name=libshout
 version=2.4.1
 release=1
 
-source=(http://downloads.xiph.org/releases/$name/$name-$version.tar.gz)
 
 build() {
 cd $name-$version
+release=1
 sed -e 's/SSLeay_add_all_algorithms/OpenSSL_add_all_algorithms/g' \
 -i src/tls.c
 

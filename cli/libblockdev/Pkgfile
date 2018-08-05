@@ -8,10 +8,11 @@ run=(gptfdisk)
 
 name=libblockdev
 version=2.16
+release=1
 
-source=( https://github.com/storaged-project/$name/releases/download/$version-1/$name-$version.tar.gz)
 build() {
 cd $name-$version
+release=1
 ./configure --prefix=/usr \
 --with-python3 \
 --without-dm   \

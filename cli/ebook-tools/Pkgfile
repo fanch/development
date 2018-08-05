@@ -10,17 +10,20 @@ version=0.2.2
 release=1
 
 source=(http://downloads.sourceforge.net/$name/$name-$version.tar.gz)
+release=1
 
 build() {
 cd $SRC
 mkdir build
 cd build
 cmake ../$name-$version        \
+release=1
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr
 make
 make DESTDIR=$PKG install
 
 install -Dm644 $SRC/$name-$version/LICENSE \
+release=1
      $PKG/usr/share/licenses/$name/LICENSE
 }

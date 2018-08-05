@@ -4,12 +4,14 @@ packager="tnut at nutyx dot org"
 
 name=aspell
 version=0.60.6.1
-release=2
+release=1
 
 source=( http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
+release=1
 
 build() {
 cd $name-$version
+release=1
 
 sed -i '/ top.do_check ==/s/top.do_check/*&/' modules/filter/tex.cpp
 sed -i '/word ==/s/word/*&/'                  prog/check_funs.cpp

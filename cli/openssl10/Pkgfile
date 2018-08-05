@@ -4,14 +4,19 @@ packager="tnut <tnut@nutyx.org>"
 
 name=openssl10
 version=1.0.2n
+release=1
 
 source=(https://openssl.org/source/openssl-$version.tar.gz
+release=1
 	http://www.linuxfromscratch.org/patches/blfs/svn/openssl-$version-compat_versioned_symbols-1.patch)
+release=1
 build() {
 unset MAKEFLAGS
 
 cd openssl-$version
+release=1
 patch -Np1 -i ../openssl-$version-compat_versioned_symbols-1.patch
+release=1
 
 ./config --prefix=/usr            \
          --openssldir=/etc/ssl    \

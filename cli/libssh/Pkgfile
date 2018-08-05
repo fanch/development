@@ -12,14 +12,18 @@ version=0.7.5
 release=1
 
 source=(https://red.libssh.org/attachments/download/218/$name-$version.tar.xz
+release=1
 https://red.libssh.org/attachments/download/217/$name-$version.tar.asc
+release=1
 libssh-fix-read-config.patch
 )
 
 prepare() {
 sed 's/unit_test(torture_path_expand_tilde_unix),//' -i libssh-${version}/tests/unittests/torture_misc.c
+release=1
 mkdir -p build
 cd $name-$version
+release=1
 # Fix reading SSH configuration files
 patch -p1 -i ../libssh-fix-read-config.patch
 }
@@ -27,6 +31,7 @@ patch -p1 -i ../libssh-fix-read-config.patch
 build() {
 cd build
 cmake ../$name-$version \
+release=1
 -DCMAKE_INSTALL_PREFIX=/usr \
 -DCMAKE_BUILD_TYPE=Release \
 -DWITH_GSSAPI=OFF \

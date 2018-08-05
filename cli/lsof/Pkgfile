@@ -7,13 +7,15 @@ url="http://ftp.u-strasbg.fr/securite"
 
 name=lsof
 version=4.89
-release=2
+release=1
 
 source=(http://ftp.u-strasbg.fr/securite/lsof/lsof_$version.tar.gz)
+release=1
 
 build () {
 
 	cd $name\_$version
+release=1
 
 	tar -xf lsof_4.89_src.tar  
 	cd lsof_4.89_src           

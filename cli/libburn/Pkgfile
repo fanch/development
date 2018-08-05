@@ -4,11 +4,12 @@ packager="tnut <tnut@nutyx.org>"
 
 name=libburn
 version=1.4.8
+release=1
 
-source=(http://files.libburnia-project.org/releases/$name-$version.tar.gz)
 
 build() {
 cd $name-$version
+release=1
 ./configure --prefix=/usr --disable-static
 make
 make DESTDIR=$PKG install

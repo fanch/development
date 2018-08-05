@@ -5,15 +5,17 @@ contributors="Pierre B"
 
 name=id3lib
 version=3.8.3
-release=2
+release=1
 
 source=(http://downloads.sourceforge.net/sourceforge/$name/$name-$version.tar.gz
+release=1
 	patch_id3lib_3.8.3_UTF16_writing_bug.diff
 	id3lib-3.8.3-CVE-2007-4460.patch
 	id3lib-3.8.3-gcc-4.3.patch)
 
 build() {
 cd $name-$version
+release=1
 patch -p1 -i ../patch_id3lib_3.8.3_UTF16_writing_bug.diff
 patch -p0 -i ../id3lib-3.8.3-CVE-2007-4460.patch
 patch -p1 -i ../id3lib-3.8.3-gcc-4.3.patch

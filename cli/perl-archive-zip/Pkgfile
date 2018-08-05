@@ -12,6 +12,7 @@ version=1.59
 release=1
 
 source=(http://cpan.metacpan.org/authors/id/P/PH/PHRED/Archive-Zip-$version.tar.gz)
+release=1
 
 build() {
 	cd Archive-*

@@ -10,11 +10,13 @@ version=2.7.0
 release=1
 
 source=(http://launchpad.net/bzr/${version%.*}/$version/+download/bzr-$version.tar.gz)
+release=1
 
 
 build() {
 
     cd $name-$version
+release=1
     sed -i -e 's|man/man1|share/&|' setup.py
     python2 setup.py install --prefix=/usr --root=$PKG
 

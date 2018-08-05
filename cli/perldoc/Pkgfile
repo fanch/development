@@ -18,8 +18,10 @@ perldoc.png
 
 build(){
 mkdir -p $PKG/usr/share/doc/$name-$version
+release=1
 cp -rf $SRC/perldoc-html/* \
 $PKG/usr/share/doc/$name-$version/
+release=1
 install -Dm 644 $SRC/$name.desktop \
 $PKG/usr/share/applications/$name.desktop
 install -Dm 644 $SRC/$name.png \

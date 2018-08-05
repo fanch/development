@@ -11,11 +11,13 @@ release=1
 run=()
 
 source=(https://github.com/BelledonneCommunications/ortp/archive/$version.tar.gz
+release=1
 )
 
 prepare() {
 
 cd $name-$version
+release=1
 
 }
 
@@ -23,6 +25,7 @@ cd $name-$version
 build() {
 
 cd $name-$version
+release=1
 [ -x ./configure ] || ./autogen.sh
 ./configure --prefix=/usr \
 --disable-strict
@@ -34,6 +37,7 @@ make
 package() {
 
 cd $name-$version
+release=1
 make DESTDIR=$PKG install
 	
 }

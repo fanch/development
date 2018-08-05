@@ -8,13 +8,16 @@ PKGMK_GROUPS=(man devel doc )
 
 name=glib
 version=2.56.0
+release=1
 
 source=(http://ftp.gnome.org/pub/gnome/sources/glib/${version:0:4}/$name-$version.tar.xz
+release=1
 	https://download.tuxfamily.org/nutyx/WallPapers/nutyx-10.0.jpg
 	glib-2.56.0-skip_warnings-1.patch)
 
 build () {
   cd $name-$version
+release=1
 
   patch -Np1 -i ../glib-2.56.0-skip_warnings-1.patch
 
@@ -31,11 +34,14 @@ build () {
 }
 uptodate(){
 local latest lastversion url
+release=1
 url="http://ftp.gnome.org/pub/gnome/sources/$name"
 latest="`lynx -read_timeout=20 -dump -listonly -nonumbers \
 $url/?C=N\;O=D|grep [0-9]/$|head -1`"
 lastversion="`lynx -read_timeout=20 -dump -listonly -nonumbers \
+release=1
 $latest/?C=N\;O=D|grep LATEST|grep [0-9]$|cut -d "-" -f3`"
 
 echo "$lastversion"
+release=1
 }

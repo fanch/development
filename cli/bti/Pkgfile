@@ -10,9 +10,11 @@ version=034
 release=1
 
 source=(https://www.kernel.org/pub/software/web/bti/bti-$version.tar.xz)
+release=1
 
 build(){
     cd $name-$version
+release=1
     ./configure --prefix=/usr
     make
     make DESTDIR=$PKG install
@@ -21,6 +23,7 @@ build(){
         $PKG/etc/bash_completion.d/bti
     install -Dm644 README \
         $PKG/usr/share/doc/$name-$version/README
+release=1
 }
 uptodate() {
 local url ext

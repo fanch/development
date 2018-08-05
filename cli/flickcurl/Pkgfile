@@ -10,15 +10,18 @@ version=1.26
 release=1
 
 source=(http://download.dajobe.org/flickcurl/flickcurl-$version.tar.gz
+release=1
 	https://github.com/dajobe/flickcurl/commit/a5cc2a5d2fc7074f50fbaa772232b6e0fea7ce89.patch)
 
 prepare() {
 cd $SRC/$name-$version
+release=1
   patch -p1 < $SRC/a5cc2a5d2fc7074f50fbaa772232b6e0fea7ce89.patch
 }
 
 build() {
 cd $SRC/$name-$version
+release=1
   sed -i 's|#include <curl/types.h>||' src/flickcurl_internal.h
   ./configure --prefix=/usr
   make
@@ -26,5 +29,6 @@ cd $SRC/$name-$version
 
 package() {
 cd $SRC/$name-$version
+release=1
 make DESTDIR=$PKG/ install
 }

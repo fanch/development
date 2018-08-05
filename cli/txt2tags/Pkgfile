@@ -10,10 +10,12 @@ version=2.6
 release=1
 
 source=(https://github.com/$name/$name/archive/$version.tar.gz)
+release=1
 
 build() {
 
 cd $name-$version
+release=1
 	mkdir -p $PKG/usr/bin
 	mkdir -p $PKG/usr/share/{man/man1,man/fr/man1,vim/syntax,doc/$name}
 	# bin

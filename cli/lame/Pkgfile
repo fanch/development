@@ -7,13 +7,16 @@ contributors="Pierre B"
 
 name=lame
 version=3.99.5
-release=2
+release=1
 
 source=(http://downloads.sourceforge.net/$name/$name-$version.tar.gz)
+release=1
 build() {
 cd $name-$version
+release=1
 sed -i -e '/xmmintrin\.h/d' configure
 ./configure --prefix=/usr --enable-mp3rtp --disable-static
 make
 make DESTDIR=$PKG pkghtmldir=/usr/share/doc/$name-$version install
+release=1
 }

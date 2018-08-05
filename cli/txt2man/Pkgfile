@@ -14,6 +14,7 @@ version=1.6.0
 release=1
 
 source=(https://github.com/mvertes/txt2man/archive/txt2man-$version.tar.gz
+release=1
 )
 
 prepare() {
@@ -22,6 +23,7 @@ echo "Fonction prepare sans objet"
 
 build() {
 cd $SRC/txt2man-txt2man-$version
+release=1
   PATH=./:$PATH make prefix=$PKG/usr install
 }
 

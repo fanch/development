@@ -12,9 +12,11 @@ version=1.326
 release=1
 
 source=(http://www.cpan.org/authors/id/X/XA/XAOC/Glib-$version.tar.gz)
+release=1
 
 build() {
 	cd Glib-$version
+release=1
 	perl Makefile.PL
 	make
 	make DESTDIR=$PKG install

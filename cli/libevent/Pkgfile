@@ -7,10 +7,10 @@ name=libevent
 version=2.1.8
 release=1
 
-source=(https://github.com/libevent/libevent/releases/download/release-$version-stable/$name-$version-stable.tar.gz)
 
 build() {
 cd $name-$version-stable
+release=1
 ./configure --prefix=/usr --disable-static
 make
 make DESTDIR=$PKG install

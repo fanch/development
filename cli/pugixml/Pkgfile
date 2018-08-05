@@ -9,7 +9,6 @@ name=pugixml
 version=1.8
 release=1
 
-source=(http://github.com/zeux/pugixml/releases/download/v${version}/pugixml-${version}.tar.gz)
 
 
 prepare() {
@@ -25,6 +24,7 @@ build() {
   cd $SRC/build
 
   cmake $SRC/pugixml-$version \
+release=1
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_INSTALL_LIBDIR=lib \

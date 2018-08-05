@@ -8,9 +8,11 @@ version=1.14.2
 release=1
 
 source=(https://ftp.gnu.org/gnu/ed/$name-$version.tar.lz)
+release=1
 
 build() {
   cd $name-$version
+release=1
   ./configure --prefix=/ \
               --bindir=/usr/bin \
               --mandir=/usr/share/man \

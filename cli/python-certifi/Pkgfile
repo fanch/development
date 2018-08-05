@@ -6,8 +6,10 @@ packager="tnut <tnut@nutyx.org>"
 
 name=python-certifi
 version=2017.7.27.1
+release=1
 
 _name=certifi
 source=(https://files.pythonhosted.org/packages/source/c/certifi/certifi-$version.tar.gz)
+release=1
 
 build=python3

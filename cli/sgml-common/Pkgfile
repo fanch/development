@@ -7,11 +7,15 @@ version=0.6.3
 release=1
 
 source=( http://anduin.linuxfromscratch.org/BLFS/sgml-common/sgml-common-$version.tgz
+release=1
 http://www.linuxfromscratch.org/patches/blfs/7.5/sgml-common-$version-manpage-1.patch)
+release=1
 
 build(){
     cd $name-$version
+release=1
     patch -Np1 -i ../sgml-common-$version-manpage-1.patch &&
+release=1
     autoreconf -f -i
     ./configure --prefix=/usr \
                 --sysconfdir=/etc

@@ -9,19 +9,24 @@ PKGMK_KEEP_SOURCES="no"
 
 name=cython
 version=0.27.3
+release=1
 run=(python python2 python2-setuptools python-setuptools)
 
 source=(https://github.com/$name/$name/archive/$version.tar.gz)
+release=1
 
 prepare() {
 cp -r cython-$version cython2-$version
+release=1
 find cython2-$version -name '*.py' | \
+release=1
 xargs sed -e 's|/usr/bin/env python|/usr/bin/env python2|' -e \
 's|/usr/bin/python|/usr/bin/python2|' -i
 }
 
 build() {
 cd cython-$version
+release=1
 python setup.py build
 python setup.py install --root=$PKG --skip-build
 
@@ -32,6 +37,7 @@ done
 
 
 cd ../cython2-$version
+release=1
 python2 setup.py build
 python2 setup.py install --root=$PKG --skip-build
 

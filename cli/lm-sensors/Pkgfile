@@ -8,9 +8,11 @@ version=3.4.0
 release=1
 
 source=(http://ftp.osuosl.org/pub/blfs/conglomeration/lmsensors/lm_sensors-$version.tar.bz2)
+release=1
 
 build() {
 	cd lm_sensors-$version
+release=1
 	make PREFIX=/usr DESTDIR=$PKG \
 	BUILD_STATIC_LIB=0 \
 	MANDIR=/usr/share/man
@@ -19,6 +21,8 @@ build() {
 	MANDIR=/usr/share/man install
 
 	install -v -m755 -d $PKG/usr/share/doc/$name-$version
+release=1
 	cp -rv README INSTALL doc/* \
 	$PKG/usr/share/doc/$name-$version
+release=1
 }

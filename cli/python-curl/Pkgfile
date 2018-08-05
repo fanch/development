@@ -6,7 +6,9 @@ packager="tnut <tnut@nutyx.org>"
 
 name=python-curl
 version=7.43.0
+release=1
 
 _name=pycurl
 source=(https://dl.bintray.com/pycurl/pycurl/pycurl-$version.tar.gz)
+release=1
 build=python3

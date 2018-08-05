@@ -6,13 +6,18 @@ packager="tnut at nutyx dot org"
 
 name=bind
 version=9.12.0
+release=1
 nutyx_version=10.0.1
+release=1
 
 source=(http://downloads.nutyx.org/files/nutyx-${nutyx_version}.tar.xz
+release=1
 	ftp://ftp.isc.org/isc/bind9/$version/$name-$version.tar.gz)
+release=1
 
 build(){
     cd $name-$version
+release=1
     ./configure --prefix=/usr
 
 	make -C lib/dns
@@ -26,14 +31,18 @@ build(){
 
     # doc
 	install -v -m755 -d $PKG/usr/share/doc/bind-$version/{arm,misc}
+release=1
 	install -v -m644 doc/arm/*.html \
 	$PKG/usr/share/doc/bind-$version/arm
+release=1
 	install -v -m644 \
 	doc/misc/{dnssec,ipv6,migrat*,options,rfc-compliance,roadmap,sdb} \
 	$PKG/usr/share/doc/bind-$version/misc
+release=1
 
     # service
 	cd $SRC/nutyx-${nutyx_version}
+release=1
 	make DESTDIR=$PKG install-bind
 }
 uptodate() {

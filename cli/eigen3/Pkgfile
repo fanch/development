@@ -12,6 +12,7 @@ release=1
 PKGMK_KEEP_SOURCES="no"
 
 source=(http://bitbucket.org/eigen/eigen/get/$version.tar.bz2)
+release=1
 build() {
 	cd eigen-eigen-*
 	mkdir build

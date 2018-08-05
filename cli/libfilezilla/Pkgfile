@@ -7,12 +7,15 @@ contributors="Greg"
 
 name=libfilezilla
 version=0.12.1
+release=1
 
 source=(http://download.filezilla-project.org/libfilezilla/libfilezilla-$version.tar.bz2)
+release=1
 
 build() {
 
 cd $SRC/$name-$version
+release=1
 ./configure --prefix=/usr \
 --disable-static
 make

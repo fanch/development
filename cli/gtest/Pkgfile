@@ -7,15 +7,13 @@ contributors="Pierre B"
 
 name=gtest
 version=1.8.0
-release=2
+release=1
 
 PKGMK_KEEP_SOURCES="no"
 
 source=(gtest.pc.in gtest-pkgconfig.patch gmock-install.patch gmock.pc.in
-	https://github.com/google/googletest/archive/release-${version}.tar.gz)
 
 prepare() {
-  cd googletest-release-${version}
     (cd googletest
     autoreconf -fvi
     cp $SRC/gtest.pc.in .
@@ -32,7 +30,6 @@ prepare() {
 }
 
 build () {
-  cd googletest-release-${version}
   (cd googletest
     # this is odd but needed only to generate gtest-config.
     ./configure --prefix=/usr

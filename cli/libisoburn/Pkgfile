@@ -7,10 +7,11 @@ contributors="Pierre B"
 
 name=libisoburn
 version=1.4.8
+release=1
 
-source=(http://files.libburnia-project.org/releases/libisoburn-$version.tar.gz)
 build () {
 cd $name-$version
+release=1
 ./configure --prefix=/usr --disable-static \
 --enable-pkg-check-modules
 make

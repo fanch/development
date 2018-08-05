@@ -10,10 +10,12 @@ version=0.5.4
 release=1
 
 source=(http://downloads.sourceforge.net/sourceforge/libavc1394/${name}-${version}.tar.gz)
+release=1
 
 build() {
 
 	cd $SRC/$name-$version
+release=1
 	./configure \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
@@ -25,6 +27,7 @@ build() {
 package () {
 
 	cd $SRC/$name-$version
+release=1
     make DESTDIR=$PKG install
    
 }

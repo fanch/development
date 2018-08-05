@@ -7,13 +7,15 @@ contributors="Pierre B"
 
 name=cifs-utils
 version=6.7
-release=2
+release=1
 
 source=( http://ftp.samba.org/pub/linux-cifs/$name/$name-$version.tar.bz2)
+release=1
 
 
 build() {
 cd $name-$version
+release=1
 autoreconf -fiv
 ./configure --prefix=/usr \
 --disable-systemd \

@@ -11,11 +11,13 @@ version=0.124.1
 release=1
 
 source=(http://jackaudio.org/downloads/${_longname}-$version.tar.gz
+release=1
         jack-99-audio.conf
         jack-40-hpet-permissions.rules)
 
 build() {
 cd ${_longname}-$version
+release=1
 ./configure --prefix=/usr --libdir=/usr/lib
 make
 make DESTDIR=$PKG install

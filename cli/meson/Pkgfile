@@ -9,10 +9,10 @@ name=meson
 version=0.47.1
 release=1
 
-source=(https://github.com/mesonbuild/$name/releases/download/$version/$name-$version.tar.gz)
 
 build() {
   cd $name-$version
+release=1
   python3 setup.py build
   python3 setup.py install --root=$PKG 
   cp -rv $PKG/* /

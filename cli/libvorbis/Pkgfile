@@ -7,14 +7,16 @@ contributors="Pierre B"
 
 name=libvorbis
 version=1.3.6
+release=1
 
-source=( http://downloads.xiph.org/releases/vorbis/$name-$version.tar.gz)
 
 build() {
 cd $name-$version
+release=1
 ./configure --prefix=/usr \
 --disable-static
 make
 make DESTDIR=$PKG install
 install -v -m644 doc/Vorbis* $PKG/usr/share/doc/libvorbis-$version
+release=1
 }

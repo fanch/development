@@ -9,10 +9,12 @@ version=0.9
 release=1
 
 source=(http://lly.org/~rcw/$name/${name}_$version.orig.tar.gz)
+release=1
 
 build () {
 
     cd $name-$version
+release=1
     make
  
 	}
@@ -20,6 +22,7 @@ build () {
 package () {
 
 cd $name-$version
+release=1
 make DESTDIR=$PKG \
         PREFIX=/usr \
         mandir=$PKG/usr/man/man1 \

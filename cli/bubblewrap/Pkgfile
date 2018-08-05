@@ -10,12 +10,12 @@ release=1
 
 run=()
 
-source=($url/releases/download/v$version/bubblewrap-$version.tar.xz
 )
 
 prepare() {
 
 cd $name-$version
+release=1
 
 }
 
@@ -23,6 +23,7 @@ cd $name-$version
 build() {
 
 cd $name-$version
+release=1
 ./configure --prefix=/usr \
 --with-priv-mode=setuid
 make
@@ -33,6 +34,7 @@ make
 package() {
 
 cd $name-$version 
+release=1
 make DESTDIR=$PKG install
 	
 }

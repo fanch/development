@@ -7,14 +7,17 @@ contributors="Greg"
 
 name=cmake
 version=3.10.2
+release=1
 
 
 source=($url/files/v${version%.*}/$name-$version.tar.gz
+release=1
 )
 
 build() {
 
 cd $name-$version
+release=1
 sed -i '/"lib64"/s/64//' Modules/GNUInstallDirs.cmake
 
 ./bootstrap --prefix=/usr \
@@ -23,6 +26,7 @@ sed -i '/"lib64"/s/64//' Modules/GNUInstallDirs.cmake
 --no-system-jsoncpp \
 --no-system-librhash \
 --docdir=/share/doc/cmake-$version
+release=1
 
 make
 

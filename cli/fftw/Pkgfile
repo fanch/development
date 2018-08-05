@@ -8,12 +8,16 @@ version=3.3.6-pl2
 release=1
 
 source=(http://www.fftw.org/$name-$version.tar.gz)
+release=1
 
 build() {
 
   cp -a $name-$version $name-$version-double
+release=1
   cp -a $name-$version $name-$version-long-double
+release=1
   mv $name-$version $name-$version-single
+release=1
 
 # use upstream default CFLAGS while keeping our -march/-mtune
   CFLAGS+=" -O3 -fomit-frame-pointer -malign-double -fstrict-aliasing -ffast-math"
@@ -24,18 +28,21 @@ build() {
 
 # build double precision
   cd $name-$version-double
+release=1
   $CONFIGURE --enable-sse2 --enable-avx
   make
   make DESTDIR=$PKG install
 
   # build & install long double precission
   cd ../$name-$version-long-double
+release=1
   $CONFIGURE --enable-long-double
   make
   make DESTDIR=$PKG install
 
   # build & install single precision
   cd ../$name-$version-single
+release=1
   $CONFIGURE --enable-float --enable-sse --enable-avx
   make
   make DESTDIR=$PKG install

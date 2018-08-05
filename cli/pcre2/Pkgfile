@@ -1,4 +1,5 @@
 description="Perl Compatible Regular Expression libraries, 2nd version."
+release=1
 url="http://www.pcre.org/"
 packager="tnut <tnut@nutyx.org>"
 
@@ -7,16 +8,19 @@ version=10.23
 release=1
 
 source=( ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/$name-$version.tar.bz2 )
+release=1
 [ "$PKGMK_ARCH" == "x86_64" ] && PKGMK_GROUPS=(devel man doc)
 [ "$PKGMK_ARCH" == "i686" ] && PKGMK_GROUPS=(man doc)
 
 build() {
 cd $name-$version
+release=1
 
 [ "${CARCH}" = "x86_64" ] && export CFLAGS="${CFLAGS} -fPIC"
 
 ./configure --prefix=/usr \
 --docdir=/usr/share/doc/pcre-$version \
+release=1
 --enable-unicode-properties \
 --enable-pcre2-16 \
 --enable-pcre2-32 \

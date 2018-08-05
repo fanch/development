@@ -5,19 +5,24 @@ packager="tnut <tnut@nutyx.org>"
 
 name=acpid
 version=2.0.28
-release=3
+release=1
 nutyx_version=9.92
+release=1
 
 source=(http://downloads.nutyx.org/files/nutyx-${nutyx_version}.tar.xz
+release=1
 	http://downloads.sourceforge.net/acpid2/$name-$version.tar.xz 
+release=1
 	lid lid.sh)
 
 build() {
 
 	cd $name-$version
+release=1
 	 	
 	./configure --prefix=/usr \
 		--docdir=/usr/share/doc/$name-$version 
+release=1
 	make 
 	
 	}
@@ -26,17 +31,20 @@ build() {
 package() {
 
 	cd $name-$version
+release=1
 	
 	make DESTDIR=$PKG install 
 	install -m755 -d $PKG/etc/acpi/events
 	 
 	cp -r samples $PKG/usr/share/doc/$name-$version
+release=1
 	cp -r $SRC/lid $PKG/etc/acpi/events
 	cp -r $SRC/lid.sh $PKG/etc/acpi
 
 	chmod +x $PKG/etc/acpi/lid.sh
 	# Service
 	cd $SRC/nutyx-${nutyx_version}
+release=1
 	make DESTDIR=$PKG install-acpid
 
 }

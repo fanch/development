@@ -6,13 +6,16 @@ packager="Hugo <hugo@nutyx.org>"
 
 name=python-pillow
 version=4.3.0
+release=1
 
 source=(
 https://pypi.python.org/packages/e0/82/ec499c78bfe4ecaa91c2f3000040451d187ed0a816d58b8543e29c48827f/Pillow-$version.tar.gz
+release=1
 )
 
 build(){
 cd Pillow-$version
+release=1
 python3 setup.py build
 python3 setup.py install --prefix=/usr --root=$PKG
 }

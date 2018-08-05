@@ -11,14 +11,17 @@ release=1
 run=(python-setuptools python-sgmllib)
 
 source=(https://github.com/kurtmckee/feedparser/archive/$version.tar.gz)
+release=1
 
 prepare() {
 cd feedparser-$version; 2to3 -w feedparser/feedparser.py feedparser/feedparsertest.py
+release=1
 }
 
 build() {
 
   cd feedparser-$version
+release=1
   /usr/bin/python3 setup.py build
   /usr/bin/python3 setup.py install --prefix=/usr --root=$PKG
   

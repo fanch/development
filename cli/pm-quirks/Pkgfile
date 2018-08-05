@@ -7,7 +7,6 @@ name=pm-quirks
 version=20100619
 release=1
 
-source=(http://pm-utils.freedesktop.org/releases/pm-quirks-${version}.tar.gz)
 
 build() {
 	install -m755 -d "${PKG}/usr/lib/pm-utils/video-quirks"
@@ -16,7 +15,6 @@ build() {
 uptodate() {
 local url ext
 ext=".tar.gz"
-url="https://pm-utils.freedesktop.org/releases/"
 lynx -read_timeout=20 -dump -listonly -nonumbers \
 $url/?C=M\;O=D|grep $name|grep $ext$|head -1|sed "s@$url/$name-@@"|sed "s/$ext//"
 }

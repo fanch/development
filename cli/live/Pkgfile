@@ -8,6 +8,7 @@ version=2017.07.18
 release=1
 
 source=(http://www.live555.com/liveMedia/public/${name}.$version.tar.gz)
+release=1
 
 build() {
 cd $SRC/live

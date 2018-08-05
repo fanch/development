@@ -12,9 +12,11 @@ release=1
 
 source=(
 http://www.cpan.org/authors/id/G/GR/GRANTM/XML-SAX-Base-$version.tar.gz)
+release=1
 
 build() {
     cd XML-SAX-Base-$version
+release=1
     perl Makefile.PL
     make OPTIMIZE="$CFLAGS" || exit 1
     make test || true

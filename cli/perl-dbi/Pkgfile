@@ -11,9 +11,11 @@ version=1.636
 release=1
 
 source=(http://www.cpan.org/authors/id/T/TI/TIMB/DBI-$version.tar.gz)
+release=1
 
 build() {
 cd DBI-$version
+release=1
 perl Makefile.PL INSTALLDIRS=vendor
 make
 make DESTDIR=$PKG install

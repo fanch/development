@@ -8,12 +8,13 @@ packager="tnut <tnut@nutyx.org>"
 
 name=squashfs
 version=4.3
-release=2
+release=3
 
-source=(http://downloads.sourceforge.net/sourceforge/$name/$name$version.tar.gz)
+source=(http://downloads.sourceforge.net/sourceforge/$name/$name$version.tar.gz sysmacros.patch)
 
 build() {
 cd $name$version/squashfs-tools
+patch -Np1 -i ../sysmacros.patch
 make XZ_SUPPORT=1 LZO_SUPPORT=1 LZMA_XZ_SUPPORT=1 LZA_SUPPORT=1
 mkdir -p $PKG/bin
 make INSTALL_DIR=$PKG/bin install

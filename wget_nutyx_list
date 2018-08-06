@@ -170,4 +170,8 @@ http://www.linuxfromscratch.org/patches/blfs/svn/wpa_supplicant-2.6-upstream_fix
 http://hostap.epitest.fi/releases/wpa_supplicant-2.6.tar.gz
 https://www.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/xfsprogs-4.17.0.tar.xz
 http://anduin.linuxfromscratch.org/BLFS/blfs-bootscripts/blfs-bootscripts-20180105.tar.xz
- http://www.linuxfromscratch.org/patches/blfs/svn/openssh-7.7p1-openssl-1.1.0-1.patch
+http://www.linuxfromscratch.org/patches/blfs/svn/openssh-7.7p1-openssl-1.1.0-1.patch
+https://github.com/djlucas/make-ca/archive/v0.8/make-ca-$version.tar.gz
+https://hg.mozilla.org/mozilla-central/raw-file/default/security/nss/lib/ckfw/builtins/certdata.txt
+http://www.cacert.org/certs/root.crt 
+http://www.cacert.org/certs/class3.crt
